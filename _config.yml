@@ -32,7 +32,6 @@ linkedin_username:  archit15singh
 remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-feed
-  - jekyll-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.
