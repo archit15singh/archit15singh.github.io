@@ -30,6 +30,7 @@ linkedin_username:  archit15singh
 
 # Build settings
 remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "neon"
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
