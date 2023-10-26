@@ -29,9 +29,10 @@ github_username:  archit15singh
 linkedin_username:  archit15singh
 
 # Build settings
-remote_theme: "mmistakes/minimal-mistakes"
+remote_theme: mmistakes/minimal-mistakes
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
