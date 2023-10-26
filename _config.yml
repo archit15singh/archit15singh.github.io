@@ -30,7 +30,6 @@ linkedin_username:  archit15singh
 
 # Build settings
 theme: minima
-minimal_mistakes_skin: "dark"
 plugins:
   - jekyll-feed
 
