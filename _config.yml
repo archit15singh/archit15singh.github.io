@@ -21,11 +21,12 @@
 title: archit.dev
 email: contact.architsingh@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  personal website
+  kaizen
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://archit15singh.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: archit_singh15
 github_username:  archit15singh
+linkedin_username:  archit15singh
 
 # Build settings
 theme: minima
