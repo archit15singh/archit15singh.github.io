@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Engineer
+engineer amongst other things
