@@ -149,4 +149,5 @@ The model will provide a list of creative marketing ideas.
 
 The model will expand on the arguments and make the essay more comprehensive.
 
-In a nutshell, "Prompts as Functions" let you use large language models to do all sorts of amazing things. By giving them the right prompt, you can make them summarize, distill, create, and so much more. It's like having a helpful assistant for a wide range of tasks. So, go ahead and try it out for yourself!
+
+[Reference](https://www.youtube.com/watch?v=aq7fnqzeaPc&t=81s&ab_channel=DavidShapiro)https://www.youtube.com/watch?v=aq7fnqzeaPc&t=81s&ab_channel=DavidShapiro
