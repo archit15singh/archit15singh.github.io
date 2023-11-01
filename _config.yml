@@ -29,7 +29,7 @@ github_username:  archit15singh
 linkedin_username:  archit15singh
 
 # Build settings
-theme: minima
+theme: hacker
 plugins:
   - jekyll-feed
   - github-pages
