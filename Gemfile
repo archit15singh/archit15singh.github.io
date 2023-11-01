@@ -4,7 +4,7 @@
 
 
 gem "jekyll"
-gem "bundler"
+gem "bundler", "2.4.10"
 gem "racc"
 gem "webrick"
 
