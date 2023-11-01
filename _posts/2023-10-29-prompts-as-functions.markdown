@@ -7,6 +7,7 @@ categories: prompt-engineering
 
 From an application perspective, we can view prompts as mathematical functions that take an input text and generate a specific type of output text. These functions can be categorized into different types based on their intended applications.
 
+
 ## Reductive Functions
 
 ### 1. Summarization
@@ -65,6 +66,7 @@ The model will give you its opinion on the book's quality.
 
 The model will provide feedback and suggestions to improve your essay.
 
+
 ## Transformative Functions
 
 ### 8. Reformatting
@@ -114,6 +116,7 @@ The model will adjust the content accordingly.
 *Example Prompt:* "Please clarify the meaning of this sentence."
 
 The model will provide a clearer explanation.
+
 
 ## Generative Functions
 
