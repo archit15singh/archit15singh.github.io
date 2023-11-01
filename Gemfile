@@ -1,13 +1,9 @@
-
-# bundle install
-# bundle exec jekyll serve
-
+source "https://rubygems.org"
 
 gem "jekyll"
-gem "bundler", "2.1.4"
+gem "bundler"
 gem "racc"
 gem "webrick"
-
 
 group :jekyll_plugins do
   gem "jekyll-feed"
