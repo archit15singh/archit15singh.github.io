@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Prompts as Functions"
+title:  "prompts as functions"
 date:   2023-11-01 12:12:12 +0000
 categories: prompt-engineering
 ---
