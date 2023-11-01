@@ -5,9 +5,7 @@ date:   2023-11-01 12:12:12 +0000
 categories: prompt-engineering
 ---
 
-# Prompts as Functions
-
-Have you ever wondered how large language models, like the ones that power AI, can be super helpful for all sorts of tasks? It turns out you can use prompts to tell them what to do, and they can do some amazing things. Let's dive into "Prompts as Functions" and see how we can make these models work for us in various ways. We'll go through different functions and show you how they work with some cool examples.
+From an application perspective, we can view prompts as mathematical functions that take an input text and generate a specific type of output text. These functions can be categorized into different types based on their intended applications.
 
 ## Reductive Functions
 
