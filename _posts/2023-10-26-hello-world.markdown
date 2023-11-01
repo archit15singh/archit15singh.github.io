@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hello World"
+title:  "hello world"
 date:   2023-10-26 15:31:59 +0000
 categories: universe
 ---
