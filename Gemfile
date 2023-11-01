@@ -2,8 +2,10 @@
 # bundle install
 # bundle exec jekyll serve
 
+
 gem "jekyll"
 gem "bundler"
+gem "hacker"
 gem "racc"
 gem "webrick"
 
