@@ -5,7 +5,6 @@
 
 gem "jekyll"
 gem "bundler"
-gem "hacker"
 gem "racc"
 gem "webrick"
 
