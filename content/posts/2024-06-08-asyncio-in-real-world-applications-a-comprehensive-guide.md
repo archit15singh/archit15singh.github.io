@@ -1,5 +1,5 @@
 ---
-title: Asyncio in Real-World Applications: A Comprehensive Guide
+title: "Asyncio in Real-World Applications: A Comprehensive Guide"
 date: 2024-06-08T12:00:00.000Z
 tags:
   - Python
@@ -7,13 +7,13 @@ tags:
   - Concurrency
   - Programming
 categories: Programming
-description: Learn how to use asyncio in real-world applications with practical examples and best practices.
+description: "Learn how to use asyncio in real-world applications with practical examples and best practices."
 cover:
   hidden: false
   relative: false
   image: /images/uploads/asyncio-cover.png
-  alt: Asyncio in Python
-  caption: Asyncio in Python
+  alt: "Asyncio in Python"
+  caption: "Asyncio in Python"
 editPost:
   URL: ""
   Text: ""
