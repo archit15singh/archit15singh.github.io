@@ -10,20 +10,18 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-# googleAnalytics: UA-123-45
 
 minify:
     disableXML: true
-    # minifyOutput: true
 
 languages:
     en:
         languageName: "English"
         weight: 1
         taxonomies:
-          category: categories
-          tag: tags
-          series: series
+            category: categories
+            tag: tags
+            series: series
         menu:
             main:
                 - name: Archive
@@ -47,48 +45,27 @@ outputs:
         - JSON
 
 params:
-    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    env: production
     description: "Theme PaperMod - https://github.com/archit15singh"
     author: Theme PaperMod
-    # author: ["Me", "You"] # multiple authors
-
     defaultTheme: auto
-    # disableThemeToggle: true
     ShowShareButtons: true
     ShowReadingTime: true
-    # disableSpecial1stPost: true
     displayFullLangName: true
     ShowPostNavLinks: true
     ShowBreadCrumbs: true
     ShowCodeCopyButtons: true
     ShowRssButtonInSectionTermList: true
     ShowToc: true
-    # comments: false
     images: ["papermod-cover.png"]
-
     profileMode:
         enabled: false
         title: PaperMod
         imageUrl: "#"
-        imageTitle: my image
-        # imageWidth: 120
-        # imageHeight: 120
-        buttons:
-            - name: Archives
-              url: archives
-            - name: Tags
-              url: tags
-
     homeInfoParams:
         Title: "PaperMod"
         Content: >
             Welcome to demo of hugo's theme PaperMod.
-
-            - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX. This starter supports editing posts with NetlifyCMS, login at /admin. Most other configs (including this message!) happen in config.yml in the root directory.
-
-            - Do give a 🌟 on Github !
-
-            - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
 
     socialIcons:
         - name: github
@@ -97,11 +74,13 @@ params:
           url: "https://ko-fi.com/adityatelange"
         - name: Rss
           url: "index.xml"
-
     editPost:
         URL: "https://github.com/archit15singh/tree/exampleSite/content"
-        Text: "Suggest Changes" # edit text
-        appendFilePath: true # to append file path to Edit link
+        Text: "Suggest Changes"
+        appendFilePath: true
+
+    assets:
+        disableHLJS: true
 
 markup:
     goldmark:
@@ -114,20 +93,16 @@ privacy:
     vimeo:
         disabled: false
         simple: true
-
     twitter:
         disabled: false
         enableDNT: true
         simple: true
-
     instagram:
         disabled: false
         simple: true
-
     youtube:
         disabled: false
         privacyEnhanced: true
-
 services:
     instagram:
         disableInlineCSS: true
