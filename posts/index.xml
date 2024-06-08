@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Jun 2024 12:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 May 2024 12:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Asyncio in Real-World Applications: A Comprehensive Guide</title>
+      <link>https://archit15singh.github.io/posts/2024-05-07-asyncio-in-real-world-applications-a-comprehensive-guide/</link>
+      <pubDate>Tue, 07 May 2024 12:00:00 +0000</pubDate>
+      
+      <guid>https://archit15singh.github.io/posts/2024-05-07-asyncio-in-real-world-applications-a-comprehensive-guide/</guid>
+      <description>Learn how to use asyncio in real-world applications with practical examples and best practices.</description>
+    </item>
+    
     <item>
       <title>Test Post</title>
       <link>https://archit15singh.github.io/posts/2022-07-29-test-post/</link>

@@ -10,7 +10,43 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 Jul 2022 06:07:58 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 May 2024 12:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Asyncio</title>
+      <link>https://archit15singh.github.io/tags/asyncio/</link>
+      <pubDate>Tue, 07 May 2024 12:00:00 +0000</pubDate>
+      
+      <guid>https://archit15singh.github.io/tags/asyncio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Concurrency</title>
+      <link>https://archit15singh.github.io/tags/concurrency/</link>
+      <pubDate>Tue, 07 May 2024 12:00:00 +0000</pubDate>
+      
+      <guid>https://archit15singh.github.io/tags/concurrency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://archit15singh.github.io/tags/programming/</link>
+      <pubDate>Tue, 07 May 2024 12:00:00 +0000</pubDate>
+      
+      <guid>https://archit15singh.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://archit15singh.github.io/tags/python/</link>
+      <pubDate>Tue, 07 May 2024 12:00:00 +0000</pubDate>
+      
+      <guid>https://archit15singh.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Testing</title>
       <link>https://archit15singh.github.io/tags/testing/</link>
