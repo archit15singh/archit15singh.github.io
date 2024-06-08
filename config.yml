@@ -37,14 +37,6 @@ params:
       url: "https://twitter.com/archit_singh15"
     - name: stackoverflow
       url: "https://stackoverflow.com/users/6245870/archit-singh"
-    - name: instagram
-      url: "https://www.instagram.com/archit_singh15"
-    - name: youtube
-      url: "https://www.youtube.com/@archit_singh15"
-    - name: reddit
-      url: "https://www.reddit.com/user/arhitsingh15"
-    - name: medium
-      url: "https://medium.com/@archit15singh"
     - name: Rss
       url: "index.xml"
 
