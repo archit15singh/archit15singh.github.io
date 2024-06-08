@@ -1,5 +1,6 @@
 baseURL: "https://archit15singh.github.io/"
-title: PaperMod
+languageCode: "en-us"
+title: Archit's Space
 paginate: 5
 theme: hugo-PaperMod
 
