@@ -5,11 +5,7 @@
 {{- end }}
 
 {{- if (.Param "ShowReadingTime") -}}
-{{- $scratch.Add "meta" (slice (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime))) }}
-{{- end }}
-
-{{- with (partial "author.html" .) }}
-{{- $scratch.Add "meta" (slice .) }}
+{{- $scratch.Add "meta" (slice (printf "%d min" .ReadingTime)) }}
 {{- end }}
 
 {{- with ($scratch.Get "meta") }}
