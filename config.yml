@@ -71,14 +71,8 @@ params:
     socialIcons:
         - name: github
           url: "https://github.com/archit15singh"
-        - name: KoFi
-          url: "https://ko-fi.com/adityatelange"
         - name: Rss
           url: "index.xml"
-    editPost:
-        URL: "https://github.com/archit15singh/tree/exampleSite/content"
-        Text: "Suggest Changes"
-        appendFilePath: true
 
     assets:
         disableHLJS: true
