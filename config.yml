@@ -64,9 +64,9 @@ params:
         title: PaperMod
         imageUrl: "#"
     homeInfoParams:
-        Title: "PaperMod"
+        Title: "Code | Write | Teach"
         Content: >
-            Welcome to demo of hugo's theme PaperMod.
+            Welcome!
 
     socialIcons:
         - name: github
