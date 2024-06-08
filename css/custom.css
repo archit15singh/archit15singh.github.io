@@ -1,0 +1,8 @@
+/* custom.css */
+
+.first-entry.home-info {
+    margin-top: 0; /* Adjust the top margin as needed */
+    margin-bottom: 0; /* Adjust the bottom margin as needed */
+    padding-top: 1rem; /* Adjust the top padding as needed */
+    padding-bottom: 1rem; /* Adjust the bottom padding as needed */
+}
