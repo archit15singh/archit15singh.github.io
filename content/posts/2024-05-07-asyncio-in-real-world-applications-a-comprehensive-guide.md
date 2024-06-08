@@ -11,7 +11,7 @@ description: "Learn how to use asyncio in real-world applications with practical
 cover:
   hidden: false
   relative: false
-  image: /images/uploads/asyncio-cover.png
+  image: /images/uploads/james-webb-nebula-full-small.png
   alt: "Asyncio in Python"
   caption: "Asyncio in Python"
 editPost:
@@ -40,7 +40,7 @@ Asyncio is a powerful library in Python that enables writing concurrent code usi
 
 Asyncio has become a cornerstone for modern Python applications that need to handle asynchronous tasks efficiently. Its ability to manage multiple tasks simultaneously makes it an ideal choice for various real-world scenarios.
 
-### Meta Topics
+### Topics
 
 1. **Introduction to Asyncio**
    - Overview
