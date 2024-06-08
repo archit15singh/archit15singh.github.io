@@ -1,6 +1,6 @@
 baseURL: "https://archit15singh.github.io/"
 languageCode: "en-us"
-title: Archit's Space
+title: "Archit's Space"
 paginate: 5
 theme: hugo-PaperMod
 params:
@@ -8,7 +8,7 @@ params:
   ShowReadingTime: true
   env: production
   description: "Archit's blog on software engineering and more"
-  author: Archit Singh
+  author: "Archit Singh"
   defaultTheme: auto
   ShowShareButtons: true
   ShowReadingTime: true
