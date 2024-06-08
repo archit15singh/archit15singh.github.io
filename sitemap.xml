@@ -3,10 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://archit15singh.github.io/</loc>
-    <lastmod>2024-06-08T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/</loc>
-    <lastmod>2024-06-08T12:00:00+00:00</lastmod>
+    <lastmod>2024-05-07T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://archit15singh.github.io/tags/asyncio/</loc>
     <lastmod>2024-05-07T12:00:00+00:00</lastmod>
@@ -20,6 +17,9 @@
     <loc>https://archit15singh.github.io/tags/concurrency/</loc>
     <lastmod>2024-05-07T12:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://archit15singh.github.io/posts/</loc>
+    <lastmod>2024-05-07T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://archit15singh.github.io/tags/programming/</loc>
     <lastmod>2024-05-07T12:00:00+00:00</lastmod>
   </url><url>
@@ -31,6 +31,15 @@
   </url><url>
     <loc>https://archit15singh.github.io/tags/</loc>
     <lastmod>2024-05-07T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://archit15singh.github.io/posts/minimal-test-post/</loc>
+    <lastmod>2024-05-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/test/</loc>
+    <lastmod>2024-05-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://archit15singh.github.io/categories/testing/</loc>
+    <lastmod>2024-05-01T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://archit15singh.github.io/posts/2022-07-29-test-post/</loc>
     <lastmod>2022-07-29T06:07:58+00:00</lastmod>
