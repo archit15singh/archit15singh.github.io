@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://archit15singh.github.io/sitemap.xml
