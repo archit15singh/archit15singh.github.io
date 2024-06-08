@@ -3,6 +3,9 @@ languageCode: "en-us"
 title: Archit's Space
 paginate: 5
 theme: hugo-PaperMod
+params:
+  DateFormat: "January 2, 2006"
+  ShowReadingTime: true
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
