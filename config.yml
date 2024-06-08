@@ -1,4 +1,4 @@
-baseURL: "/" # Ensure baseURL uses https if your site is hosted with https
+baseURL: "https://archit15singh.github.io/"
 title: PaperMod
 paginate: 5
 theme: hugo-PaperMod
