@@ -1,26 +1,31 @@
-timeout: 30000
+# General Configuration
+timeout: 30000 # Timeout in milliseconds for Hugo operations
+
+# Enable inline shortcodes within content
 enableInlineShortcodes: true
 
+# Taxonomies Configuration
 taxonomies:
-  category: categories
-  tag: tags
-  series: series
+  category: categories # Categories taxonomy
+  tag: tags # Tags taxonomy
+  series: series # Series taxonomy
 
+# Privacy Settings for Embeds and Third-Party Content
 privacy:
   vimeo:
-    disabled: false
-    simple: true
+    disabled: false # Enable Vimeo embeds
+    simple: true # Use simpler, privacy-friendly Vimeo embeds
 
   twitter:
-    disabled: false
-    enableDNT: true
-    simple: true
-    disableInlineCSS: true
+    disabled: false # Enable Twitter embeds
+    enableDNT: true # Enable "Do Not Track" for Twitter embeds
+    simple: true # Use simpler, privacy-friendly Twitter embeds
+    disableInlineCSS: true # Disable Twitter's default inline CSS to prevent tracking
 
   instagram:
-    disabled: false
-    simple: true
+    disabled: false # Enable Instagram embeds
+    simple: true # Use simpler, privacy-friendly Instagram embeds
 
   youtube:
-    disabled: false
-    privacyEnhanced: true
+    disabled: false # Enable YouTube embeds
+    privacyEnhanced: true # Use YouTube's privacy-enhanced mode to restrict the use of cookies for tracking
