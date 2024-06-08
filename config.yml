@@ -6,6 +6,36 @@ theme: hugo-PaperMod
 params:
   DateFormat: "January 2, 2006"
   ShowReadingTime: true
+  env: production
+  description: "Archit's blog on software engineering and more"
+  author: Archit Singh
+  defaultTheme: auto
+  ShowShareButtons: true
+  ShowReadingTime: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowToc: true
+  images: ["papermod-cover.png"]
+  profileMode:
+    enabled: false
+    title: PaperMod
+    imageUrl: "#"
+  homeInfoParams:
+    Title: "Code | Write | Teach"
+    Content: >
+      Turning code into solutions, and solutions into stories
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/archit15singh"
+    - name: Rss
+      url: "index.xml"
+
+  assets:
+    disableHLJS: true
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -16,93 +46,62 @@ enableEmoji: true
 pygmentsUseClasses: true
 
 minify:
-    disableXML: true
+  disableXML: true
 
 languages:
-    en:
-        languageName: "English"
-        weight: 1
-        taxonomies:
-            category: categories
-            tag: tags
-            series: series
-        menu:
-            main:
-                - name: Archive
-                  url: archives
-                  weight: 5
-                - name: Search
-                  url: search/
-                  weight: 10
-                - name: Tags
-                  url: tags/
-                  weight: 10
-                - name: WiKi
-                  url: https://github.com/archit15singh/wiki/
-                - name: Discord
-                  url: https://discord.gg/ahpmTvhVmp
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Archive
+          url: archives
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+        - name: WiKi
+          url: https://github.com/archit15singh/wiki/
+        - name: Discord
+          url: https://discord.gg/ahpmTvhVmp
 
 outputs:
-    home:
-        - HTML
-        - RSS
-        - JSON
-
-params:
-    env: production
-    description: "Theme PaperMod - https://github.com/archit15singh"
-    author: Theme PaperMod
-    defaultTheme: auto
-    ShowShareButtons: true
-    ShowReadingTime: true
-    displayFullLangName: true
-    ShowPostNavLinks: true
-    ShowBreadCrumbs: true
-    ShowCodeCopyButtons: true
-    ShowRssButtonInSectionTermList: true
-    ShowToc: true
-    images: ["papermod-cover.png"]
-    profileMode:
-        enabled: false
-        title: PaperMod
-        imageUrl: "#"
-    homeInfoParams:
-        Title: "Code | Write | Teach"
-        Content: >
-            Turning code into solutions, and solutions into stories
-
-    socialIcons:
-        - name: github
-          url: "https://github.com/archit15singh"
-        - name: Rss
-          url: "index.xml"
-
-    assets:
-        disableHLJS: true
+  home:
+    - HTML
+    - RSS
+    - JSON
 
 markup:
-    goldmark:
-        renderer:
-            unsafe: true
-    highlight:
-        noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
 
 privacy:
-    vimeo:
-        disabled: false
-        simple: true
-    twitter:
-        disabled: false
-        enableDNT: true
-        simple: true
-    instagram:
-        disabled: false
-        simple: true
-    youtube:
-        disabled: false
-        privacyEnhanced: true
+  vimeo:
+    disabled: false
+    simple: true
+  twitter:
+    disabled: false
+    enableDNT: true
+    simple: true
+  instagram:
+    disabled: false
+    simple: true
+  youtube:
+    disabled: false
+    privacyEnhanced: true
+
 services:
-    instagram:
-        disableInlineCSS: true
-    twitter:
-        disableInlineCSS: true
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true
