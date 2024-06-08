@@ -11,7 +11,7 @@ description: "Learn how to use asyncio in real-world applications with practical
 cover:
   hidden: false
   relative: false
-  image: /images/uploads/james-webb-nebula-full-small.png
+  image: /images/uploads/cosmic-timetraveler.jpg
   alt: "Asyncio in Python"
   caption: "Asyncio in Python"
 editPost:
