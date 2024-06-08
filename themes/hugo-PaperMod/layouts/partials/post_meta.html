@@ -1,13 +1,7 @@
-{{- $scratch := newScratch }}
-
 {{- if not .Date.IsZero -}}
-{{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default "January 2, 2006" .Site.Params.DateFormat)))) }}
+  <span title="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</span>
 {{- end }}
 
 {{- if (.Param "ShowReadingTime") -}}
-{{- $scratch.Add "meta" (slice (printf "%d min" .ReadingTime)) }}
-{{- end }}
-
-{{- with ($scratch.Get "meta") }}
-{{- delimit . "&nbsp;·&nbsp;" -}}
+  &nbsp;·&nbsp;{{ printf "%d min" .ReadingTime }}
 {{- end -}}
