@@ -1,16 +1,22 @@
 baseURL: "https://archit15singh.github.io/"
 languageCode: "en-us"
-title: "Archit's Space"
+title: "Archit's Space - Software Engineering Insights"
 paginate: 5
 theme: hugo-PaperMod
+
 params:
+  # General Settings
   DateFormat: "January 2, 2006"
-  ShowReadingTime: true
   env: production
   description: "Archit's blog on software engineering and more"
   author: "Archit Singh"
   defaultTheme: auto
-  ShowShareButtons: true
+
+  # SEO Settings
+  metaDescription: "A blog by Archit Singh, sharing knowledge on software engineering, coding best practices, and technology insights."
+  canonicalURL: "https://archit15singh.github.io/"
+
+  # Display Settings
   ShowReadingTime: true
   displayFullLangName: true
   ShowPostNavLinks: true
@@ -19,15 +25,23 @@ params:
   ShowRssButtonInSectionTermList: true
   ShowToc: true
   images: ["papermod-cover.png"]
+
+  # Features
+  ShowShareButtons: true
+
+  # Profile Mode
   profileMode:
     enabled: false
     title: PaperMod
     imageUrl: "#"
+
+  # Home Info
   homeInfoParams:
     Title: "Code | Write | Teach"
     Content: >
-      Turning code into solutions, and solutions into stories
+      Turning code into solutions, and solutions into stories.
 
+  # Social Icons
   socialIcons:
     - name: github
       url: "https://github.com/archit15singh"
@@ -40,6 +54,7 @@ params:
     - name: Rss
       url: "index.xml"
 
+  # Assets
   assets:
     disableHLJS: true
 
