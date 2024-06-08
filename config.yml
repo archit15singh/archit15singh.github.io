@@ -73,10 +73,6 @@ languages:
         - name: Tags
           url: tags/
           weight: 10
-        - name: WiKi
-          url: https://github.com/archit15singh/wiki/
-        - name: Discord
-          url: https://discord.gg/ahpmTvhVmp
 
 outputs:
   home:
