@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 May 2024 12:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Jul 2024 12:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>God Programmer Traits</title>
+      <link>https://archit15singh.github.io/posts/2024-07-12-god-programmer/</link>
+      <pubDate>Fri, 12 Jul 2024 12:00:00 +0000</pubDate>
+      
+      <guid>https://archit15singh.github.io/posts/2024-07-12-god-programmer/</guid>
+      <description>Become a god programmer</description>
+    </item>
+    
     <item>
       <title>Asyncio in Real-World Applications: A Comprehensive Guide</title>
       <link>https://archit15singh.github.io/posts/2024-05-07-asyncio-in-real-world-applications-a-comprehensive-guide/</link>
@@ -99,17 +108,6 @@
       
       <guid>https://archit15singh.github.io/posts/emoji-support/</guid>
       <description>Guide to emoji usage in Hugo</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://archit15singh.github.io/posts/2024-07-12-god-programmer/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://archit15singh.github.io/posts/2024-07-12-god-programmer/</guid>
-      <description>For more detailed essays, you can explore the collection directly from the 97 Things Every Programmer Should Know collection. This collection provides valuable lessons and practical tips that can benefit both novices and experienced professionals in their respective fields.
-Code Quality and Maintenance Code Readability and Documentation
-Code Design Code Is Design Encapsulate Behavior, not Just State Code Layout Code Layout Matters Comment Only What the Code Cannot Say Writing Maintainable Code Write Code as If You Had to Support It for the Rest of Your Life Write Small Functions Using Examples Code Review and Refactoring</description>
     </item>
     
     

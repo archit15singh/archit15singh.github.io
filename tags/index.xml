@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 May 2024 12:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Jul 2024 12:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming</title>
+      <link>https://archit15singh.github.io/tags/programming/</link>
+      <pubDate>Fri, 12 Jul 2024 12:00:00 +0000</pubDate>
+      
+      <guid>https://archit15singh.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Asyncio</title>
       <link>https://archit15singh.github.io/tags/asyncio/</link>
@@ -26,15 +35,6 @@
       <pubDate>Tue, 07 May 2024 12:00:00 +0000</pubDate>
       
       <guid>https://archit15singh.github.io/tags/concurrency/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming</title>
-      <link>https://archit15singh.github.io/tags/programming/</link>
-      <pubDate>Tue, 07 May 2024 12:00:00 +0000</pubDate>
-      
-      <guid>https://archit15singh.github.io/tags/programming/</guid>
       <description></description>
     </item>
     
