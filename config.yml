@@ -61,7 +61,7 @@ params:
   # Assets
   assets:
     disableHLJS: true
-    disableFingerprinting: true
+    disableFingerprinting: false
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
