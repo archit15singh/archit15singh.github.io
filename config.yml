@@ -71,9 +71,19 @@ buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
 
+sitemap:
+  changefreq: "weekly"
+  priority: 0.5
+  filename: "sitemap.xml"
+
 minify:
   disableXML: true
   minifyOutput: true
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
 
 languages:
   en:

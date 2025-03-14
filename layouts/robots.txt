@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /tags/
+Disallow: /categories/
+Allow: /
+
+Sitemap: {{ .Site.BaseURL }}sitemap.xml 
