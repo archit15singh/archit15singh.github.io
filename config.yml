@@ -14,6 +14,7 @@ params:
   defaultTheme: auto
   comments: false
   disableScrollToTop: true
+  image_format: "webp"
 
   # SEO Settings
   metaDescription: "A blog by Archit Singh, sharing knowledge on software engineering, coding best practices, and technology insights."

@@ -11,7 +11,7 @@ description: "Learn how to use asyncio in real-world applications with practical
 cover:
   hidden: false
   relative: false
-  image: /images/uploads/cosmic-timetraveler.jpg
+  image: /images/uploads/cosmic-timetraveler.webp
   alt: "Asyncio in Python"
   caption: "Asyncio in Python"
 editPost:
@@ -32,6 +32,7 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: false
 UseHugoToc: true
+image_format: "webp"
 ---
 
 Asyncio is a powerful library in Python that enables writing concurrent code using the async/await syntax. It provides a framework for managing I/O-bound and high-level structured network code. Asyncio is widely used in web servers, database drivers, network protocols, and other applications that require concurrency without the complexity of traditional threading or multiprocessing.
