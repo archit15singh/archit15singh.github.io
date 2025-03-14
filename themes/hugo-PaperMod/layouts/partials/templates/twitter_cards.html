@@ -28,6 +28,6 @@
 {{- end }}
 <meta name="twitter:title" content="{{ .Title }}"/>
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>
-{{ with .Site.Social.twitter -}}
+{{ with (index (where .Site.Params.socialIcons "name" "twitter") 0).url | default (index (where .Site.Params.socialIcons "name" "x") 0).url -}}
 <meta name="twitter:site" content="@{{ . }}"/>
 {{ end -}}

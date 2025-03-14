@@ -1,7 +1,8 @@
 baseURL: "https://archit15singh.github.io/"
 languageCode: "en-us"
 title: "Archit's Space"
-paginate: 5
+pagination:
+  pagerSize: 5
 theme: hugo-PaperMod
 
 params:
@@ -106,8 +107,7 @@ privacy:
   vimeo:
     disabled: false
     simple: true
-  twitter:
-    disabled: false
+  x:
     enableDNT: true
     simple: true
   instagram:
@@ -120,5 +120,5 @@ privacy:
 services:
   instagram:
     disableInlineCSS: true
-  twitter:
+  x:
     disableInlineCSS: true
