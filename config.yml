@@ -69,6 +69,7 @@ pygmentsUseClasses: true
 
 minify:
   disableXML: true
+  minifyOutput: true
 
 languages:
   en:
