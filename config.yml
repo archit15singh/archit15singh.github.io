@@ -12,6 +12,8 @@ params:
   description: "Archit's blog on software engineering and more"
   author: "Archit Singh"
   defaultTheme: auto
+  comments: false
+  disableScrollToTop: true
 
   # SEO Settings
   metaDescription: "A blog by Archit Singh, sharing knowledge on software engineering, coding best practices, and technology insights."
