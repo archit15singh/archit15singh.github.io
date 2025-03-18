@@ -2,7 +2,7 @@ baseURL: "https://archit15singh.github.io/"
 languageCode: "en-us"
 title: "Archit's Space"
 pagination:
-  pagerSize: 5
+  pagerSize: 100
 theme: hugo-PaperMod
 
 params:
