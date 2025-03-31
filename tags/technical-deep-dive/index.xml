@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>JavaScript Execution Model on Archit&#39;s Space</title>
-    <link>https://archit15singh.github.io/tags/javascript-execution-model/</link>
-    <description>Recent content in JavaScript Execution Model on Archit&#39;s Space</description>
+    <title>Technical Deep Dive on Archit&#39;s Space</title>
+    <link>https://archit15singh.github.io/tags/technical-deep-dive/</link>
+    <description>Recent content in Technical Deep Dive on Archit&#39;s Space</description>
     <image>
       <url>https://archit15singh.github.io/papermod-cover.png</url>
       <link>https://archit15singh.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 Jul 2022 12:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/javascript-execution-model/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Jul 2022 12:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/technical-deep-dive/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>JS execution model in depth</title>
+      <title>How JavaScript Really Runs: Execution Model Explained</title>
       <link>https://archit15singh.github.io/posts/2022-07-29-js-execution-model-in-depth/</link>
       <pubDate>Fri, 29 Jul 2022 12:00:00 +0000</pubDate>
       
