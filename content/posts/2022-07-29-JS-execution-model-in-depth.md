@@ -121,7 +121,7 @@ And just like in theater: no actor can speak two lines at the same time. JavaScr
 
 ---
 
-## 🧩 2. **Core Architecture of JavaScript Runtime**
+## 🧩 2. Core Architecture of JavaScript Runtime
 
 To understand *how* JavaScript runs your code, we need to dissect **what components make up the JS runtime**.  
 At the core, JavaScript doesn't run in a vacuum — it needs an **engine** to interpret the code, and a **host environment** to provide real-world capabilities like networking, timers, and file access.
@@ -130,7 +130,7 @@ Let’s peel this layer by layer.
 
 ---
 
-### 🔹 2.1. **The JavaScript Engine**
+### 🔹 2.1. The JavaScript Engine
 
 #### ✅ Literal meaning:
 The **engine** is the heart of the JavaScript runtime. It's the software that understands and executes ECMAScript — the official JavaScript language specification.
@@ -159,7 +159,7 @@ No DOM. No timers. No file I/O. Just language-level stuff.
 
 ---
 
-### 🔹 2.2. **The Host Environment**
+### 🔹 2.2. The Host Environment
 
 #### ✅ Literal meaning:
 This is the **external system** embedding the JS engine.  
@@ -201,7 +201,7 @@ The actor can memorize lines (JavaScript), but can't **do** anything — like tu
 
 ---
 
-### 🔹 2.3. **Engine vs Host: Division of Concerns**
+### 🔹 2.3. Engine vs Host: Division of Concerns
 
 #### ✅ Literal meaning:
 JavaScript engines and host environments play **distinct but collaborative roles**.
@@ -336,7 +336,7 @@ This is **unstructured memory** — managed automatically by the garbage collect
 
 ---
 
-### 🧠 2. **Call Stack**  
+### 🧠 2. Call Stack
 > 🧾 Where functions are executed, tracked, and returned — one frame at a time.
 
 - JavaScript uses a **stack** (LIFO) to manage **function calls**.
@@ -363,7 +363,7 @@ outer();
 
 ---
 
-### 🧠 3. **Job/Task Queue**  
+### 🧠 3. Job/Task Queue
 > 🕓 A FIFO queue of pending **asynchronous callbacks** to run when the stack is empty.
 
 - Used by async actions: `setTimeout`, `fetch`, Promises
@@ -483,11 +483,11 @@ If you understand how the stack and queue interact, you can **predict and contro
 
 ---
 
-## 4. 📦 **Execution Contexts & Call Stack**
+## 4. 📦 Execution Contexts & Call Stack
 
 ---
 
-### 4.1. 🧠 **What is an Execution Context?**
+### 4.1. 🧠 What is an Execution Context?
 
 An **execution context** (also called a *stack frame*) is the smallest unit of JS code execution.  
 Whenever JavaScript runs any code—be it global, a function, or an eval—it wraps it in an execution context.
@@ -574,7 +574,7 @@ Each context stores runtime-bound values:
 
 ---
 
-### 4.2. 🔁 **Function Invocation & Stack Frames**
+### 4.2. 🔁 Function Invocation & Stack Frames
 
 When a function is invoked:
 1. JS creates a new **execution context** (stack frame)
@@ -615,7 +615,7 @@ foo();
 
 ---
 
-### ⚡ 4.3. **Tail Call Optimization (TCO)**
+### ⚡ 4.3. Tail Call Optimization (TCO)
 
 **Tail Call** = when a function returns the result of *calling another function directly*  
 (i.e., no more work left to do after the call).
@@ -849,7 +849,7 @@ Understanding realms is a **superpower** — especially if you’re debugging st
 
 ---
 
-## 6. 🌐 **Agent Types in the Web Platform**
+## 6. 🌐 Agent Types in the Web Platform
 
 The web isn't just one giant thread where all JavaScript code runs together. Instead, it's composed of multiple **agents** — isolated, independent runtimes that can each execute JS code with their own **heap**, **call stack**, and **event loop**. Understanding these agent types is crucial for mastering concurrency, memory isolation, and performance design patterns in modern web development.
 
@@ -857,7 +857,7 @@ Let’s break down the main types of agents and why they matter:
 
 ---
 
-### 6.1 🪟 **Main Window Agent**
+### 6.1 🪟 Main Window Agent
 
 This is the agent you interact with most — the **tab** in your browser running HTML, CSS, and JavaScript. It includes:
 - The global `window` object
@@ -875,7 +875,7 @@ Multiple same-origin iframes can *share* the same agent, meaning they share the 
 
 ---
 
-### 6.2 👷 **Dedicated Worker Agent**
+### 6.2 👷 Dedicated Worker Agent
 
 Created via `new Worker()`, a **Dedicated Worker** runs JS in a completely separate agent — its own isolated thread. It doesn’t have access to the DOM, but can perform heavy computations without blocking the main thread.
 
@@ -896,7 +896,7 @@ worker.postMessage({ task: "compute" });
 
 ---
 
-### 6.3 🤝 **Shared Worker Agent**
+### 6.3 🤝 Shared Worker Agent
 
 Shared Workers are like Dedicated Workers, but **shared across multiple same-origin contexts** — tabs, iframes, or windows. They persist beyond a single page and can maintain shared state (like a single WebSocket connection).
 
@@ -906,7 +906,7 @@ Shared Workers are like Dedicated Workers, but **shared across multiple same-ori
 
 ---
 
-### 6.4 🛰 **Service Worker Agent**
+### 6.4 🛰 Service Worker Agent
 
 A **Service Worker** is a proxy-like agent that sits between your web app and the network. It doesn’t have a UI and cannot touch the DOM, but it can:
 - Intercept network requests
@@ -922,7 +922,7 @@ A **Service Worker** is a proxy-like agent that sits between your web app and th
 
 ---
 
-### 6.5 🎨 **Worklet Agent**
+### 6.5 🎨 Worklet Agent
 
 **Worklets** are ultra-lightweight, low-latency agents used for frame-by-frame operations in:
 - **AudioWorklet** (real-time DSP)
@@ -975,7 +975,7 @@ You, as a developer, control which type of agent runs your code — and how they
 
 ---
 
-## 7. 🔁 **Job Queue & Event Loop**
+## 7. 🔁 Job Queue & Event Loop
 
 Modern JavaScript feels synchronous — but behaves asynchronously. That paradox is powered by one of the most elegant constructs in programming: the **event loop**.
 
@@ -1110,7 +1110,7 @@ You’re not just writing code — you’re orchestrating a symphony of jobs in 
 
 ---
 
-## 8. 🧠 **Concurrency & Memory Sharing**
+## 8. 🧠 Concurrency & Memory Sharing
 
 In the world of JavaScript, we often talk about *single-threaded execution*, the *event loop*, and *asynchronous callbacks*. But what happens when multiple threads—*agents*, in ECMAScript speak—need to **share memory and coordinate**? That’s where **agent clusters**, **shared memory**, and **atomic operations** come in.
 
@@ -1118,7 +1118,7 @@ This section dives into JavaScript’s *low-level concurrency primitives*, showi
 
 ---
 
-### 8.1 ⚡ **Agent Clusters: Who Can Share Memory with Whom?**
+### 8.1 ⚡ Agent Clusters: Who Can Share Memory with Whom?
 
 In JavaScript, every independent execution context—like a tab, worker, or iframe—is called an **agent**. But not all agents are created equal. Only some can **share memory**.
 
@@ -1144,7 +1144,7 @@ Think of **agent clusters** like secure bubbles. If two agents are in the same b
 
 ---
 
-### 8.2 🧠 **Shared Memory with SharedArrayBuffer**
+### 8.2 🧠 Shared Memory with SharedArrayBuffer
 
 JavaScript is traditionally **copy-by-value** when agents communicate. That’s how `postMessage()` works: it sends a **structured clone** of the data.
 
@@ -1164,7 +1164,7 @@ Now both the main thread and the worker share that memory. But shared access mea
 
 ---
 
-### 8.3 🔒 **Synchronizing with Atomics**
+### 8.3 🔒 Synchronizing with Atomics
 
 Just because memory is shared doesn’t mean it’s safe.
 
@@ -1196,7 +1196,7 @@ This pattern enables **thread-style coordination** between agents — like build
 
 ---
 
-### 8.4 📏 **Memory Consistency and Data Races**
+### 8.4 📏 Memory Consistency and Data Races
 
 JavaScript’s memory model ensures **predictable behavior** only if you follow certain rules.
 
@@ -1354,7 +1354,7 @@ Use the power. Know the cost.
 
 ---
 
-## 🔗 10. **Putting It All Together**
+## 🔗 10. Putting It All Together
 
 ---
 
@@ -1364,7 +1364,7 @@ Everything we’ve explored — stacks, heaps, queues, jobs, realms, agents, wor
 
 ---
 
-### 10.1 ⚙️ **Full Execution Trace**
+### 10.1 ⚙️ Full Execution Trace
 
 Let’s simulate a complete run of a JavaScript program involving:
 
@@ -1433,7 +1433,7 @@ console.log("End");
 
 ---
 
-### 10.2 🧠 **Mental Models & Visuals**
+### 10.2 🧠 Mental Models & Visuals
 
 ---
 
@@ -1499,17 +1499,6 @@ Timeout 1
            ├─ Own GlobalThis
            └─ Shared Stack/Queue (if same-origin)
 ```
-
----
-
-### 🎯 Interview Insight
-
-If you truly understand this unified flow, you can:
-
-- Predict async code output reliably.
-- Avoid callback hell and race conditions.
-- Understand Node.js concurrency patterns.
-- Handle shared memory in web workers safely.
 
 ---
 
