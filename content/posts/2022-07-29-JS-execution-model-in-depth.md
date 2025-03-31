@@ -36,17 +36,7 @@ image_format: "webp"
 
 
 # How JavaScript Really Runs: From Engines to Event Loop (Execution Model Deep Dive)
----
 
-# 🧠 JavaScript Execution Model: Hierarchical Concept Tree
-
----
-
-## 1. 🔰 **Introduction & Philosophy**
-   - What is the JavaScript Execution Model?
-   - Why this matters (performance, async, correctness)
-   - Real-world analogy (Stage manager, Chef, CPU scheduler)
-   - Spec vs Engine (ECMAScript vs V8/SpiderMonkey)
 
 ---
 
