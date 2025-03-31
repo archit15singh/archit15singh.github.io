@@ -1,17 +1,17 @@
 ---
-title: "How JavaScript Really Runs: Execution Model Explained"
+title: "How JavaScript Really Runs: From Engines to Event Loop (Execution Model Deep Dive)"
 date: 2022-07-29T12:00:00.000Z
 tags:
   - JavaScript
   - Technical Deep Dive
 categories: JavaScript
-description: "An in-depth breakdown of the JS execution model"
+description: "Explore how JavaScript code actually runs: from the engine and host environment to call stacks, queues, realms, agents, and async behavior — explained with mental models, real code, and execution traces."
 cover:
   hidden: false
   relative: false
   image: /images/uploads/cosmic-timetraveler.webp
-  alt: "JS execution model"
-  caption: "JS execution model"
+  alt: "JS deep dive"
+  caption: "JS deep dive"
 editPost:
   URL: ""
   Text: ""
@@ -35,7 +35,7 @@ image_format: "webp"
 
 
 
-# How JavaScript Really Runs: Execution Model Explained
+# How JavaScript Really Runs: From Engines to Event Loop (Execution Model Deep Dive)
 ---
 
 # 🧠 JavaScript Execution Model: Hierarchical Concept Tree
