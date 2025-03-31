@@ -509,3 +509,198 @@ I can:
 - Break down how two agents use shared memory safely
 
 Let me know your next target — I’m ready to go recursive on it.
+
+Great! Let's continue the **recursive breakdown** from where we left off. We just finished:
+
+> "An agent also has a single memory model, indicating whether it's little-endian, whether it can be synchronously blocked, whether atomic operations are lock-free, etc."
+
+Now, the next part of the MDN doc says:
+
+---
+
+## 📌 Next block:
+
+> ### “An agent on the web can be one of the following:  
+> - A Similar-origin window agent, which contains various Window objects which can potentially reach each other, either directly or by using `document.domain`. If the window is origin-keyed, then only same-origin windows can reach each other.  
+> - A Dedicated worker agent containing a single `DedicatedWorkerGlobalScope`.  
+> - A Shared worker agent containing a single `SharedWorkerGlobalScope`.  
+> - A Service worker agent containing a single `ServiceWorkerGlobalScope`.  
+> - A Worklet agent containing a single `WorkletGlobalScope`.”
+
+---
+
+### ✅ Let's go **line-by-line and recursively break this down**:
+
+---
+
+### 🔹 Line 1:
+> **"An agent on the web can be one of the following:"**
+
+🧠 **Big idea**: On the web, **each type of “execution environment”** (like a browser tab, a worker, etc.) is backed by its own **agent** — meaning it has its own **heap**, **stack**, and **queue**.
+
+> Think of each agent as its own little JS runtime.
+
+---
+
+### 🔹 Line 2:
+> **"A Similar-origin window agent, which contains various Window objects which can potentially reach each other, either directly or by using `document.domain`. If the window is origin-keyed, then only same-origin windows can reach each other."**
+
+### 🧠 What's going on here?
+
+A **window agent** = Your main page + all **same-origin iframes** you embed in it.
+
+#### 🔄 Shared Agent Example:
+```html
+<!-- index.html -->
+<iframe src="https://yourdomain.com/page.html"></iframe>
+```
+
+These two can **share memory and synchronously access each other**:
+```js
+// From parent page
+console.log(window.frames[0].document.body);
+```
+
+🧪 But if the iframe is cross-origin, access is blocked for security.
+
+#### ⚠️ Security twist:
+If `document.domain` is set (deprecated but still used), two **subdomains** can loosen the restriction a bit.
+
+```js
+// both pages set
+document.domain = "example.com";
+```
+
+Then they can reach each other, even if one is `a.example.com` and one is `b.example.com`.
+
+---
+
+### 🔹 Line 3:
+> **"A Dedicated worker agent containing a single `DedicatedWorkerGlobalScope`."**
+
+### 🧠 What is a **Dedicated Worker Agent**?
+
+When you create a **Web Worker** in the browser:
+
+```js
+const worker = new Worker("worker.js");
+```
+
+That script (`worker.js`) runs in its own **dedicated worker agent** — with its **own heap, queue, and stack** — completely separate from the main thread.
+
+🔁 Communication is done **asynchronously** via `postMessage()` — like this:
+
+```js
+// main.js
+worker.postMessage("hi");
+
+// worker.js
+onmessage = (e) => {
+  console.log("Got:", e.data);
+};
+```
+
+> ⚠️ You **cannot** synchronously access memory between main thread and a dedicated worker (unless using `SharedArrayBuffer`).
+
+---
+
+### 🔹 Line 4:
+> **"A Shared worker agent containing a single `SharedWorkerGlobalScope`."**
+
+### 🧠 Difference between **Shared Worker** and **Dedicated Worker**?
+
+- **Dedicated Worker**: Only 1 page can talk to it.
+- **Shared Worker**: Multiple tabs (from the same origin) can talk to the same worker.
+
+```js
+// In two tabs of the same site:
+const sharedWorker = new SharedWorker("worker.js");
+```
+
+Now both tabs talk to the same long-living agent!
+
+Why use this?
+- Share data between tabs
+- Maintain a centralized cache
+- Reduce memory usage
+
+📦 But again — it's **a separate agent** with **its own stack/heap/queue**.
+
+---
+
+### 🔹 Line 5:
+> **"A Service worker agent containing a single `ServiceWorkerGlobalScope`."**
+
+### 🧠 What’s special about **Service Workers**?
+
+- They’re **background scripts** that sit between your site and the network.
+- Intercept requests (`fetch`), cache stuff, serve offline pages.
+
+```js
+// Registering a service worker
+navigator.serviceWorker.register("sw.js");
+```
+
+🧠 They:
+- Outlive pages
+- Don’t have access to DOM
+- Run in **their own agent**
+
+💡 Use case:
+```js
+self.addEventListener("fetch", (event) => {
+  event.respondWith(caches.match(event.request));
+});
+```
+
+Service workers have a **completely isolated memory space** and no direct access to the DOM.
+
+---
+
+### 🔹 Line 6:
+> **"A Worklet agent containing a single `WorkletGlobalScope`."**
+
+### 🧠 What’s a **Worklet**?
+
+Advanced topic — used for things like:
+- **CSS Paint API**
+- **Web Audio API (AudioWorklet)**
+- **Animations**
+
+🔊 Example: An `AudioWorklet` lets you do **low-latency audio processing** on a separate thread (agent).
+
+```js
+// In main thread
+audioContext.audioWorklet.addModule("processor.js");
+
+// processor.js
+class MyProcessor extends AudioWorkletProcessor {
+  process(inputs, outputs, parameters) {
+    // run audio processing
+    return true;
+  }
+}
+registerProcessor("my-processor", MyProcessor);
+```
+
+These agents are **super-lightweight**, meant for **tiny, focused jobs** like drawing or audio frames.
+
+---
+
+## 🧠 Summary:
+
+| Agent Type | Runs in | Has Own Stack/Heap/Queue? | Use Case |
+|------------|---------|---------------------------|----------|
+| Similar-origin Window Agent | Main page + iframes (same origin) | ✅ Yes | Regular DOM pages |
+| Dedicated Worker Agent | Worker created via `new Worker()` | ✅ Yes | Offload CPU-intensive tasks |
+| Shared Worker Agent | Shared among multiple tabs | ✅ Yes | Tab-to-tab communication |
+| Service Worker Agent | Background fetch/caching logic | ✅ Yes | Offline apps, PWA |
+| Worklet Agent | Lightweight visual/audio tasks | ✅ Yes | Audio, CSS, animations |
+
+---
+
+You want to continue to the **next part** after this? It’s:
+
+> **“In other words, each worker creates its own agent, while one or more windows may be within the same agent—usually a main document and its similar-origin iframes…”**
+
+Just say the word and we’ll keep recursively breaking it down with visuals and mental models.
