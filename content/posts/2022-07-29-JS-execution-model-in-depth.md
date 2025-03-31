@@ -1,4 +1,3 @@
-
 ---
 title: "JS execution model in depth"
 date: 2022-07-29T12:00:00.000Z
