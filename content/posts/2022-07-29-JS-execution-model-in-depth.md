@@ -1,9 +1,9 @@
 ---
-title: "JS execution model in depth"
+title: "How JavaScript Really Runs: Execution Model Explained"
 date: 2022-07-29T12:00:00.000Z
 tags:
   - JavaScript
-  - JavaScript Execution Model
+  - Technical Deep Dive
 categories: JavaScript
 description: "An in-depth breakdown of the JS execution model"
 cover:
@@ -35,7 +35,7 @@ image_format: "webp"
 
 
 
-# JS execution model
+# How JavaScript Really Runs: Execution Model Explained
 ---
 
 # 🧠 JavaScript Execution Model: Hierarchical Concept Tree
