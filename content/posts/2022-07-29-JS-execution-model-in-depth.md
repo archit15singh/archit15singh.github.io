@@ -2109,3 +2109,130 @@ Want to go deeper into:
 - Simulation of race conditions?
 
 Let’s pick a direction!
+🔥 Awesome catch — let’s audit what **I missed** from your full MDN snippet breakdown.  
+Here’s a **delta analysis**: what was **not fully covered** or **only partially explored** in my previous reply.
+
+---
+
+## 🔍 MISSED / INCOMPLETE EXPLANATIONS:
+
+---
+
+### 1. ✅ **Agent Cluster Creation Criteria (subtle details)**
+
+> "When creating an agent (such as by spawning a worker), there are some criteria for whether it's in the same cluster..."
+
+🔸 **Missed:**  
+I didn’t explain **how the browser decides** whether a new agent goes into the same cluster or a new one.
+
+🔬 Should’ve emphasized:
+- Cluster assignment depends on:
+  - **Type of worker** (`DedicatedWorker` vs `SharedWorker`)
+  - **Origin relationship** (same-origin, cross-origin)
+  - **Opener/ancestor hierarchy**
+- **Not just “who created whom”**, but also **execution context** and **memory isolation** policy.
+
+---
+
+### 2. 📌 **"For the exact algorithm, check the HTML spec."**
+
+🧠 This implies: there’s a **deterministic cluster decision algorithm** in the HTML spec.  
+I **missed mentioning** this exists and is centralized in the spec.
+
+Could’ve briefly summarized:
+> 🧩 The cluster assignment is based on origin, opener/ancestor relationship, and agent type — enforced by the HTML spec for predictable memory boundaries.
+
+---
+
+### 3. ⚠️ **Structured cloning vs postMessage vs SharedArrayBuffer**
+
+> "On the web, memory is shared via the postMessage() method."
+
+🔸 **What I missed:**  
+The line implies **postMessage is the only mechanism**, but that’s nuanced.
+
+- `postMessage()` doesn't actually *share* memory unless you pass `SharedArrayBuffer` explicitly.
+- Structured cloning = copy, not share.
+- Missed calling out: `postMessage()` can **include** a `SharedArrayBuffer` in the **transfer list** for memory sharing.
+
+💡 Should’ve said:  
+> postMessage() is a channel, but *shared memory* only happens if you explicitly transfer `SharedArrayBuffer`.
+
+---
+
+### 4. 🧪 **Interleaving Semantics for Data Race-Free Programs**
+
+> "Data race free programs have interleaving semantics..."
+
+🔍 Missed explaining:
+- What “**interleaving semantics**” actually means.
+- Why race-free means you can reason as if each agent’s steps are executed in **some sequential order** (like cooperative multitasking).
+
+🧬 Could've added metaphor:
+> Imagine each agent takes a turn writing on a shared whiteboard one step at a time. If they follow the rules (Atomics or no overlap), the whiteboard always makes sense.
+
+---
+
+### 5. ⚠️ **Non-Atomic Races: Predictability & Access Size**
+
+> "...so long as atomic operations are not involved in any data races and the operations that race all have the same access size."
+
+🔍 I skipped this precision:
+- **Access size matters** for predictability
+- Mixing 1-byte (`Int8`) and 4-byte (`Int32`) on the same address can cause value tearing
+
+💡 Strongly-typed memory = each memory cell should only be accessed by one "type" and access size consistently.
+
+---
+
+### 6. ❗ **Memory tearing** explanation was too brief
+
+> "...racing accesses will not 'tear' (bits of their values will not be mixed)."
+
+🔬 Could’ve added:
+- **Tearing** = e.g., reading a 32-bit value but only getting half updated bytes (2 from old write, 2 from new write)
+- Only happens in non-atomic interleaved updates on the **same address with no guarantees**
+
+---
+
+### 7. ❌ **Distinction between Promise Blocking and Agent Blocking**
+
+> "This is different from waiting on a promise... it halts the entire agent..."
+
+💡 I mentioned it, but not clearly enough.
+
+Should’ve deeply emphasized:
+- `await` on a Promise = **non-blocking** → event loop keeps spinning
+- `Atomics.wait()` = **fully blocking** → freezes the agent’s thread until notified
+
+---
+
+### 8. ⛔ **Agent Cluster Termination Strategy #2**
+
+> "The spec also allows a second strategy... identify the termination and the agent that was terminated..."
+
+🔍 Totally skipped this:
+- There’s a **planned spec strategy** for “partial cluster fault-tolerance” (like crash recovery)
+- ⚠️ But not implemented in browsers yet
+
+💡 Could’ve mentioned:
+> Future APIs might let one agent detect another’s termination and respond — but no browser supports it yet.
+
+---
+
+## ✅ Recap: What I Need to Add or Expand
+
+| Missed Point | Fix Needed |
+|--------------|------------|
+| Agent cluster assignment logic | Clarify when/why new clusters are created |
+| Reference to HTML spec algo | Add that there’s a central algorithm |
+| Clarify postMessage vs shared memory | Add nuance on postMessage + SAB |
+| Interleaving semantics | Visual metaphor + intuition |
+| Access size constraints in races | Mention alignment, strongly typed memory |
+| Memory tearing | Add byte-level example |
+| Blocking: Promise vs Atomics | Emphasize non-blocking vs blocking |
+| Spec's unimplemented recovery API | Mention future fault-tolerant designs |
+
+---
+
+Want me to patch in these improvements into the previous breakdown? I can thread them seamlessly or highlight them in a new focused section.
