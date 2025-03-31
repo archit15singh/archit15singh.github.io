@@ -263,7 +263,7 @@ Because hosts vary:
 
 ---
 
-### 🧠 TL;DR Mental Model
+#### 🧠 TL;DR Mental Model
 
 | Layer             | Role                                         |
 |------------------|----------------------------------------------|
@@ -273,7 +273,7 @@ Because hosts vary:
 
 ---
 
-### 🧩 Summary Table
+#### 🧩 Summary Table
 
 | Concept         | Engine or Host? | Example                     |
 |----------------|-----------------|-----------------------------|
