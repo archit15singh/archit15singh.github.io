@@ -39,6 +39,15 @@
     </item>
     
     <item>
+      <title>JS execution model in depth</title>
+      <link>https://archit15singh.github.io/posts/2022-07-29-js-execution-model-in-depth/</link>
+      <pubDate>Fri, 29 Jul 2022 12:00:00 +0000</pubDate>
+      
+      <guid>https://archit15singh.github.io/posts/2022-07-29-js-execution-model-in-depth/</guid>
+      <description>An in-depth breakdown of the JS execution model</description>
+    </item>
+    
+    <item>
       <title>Test Post</title>
       <link>https://archit15singh.github.io/posts/2022-07-29-test-post/</link>
       <pubDate>Fri, 29 Jul 2022 06:07:58 +0000</pubDate>
