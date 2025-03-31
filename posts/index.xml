@@ -39,12 +39,12 @@
     </item>
     
     <item>
-      <title>How JavaScript Really Runs: Execution Model Explained</title>
+      <title>How JavaScript Really Runs: From Engines to Event Loop (Execution Model Deep Dive)</title>
       <link>https://archit15singh.github.io/posts/2022-07-29-js-execution-model-in-depth/</link>
       <pubDate>Fri, 29 Jul 2022 12:00:00 +0000</pubDate>
       
       <guid>https://archit15singh.github.io/posts/2022-07-29-js-execution-model-in-depth/</guid>
-      <description>An in-depth breakdown of the JS execution model</description>
+      <description>Explore how JavaScript code actually runs: from the engine and host environment to call stacks, queues, realms, agents, and async behavior — explained with mental models, real code, and execution traces.</description>
     </item>
     
     <item>
