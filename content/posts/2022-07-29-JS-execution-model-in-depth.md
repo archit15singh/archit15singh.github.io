@@ -35,7 +35,6 @@ image_format: "webp"
 
 # How JavaScript Really Runs: From Engines to Event Loop (Execution Model Deep Dive)
 
----
 ## 🚀 What This Series Will Teach You
 
 This blog post is the first step of a **multi-part deep dive** into the JS execution model. You’ll learn:
@@ -847,18 +846,6 @@ This is **realm-level isolation**, but **still within the same agent**. Great fo
 JavaScript realms are like alternate realities — isolated yet interconnected in subtle ways. They influence how your objects behave, how identity is checked, and how memory is managed.
 
 Understanding realms is a **superpower** — especially if you’re debugging strange prototype issues or building frameworks and platforms. Master this layer, and you’re one step closer to mastering the entire JavaScript execution model.
-
----
-
-## 6. 🌐 **Agent Types in the Web Platform**
-### 6.1. Main Window Agent
-### 6.2. Dedicated Worker Agent
-### 6.3. Shared Worker Agent
-### 6.4. Service Worker Agent
-### 6.5. Worklet Agent
-   - Each has its own heap, stack, queue
-   - Communication model (`postMessage`, SharedArrayBuffer)
-
 
 ---
 
