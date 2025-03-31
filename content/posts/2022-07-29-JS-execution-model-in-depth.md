@@ -126,23 +126,6 @@ Each section will build your mental model — with visuals, real code traces, in
 
 ---
 
-## 2. 🧩 **Core Architecture of JavaScript Runtime**
-### 2.1. The JavaScript Engine
-   - What the engine provides (ECMAScript features)
-   - Examples: V8, SpiderMonkey
-   - Responsibilities (parsing, execution, optimization)
-
-### 2.2. The Host Environment
-   - Browser vs Node.js vs Deno
-   - Provided APIs: DOM, `setTimeout`, `fs`, `fetch`
-   - Real-world metaphor: actor vs stage
-
-### 2.3. Engine vs Host: Division of Concerns
-   - Language features vs Platform capabilities
-   - Why JS code looks different across environments
-
----
-
 ## 🧩 2. **Core Architecture of JavaScript Runtime**
 
 To understand *how* JavaScript runs your code, we need to dissect **what components make up the JS runtime**.  
@@ -325,7 +308,7 @@ Because hosts vary:
 
 ---
 
-# 🧠 Agent Execution Model — The Secret Engine Behind JavaScript’s Run-Time
+## 3. 🧠 Agent Execution Model — The Secret Engine Behind JavaScript’s Run-Time
 
 JavaScript may *look* like a language, but it **runs** like a machine. Under the hood, every line of your JavaScript code is managed by a tiny execution engine called an **agent**.
 
@@ -519,22 +502,6 @@ Understanding the **agent model** gives you deep insight into:
 When your UI freezes or `console.log` appears out of order — you’re seeing the **agent lifecycle in action**.  
 If you understand how the stack and queue interact, you can **predict and control** the timing of your code.
 
----
-
-## 4. 📦 **Execution Contexts & Call Stack**
-### 4.1. What is an Execution Context?
-   - Stack frame structure
-   - Lexical environments
-   - Realm association
-   - `this`, `arguments`, and bindings
-
-### 4.2. Function Invocation & Stack Frames
-   - How function calls push/pull stack
-   - `return`, `throw`, and unwind behavior
-
-### 4.3. Tail Call Optimization (TCO)
-   - Concept, usage, engine support caveats
-
 
 ---
 
@@ -724,25 +691,7 @@ function factorial(n, acc = 1) {
 
 ---
 
-
-## 5. 🌀 **Realms**
-### 5.1. What is a Realm?
-   - A sandboxed global JS environment
-   - One realm = one global object
-
-### 5.2. Realm Internals
-   - Intrinsic objects (e.g. `Array`, `Object`)
-   - Global variables, `globalThis`, `window`
-   - Template literal caches
-
-### 5.3. Cross-Realm Pitfalls
-   - `instanceof` fails across realms
-   - Use `Array.isArray()` and `Object.prototype.toString.call`
-
-
----
-
-# 🌀 Understanding Realms: The Hidden Worlds of JavaScript Execution
+## 5. 🌀 Understanding Realms: The Hidden Worlds of JavaScript Execution
 
 When we talk about JavaScript execution, we often focus on the call stack, the event loop, or async jobs. But there’s a **deeper architectural layer** that rarely gets discussed—**Realms**.
 
