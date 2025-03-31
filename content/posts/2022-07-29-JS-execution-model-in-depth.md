@@ -36,6 +36,20 @@ image_format: "webp"
 # How JavaScript Really Runs: From Engines to Event Loop (Execution Model Deep Dive)
 
 ---
+## 🚀 What This Series Will Teach You
+
+This blog post is the first step of a **multi-part deep dive** into the JS execution model. You’ll learn:
+
+- How JavaScript handles synchronous and asynchronous code
+- What the call stack, job queue, microtasks, and event loop really are
+- How realms, agents, and execution contexts work together
+- How engines like V8 optimize while staying spec-compliant
+- Why seemingly simple code can behave unexpectedly — and how to reason through it
+
+Each section will build your mental model — with visuals, real code traces, intuitive metaphors, and runtime behavior breakdowns.
+
+> 📌 Whether you're building a single-page app, debugging race conditions, or writing high-performance server-side JS — knowing *how JS really runs* is your ultimate superpower.
+---
 
 ## 1. 🎯 Introduction: What is the JavaScript Execution Model?
 
@@ -105,22 +119,6 @@ Let’s break it down with a metaphor:
 The actor (engine) can’t improvise wildly — it must follow the script (your code) — but the stage manager decides when scenes start, what props are ready, and how long each act lasts.
 
 And just like in theater: no actor can speak two lines at the same time. JavaScript, too, is single-threaded — one line at a time, unless you start spinning off background actors (Web Workers, Service Workers).
-
----
-
-## 🚀 What This Series Will Teach You
-
-This blog post is the first step of a **multi-part deep dive** into the JS execution model. You’ll learn:
-
-- How JavaScript handles synchronous and asynchronous code
-- What the call stack, job queue, microtasks, and event loop really are
-- How realms, agents, and execution contexts work together
-- How engines like V8 optimize while staying spec-compliant
-- Why seemingly simple code can behave unexpectedly — and how to reason through it
-
-Each section will build your mental model — with visuals, real code traces, intuitive metaphors, and runtime behavior breakdowns.
-
-> 📌 Whether you're building a single-page app, debugging race conditions, or writing high-performance server-side JS — knowing *how JS really runs* is your ultimate superpower.
 
 ---
 
