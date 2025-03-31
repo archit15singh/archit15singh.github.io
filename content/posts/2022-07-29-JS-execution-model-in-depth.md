@@ -33,13 +33,11 @@ UseHugoToc: true
 image_format: "webp"
 ---
 
-
-
 # How JavaScript Really Runs: From Engines to Event Loop (Execution Model Deep Dive)
 
 ---
 
-# 🎯 Introduction: What is the JavaScript Execution Model?
+## 1. 🎯 Introduction: What is the JavaScript Execution Model?
 
 JavaScript might *look* simple — you write `let x = 10`, it runs. You call a function, it executes. But under the hood, a sophisticated system choreographs every line you write. That system is called the **JavaScript execution model**.
 
@@ -288,23 +286,6 @@ Because hosts vary:
 | `fs`            | Host (Node.js)  | File system access          |
 | `console`       | Host            | Logging (defined per host)  |
 | `function`, `=>`| Engine          | Language-level syntax       |
-
----
-
-## 3. 🧠 **Agent Execution Model**
-### 3.1. What is an Agent?
-   - A self-contained JS executor (stack, heap, queue)
-   - Think: one thread of execution
-   - Single-threaded illusion
-
-### 3.2. Agent Data Structures
-   - Heap → Stores objects/functions
-   - Stack → Execution contexts (LIFO)
-   - Queue → Job queue / task queue (FIFO)
-
-### 3.3. Agent Lifecycle
-   - Job starts → callback runs → stack fills → stack empties
-   - Generator/yield → paused execution contexts
 
 ---
 
@@ -1009,29 +990,6 @@ You, as a developer, control which type of agent runs your code — and how they
 
 ---
 
-
-## 7. 🔁 **Job Queue & Event Loop**
-### 7.1. What is a Job?
-   - Callback + Execution Context = Job
-   - Examples: Promises, `setTimeout`
-
-### 7.2. Event Loop
-   - Pulling jobs from queue
-   - Run-to-completion guarantee
-   - Stack must be empty before next job runs
-
-### 7.3. Microtasks vs Macrotasks
-   - Promises (`.then`) vs timers
-   - Drain microtasks after each job
-   - Queue interleaving & prioritization
-
-### 7.4. Blocking vs Non-Blocking
-   - Why async I/O matters
-   - Legacy exceptions: `alert()`, sync XHR
-
-
----
-
 ## 7. 🔁 **Job Queue & Event Loop**
 
 Modern JavaScript feels synchronous — but behaves asynchronously. That paradox is powered by one of the most elegant constructs in programming: the **event loop**.
@@ -1164,29 +1122,6 @@ This model gives JS its magic mix of **simplicity + power**:
 
 Next time you wonder *why Promises beat timers*, or *why your UI freezes*, or *why `console.log` shows up before your `setTimeout`*, remember:  
 You’re not just writing code — you’re orchestrating a symphony of jobs in a beautifully synchronized single-threaded engine.
-
----
-
-
-## 8. 🧠 **Concurrency & Memory Sharing**
-### 8.1. Agent Clusters
-   - What forms a cluster?
-   - Shared memory = same cluster
-   - Cross-cluster = full isolation
-
-### 8.2. Shared Memory via SharedArrayBuffer
-   - Memory sharing across agents
-   - Structured cloning vs memory transfer
-   - `SharedArrayBuffer`, `postMessage`
-
-### 8.3. Synchronization with Atomics
-   - `Atomics.wait`, `notify`, `load`, `store`
-   - Why atomic operations are needed
-
-### 8.4. Memory Consistency Model
-   - Sequential consistency vs value tearing
-   - Importance of access size alignment
-
 
 ---
 
@@ -1334,21 +1269,6 @@ The introduction of shared memory and `Atomics` fundamentally changes what JavaS
 Welcome to the world of **concurrent JavaScript** — where your variables can now live in more than one mind at once.
 
 ---
-## 9. 🚧 **Cluster Lifecycle & Blocking**
-### 9.1. Blocking APIs (`Atomics.wait`)
-   - Full agent blocking vs async yielding
-   - Differences from Promises
-
-### 9.2. Forward Progress Guarantees
-   - No starvation policy
-   - Fairness within clusters
-
-### 9.3. Agent Termination
-   - Cluster-wide termination rules
-   - Unimplemented fault-tolerant recovery spec
-
----
-
 
 ## 9. 🚧 Cluster Lifecycle & Blocking
 
@@ -1446,19 +1366,6 @@ If you’re using `SharedArrayBuffer`, `Atomics`, or any worker model with share
 Shared memory brings **power** — and **responsibility**. You’re no longer in JavaScript’s comfy async sandbox. You’re in systems-land now — where deadlocks, race conditions, and cluster-wide failure are real threats.
 
 Use the power. Know the cost.
-
----
-
-## 10. 🔗 **Putting It All Together**
-### 10.1. Full Execution Trace
-   - Simulate `setTimeout`, `Promise`, nested functions
-   - Show: stack → heap → queue → event loop
-
-### 10.2. Mental Models & Visuals
-   - Timeline diagrams
-   - Stack-heap-queue visualization
-   - Cross-realm and agent flowchart
-
 
 ---
 
