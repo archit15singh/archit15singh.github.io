@@ -1,11 +1,11 @@
 ---
 title: "How JavaScript Really Runs: From Engines to Event Loop (Execution Model Deep Dive)"
+description: "Explore how JavaScript code actually runs: from the engine and host environment to call stacks, queues, realms, agents, and async behavior — explained with mental models, real code, and execution traces."
 date: 2022-07-29T12:00:00.000Z
 tags:
   - JavaScript
   - Technical Deep Dive
 categories: JavaScript
-description: "Explore how JavaScript code actually runs: from the engine and host environment to call stacks, queues, realms, agents, and async behavior — explained with mental models, real code, and execution traces."
 cover:
   hidden: false
   relative: false
@@ -36,7 +36,6 @@ image_format: "webp"
 
 
 # How JavaScript Really Runs: From Engines to Event Loop (Execution Model Deep Dive)
-
 
 ---
 
