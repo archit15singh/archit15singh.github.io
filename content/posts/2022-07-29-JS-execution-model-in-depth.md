@@ -1,7 +1,7 @@
 ---
 title: "Who Am I?"
 description: "A deep dive into my cognitive operating system: first-principles thinking, recursive refinement, systems thinking, and how I evolve as a systems engineer and thought leader."
-date: 2025-06-06T12:00:00.000Z
+date: 2024-06-06T12:00:00.000Z
 tags:
   - Personal
   - Mindset
