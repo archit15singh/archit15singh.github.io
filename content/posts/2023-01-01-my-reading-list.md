@@ -1,33 +1,38 @@
 ---
-title: "My Reading List for the next 10 years and Why"
-description: "A decade-long, first-principles roadmap through epistemology, symbolic systems, cognition, memory, AI, human-AI augmentation, and engineering—mapping the foundational texts that will shape my journey as a systems thinker and AI engineer."
-date: 2023-01-01T12:00:00.000Z
-  categories: Learning
-  cover:
+title: "Who Am I?"
+description: "A deep dive into my cognitive operating system: first-principles thinking, recursive refinement, systems thinking, and how I evolve as a systems engineer and thought leader."
+date: 2022-01-01T12:00:00.000Z
+tags:
+  - Personal
+  - Mindset
+  - Systems Thinking
+  - Technical Philosophy
+categories: About
+cover:
   hidden: false
   relative: false
   image: ""
   alt: ""
   caption: ""
-  editPost:
+editPost:
   URL: ""
   Text: ""
   appendFilePath: false
-  showToc: true
-  TocOpen: true
-  hidemeta: false
-  comments: true
-  disableHLJS: false
-  disableShare: false
-  hideSummary: false
-  searchHidden: false
-  ShowReadingTime: true
-  ShowBreadCrumbs: true
-  ShowPostNavLinks: true
-  ShowWordCount: true
-  ShowRssButtonInSectionTermList: false
-  UseHugoToc: true
-  image\_format: "webp"
+showToc: true
+TocOpen: true
+hidemeta: false
+comments: true
+disableHLJS: false
+disableShare: false
+hideSummary: false
+searchHidden: false
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+ShowWordCount: true
+ShowRssButtonInSectionTermList: false
+UseHugoToc: true
+image_format: "webp"
 ---
 
 
