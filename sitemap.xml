@@ -52,6 +52,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://archit15singh.github.io/posts/2024-01-01-ai-memory/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://archit15singh.github.io/archives/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
