@@ -1,17 +1,19 @@
 ---
-title: "How JavaScript Really Runs: From Engines to Event Loop (Execution Model Deep Dive)"
-description: "Explore how JavaScript code actually runs: from the engine and host environment to call stacks, queues, realms, agents, and async behavior — explained with mental models, real code, and execution traces."
-date: 2022-07-29T12:00:00.000Z
+title: "Who Am I?"
+description: "A deep dive into my cognitive operating system: first-principles thinking, recursive refinement, systems thinking, and how I evolve as a systems engineer and thought leader."
+date: 2025-06-06T12:00:00.000Z
 tags:
-  - JavaScript
-  - Technical Deep Dive
-categories: JavaScript
+  - Personal
+  - Mindset
+  - Systems Thinking
+  - Technical Philosophy
+categories: About
 cover:
   hidden: false
   relative: false
-  image: /images/uploads/cosmic-timetraveler.webp
-  alt: "JS deep dive"
-  caption: "JS deep dive"
+  image: ""
+  alt: ""
+  caption: ""
 editPost:
   URL: ""
   Text: ""
@@ -32,6 +34,7 @@ ShowRssButtonInSectionTermList: false
 UseHugoToc: true
 image_format: "webp"
 ---
+
 
 # **Who Am I?**
 
