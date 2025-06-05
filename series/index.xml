@@ -9,16 +9,6 @@
       <link>https://archit15singh.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/series/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Themes Guide</title>
-      <link>https://archit15singh.github.io/series/themes-guide/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://archit15singh.github.io/series/themes-guide/</guid>
-      <description></description>
-    </item>
-    
+    <language>en</language><atom:link href="https://archit15singh.github.io/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

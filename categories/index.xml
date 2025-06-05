@@ -10,58 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 12 Jul 2024 12:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Programming</title>
-      <link>https://archit15singh.github.io/categories/programming/</link>
-      <pubDate>Fri, 12 Jul 2024 12:00:00 +0000</pubDate>
-      
-      <guid>https://archit15singh.github.io/categories/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Testing</title>
-      <link>https://archit15singh.github.io/categories/testing/</link>
-      <pubDate>Wed, 01 May 2024 12:00:00 +0000</pubDate>
-      
-      <guid>https://archit15singh.github.io/categories/testing/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Fri, 29 Jul 2022 12:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JavaScript</title>
       <link>https://archit15singh.github.io/categories/javascript/</link>
       <pubDate>Fri, 29 Jul 2022 12:00:00 +0000</pubDate>
       
       <guid>https://archit15singh.github.io/categories/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>What</title>
-      <link>https://archit15singh.github.io/categories/what/</link>
-      <pubDate>Fri, 29 Jul 2022 06:07:58 +0000</pubDate>
-      
-      <guid>https://archit15singh.github.io/categories/what/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Syntax</title>
-      <link>https://archit15singh.github.io/categories/syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://archit15singh.github.io/categories/syntax/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Themes</title>
-      <link>https://archit15singh.github.io/categories/themes/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://archit15singh.github.io/categories/themes/</guid>
       <description></description>
     </item>
     
