@@ -10,7 +10,7 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Jan 2023 12:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Jun 2025 10:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Reading List for the next 10 years and Why</title>
       <link>https://archit15singh.github.io/posts/2023-01-01-my-reading-list/</link>
@@ -27,18 +27,6 @@
       
       <guid>https://archit15singh.github.io/posts/2022-01-01-who-am-i/</guid>
       <description>A deep dive into my cognitive operating system: first-principles thinking, recursive refinement, systems thinking, and how I evolve as a systems engineer and thought leader.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://archit15singh.github.io/posts/2024-01-01-ai-memory/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://archit15singh.github.io/posts/2024-01-01-ai-memory/</guid>
-      <description>&lt;h1 id=&#34;forging-ais-lasting-memory-learning-from-first-principles-and-asimovs-robots&#34;&gt;&lt;strong&gt;Forging AI’s Lasting Memory: Learning from First Principles and Asimov’s Robots&lt;/strong&gt;&lt;/h1&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;1-why-ai-agents-today-still-forget&#34;&gt;1. Why AI Agents Today Still “Forget”&lt;/h3&gt;
-&lt;p&gt;Despite advances in large language models (LLMs), interacting with most AI chatbots feels like talking to a tide: each new wave of conversation washes away earlier details. Contrast this with Isaac Asimov’s positronic robots, Daneel Olivaw or R. Giskard, who carry knowledge and context across years (or even centuries), never losing sight of a user’s core preferences or a mission’s essential facts.&lt;/p&gt;</description>
     </item>
     
     
