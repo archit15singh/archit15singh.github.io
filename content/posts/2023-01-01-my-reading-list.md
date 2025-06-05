@@ -8,9 +8,9 @@ categories: Reading
 cover:
   hidden: false
   relative: false
-  image: ""
-  alt: ""
-  caption: ""
+  image: "/images/uploads/reading-map.webp"
+  alt: "A systems-thinking reading map across cognition, AI, and epistemology"
+  caption: "My 10-year reading map: Epistemology to AI Augmentation"
 editPost:
   URL: ""
   Text: ""
