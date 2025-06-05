@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 01 Jan 2022 12:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/systems-thinking/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Jan 2023 12:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/systems-thinking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Who Am I?</title>
+      <link>https://archit15singh.github.io/posts/2023-01-01-my-reading-list/</link>
+      <pubDate>Sun, 01 Jan 2023 12:00:00 +0000</pubDate>
+      
+      <guid>https://archit15singh.github.io/posts/2023-01-01-my-reading-list/</guid>
+      <description>A deep dive into my cognitive operating system: first-principles thinking, recursive refinement, systems thinking, and how I evolve as a systems engineer and thought leader.</description>
+    </item>
+    
     <item>
       <title>Who Am I?</title>
       <link>https://archit15singh.github.io/posts/2022-01-01-who-am-i/</link>
