@@ -9,7 +9,7 @@ params:
   # General Settings
   DateFormat: "January 2, 2006"
   env: production
-  description: "Archit's blog on software engineering and more"
+  description: "Building Systems from First Principles: AI, Cognitive Science, and Engineering Deep Dives by Archit Singh"
   author: "Archit Singh"
   defaultTheme: auto
   comments: false
@@ -18,7 +18,7 @@ params:
   goatcounter: "architsingh"
 
   # SEO Settings
-  metaDescription: "A blog by Archit Singh, sharing knowledge on software engineering, coding best practices, and technology insights."
+  metaDescription: "Archit Singh’s blog on first-principles systems thinking—covering AI agent architectures, cognitive science, and resilient engineering."
   canonicalURL: "https://archit15singh.github.io/"
 
   # Display Settings
@@ -42,9 +42,9 @@ params:
 
   # Home Info
   homeInfoParams:
-    Title: "Code | Write | Teach"
+    Title: "Building Systems from First Principles"
     Content: >
-      Turning code into solutions, and solutions into stories.
+      I’m Archit Singh—a backend engineer, AI-agent architect, and lifelong systems thinker. I refuse to settle for surface-level explanations. Instead, I dig down to first principles, model complex ideas across disciplines, and iterate obsessively until clarity yields impact. From epistemology and symbolic systems to resilient data pipelines and memory-augmented AI, this space shares high-signal, first-principles deep dives.
 
   # Social Icons
   socialIcons:
@@ -53,7 +53,7 @@ params:
     - name: linkedin
       url: "https://www.linkedin.com/in/archit15singh"
     - name: twitter
-      url: "https://twitter.com/archit_singh15"
+      url: "https://x.com/archit_singh15"
     - name: stackoverflow
       url: "https://stackoverflow.com/users/6245870/archit-singh"
     - name: Rss
