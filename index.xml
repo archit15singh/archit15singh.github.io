@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Jun 2025 10:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jan 2024 10:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forging AI’s Lasting Memory: Lessons from Asimov and First Principles</title>
+      <link>https://archit15singh.github.io/posts/2024-01-01-ai-memory/</link>
+      <pubDate>Mon, 01 Jan 2024 10:00:00 +0000</pubDate>
+      
+      <guid>https://archit15singh.github.io/posts/2024-01-01-ai-memory/</guid>
+      <description>A deep dive into why modern AI agents forget, how Isaac Asimov’s positronic robots managed memory, and a first-principles guide to building memory systems that endure across sessions.</description>
+    </item>
+    
     <item>
       <title>My Reading List for the next 10 years and Why</title>
       <link>https://archit15singh.github.io/posts/2023-01-01-my-reading-list/</link>
