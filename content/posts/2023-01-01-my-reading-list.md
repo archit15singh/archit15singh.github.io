@@ -376,6 +376,90 @@ Below, I explain the meta-purpose behind this journey, then break down each doma
 
 ---
 
+10. Human–Computer Interaction (HCI) & User Experience
+    First Principles:
+
+* **Perception & Mental Models**: How humans form internal representations of interfaces, predict outcomes, and make decisions based on affordances.
+* **Usability & Accessibility**: Designing interfaces that minimize cognitive load, error rates, and learning curves while accommodating diverse user abilities.
+* **Feedback & Affordances**: Signaling system status and available actions clearly, so users maintain a continuous sense of control.
+* **Trust & Cognitive Load**: Balancing information density and interaction complexity to foster trust without overwhelming short-term working memory.
+
+My Ten-Year Book Sequence:
+
+* Bill Moggridge – *Designing Interactions* (2006)
+  A visually rich history of how people interact with computers—from Engelbart’s mouse to modern multi-touch—to build intuition about design evolution.
+* Steve Krug – *Don’t Make Me Think, Revisited: A Common Sense Approach to Web Usability* (3rd ed., 2014)
+  Pragmatic guidelines for reducing cognitive friction in interfaces, applicable even to non-graphical tools like command-line or API design.
+* Don Norman – *The Design of Everyday Things* (Revised & Expanded ed., 2013)
+  Seminal work on affordances, feedback, and mental models that explains why poor design leads to user error and frustration.
+* Alan Cooper, Robert Reimann, David Cronin & Christopher Noessel – *About Face: The Essentials of Interaction Design* (4th ed., 2014)
+  Deep dive into user goals, personas, scenarios, and design patterns, providing a comprehensive framework for crafting intuitive interfaces.
+
+---
+
+11. Emerging Paradigms: Neuro-Inspiration & Computational Neuroscience
+    First Principles:
+
+* **Multi-Scale Modeling**: Bridging single-neuron dynamics (ion channels, spiking) with network-level phenomena (oscillations, feedback loops).
+* **Biophysical Realism**: Understanding how synaptic plasticity (LTP/LTD) and dendritic computations give rise to memory and learning.
+* **Neuromorphic Constraints**: Translating energy-efficient, event-driven spikes into hardware approximations that support real-time learning.
+* **Circuit-Level Function**: Mapping how brain regions coordinate to implement perception, decision-making, and action, then using those insights to design memory-augmented agents.
+
+My Ten-Year Book Sequence:
+
+* Peter Dayan & Laurence F. Abbott – *Theoretical Neuroscience: Computational and Mathematical Modeling of Neural Systems* (2001)
+  Lays out mathematical frameworks (e.g., Poisson spiking, neural coding) to connect abstract AI models with real neuron dynamics.
+* Eric Kandel, James Schwartz & Thomas Jessell – *Principles of Neural Science* (5th ed., 2012)
+  Circuit-level and systems-level neuroscience foundation: how neural circuits implement perception, memory, and behavior.
+* Wulfram Gerstner & Werner M. Kistler – *Spiking Neuron Models: Single Neurons, Populations, Plasticity* (2002)
+  Detailed treatment of spiking neurons, synaptic plasticity, and population dynamics—critical for low-power, brain-inspired hardware design.
+* (MIT CSAIL/IEEE anthology) – *Neuromorphic Computing and Beyond* (various tutorials, circa 2019–2022)
+  A curated set of tutorials on event-driven architectures, memristor-based synapses, and hardware implementations that mirror biological computation.
+
+---
+
+12. AI Interpretability & Explainable AI (XAI)
+    First Principles:
+
+* **Transparency vs. Complexity Trade-off**: Understanding that model performance often scales with complexity, but stakeholders demand clear, human-readable reasoning.
+* **Model-Agnostic Explanations**: Techniques (SHAP, LIME) that treat any black-box model as a function and generate post-hoc interpretability without altering core architecture.
+* **Causal Reasoning & Counterfactuals**: Going beyond correlation to identify cause-and-effect relationships and generate “what-if” scenarios that stakeholders can validate.
+* **Human-Centered Explanations**: Framing model outputs in narratives or visualizations that align with user mental models and domain expertise.
+
+My Ten-Year Book Sequence:
+
+* Christoph Molnar – *Interpretable Machine Learning* (2nd ed., 2021)
+  Hands-on guide to both model-agnostic and model-specific interpretability methods, with code examples for SHAP, LIME, saliency maps, and decision-tree surrogates.
+* Judea Pearl – *Causality: Models, Reasoning, and Inference* (2nd ed., 2009)
+  Foundational treatment of causal graphs, do-calculus, and counterfactual logic—crucial for building AI systems that can “explain” their reasoning in causal terms.
+* Various ICML/NeurIPS tutorial papers – *Counterfactual Explanations for Machine Learning* (2018–2022)
+  Recent research on generating actionable, human-readable “what-if” explanations that show how small changes in input lead to different model outcomes.
+* (IJCAI/AAAI collections) – *Explainable AI: A Guide for Researchers* (annual tutorial compendium)
+  Synthesizes state-of-the-art progress in causal explanation algorithms, fairness-aware interpretability, and human-centered XAI across domains.
+
+---
+
+13. AI Safety & Alignment
+    First Principles:
+
+* **Objective Specification & Corrigibility**: Recognizing that any learned or programmed objective may diverge from human values, and designing systems that remain open to correction.
+* **Long-Term Risk Assessment**: Distinguishing near-term ethical concerns (bias, fairness) from existential risks (recursive self-improvement, goal misalignment).
+* **Value Learning vs. Reward Maximization**: Embedding uncertainty about human values into the optimization process so that agents defer to human input when values conflict.
+* **Multi-Agent & Market Dynamics**: Understanding how networks of AI agents interact, compete for resources, and how small mis-specifications can cascade into large-scale societal harms.
+
+My Ten-Year Book Sequence:
+
+* Nick Bostrom – *Superintelligence: Paths, Dangers, Strategies* (2014)
+  Rigorous analysis of why highly capable AI systems may pose existential risks if objectives are not properly aligned with human welfare.
+* Stuart Russell – *Human Compatible: Artificial Intelligence and the Problem of Control* (2019)
+  Reframes AI development around uncertain, corrigible objectives that allow human overseers to guide agents safely toward beneficial outcomes.
+* (Eliezer Yudkowsky et al.) – *Corrigibility: Definitions and Open Problems* (various 2018+ papers)
+  A collection of formal definitions and research frontiers on making AI systems receptive to human intervention and correction.
+* Selected survey chapters on preference elicitation & decision theory – *Preference Elicitation and Decision Theory* (2015–2022)
+  Guides for how to formally model human preferences and trade-offs so that AI agents interpret and optimize toward them without unintended side effects.
+
+---
+
 ## Integrating Everything Over Ten Years
 
 Rather than treating these fields as isolated silos, the real power emerges when I **juxtapose** them. For example:
