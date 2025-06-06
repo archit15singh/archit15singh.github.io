@@ -376,15 +376,16 @@ Below, I explain the meta-purpose behind this journey, then break down each doma
 
 ---
 
-10. Human–Computer Interaction (HCI) & User Experience
-    First Principles:
+## 10. Human–Computer Interaction (HCI) & User Experience
+
+**First Principles:**
 
 * **Perception & Mental Models**: How humans form internal representations of interfaces, predict outcomes, and make decisions based on affordances.
 * **Usability & Accessibility**: Designing interfaces that minimize cognitive load, error rates, and learning curves while accommodating diverse user abilities.
 * **Feedback & Affordances**: Signaling system status and available actions clearly, so users maintain a continuous sense of control.
 * **Trust & Cognitive Load**: Balancing information density and interaction complexity to foster trust without overwhelming short-term working memory.
 
-My Ten-Year Book Sequence:
+**My Ten-Year Book Sequence:**
 
 * Bill Moggridge – *Designing Interactions* (2006)
   A visually rich history of how people interact with computers—from Engelbart’s mouse to modern multi-touch—to build intuition about design evolution.
@@ -397,15 +398,16 @@ My Ten-Year Book Sequence:
 
 ---
 
-11. Emerging Paradigms: Neuro-Inspiration & Computational Neuroscience
-    First Principles:
+## 11. Emerging Paradigms: Neuro-Inspiration & Computational Neuroscience
+
+**First Principles:**
 
 * **Multi-Scale Modeling**: Bridging single-neuron dynamics (ion channels, spiking) with network-level phenomena (oscillations, feedback loops).
 * **Biophysical Realism**: Understanding how synaptic plasticity (LTP/LTD) and dendritic computations give rise to memory and learning.
 * **Neuromorphic Constraints**: Translating energy-efficient, event-driven spikes into hardware approximations that support real-time learning.
 * **Circuit-Level Function**: Mapping how brain regions coordinate to implement perception, decision-making, and action, then using those insights to design memory-augmented agents.
 
-My Ten-Year Book Sequence:
+**My Ten-Year Book Sequence:**
 
 * Peter Dayan & Laurence F. Abbott – *Theoretical Neuroscience: Computational and Mathematical Modeling of Neural Systems* (2001)
   Lays out mathematical frameworks (e.g., Poisson spiking, neural coding) to connect abstract AI models with real neuron dynamics.
@@ -418,15 +420,16 @@ My Ten-Year Book Sequence:
 
 ---
 
-12. AI Interpretability & Explainable AI (XAI)
-    First Principles:
+## 12. AI Interpretability & Explainable AI (XAI)
+
+**First Principles:**
 
 * **Transparency vs. Complexity Trade-off**: Understanding that model performance often scales with complexity, but stakeholders demand clear, human-readable reasoning.
 * **Model-Agnostic Explanations**: Techniques (SHAP, LIME) that treat any black-box model as a function and generate post-hoc interpretability without altering core architecture.
 * **Causal Reasoning & Counterfactuals**: Going beyond correlation to identify cause-and-effect relationships and generate “what-if” scenarios that stakeholders can validate.
 * **Human-Centered Explanations**: Framing model outputs in narratives or visualizations that align with user mental models and domain expertise.
 
-My Ten-Year Book Sequence:
+**My Ten-Year Book Sequence:**
 
 * Christoph Molnar – *Interpretable Machine Learning* (2nd ed., 2021)
   Hands-on guide to both model-agnostic and model-specific interpretability methods, with code examples for SHAP, LIME, saliency maps, and decision-tree surrogates.
@@ -439,15 +442,16 @@ My Ten-Year Book Sequence:
 
 ---
 
-13. AI Safety & Alignment
-    First Principles:
+## 13. AI Safety & Alignment
+
+**First Principles:**
 
 * **Objective Specification & Corrigibility**: Recognizing that any learned or programmed objective may diverge from human values, and designing systems that remain open to correction.
 * **Long-Term Risk Assessment**: Distinguishing near-term ethical concerns (bias, fairness) from existential risks (recursive self-improvement, goal misalignment).
 * **Value Learning vs. Reward Maximization**: Embedding uncertainty about human values into the optimization process so that agents defer to human input when values conflict.
 * **Multi-Agent & Market Dynamics**: Understanding how networks of AI agents interact, compete for resources, and how small mis-specifications can cascade into large-scale societal harms.
 
-My Ten-Year Book Sequence:
+**My Ten-Year Book Sequence:**
 
 * Nick Bostrom – *Superintelligence: Paths, Dangers, Strategies* (2014)
   Rigorous analysis of why highly capable AI systems may pose existential risks if objectives are not properly aligned with human welfare.
@@ -493,6 +497,6 @@ Hence, after internalizing foundational texts (Years 1–4), I’ll begin **rere
 
 ## Final Thoughts
 
-By following this structured, first-principles–based roadmap, I aim to become the “frontier engineer” and “thought leader” I envision, someone who seamlessly navigates between epistemology, symbolic systems, cognitive science, memory research, AI, human augmentation, and production-grade engineering. Over the next decade, this reading list will be my compass, ensuring that my learning is deep, integrated, and directly applicable to both research and real-world impact.
+By following this structured, first-principles-based roadmap, I aim to become the “frontier engineer” and “thought leader” I envision, someone who seamlessly navigates between epistemology, symbolic systems, cognitive science, memory research, AI, human augmentation, and production-grade engineering. Over the next decade, this reading list will be my compass, ensuring that my learning is deep, integrated, and directly applicable to both research and real-world impact.
 
 It’s not just a list of books; it’s a manifesto for continuous, intentional growth. Every time I pick up a volume, whether it’s Russell challenging my assumptions about knowledge, Clark reshaping how I think about tools, or Kleppmann revealing the internals of distributed logs, I’ll remember **why** I’m here: to build systems that think, remember, and adapt at the level of a thinking organism, and to do so with philosophical rigor, cognitive insight, and engineering excellence.
