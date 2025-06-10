@@ -794,3 +794,84 @@ If you want next, I can generate:
 If you say the word, I will generate any of these next. 🚀
 Just reply: Priority Subset, Reading Pathways, or Notion Dashboard.
 
+Here is the **precise updated list of *missing books from your Meta-Strategic Reflection conversation*** — these were not yet present in your 10-year reading list above:
+
+---
+
+### 🧠 Meta-cognition & Meta-strategic reflection → Missing Books
+
+#### Philosophy of Thinking
+
+* **The Art of Thinking** — Ernest Dimnet
+* **How to Think** — Alan Jacobs
+* **The Fifth Discipline** — Peter Senge ✅ This is HIGHLY worth adding to your list — one of the core books for feedback-driven, systems-aware, *thinking about thinking*.
+
+#### Systems Thinking
+
+* **Thinking in Systems** — Donella Meadows ✅ Not explicitly present — should absolutely be added.
+* **Systems Thinking** — Jamshid Gharajedaghi (optional advanced companion)
+
+#### Epistemology (Advanced)
+
+* **The Beginning of Infinity** — David Deutsch ✅ Essential — it will deeply enrich your *Knowledge and Its Limits* level epistemology.
+* **Rationality: From AI to Zombies** — Eliezer Yudkowsky
+  (Less formal, but trains strong *instrumental rationality* and meta-strategic awareness)
+
+#### Creativity & Divergent Thinking
+
+* **Lateral Thinking** — Edward de Bono
+* **A Whack on the Side of the Head** — Roger von Oech
+
+#### Reflective Practice / Learning Loop
+
+* **The Reflective Practitioner** — Donald Schön ✅ Important if you want to consciously improve your “what thinking move was that?” feedback loop.
+
+---
+
+### Summary of what to add to your 10-year list:
+
+| Type                   | Book                                        | Priority                                    |
+| ---------------------- | ------------------------------------------- | ------------------------------------------- |
+| Philosophy of Thinking | The Fifth Discipline — Senge                | Very High                                   |
+| Philosophy of Thinking | The Art of Thinking — Dimnet                | Medium                                      |
+| Philosophy of Thinking | How to Think — Jacobs                       | Medium                                      |
+| Systems Thinking       | Thinking in Systems — Meadows               | Very High                                   |
+| Systems Thinking       | Systems Thinking — Gharajedaghi             | Optional Advanced                           |
+| Epistemology           | The Beginning of Infinity — Deutsch         | Very High                                   |
+| Epistemology           | Rationality: From AI to Zombies — Yudkowsky | High for applied epistemic practice         |
+| Creativity             | Lateral Thinking — de Bono                  | Medium (adds valuable dimension to toolkit) |
+| Creativity             | A Whack on the Side of the Head — von Oech  | Optional but useful                         |
+| Learning Loop          | The Reflective Practitioner — Schön         | High                                        |
+
+---
+
+### Why these matter:
+
+✅ Your list already covers *formal knowledge*, *memory*, *AI*, *HCI*, *symbolic systems* very well.
+✅ It is slightly under-covered on **systems thinking**, **meta-cognition as a practice**, and **creativity as a deliberate strategic tool**.
+✅ The missing books above round out that layer — so your reading list will then fully support your *meta-strategic reflection* process and the recursive learning loops you want to cultivate.
+
+---
+
+### Final Note:
+
+These books can be slotted in **without displacing your current plan** — they mostly complement:
+
+* Epistemology block
+* Systems thinking block (add Thinking in Systems + Fifth Discipline as explicit section)
+* Add “Meta-cognitive & Reflective Practice” as a new section → insert Reflective Practitioner, Art of Thinking, How to Think
+* Creativity block can be a side path — highly useful if you do AI + narrative + engineering work.
+
+---
+
+**Conclusion:**
+👉 Yes — **about 8–10 critical books were not present in your current reading list**.
+👉 They are all highly aligned to your *meta-strategic reflection → cognitive self-modeling → abstraction & transfer* stack.
+👉 If you add them, your reading map will be **world-class**.
+
+---
+
+If you want, I can generate the **precisely rewritten section to append to your existing Markdown reading list**, in your exact format, with section titles and book entries — so you can just copy/paste it cleanly.
+
+Would you like me to do that next? Just say:
+**“Yes, generate the section.”** 🚀
