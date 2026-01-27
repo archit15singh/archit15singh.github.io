@@ -8,8 +8,11 @@ tags:
 categories:
   - AI
 cover:
-  hidden: true
+  hidden: false
   relative: false
+  image: "/images/uploads/ai-augmented-developer-playbook-banner.jpeg"
+  alt: "AI-augmented developer orchestrating systems with agents and patterns"
+  caption: "The AI-augmented developer: architect, delegator, and validator."
 editPost:
   URL: ""
   Text: ""
