@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>AI on Archit&#39;s Space</title>
-    <link>https://archit15singh.github.io/categories/ai/</link>
-    <description>Recent content in AI on Archit&#39;s Space</description>
+    <title>Development on Archit&#39;s Space</title>
+    <link>https://archit15singh.github.io/tags/development/</link>
+    <description>Recent content in Development on Archit&#39;s Space</description>
     <image>
       <url>https://archit15singh.github.io/papermod-cover.png</url>
       <link>https://archit15singh.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Jan 2026 10:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Jan 2026 10:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The AI-Augmented Developer Playbook: Architect, Delegate, Validate</title>
       <link>https://archit15singh.github.io/posts/2026-01-26-ai-augmented-developer-playbook/</link>
@@ -18,15 +18,6 @@
       
       <guid>https://archit15singh.github.io/posts/2026-01-26-ai-augmented-developer-playbook/</guid>
       <description>A practical playbook for shifting from code-producing craftsman to AI-orchestrating architect, using abstract thinking, pattern libraries, and rigorous validation to ship higher-leverage systems.</description>
-    </item>
-    
-    <item>
-      <title>Forging AI’s Lasting Memory: Lessons from Asimov and First Principles</title>
-      <link>https://archit15singh.github.io/posts/2024-01-01-ai-memory/</link>
-      <pubDate>Mon, 01 Jan 2024 10:00:00 +0000</pubDate>
-      
-      <guid>https://archit15singh.github.io/posts/2024-01-01-ai-memory/</guid>
-      <description>A deep dive into why modern AI agents forget, how Isaac Asimov’s positronic robots managed memory, and a first-principles guide to building memory systems that endure across sessions.</description>
     </item>
     
   </channel>

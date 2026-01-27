@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jan 2024 10:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Jan 2026 10:00:00 +0000</lastBuildDate><atom:link href="https://archit15singh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The AI-Augmented Developer Playbook: Architect, Delegate, Validate</title>
+      <link>https://archit15singh.github.io/posts/2026-01-26-ai-augmented-developer-playbook/</link>
+      <pubDate>Mon, 26 Jan 2026 10:00:00 +0000</pubDate>
+      
+      <guid>https://archit15singh.github.io/posts/2026-01-26-ai-augmented-developer-playbook/</guid>
+      <description>A practical playbook for shifting from code-producing craftsman to AI-orchestrating architect, using abstract thinking, pattern libraries, and rigorous validation to ship higher-leverage systems.</description>
+    </item>
+    
     <item>
       <title>Forging AI’s Lasting Memory: Lessons from Asimov and First Principles</title>
       <link>https://archit15singh.github.io/posts/2024-01-01-ai-memory/</link>
