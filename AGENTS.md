@@ -3,6 +3,11 @@
 ## Build Commands
 - `hugo server -D` — Local dev server with drafts
 - `hugo --minify --cleanDestinationDir` — Production build (outputs to `public/`)
+- Always run production build locally before pushing to verify posts are included
+
+## Important: Future Dates
+- `buildFuture: false` is set in config.yml — posts with future dates will NOT be built
+- Always use past or current dates in frontmatter to ensure posts are published
 
 ## Architecture
 This is a Hugo static site using the **PaperMod** theme, deployed to GitHub Pages via `.github/workflows/gh-pages.yml`.
