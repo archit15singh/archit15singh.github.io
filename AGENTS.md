@@ -26,3 +26,7 @@ This is a Hugo static site using the **PaperMod** theme, deployed to GitHub Page
 ## Code Style
 - YAML for config; Markdown for content
 - Keep frontmatter keys consistent with existing posts (see `content/posts/` examples)
+
+## Deployment
+- Auto-deploys on push to `main` via GitHub Actions (no manual step needed)
+- Use `draft: true` in frontmatter for unpublished posts (`hugo server -D` shows drafts; production build won't)
