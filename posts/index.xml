@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Test Blog Post</title>
+      <link>https://archit15singh.github.io/posts/2025-01-30-test-blog-post/</link>
+      <pubDate>Thu, 30 Jan 2025 10:00:00 +0000</pubDate>
+      
+      <guid>https://archit15singh.github.io/posts/2025-01-30-test-blog-post/</guid>
+      <description>A test blog post to verify the publishing pipeline.</description>
+    </item>
+    
+    <item>
       <title>Forging AI’s Lasting Memory: Lessons from Asimov and First Principles</title>
       <link>https://archit15singh.github.io/posts/2024-01-01-ai-memory/</link>
       <pubDate>Mon, 01 Jan 2024 10:00:00 +0000</pubDate>
