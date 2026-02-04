@@ -11,6 +11,7 @@ Hugo static site using the **PaperMod** theme, deployed to GitHub Pages via GitH
 - `hugo server -D` — Local dev server with drafts
 - `hugo server` — Local dev server (production mode)
 - `hugo --minify --cleanDestinationDir` — Production build to `public/`
+- `ui-shot <url> -o <path>` — Screenshot a page for visual verification (`ui-shot --help` for options)
 
 ## Critical: buildFuture Configuration
 
