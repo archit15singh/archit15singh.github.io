@@ -38,10 +38,7 @@ Over the past few years, I’ve found myself at the intersection of philosophy, 
 
 ## Why This Journey?
 
-1. **Clarify My Intellectual Trajectory**: Understanding fundamental concepts ensures depth rather than surface-level knowledge.
-2. **Align With Long-Term Goals**: Aiming for Stanford’s Symbolic Systems program while leading practical AI infrastructure projects.
-3. **Bridge Theory and Practice**: Integrating philosophical theory directly into AI engineering.
-4. **Create an Executable Learning Plan**: Establish clear milestones to track progress and integration over ten years.
+This list structures a decade across four layers: **foundations** (epistemology, how we know what we know), **mechanics** (AI, cognition, symbolic systems), **applications** (engineering, ML, HCI), and **integration** (systems thinking that connects everything). Each book isn’t isolated; it’s a thread in a cognitive tapestry I’ll weave intentionally.
 
 ---
 
