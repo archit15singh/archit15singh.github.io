@@ -31,3 +31,7 @@ Posts with future dates will NOT be built. Always use past/current dates in fron
 ## Playwright
 
 Use `playwright screenshot --full-page --viewport-size="1280,3000" <url> <output.png>` for full-page screenshots. Run `playwright --help` for all commands.
+
+## GitHub CLI
+
+Use `gh` for GitHub operations (issues, PRs, runs, releases) instead of web scraping—it's faster and more reliable. Run `gh --help` for all commands.
