@@ -8,8 +8,11 @@ tags:
 categories:
   - AI
 cover:
-  hidden: true
+  hidden: false
   relative: false
+  image: "/images/uploads/designing-cli-tools-for-ai-agents-banner.jpeg"
+  alt: "Abstract black hole with accretion disk -- the gravity well of good design pulls everything into alignment"
+  caption: ""
 editPost:
   URL: ""
   Text: ""
