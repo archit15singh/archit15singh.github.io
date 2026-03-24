@@ -49,7 +49,7 @@ Take a concrete scenario: a policy event changes import tariffs on a particular 
 A naive approach sends this to a model and asks for a recommendation. The model will give you one. It will sound authoritative. It will probably even be structurally reasonable. But it has no access to your actual supplier contracts, no way to check certification requirements against each part number, no mechanism to validate that the recommended order volumes are actually achievable given supplier capacity.
 
 ```
-User: "25% tariff on China → Korea lane. What should we do?"
+User: "25% tariff on China -> Korea lane. What should we do?"
 LLM:  "Consider rerouting to Vietnam suppliers, or absorbing cost,
        or diversifying across multiple lanes..."
 
@@ -83,7 +83,7 @@ That's the gap. The deterministic system can compute any scenario you give it wi
 
 ```
                 WHAT CODE DOES WELL         WHAT LLMs DO WELL
-                ─────────────────────       ───────────────────────
+                ---------------------       -----------------------
                 Arithmetic                  Interpreting policy language
                 Constraint enforcement      Framing scenario hypotheses
                 Reproducible math           Exploring the parameter space
@@ -104,23 +104,23 @@ The core design principle:
 The LLM is an agent that calls a deterministic simulator as a tool. The simulator enforces all hard constraints - certifications, MOQs, capacity limits, contractual minimums - and returns structured results. The LLM reasons over those results, adjusts its hypotheses, runs more simulations, and synthesizes a recommendation.
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                    HYBRID AGENT SYSTEM                          │
-│                                                                 │
-│   ┌──────────────┐         ┌───────────────────────────────┐   │
-│   │              │         │      DETERMINISTIC            │   │
-│   │  LLM AGENT   │────────▶│        SIMULATOR              │   │
-│   │              │◀────────│                               │   │
-│   │  Explores    │  tool   │  Enforces hard constraints    │   │
-│   │  Reasons     │  calls  │  Runs cost calculations       │   │
-│   │  Synthesizes │         │  Returns structured results   │   │
-│   │  Explains    │         │  Reproducible math            │   │
-│   │              │         │                               │   │
-│   └──────────────┘         └───────────────────────────────┘   │
-│                                                                 │
-│   LLM decides WHAT to simulate.                                 │
-│   Code decides WHETHER it's feasible and WHAT it costs.        │
-└─────────────────────────────────────────────────────────────────┘
++-----------------------------------------------------------------+
+|                    HYBRID AGENT SYSTEM                          |
+|                                                                 |
+|   +--------------+         +-------------------------------+   |
+|   |              |         |      DETERMINISTIC            |   |
+|   |  LLM AGENT   |-------->|        SIMULATOR              |   |
+|   |              |<--------|                               |   |
+|   |  Explores    |  tool   |  Enforces hard constraints    |   |
+|   |  Reasons     |  calls  |  Runs cost calculations       |   |
+|   |  Synthesizes |         |  Returns structured results   |   |
+|   |  Explains    |         |  Reproducible math            |   |
+|   |              |         |                               |   |
+|   +--------------+         +-------------------------------+   |
+|                                                                 |
+|   LLM decides WHAT to simulate.                                 |
+|   Code decides WHETHER it's feasible and WHAT it costs.        |
++-----------------------------------------------------------------+
 ```
 
 ---
@@ -135,7 +135,7 @@ Before touching the simulator, the agent reasons about the response categories:
 
 ```
 LLM internal reasoning:
-  "25% tariff affects ~340 SKUs on the China → Korea lane.
+  "25% tariff affects ~340 SKUs on the China -> Korea lane.
    Response strategies fall along two axes:
      cost delta vs. transition risk
      breadth of rerouting vs. selectivity
@@ -156,18 +156,18 @@ The agent calls the simulator five times. Each call returns not just costs but c
 
 ```
 Scenario 1: Absorb full tariff
-──────────────────────────────
-agent → simulator({routing: current, tariff_applied: true})
-← {
+------------------------------
+agent -> simulator({routing: current, tariff_applied: true})
+<- {
     annual_cost_delta: +$47M,
     lead_time_delta: 0 days,
     constraint_violations: []
   }
 
 Scenario 2: Full Vietnam reroute
-─────────────────────────────────
-agent → simulator({routing: vietnam_all, affected_skus: 340})
-← {
+---------------------------------
+agent -> simulator({routing: vietnam_all, affected_skus: 340})
+<- {
     annual_cost_delta: +$12M,
     lead_time_delta: +18 days,
     constraint_violations: [
@@ -177,12 +177,12 @@ agent → simulator({routing: vietnam_all, affected_skus: 340})
   }
 
 Scenario 3: Selective reroute (>15% impact SKUs)
-──────────────────────────────────────────────────
-agent → simulator({routing: vietnam_subset, affected_skus: 127})
-← {
+--------------------------------------------------
+agent -> simulator({routing: vietnam_subset, affected_skus: 127})
+<- {
     annual_cost_delta: +$21M,
     lead_time_delta: +4 days,
-    constraint_violations: []    ← clean
+    constraint_violations: []    <- clean
   }
 ```
 
@@ -209,20 +209,20 @@ LLM synthesis:
 ### The output
 
 ```
-┌────────────────────────────────────────────────────────────┐
-│  RECOMMENDATION: Scenario 3 - Selective Reroute            │
-│                                                            │
-│  Reroute 127 SKUs (>15% tariff impact) to Vietnam          │
-│  alternative suppliers over 60 days.                       │
-│                                                            │
-│  Annual cost delta:  +$21M  (vs. +$47M absorb baseline)   │
-│  Lead time impact:   +4 days average                       │
-│  Constraint status:  CLEAN - no violations                 │
-│                                                            │
-│  Why not Scenario 2: Certification gaps on 2 SKUs,        │
-│  MOQ violation at forecast volume.                         │
-│  Why not Scenario 5: Renegotiation timeline exceeds Q1.   │
-└────────────────────────────────────────────────────────────┘
++------------------------------------------------------------+
+|  RECOMMENDATION: Scenario 3 - Selective Reroute            |
+|                                                            |
+|  Reroute 127 SKUs (>15% tariff impact) to Vietnam          |
+|  alternative suppliers over 60 days.                       |
+|                                                            |
+|  Annual cost delta:  +$21M  (vs. +$47M absorb baseline)   |
+|  Lead time impact:   +4 days average                       |
+|  Constraint status:  CLEAN - no violations                 |
+|                                                            |
+|  Why not Scenario 2: Certification gaps on 2 SKUs,        |
+|  MOQ violation at forecast volume.                         |
+|  Why not Scenario 5: Renegotiation timeline exceeds Q1.   |
++------------------------------------------------------------+
 ```
 
 The output isn't just a number. It includes the reasoning, the rejected alternatives, and the assumptions - which means a supply chain director can actually review it rather than trust it blindly.
@@ -265,7 +265,7 @@ The interactive version - five scenarios, real-time response - is a demo. The pr
 
 ```
 INTERACTIVE (demo)          PRODUCTION (batch)
-────────────────────        ──────────────────────────────────
+--------------------        ----------------------------------
 5 scenarios                 Hundreds to thousands of simulations
 Real-time output            Runs offline (nightly or on trigger)
 Single policy event         Continuous monitoring for policy signals
@@ -276,7 +276,7 @@ One recommendation          Portfolio of documented recommendations
 The production architecture adds a scheduler that detects policy changes above a materiality threshold, spawns analysis agents per affected trade lane, runs simulations in parallel, and stores the results in a structured recommendation store with full audit trails. The LLM's synthesis job shifts from "pick one recommendation" to "summarize the portfolio and flag the high-urgency items."
 
 ```
-Policy signals ──▶ Scheduler ──▶ Simulation Farm ──▶ Synthesis Agent ──▶ Recommendation Store
+Policy signals --> Scheduler --> Simulation Farm --> Synthesis Agent --> Recommendation Store
                    (trigger)       (vectorized,         (LLM reads         (versioned, auditable,
                                    parallel runs)        batch output)       human-reviewable)
 ```
@@ -295,7 +295,7 @@ The rule I've found most reliable:
 
 ```
 IN CODE:                            IN THE LLM:
-────────────────────────────────    ──────────────────────────────────
+--------------------------------    ----------------------------------
 Tariff rate arithmetic              "Which scenarios should I test?"
 Supplier certification lookup       "What does this policy imply?"
 Capacity constraint checking        "Which result is the best overall?"
