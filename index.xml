@@ -12,11 +12,11 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Mar 2026 10:00:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hard Constraints Belong in Code: Designing Hybrid AI Agents for Constrained Optimization</title>
+      <title>Hard Constraints Belong in Code: The Probabilistic-Deterministic Hybrid Agent Pattern</title>
       <link>https://archit15singh.github.io/posts/2026-03-23-hard-constraints-belong-in-code/</link>
       <pubDate>Mon, 23 Mar 2026 10:00:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-03-23-hard-constraints-belong-in-code/</guid>
-      <description>A design principle for agentic systems that need real guarantees: let the LLM explore the solution space, let deterministic code enforce the rules, and wire them together through a feedback loop that catches what the model can&amp;#39;t.</description>
+      <description>LLMs are probabilistic reasoners - great at exploring solution spaces using model priors, bad at guaranteeing correctness. Deterministic code is the opposite. The right architecture for high-stakes decisions wires them together: model priors for exploration, code for enforcement.</description>
     </item>
     
     <item>
