@@ -4,7 +4,8 @@ description: "A practitioner's guide to designing command-line tools that AI cod
 date: 2026-02-28T00:00:00+05:30
 tags:
   - AI
-  - Development
+  - Agents
+  - Engineering
 categories:
   - AI
 cover:

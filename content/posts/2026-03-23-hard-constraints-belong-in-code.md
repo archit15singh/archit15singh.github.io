@@ -5,7 +5,6 @@ date: 2026-03-23T10:00:00+05:30
 tags:
   - AI
   - Agents
-  - Systems Design
 categories:
   - AI
 cover:

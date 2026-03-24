@@ -4,7 +4,9 @@ description: "A decade-long, first-principles roadmap through epistemology, symb
 date: 2023-01-01T12:00:00.000Z
 tags:
   - Reading
-categories: Reading
+  - Mindset
+categories:
+  - Reading
 cover:
   hidden: false
   relative: false
