@@ -1,6 +1,6 @@
 ---
-title: "Hard Constraints Belong in Code: Designing Hybrid AI Agents for Constrained Optimization"
-description: "A design principle for agentic systems that need real guarantees: let the LLM explore the solution space, let deterministic code enforce the rules, and wire them together through a feedback loop that catches what the model can't."
+title: "Hard Constraints Belong in Code: The Probabilistic-Deterministic Hybrid Agent Pattern"
+description: "LLMs are probabilistic reasoners - great at exploring solution spaces using model priors, bad at guaranteeing correctness. Deterministic code is the opposite. The right architecture for high-stakes decisions wires them together: model priors for exploration, code for enforcement."
 date: 2026-03-23T10:00:00+05:30
 tags:
   - AI
@@ -36,9 +36,13 @@ UseHugoToc: true
 
 # Hard Constraints Belong in Code
 
-There's a category of problems where LLMs are genuinely useful, but where deploying a pure LLM solution will eventually fail in a way that matters. Constrained optimization is one of them. The failure mode isn't obvious - the model sounds confident, the output looks reasonable, and then someone catches that the recommended supplier isn't certified for the part in question, or that the suggested order quantity violates a contractual minimum.
+LLMs are probabilistic reasoners. They draw on model priors to interpret ambiguous inputs, frame hypotheses, and synthesize trade-offs across a large solution space. That's exactly what makes them useful for complex decisions - and exactly what makes them unreliable for enforcing hard rules.
 
-The right architecture for these problems isn't "better prompting." It's a hybrid: deterministic code for anything with a correct answer derivable from data, and LLMs for everything that requires judgment over structured results. Getting this boundary right is the core design decision.
+Deterministic code is the opposite. It has no priors, no judgment, no ability to explore. But it guarantees correctness on anything reducible to math or a lookup.
+
+The right architecture for high-stakes decisions uses both. The LLM does what probabilistic reasoning is good at - exploring the space of possible responses using its priors about costs, risks, and trade-offs. Deterministic code does what it's good at - enforcing constraints, running calculations, and returning structured results the model can reason over. Neither alone is sufficient. The failure mode of pure LLM is subtle: the model sounds confident, the output looks reasonable, and then someone catches that the recommended supplier isn't certified for that part, or the suggested order quantity violates a contractual minimum. The failure mode of pure deterministic optimization is different: it answers the question you asked, not the question you needed to ask.
+
+Getting the boundary between the two right is the core design decision.
 
 ---
 
