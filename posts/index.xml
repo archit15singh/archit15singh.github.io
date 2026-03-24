@@ -10,7 +10,15 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Mar 2026 10:00:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Mar 2026 10:00:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Persistent Memory for AI Agents: Architecture Decisions in Memori</title>
+      <link>https://archit15singh.github.io/posts/2026-03-24-memori-architecture/</link>
+      <pubDate>Tue, 24 Mar 2026 10:00:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-03-24-memori-architecture/</guid>
+      <description>A deep dive into the engineering decisions behind Memori -- a persistent memory system for AI coding agents built on Rust, SQLite, and fastembed. Covers hybrid search with RRF, access decay scoring, cosine deduplication, and why I deliberately chose brute-force over indexing.</description>
+    </item>
+    
     <item>
       <title>Hard Constraints Belong in Code: The Probabilistic-Deterministic Hybrid Agent Pattern</title>
       <link>https://archit15singh.github.io/posts/2026-03-23-hard-constraints-belong-in-code/</link>
