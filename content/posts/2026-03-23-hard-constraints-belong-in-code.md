@@ -12,7 +12,7 @@ cover:
   hidden: false
   relative: false
   image: "/images/uploads/hard-constraints-belong-in-code-banner.jpeg"
-  alt: "Control panel with dials and gauges — deterministic precision and probabilistic exploration in one system"
+  alt: "Control panel with dials and gauges - deterministic precision and probabilistic exploration in one system"
   caption: ""
 editPost:
   URL: ""
@@ -36,7 +36,7 @@ UseHugoToc: true
 
 # Hard Constraints Belong in Code
 
-There's a category of problems where LLMs are genuinely useful, but where deploying a pure LLM solution will eventually fail in a way that matters. Constrained optimization is one of them. The failure mode isn't obvious — the model sounds confident, the output looks reasonable, and then someone catches that the recommended supplier isn't certified for the part in question, or that the suggested order quantity violates a contractual minimum.
+There's a category of problems where LLMs are genuinely useful, but where deploying a pure LLM solution will eventually fail in a way that matters. Constrained optimization is one of them. The failure mode isn't obvious - the model sounds confident, the output looks reasonable, and then someone catches that the recommended supplier isn't certified for the part in question, or that the suggested order quantity violates a contractual minimum.
 
 The right architecture for these problems isn't "better prompting." It's a hybrid: deterministic code for anything with a correct answer derivable from data, and LLMs for everything that requires judgment over structured results. Getting this boundary right is the core design decision.
 
@@ -44,7 +44,7 @@ The right architecture for these problems isn't "better prompting." It's a hybri
 
 ## The Problem with Pure LLM Optimization
 
-Take a concrete scenario: a policy event changes import tariffs on a particular trade lane. A supply chain team needs to know what to do — which parts to reroute, to which suppliers, over what timeline, at what cost.
+Take a concrete scenario: a policy event changes import tariffs on a particular trade lane. A supply chain team needs to know what to do - which parts to reroute, to which suppliers, over what timeline, at what cost.
 
 A naive approach sends this to a model and asks for a recommendation. The model will give you one. It will sound authoritative. It will probably even be structurally reasonable. But it has no access to your actual supplier contracts, no way to check certification requirements against each part number, no mechanism to validate that the recommended order volumes are actually achievable given supplier capacity.
 
@@ -67,7 +67,7 @@ The model doesn't know what it doesn't know about your constraints. It will happ
 
 ## The Problem with Pure Deterministic Optimization
 
-The reflex fix is to throw this at an operations research model — minimize cost subject to constraints, return the optimal routing.
+The reflex fix is to throw this at an operations research model - minimize cost subject to constraints, return the optimal routing.
 
 ```
 minimize:   Σ(cost[i] * volume[i])
@@ -77,7 +77,7 @@ subject to: lead_time[i] ≤ max_lead_time
             moq[i,j] ≤ order_quantity[i,j]
 ```
 
-This is correct and reproducible. It will also only answer the question you asked. The question you need answered is: *which scenarios are worth evaluating?* A 25% tariff shock doesn't have one obvious response — it has a space of possible responses, each with different risk profiles, transition timelines, and strategic implications. The optimization model needs a human to frame each scenario, encode each trade-off, and decide what the objective function should be.
+This is correct and reproducible. It will also only answer the question you asked. The question you need answered is: *which scenarios are worth evaluating?* A 25% tariff shock doesn't have one obvious response - it has a space of possible responses, each with different risk profiles, transition timelines, and strategic implications. The optimization model needs a human to frame each scenario, encode each trade-off, and decide what the objective function should be.
 
 That's the gap. The deterministic system can compute any scenario you give it with perfect accuracy. It cannot decide which scenarios to explore.
 
@@ -101,7 +101,7 @@ The core design principle:
 
 > **Hard constraints are enforced by code. The LLM explores the optimization parameter space via simulator access.**
 
-The LLM is an agent that calls a deterministic simulator as a tool. The simulator enforces all hard constraints — certifications, MOQs, capacity limits, contractual minimums — and returns structured results. The LLM reasons over those results, adjusts its hypotheses, runs more simulations, and synthesizes a recommendation.
+The LLM is an agent that calls a deterministic simulator as a tool. The simulator enforces all hard constraints - certifications, MOQs, capacity limits, contractual minimums - and returns structured results. The LLM reasons over those results, adjusts its hypotheses, runs more simulations, and synthesizes a recommendation.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -141,14 +141,14 @@ LLM internal reasoning:
      breadth of rerouting vs. selectivity
 
    I'll construct 5 scenarios spanning the trade-off space:
-   1. Absorb full tariff — baseline
+   1. Absorb full tariff - baseline
    2. Full reroute to Vietnam alternatives
-   3. Selective reroute — highest-impact SKUs only
+   3. Selective reroute - highest-impact SKUs only
    4. Nearshore to Korea domestic for top volume SKUs
    5. Reroute + contract renegotiation hybrid"
 ```
 
-The LLM isn't computing anything yet. It's deciding what's worth computing — which is exactly what it's good at.
+The LLM isn't computing anything yet. It's deciding what's worth computing - which is exactly what it's good at.
 
 ### Step 2: Scenario runs with structured feedback
 
@@ -186,23 +186,23 @@ agent → simulator({routing: vietnam_subset, affected_skus: 127})
   }
 ```
 
-Scenario 2 comes back with violations. The LLM doesn't average over them or hope the violations are minor — it takes them as hard stops and adjusts the next hypothesis accordingly. This is the feedback loop that makes the system trustworthy.
+Scenario 2 comes back with violations. The LLM doesn't average over them or hope the violations are minor - it takes them as hard stops and adjusts the next hypothesis accordingly. This is the feedback loop that makes the system trustworthy.
 
 ### Step 3: Synthesis over validated results
 
-After all five runs, the LLM synthesizes across scenarios where constraint violations are zero. It's comparing apples to apples — every option on the final shortlist has already been verified as operationally feasible:
+After all five runs, the LLM synthesizes across scenarios where constraint violations are zero. It's comparing apples to apples - every option on the final shortlist has already been verified as operationally feasible:
 
 ```
 LLM synthesis:
-  Scenario 1: $47M annual exposure, zero routing flexibility — baseline
+  Scenario 1: $47M annual exposure, zero routing flexibility - baseline
               for comparison only.
-  Scenario 2: Eliminated — constraint violations on 2 SKUs, high
+  Scenario 2: Eliminated - constraint violations on 2 SKUs, high
               supply risk with unproven suppliers.
   Scenario 3: Best balance. $21M delta, +4 days lead time, no
               violations. Recommend this.
   Scenario 4: Similar cost to Scenario 3, reduces Korea-domestic
               strategic optionality.
-  Scenario 5: Dependent on contract renegotiation — timeline
+  Scenario 5: Dependent on contract renegotiation - timeline
               uncertain, not executable within Q1.
 ```
 
@@ -210,14 +210,14 @@ LLM synthesis:
 
 ```
 ┌────────────────────────────────────────────────────────────┐
-│  RECOMMENDATION: Scenario 3 — Selective Reroute            │
+│  RECOMMENDATION: Scenario 3 - Selective Reroute            │
 │                                                            │
 │  Reroute 127 SKUs (>15% tariff impact) to Vietnam          │
 │  alternative suppliers over 60 days.                       │
 │                                                            │
 │  Annual cost delta:  +$21M  (vs. +$47M absorb baseline)   │
 │  Lead time impact:   +4 days average                       │
-│  Constraint status:  CLEAN — no violations                 │
+│  Constraint status:  CLEAN - no violations                 │
 │                                                            │
 │  Why not Scenario 2: Certification gaps on 2 SKUs,        │
 │  MOQ violation at forecast volume.                         │
@@ -225,7 +225,7 @@ LLM synthesis:
 └────────────────────────────────────────────────────────────┘
 ```
 
-The output isn't just a number. It includes the reasoning, the rejected alternatives, and the assumptions — which means a supply chain director can actually review it rather than trust it blindly.
+The output isn't just a number. It includes the reasoning, the rejected alternatives, and the assumptions - which means a supply chain director can actually review it rather than trust it blindly.
 
 ---
 
@@ -261,7 +261,7 @@ The loop is what allows the LLM to act like an experienced analyst who adjusts t
 
 ## Production: From Interactive to Batch
 
-The interactive version — five scenarios, real-time response — is a demo. The production version is different in scale but identical in structure:
+The interactive version - five scenarios, real-time response - is a demo. The production version is different in scale but identical in structure:
 
 ```
 INTERACTIVE (demo)          PRODUCTION (batch)
@@ -312,21 +312,21 @@ The hybrid exists precisely because both failure modes are real and neither is a
 
 ## The Broader Pattern
 
-This architecture — LLM as explorer, deterministic system as enforcer, structured feedback loop between them — isn't specific to supply chain. It applies anywhere the problem has both:
+This architecture - LLM as explorer, deterministic system as enforcer, structured feedback loop between them - isn't specific to supply chain. It applies anywhere the problem has both:
 
 1. A large space of possible actions that requires judgment to navigate
 2. Hard constraints that must hold in the output regardless of what the model recommends
 
-Loan underwriting, treatment protocol recommendation, infrastructure change management, legal contract review — any domain where a human expert would say "here are the options I'd consider" AND "here's what would absolutely disqualify each one" is a candidate for this pattern.
+Loan underwriting, treatment protocol recommendation, infrastructure change management, legal contract review - any domain where a human expert would say "here are the options I'd consider" AND "here's what would absolutely disqualify each one" is a candidate for this pattern.
 
-The insight that makes it work in practice: **the LLM doesn't need to know the constraints in detail. It needs to be wired to a system that enforces them and returns violations as data.** The model's job is to respond to that data intelligently — which is exactly what it's good at.
+The insight that makes it work in practice: **the LLM doesn't need to know the constraints in detail. It needs to be wired to a system that enforces them and returns violations as data.** The model's job is to respond to that data intelligently - which is exactly what it's good at.
 
 ---
 
 ## Closing
 
-The temptation with capable frontier models is to route everything through the model and treat the results as reliable. For exploration, synthesis, and explanation — that trust is usually warranted. For anything with a ground truth derivable from data, it isn't.
+The temptation with capable frontier models is to route everything through the model and treat the results as reliable. For exploration, synthesis, and explanation - that trust is usually warranted. For anything with a ground truth derivable from data, it isn't.
 
-The architectural discipline of separating these two modes — and building the feedback loop that connects them — is what takes an AI system from "impressive demo" to something a production team can actually depend on.
+The architectural discipline of separating these two modes - and building the feedback loop that connects them - is what takes an AI system from "impressive demo" to something a production team can actually depend on.
 
 Hard constraints belong in code. Not because models can't reason about them. Because production systems can't afford to find out when they got it slightly wrong.
