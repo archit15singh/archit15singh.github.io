@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Systems Design on Archit&#39;s Space</title>
+    <link>https://archit15singh.github.io/tags/systems-design/</link>
+    <description>Recent content in Systems Design on Archit&#39;s Space</description>
+    <image>
+      <url>https://archit15singh.github.io/papermod-cover.png</url>
+      <link>https://archit15singh.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Mar 2026 10:00:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/systems-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hard Constraints Belong in Code: Designing Hybrid AI Agents for Constrained Optimization</title>
+      <link>https://archit15singh.github.io/posts/2026-03-23-hard-constraints-belong-in-code/</link>
+      <pubDate>Mon, 23 Mar 2026 10:00:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-03-23-hard-constraints-belong-in-code/</guid>
+      <description>A design principle for agentic systems that need real guarantees: let the LLM explore the solution space, let deterministic code enforce the rules, and wire them together through a feedback loop that catches what the model can&amp;#39;t.</description>
+    </item>
+    
+  </channel>
+</rss>
