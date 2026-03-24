@@ -37,11 +37,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://archit15singh.github.io/tags/systems-design/</loc>
-    <lastmod>2026-03-23T10:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://archit15singh.github.io/tags/</loc>
     <lastmod>2026-03-23T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -52,7 +47,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://archit15singh.github.io/tags/development/</loc>
+    <loc>https://archit15singh.github.io/tags/engineering/</loc>
     <lastmod>2026-02-28T00:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -67,8 +62,8 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://archit15singh.github.io/tags/memory/</loc>
-    <lastmod>2024-01-01T10:00:00+00:00</lastmod>
+    <loc>https://archit15singh.github.io/tags/mindset/</loc>
+    <lastmod>2023-01-01T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -88,11 +83,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://archit15singh.github.io/categories/about/</loc>
-    <lastmod>2022-01-01T12:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/mindset/</loc>
     <lastmod>2022-01-01T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

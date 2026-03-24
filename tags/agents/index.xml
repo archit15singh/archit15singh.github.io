@@ -19,5 +19,21 @@
       <description>LLMs are probabilistic reasoners - great at exploring solution spaces using model priors, bad at guaranteeing correctness. Deterministic code is the opposite. The right architecture for high-stakes decisions wires them together: model priors for exploration, code for enforcement.</description>
     </item>
     
+    <item>
+      <title>Designing CLI Tools for AI Agents: Lessons from Building Memori</title>
+      <link>https://archit15singh.github.io/posts/2026-02-28-designing-cli-tools-for-ai-agents/</link>
+      <pubDate>Sat, 28 Feb 2026 00:00:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-02-28-designing-cli-tools-for-ai-agents/</guid>
+      <description>A practitioner&amp;#39;s guide to designing command-line tools that AI coding agents can use effectively -- covering output modes, error design, behavioral snippets, and the subtle art of making machines help themselves.</description>
+    </item>
+    
+    <item>
+      <title>Forging AI’s Lasting Memory: Lessons from Asimov and First Principles</title>
+      <link>https://archit15singh.github.io/posts/2024-01-01-ai-memory/</link>
+      <pubDate>Mon, 01 Jan 2024 10:00:00 +0000</pubDate>
+      <guid>https://archit15singh.github.io/posts/2024-01-01-ai-memory/</guid>
+      <description>A deep dive into why modern AI agents forget, how Isaac Asimov’s positronic robots managed memory, and a first-principles guide to building memory systems that endure across sessions.</description>
+    </item>
+    
   </channel>
 </rss>
