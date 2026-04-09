@@ -11,8 +11,8 @@ categories:
 cover:
   hidden: false
   relative: false
-  image: "/images/uploads/memori-architecture-banner.jpeg"
-  alt: "Abstract circuit nodes interconnected -- recursive memory architecture for AI agents"
+  image: "/images/uploads/memori-recursive-design-banner.jpeg"
+  alt: "A lone figure ascending an infinite staircase through darkness toward light -- recursive layers of agent memory"
   caption: ""
 editPost:
   URL: ""
