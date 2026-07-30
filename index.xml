@@ -12,11 +12,11 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 31 Jul 2026 00:45:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Luffy: A PR Review Agent That Actually Remembers</title>
+      <title>Building Luffy: a PR review agent you can audit</title>
       <link>https://archit15singh.github.io/posts/2026-07-31-luffy-pr-review-agent/</link>
       <pubDate>Fri, 31 Jul 2026 00:45:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-07-31-luffy-pr-review-agent/</guid>
-      <description>Most AI PR bots are stateless chat on a diff. Luffy is a review control plane: explicit trigger, bounded context, one Hermes review via OpenRouter, and a central memory hub that grows smarter with every run. Here is how I built it and why each design decision is where it is.</description>
+      <description>A comment-triggered PR review control plane. Hermes Agent, OpenRouter, Claude Opus 5, and a hub memory that actually grows. Built it on a real Odoo bug, captured the full agentic loop, and got a REQUEST CHANGES the code earned. Here is the system, the numbers, and a slice of the trace.</description>
     </item>
     
     <item>
