@@ -10,7 +10,11 @@ tags:
 categories:
   - Engineering
 cover:
-  hidden: true
+  hidden: false
+  relative: false
+  image: "/images/uploads/luffy-banner.jpeg"
+  alt: "Luffy — a comment-triggered PR review agent with growing hub memory"
+  caption: ""
 editPost:
   URL: ""
   Text: ""
