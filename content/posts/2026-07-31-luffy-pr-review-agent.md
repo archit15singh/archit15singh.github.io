@@ -39,8 +39,6 @@ This post is how that system is put together, what broke on the way, and what a 
 
 Proof, not vibe: Actions run `30574256524` on a fork's PR #3. Model `anthropic/claude-opus-5`. **REQUEST CHANGES**, score **42/100**. Ten API calls, nine tool-call turns, twenty-six session messages, about four minutes of Hermes wall time, roughly **$0.59**. The full trace package lives in the repo under `docs/showcase/`.
 
-![Luffy captured Opus 5 agentic-loop trace on archit15singh/odoo PR #3 — REQUEST CHANGES, 42/100, 10 API calls, $0.59](/images/uploads/luffy-trace-demo.png)
-
 ---
 
 ## The problem is systems, not "better prompts"
