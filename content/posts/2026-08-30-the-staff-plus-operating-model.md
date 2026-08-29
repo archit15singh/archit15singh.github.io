@@ -75,7 +75,7 @@ If the archetypes answer *who you are*, the pillars answer *what you actually do
 
 **Leveling up others.** Be a force multiplier. "Scale yourself by writing and growing others."
 
-The single most useful decision tactic in the whole field is borrowed from the IETF: **seek consent, not consensus.** Do not ask "Is everyone OK with choice A?" Ask *"Can anyone not live with choice A?"* Rough consensus, where "lack of disagreement is more important than agreement," lets a decision move in a day instead of a quarter.
+One decision tactic stands out, borrowed from the IETF: **seek consent, not consensus.** Do not ask "Is everyone OK with choice A?" Ask *"Can anyone not live with choice A?"* Rough consensus, where "lack of disagreement is more important than agreement," lets a decision move in a day instead of a quarter.
 
 ---
 
@@ -98,13 +98,13 @@ This is the dense core: how you actually spend your days once you're past Senior
 
 ### Work on what matters
 
-The field's best prioritization framework is a list of traps to avoid.
+The clearest prioritization framework here is a list of traps to avoid.
 
 *Snacking* is easy, low-impact work that feels productive. Gloriously rewarded by everyone except reality. *Preening* is low-impact, **high-visibility** work. The seductive one, because many orgs conflate visibility with impact. Doing it well requires near-invulnerability to criticism, and it rots your real work. *Chasing ghosts* means investing in large projects because they echo your *previous* company's problems, not your current one's.
 
 Instead, work where there is **both room and attention**: priorities that will matter but aren't yet swamped. Swarm existential problems when they are existential, but don't pile onto everyone's top priority. And the highest-value, most-neglected place to spend time is **growing the team around you**. Mentoring and coaching beat hiring for engineering velocity, and it will outlive your tech specs and pull requests as your legacy.
 
-Two more moves here are genuinely underrated.
+Two more moves here are easy to skip and hard to regret.
 
 **Editing.** Most projects are one small change, one quick conversation, one unblock away from succeeding. With your relationships and context, you can shift outcomes with ounces of effort. And finishing things, turning a project from risk to asset, is always time well spent.
 
@@ -112,7 +112,7 @@ Two more moves here are genuinely underrated.
 
 ### Create space for others
 
-The most counterintuitive and most correct idea in the field: the best measure of your long-term success is that the org **benefits from but doesn't rely on** you. "A good discussion is, in this new world, one that it turns out you didn't need to attend."
+The counterintuitive idea here is also the correct one: the best measure of your long-term success is that the org **benefits from but doesn't rely on** you. "A good discussion is, in this new world, one that it turns out you didn't need to attend."
 
 Techniques: shift toward asking questions instead of giving answers, pull in exactly one non-participant at a time, volunteer to take notes (it is a leadership act, not a demotion, and it frees a real notetaker to contribute), circulate decisions early *before* they crystallize, separate style feedback from substance feedback (stop giving style notes that won't change outcomes), and the big one: **change your mind**. If senior leaders never change their minds, everyone learns to correlate bluster with success.
 
@@ -128,7 +128,7 @@ This is the one most ambitious ICs resist, and it is the one that decides whethe
 
 ## The honest arithmetic: getting the title
 
-All the operating brilliance is worthless if it never converts to the title, because, fairly or not, your org's ceiling is the constraint. The promotion material here is refreshingly explicit.
+All the operating savvy is worthless if it never converts to the title, because, fairly or not, your org's ceiling is the constraint. The promotion material here is unusually direct.
 
 **Promotion is a team activity, not a solo one.** "Don't play team games alone, you'll lose." Write the promotion packet *collaboratively* with your manager, bring them into the fold *early*, and temper your expectations.
 
@@ -181,7 +181,7 @@ This post is a synthesis. But the real payoff comes from running the trajectory 
 
 **Wave 3: mine the network, not just the canon.** This is the recursion that actually compounds. Every time you read something that lands, chase the sources it cites and the debates it references. Most good writers publish a mapped reading list of the work they respect. Pull on those threads, and within a couple of rounds the same operating principles start showing up under different names and framings. That cross-verification, seeing the same idea survive independent restatement, is how you know it is a real principle and not one person's tic. Set a stop condition so it does not become an infinite scroll: three to five rounds, or until a fresh round stops adding new ideas.
 
-Six to ten deliberately paced hours across the three waves beats months of scattered reading. Each wave makes the next one land harder. If you only do one, do Wave 1 plus Wave 2; that combination alone is the 80/20 of the whole field.
+Six to ten deliberately paced hours across the three waves beats months of scattered reading. Each wave makes the next one land harder. If you only do one, do Wave 1 plus Wave 2; that combination alone is the 80/20 of the field.
 
 ## The material, collated and ranked
 
@@ -198,7 +198,7 @@ If you want a map before you start, here is the field collated and ranked by how
 4. The essay on the engineer-versus-manager pendulum, to keep the two tracks straight and to know when to swing between them.
 5. The essay on engineering levels, which dismantles the default "management is the only promotion" story.
 6. The talk on the hidden, non-promotable glue work that holds teams together, and how to keep it from quietly capping your career.
-7. The field's best senior-engineer job description, written as an explicit boundary between what belongs to the engineer and what belongs to the manager.
+7. A clear senior-engineer job description, written as an explicit boundary between what belongs to the engineer and what belongs to the manager.
 
 **Tier 3: case studies and future-state models. Read later, for breadth.**
 
