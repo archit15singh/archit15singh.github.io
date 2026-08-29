@@ -1,6 +1,6 @@
 ---
 title: "Listen to this post: free text-to-speech on a Hugo blog"
-description: "How every post on this site got a read-aloud button with the Web Speech API: the two approach families, the seven browser bugs that shaped the code, the accessibility decisions, and the two Hugo traps that could have dropped the whole feature silently."
+description: "How every post on this site got a read-aloud button with the Web Speech API: the two approach families, the six browser bugs that shaped the code, the accessibility decisions, and the two Hugo traps that could have dropped the whole feature silently."
 date: 2026-08-30T00:45:00+05:30
 tags: [Engineering, WebSpeech, Accessibility, Hugo]
 categories: [Engineering]
@@ -10,7 +10,7 @@ cover:
   hidden: false
 ---
 
-There is a Listen button on top of every post here now. Press it and the browser reads the article aloud, highlights the paragraph it is speaking, shows progress in a status bar, and lets you jump to any paragraph by clicking it. It costs nothing per listener, stores no files, and shipped as three files and a config flag. Here is exactly how it works and what I had to dodge to make it survive the real world.
+There is a Listen button on top of every post here now. Press it and the browser reads the article aloud, highlights and scrolls to the paragraph it is speaking, shows progress in a status bar, and lets you jump to any paragraph by clicking it, or step through them with the previous and next buttons in the player. It costs nothing per listener, stores no files, and shipped as three files and a config flag. Here is exactly how it works and what I had to dodge to make it survive the real world.
 
 ## Two ways to make a blog speak
 
@@ -26,7 +26,7 @@ Three files live in the repo.
 
 `layouts/_default/single.html` is a byte-for-byte copy of the PaperMod single-post template with one extra line injected above the content: `partial "listen.html"`. Hugo prefers the root layout over the theme's, so the theme submodule stays untouched. That is the only reason the override stays maintainable; any theme bump shows up as a one-line diff instead of a fork war.
 
-`layouts/partials/listen.html` renders the player: a Listen button that becomes Pause then Resume, a Stop button, a speed toggle that cycles 1x, 1.25x, 1.5x, 2x, and a voice picker. It starts with the `hidden` attribute and only un-hides when JavaScript confirms `speechSynthesis` exists. If the browser can't speak, the button simply never appears. The CSS is scoped inside the partial so the player never leaks styling into the theme.
+`layouts/partials/listen.html` renders the player: a Listen button that becomes Pause then Resume, a Stop button, previous and next paragraph jump buttons, a speed toggle that cycles 1x, 1.25x, 1.5x, 2x, and a voice picker. It starts with the `hidden` attribute and only un-hides when JavaScript confirms `speechSynthesis` exists. If the browser can't speak, the button simply never appears. The CSS is scoped inside the partial so the player never leaks styling into the theme.
 
 `static/js/listen.js` does the work. It walks the article with a `TreeWalker`, collects text from paragraphs and list items, skips code blocks, footnotes, and asides, splits everything into short speakable chunks, and drives the state machine: idle, playing, paused.
 
@@ -60,7 +60,7 @@ The second trap is Hugo's `default` helper. `(.Param "tts") | default true` retu
 
 ## What I deliberately skipped
 
-Pre-generated audio, og:audio tags, AudioObject schema, RSS enclosures, and a podcast feed all look like obvious next steps. They all have the same requirement, which is a real audio file. Browser synthesis never creates one, so none of those signals apply to this setup. And the SEO case for chasing them is weaker than the hype: AudioObject has no Google rich result today, so the markup is entity bookkeeping, not a SERP feature. A local 82-parameter voice model running on-device is genuinely tempting, but it trades the consistent-voice problem for a multi-megabyte download per reader. At eleven posts it is not worth it.
+Pre-generated audio, og:audio tags, AudioObject schema, RSS enclosures, and a podcast feed all look like obvious next steps. They all have the same requirement, which is a real audio file. Browser synthesis never creates one, so none of those signals apply to this setup. And the SEO case for chasing them is weaker than the hype: AudioObject has no Google rich result today, so the markup is entity bookkeeping, not a SERP feature. A local 82-million-parameter voice model running on-device is genuinely tempting, but it trades the consistent-voice problem for a multi-megabyte download per reader. At eleven posts it is not worth it.
 
 ## Verifying without a phone
 
@@ -68,7 +68,7 @@ The player gets exercised in headless Chrome with a small Playwright script that
 
 ## The honest limits
 
-The voice is the reader's OS voice. On a Mac the picker offers all 181 installed voices and the quality is genuinely good. On a phone it depends on what the manufacturer shipped. There is no seek bar, because the Speech API does not expose position, only chunk boundaries. And background-tab playback is unreliable; browsers throttle synthesis when the tab loses focus, so this is a read-along feature, not a hands-free podcast replacement.
+The voice is the reader's OS voice. The picker lists whatever voices the operating system shipped, which on my machines runs from dozens in a bare headless browser to a hundred-plus in the browsers I actually use. On a phone it depends on what the manufacturer bundled. There is no seek bar, because the Speech API does not expose position, only chunk boundaries. And background-tab playback is unreliable; browsers throttle synthesis when the tab loses focus, so this is a read-along feature, not a hands-free podcast replacement.
 
 Those limits are the other side of the trade that made this free and zero-maintenance. The moment consistent narration matters more than the cost of generating it, I know exactly which files to rewrite and which button stays.
 
