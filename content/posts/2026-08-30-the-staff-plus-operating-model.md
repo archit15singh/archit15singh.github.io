@@ -171,19 +171,42 @@ The deeper point applies to everyone: *if you only do glue, you will only get be
 
 ---
 
-## The sequence that works
+## How to keep mining it yourself, in three waves
 
-Here is the order in which to build the skills, because they compound.
+This post is a synthesis. But the real payoff comes from running the trajectory yourself. The field compounds when you mine it recursively, in waves rather than one long read. Here is a repeatable three-wave method, tuned to this specific corner of engineering.
 
-- **First, get the vocabulary and the operating model.** Read the guides on the archetypes, operating, choosing work, creating space, and finding a sponsor. Then read several career stories of people already doing the role. This builds the shared framework in a few hours.
-- **Second, get the day-to-day mechanics.** The book-length treatment of the role, parts one through three (big picture, execution, influence), plus the glue essay. This is where the work becomes concrete.
-- **Third, get the manager's perspective.** Read the management-track classic, especially the chapter on the tech lead role and the senior-skills list. This tells you exactly what you'll be negotiating against.
-- **Fourth, build judgment.** Read the pendulum essay and the piece on engineering levels. This tells you when to slow down and which offers and tracks to refuse.
-- **Finally, study working examples.** Read people who write concretely about what the work looks like day to day, rather than about traits. This keeps you focused on the *work*, not the *labels*.
+**Wave 1: build the shared vocabulary.** Go broad and fast. Read the core operating guides: the archetypes, how to choose work, how to create space for others, how to find a sponsor, and what a level-defining project looks like. Then read five or six first-person stories of people already doing the role. Stop when you can restate the operating model in your own words. This wave is a few focused hours and its only output is a shared framework you can talk about.
 
-A deliberately paced 30 hours across those five passes, one to three days spread over a few weeks, will move a capable senior engineer further than months of scattered reading. The whole point is that the material compounds: each pass makes the next one land harder.
+**Wave 2: go deep on the mechanics.** Pick the single richest written treatment of the role and read it cover to cover in its intended order: big picture, then execution, then influence. Pair it with the canonical essay on the hidden, non-promotable work that holds teams together. This is where the model stops being vocabulary and becomes procedure. You should come out of this wave able to *run* a cross-team project, not just describe one.
 
-The deeper trick, if you want to keep going: **don't read people, mine the network around the people.** Every time you read something good, chase the sources it cites. The field's best writers publish literal maps of the work they respect. That is how a short syllabus becomes a compounding, self-recommending set, and how you eventually see the same operating principles wearing different names across many authors.
+**Wave 3: mine the network, not just the canon.** This is the recursion that actually compounds. Every time you read something that lands, chase the sources it cites and the debates it references. Most good writers publish a mapped reading list of the work they respect. Pull on those threads, and within a couple of rounds the same operating principles start showing up under different names and framings. That cross-verification, seeing the same idea survive independent restatement, is how you know it is a real principle and not one person's tic. Set a stop condition so it does not become an infinite scroll: three to five rounds, or until a fresh round stops adding new ideas.
+
+Six to ten deliberately paced hours across the three waves beats months of scattered reading. Each wave makes the next one land harder. If you only do one, do Wave 1 plus Wave 2; that combination alone is the 80/20 of the whole field.
+
+## The material, collated and ranked
+
+If you want a map before you start, here is the field collated and ranked by how much practical value each piece provides at the Senior to Staff/Principal transition. Tier 1 shapes everything; the lower tiers fill in the edges.
+
+**Tier 1: read first. Highest impact for the transition.**
+
+1. The canonical book-length treatment of the staff-plus role. Organizes the entire job into big-picture thinking, project execution, and levelling up others, and is the single most practical manual for influence without authority.
+2. The guide collection that defines the role's archetypes and its day-to-day operating model: how to choose work, measure quality, stay aligned with authority, and get the title. The stories in it are the raw material every other framework restates.
+3. The management-track classic, specifically its tech-lead chapter and its senior-skills list. This is the manager's perspective you will be negotiating against, so it is worth reading even if you never manage.
+
+**Tier 2: essential texture. Mine heavily once you have the vocabulary.**
+
+4. The essay on the engineer-versus-manager pendulum, to keep the two tracks straight and to know when to swing between them.
+5. The essay on engineering levels, which dismantles the default "management is the only promotion" story.
+6. The talk on the hidden, non-promotable glue work that holds teams together, and how to keep it from quietly capping your career.
+7. The field's best senior-engineer job description, written as an explicit boundary between what belongs to the engineer and what belongs to the manager.
+
+**Tier 3: case studies and future-state models. Read later, for breadth.**
+
+8. First-person accounts of operating at staff-plus day to day: what the calendar actually looks like, how much coding a staff engineer does, and how the mindset and focus shift.
+9. The reflections of a principal engineer on why the role is really about influence, not individual technical heroics, and why its problems are always people problems.
+10. Essays on engineering maturity and mental models, which sharpen the judgment the frameworks assume you already have.
+
+The ranking is by practical value, not by literary merit, and it is deliberately weighted toward the transition you are in now. The tier-two and tier-three material becomes more useful the further you go, so there is no rule to read it all before moving up. Read Tier 1, run a wave or two, then let the material pick your next thread.
 
 ---
 
