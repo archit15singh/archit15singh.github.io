@@ -7,8 +7,9 @@
   const content = document.querySelector(".post-content");
   if (!player || !content) return;
 
-  const MAX_CHARS = 300;
+  const MAX_CHARS = 220;
   const RATES = [1, 1.25, 1.5, 2];
+  const VOICE_POLL_MS = 250;
   const SKIP_SELECTOR = "pre, code, .highlight, script, style, .footnotes, aside, kbd, samp";
   const VOICE_KEY = "listen-voice-name";
   const SYNTH = window.speechSynthesis;
@@ -25,6 +26,7 @@
   let mode = "idle"; // idle | playing | paused
   let gen = 0;
   let watchdog = null;
+  let voicePoll = null;
   let lastSpeechOp = 0;
   let selectedVoice = null;
 
@@ -54,6 +56,10 @@
       for (const chunk of splitChunks(text)) out.push({ el, text: chunk });
     });
     return out;
+  }
+
+  function sanitizeForSpeech(text) {
+    return text.replace(/[<>]/g, (ch) => (ch === "<" ? "\uff1c" : "\uff1e"));
   }
 
   function splitChunks(text) {
@@ -130,7 +136,7 @@
   }
 
   function utteranceFor(text) {
-    const u = new SpeechSynthesisUtterance(text);
+    const u = new SpeechSynthesisUtterance(sanitizeForSpeech(text));
     u.lang = document.documentElement.lang || "en-US";
     u.rate = RATES[rateIdx];
     const v = pickVoice();
@@ -175,6 +181,10 @@
   }
 
   function setLabels() {
+    btnPlay.setAttribute(
+      "aria-label",
+      mode === "idle" ? "Listen to this post" : mode === "paused" ? "Resume reading" : "Pause reading"
+    );
     if (mode === "idle") {
       btnPlay.textContent = "Listen";
       btnStop.hidden = true;
@@ -354,7 +364,27 @@
     SYNTH.onvoiceschanged = () => {
       SYNTH.getVoices();
       populateVoices();
+      stopVoicePoll();
     };
+    startVoicePoll();
   }
   populateVoices();
+
+  function startVoicePoll() {
+    stopVoicePoll();
+    voicePoll = setInterval(() => {
+      const voices = allVoices();
+      if (voices.length) {
+        populateVoices();
+        stopVoicePoll();
+      }
+    }, VOICE_POLL_MS);
+  }
+
+  function stopVoicePoll() {
+    if (voicePoll) {
+      clearInterval(voicePoll);
+      voicePoll = null;
+    }
+  }
 })();
