@@ -90,6 +90,7 @@ Client-side player using the Web Speech API — no audio files, no deps, no buil
 
 - **`default` treats `false` as empty**: `(.Param "tts") | default true` returns `true` even when frontmatter sets `tts: false`. Use `and .Site.Params.tts.enabled (ne (.Param "tts") false)` for a per-post opt-out.
 - When overriding a theme template, keep it a byte-identical copy + injection, so upstream `git diff` against the submodule stays a one-liner.
+- **`gh` resolves to the submodule's repo**: with `themes/hugo-PaperMod` present, `gh run list` / `gh repo view` target `adityatelange/hugo-PaperMod`. Always pass `-R archit15singh/archit15singh.github.io`.
 
 ## Site Configuration Hotspots
 
