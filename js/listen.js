@@ -21,6 +21,7 @@
   const btnNext = player.querySelector(".lp-next");
   const voiceSel = player.querySelector(".lp-voice");
   const statusEl = player.querySelector(".lp-status");
+  const announceEl = player.querySelector(".lp-announce");
 
   let items = [];
   let rateIdx = 0;
@@ -176,6 +177,16 @@
     statusEl.textContent = msg || "";
   }
 
+  function announce(msg) {
+    if (announceEl) announceEl.textContent = msg;
+  }
+
+  function trackEvent() {
+    if (window.goatcounter && goatcounter.count) {
+      goatcounter.count({ event: true, title: "tts listen" });
+    }
+  }
+
   function updateStatus() {
     if (mode === "playing") setStatus("Reading · " + pct() + "%");
     else if (mode === "paused") setStatus("Paused · " + pct() + "%");
@@ -256,6 +267,7 @@
     if (i < 0 || i >= items.length) i = 0;
     current = i;
     mode = "playing";
+    announce("Reading");
     setLabels();
     startWatchdog();
     updateStatus();
@@ -268,6 +280,7 @@
       setStatus("No readable text on this page.");
       return;
     }
+    trackEvent();
     beginAt(0);
   }
 
@@ -313,6 +326,7 @@
     gen += 1;
     SYNTH.cancel();
     mode = "paused";
+    announce("Paused");
     updateStatus();
     setLabels();
   }
@@ -320,6 +334,7 @@
   function resume() {
     if (mode !== "paused" || current < 0) return;
     mode = "playing";
+    announce("Reading");
     setLabels();
     startWatchdog();
     updateStatus();
@@ -333,6 +348,7 @@
     mode = "idle";
     clearHighlight();
     setStatus("");
+    announce("Stopped");
     setLabels();
     stopWatchdog();
   }
@@ -343,6 +359,7 @@
     mode = "idle";
     clearHighlight();
     setStatus("Finished · 100%");
+    announce("Finished");
     setLabels();
     stopWatchdog();
   }

@@ -24,7 +24,7 @@
       <link>https://archit15singh.github.io/posts/2026-08-30-adding-text-to-speech-to-a-hugo-blog/</link>
       <pubDate>Sun, 30 Aug 2026 00:45:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-08-30-adding-text-to-speech-to-a-hugo-blog/</guid>
-      <description>How every post on this site got a read-aloud button with the Web Speech API: the two approach families, the seven browser bugs that shaped the code, the accessibility decisions, and the two Hugo traps that could have dropped the whole feature silently.</description>
+      <description>How every post on this site got a read-aloud button with the Web Speech API: the two approach families, the six browser bugs that shaped the code, the accessibility decisions, and the two Hugo traps that could have dropped the whole feature silently.</description>
     </item>
     
     <item>
