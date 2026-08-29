@@ -83,7 +83,7 @@ Client-side player using the Web Speech API — no audio files, no deps, no buil
 
 - **Toggle**: `params.tts.enabled` in config.yml (global); set `tts: false` in a post's frontmatter to hide it on that post.
 - **Files**: `layouts/_default/single.html` (override of the theme's, byte-identical except the injected `partial "listen.html"` above `.post-content`), `layouts/partials/listen.html` (player markup + scoped inline CSS), `static/js/listen.js` (speech logic, deferred, loaded only on post pages).
-- **Behavior**: text is read from `.post-content`, split into ≤300-char sentence chunks (avoids the Safari long-utterance cutoff bug), code blocks/pre/footnotes skipped, active paragraph highlighted, rate toggle 1x–2x, watchdog restarts a stalled chunk on flaky mobile synthesizers, `speechSynthesis.cancel()` on unload.
+- **Behavior**: text is read from `.post-content`, split into ≤300-char sentence chunks (avoids the Safari long-utterance cutoff bug), code blocks/pre/footnotes skipped, active paragraph highlighted + auto-scrolled into view, **click any paragraph to start reading from there**, **voice picker** (persisted in `localStorage`), **progress %** in the status bar, rate toggle 1x–2x, watchdog restarts a stalled chunk on flaky mobile synthesizers, `speechSynthesis.cancel()` on unload.
 - **Verify**: `hugo server` then `node /var/folders/3d/y46y2yvs7pz05l35lp_1wjzc0000gn/T/opencode/tts-test.js` (asserts state machine + no console errors). Player appears on `public/posts/*/index.html`, never on the homepage.
 
 ## Hugo Gotchas

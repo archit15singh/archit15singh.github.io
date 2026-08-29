@@ -35,6 +35,15 @@
       font-size: 0.82rem;
       min-height: 1.1em;
     }
+    .listen-player .lp-voice {
+      font: inherit;
+      max-width: 14rem;
+      padding: 0.35rem 0.5rem;
+      border: 1px solid var(--border, #ddd);
+      border-radius: 6px;
+      background: var(--entry, #fff);
+      color: var(--primary, #333);
+    }
     .post-content .lp-active {
       background: var(--mark-bg, rgba(255, 230, 0, 0.35));
       border-radius: 3px;
@@ -45,6 +54,9 @@
   <span class="lp-speed" role="group" aria-label="Reading speed">
     <button class="lp-rate" type="button" aria-label="Change reading speed">1x</button>
   </span>
+  <label class="lp-voice-group" aria-label="Choose voice">
+    <select class="lp-voice"></select>
+  </label>
   <span class="lp-status" role="status" aria-live="polite"></span>
 </div>
 <script src="{{ "js/listen.js" | relURL }}" defer></script>

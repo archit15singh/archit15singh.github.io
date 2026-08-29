@@ -10,11 +10,13 @@
   const MAX_CHARS = 300;
   const RATES = [1, 1.25, 1.5, 2];
   const SKIP_SELECTOR = "pre, code, .highlight, script, style, .footnotes, aside, kbd, samp";
+  const VOICE_KEY = "listen-voice-name";
   const SYNTH = window.speechSynthesis;
 
   const btnPlay = player.querySelector(".lp-play");
   const btnStop = player.querySelector(".lp-stop");
   const btnRate = player.querySelector(".lp-rate");
+  const voiceSel = player.querySelector(".lp-voice");
   const statusEl = player.querySelector(".lp-status");
 
   let items = [];
@@ -24,6 +26,7 @@
   let gen = 0;
   let watchdog = null;
   let lastSpeechOp = 0;
+  let selectedVoice = null;
 
   player.hidden = false;
 
@@ -78,14 +81,52 @@
     return chunks;
   }
 
+  function voiceRank(v) {
+    let r = 0;
+    if (/^en/i.test(v.lang)) r -= 2;
+    if (/en[-_]US/i.test(v.lang)) r -= 1;
+    if (!v.localService) r -= 1;
+    return r;
+  }
+
+  function allVoices() {
+    return SYNTH.getVoices ? SYNTH.getVoices().slice() : [];
+  }
+
   function pickVoice() {
-    const voices = SYNTH.getVoices ? SYNTH.getVoices() : [];
-    return (
-      voices.find((v) => /en[-_]US/i.test(v.lang) && !v.localService) ||
-      voices.find((v) => /en[-_]US/i.test(v.lang)) ||
-      voices.find((v) => /^en/i.test(v.lang)) ||
-      null
-    );
+    const voices = allVoices();
+    if (selectedVoice && voices.some((v) => v.name === selectedVoice.name)) {
+      return selectedVoice;
+    }
+    const fallback = [...voices].sort((a, b) => voiceRank(a) - voiceRank(b))[0] || null;
+    return fallback;
+  }
+
+  function populateVoices() {
+    const voices = allVoices();
+    if (!voices.length) return;
+    const saved = voiceSel.value;
+    voiceSel.innerHTML = "";
+    const auto = document.createElement("option");
+    auto.value = "";
+    auto.textContent = "Default voice";
+    voiceSel.appendChild(auto);
+    [...voices]
+      .sort((a, b) => voiceRank(a) - voiceRank(b) || a.name.localeCompare(b.name))
+      .forEach((v) => {
+        const opt = document.createElement("option");
+        opt.value = v.name;
+        opt.textContent = v.name + (v.localService ? "" : " ·online");
+        voiceSel.appendChild(opt);
+      });
+    if (saved) {
+      voiceSel.value = saved;
+    } else {
+      const stored = localStorage.getItem(VOICE_KEY);
+      if (stored && voices.some((v) => v.name === stored)) voiceSel.value = stored;
+    }
+    selectedVoice =
+      voices.find((v) => v.name === voiceSel.value) || null;
   }
 
   function utteranceFor(text) {
@@ -101,13 +142,36 @@
     content.querySelectorAll(".lp-active").forEach((el) => el.classList.remove("lp-active"));
   }
 
+  function scrollElIntoView(el) {
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    if (r.top < 0 || r.bottom > vh) {
+      el.scrollIntoView({ block: "center", behavior: "smooth" });
+    }
+  }
+
   function setHighlight(el) {
     clearHighlight();
-    if (el) el.classList.add("lp-active");
+    if (el) {
+      el.classList.add("lp-active");
+      scrollElIntoView(el);
+    }
+  }
+
+  function pct() {
+    if (!items.length) return 0;
+    return Math.min(100, Math.round(((current + 1) / items.length) * 100));
   }
 
   function setStatus(msg) {
     statusEl.textContent = msg || "";
+  }
+
+  function updateStatus() {
+    if (mode === "playing") setStatus("Reading · " + pct() + "%");
+    else if (mode === "paused") setStatus("Paused · " + pct() + "%");
+    else setStatus("");
   }
 
   function setLabels() {
@@ -172,21 +236,34 @@
       return;
     }
     speakOne();
+    updateStatus();
+  }
+
+  function beginAt(i) {
+    gen += 1;
+    if (i < 0 || i >= items.length) i = 0;
+    current = i;
+    mode = "playing";
+    setLabels();
+    startWatchdog();
+    updateStatus();
+    speakOne();
   }
 
   function start() {
-    gen += 1;
     items = buildItems();
     if (!items.length) {
       setStatus("No readable text on this page.");
       return;
     }
-    current = 0;
-    mode = "playing";
-    setStatus("Reading");
-    setLabels();
-    startWatchdog();
-    speakOne();
+    beginAt(0);
+  }
+
+  function startFromElement(el) {
+    items = buildItems();
+    const idx = items.findIndex((it) => it.el === el);
+    if (idx === -1) return;
+    beginAt(idx);
   }
 
   function pause() {
@@ -194,16 +271,16 @@
     gen += 1;
     SYNTH.cancel();
     mode = "paused";
-    setStatus("Paused");
+    updateStatus();
     setLabels();
   }
 
   function resume() {
     if (mode !== "paused" || current < 0) return;
     mode = "playing";
-    setStatus("Reading");
     setLabels();
     startWatchdog();
+    updateStatus();
     speakOne();
   }
 
@@ -223,7 +300,7 @@
     current = -1;
     mode = "idle";
     clearHighlight();
-    setStatus("Finished");
+    setStatus("Finished · 100%");
     setLabels();
     stopWatchdog();
   }
@@ -248,10 +325,36 @@
     }
   });
 
+  voiceSel.addEventListener("change", () => {
+    const voices = allVoices();
+    selectedVoice = voices.find((v) => v.name === voiceSel.value) || null;
+    if (selectedVoice) localStorage.setItem(VOICE_KEY, selectedVoice.name);
+    else localStorage.removeItem(VOICE_KEY);
+    if (mode === "playing") {
+      const t = gen;
+      SYNTH.cancel();
+      setTimeout(() => {
+        if (gen === t) speakOne();
+      }, 100);
+    }
+  });
+
+  content.addEventListener("click", (e) => {
+    if (e.target.closest("a,button")) return;
+    if (window.getSelection && window.getSelection().toString()) return;
+    const el = e.target.closest("p,li,td,blockquote,h2,h3,h4,h5,h6");
+    if (!el || !content.contains(el)) return;
+    startFromElement(el);
+  });
+
   window.addEventListener("beforeunload", () => SYNTH.cancel());
 
   if (SYNTH.getVoices) {
     SYNTH.getVoices();
-    SYNTH.onvoiceschanged = () => SYNTH.getVoices();
+    SYNTH.onvoiceschanged = () => {
+      SYNTH.getVoices();
+      populateVoices();
+    };
   }
+  populateVoices();
 })();
