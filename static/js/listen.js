@@ -17,6 +17,8 @@
   const btnPlay = player.querySelector(".lp-play");
   const btnStop = player.querySelector(".lp-stop");
   const btnRate = player.querySelector(".lp-rate");
+  const btnPrev = player.querySelector(".lp-prev");
+  const btnNext = player.querySelector(".lp-next");
   const voiceSel = player.querySelector(".lp-voice");
   const statusEl = player.querySelector(".lp-status");
 
@@ -276,6 +278,36 @@
     beginAt(idx);
   }
 
+  function jumpPara(dir) {
+    if (!items.length) return;
+    const order = [];
+    const firstChunk = new Map();
+    for (let i = 0; i < items.length; i++) {
+      const el = items[i].el;
+      if (!firstChunk.has(el)) {
+        firstChunk.set(el, i);
+        order.push(el);
+      }
+    }
+    const curIdx = current >= 0 ? current : 0;
+    const curPara = order.indexOf(items[curIdx].el);
+    if (curPara === -1) return;
+    const target = curPara + dir;
+    if (target < 0 || target >= order.length) return;
+    const el = order[target];
+    const idx = firstChunk.get(el);
+    if (mode === "paused") {
+      gen += 1;
+      SYNTH.cancel();
+      current = idx;
+      setHighlight(el);
+      updateStatus();
+      setLabels();
+    } else {
+      beginAt(idx);
+    }
+  }
+
   function pause() {
     if (mode !== "playing") return;
     gen += 1;
@@ -322,6 +354,9 @@
   });
 
   btnStop.addEventListener("click", stop);
+
+  btnPrev.addEventListener("click", () => jumpPara(-1));
+  btnNext.addEventListener("click", () => jumpPara(1));
 
   btnRate.addEventListener("click", () => {
     rateIdx = (rateIdx + 1) % RATES.length;
