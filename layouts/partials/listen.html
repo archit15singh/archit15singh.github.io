@@ -1,0 +1,50 @@
+{{- /* TTS "Listen to this post" player (Web Speech API). Hidden unless speechSynthesis is available. */ -}}
+<div class="listen-player" hidden>
+  <style>
+    .listen-player {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.75rem;
+      margin: 1.25rem 0 0;
+      padding: 0.6rem 0.9rem;
+      border: 1px solid var(--border, #ddd);
+      border-radius: 8px;
+      background: var(--code-bg, #f7f7f8);
+      font-size: 0.9rem;
+    }
+    .listen-player[hidden] { display: none; }
+    .listen-player.is-reading {
+      background: var(--tertiary-bg, #eef2ff);
+    }
+    .listen-player button {
+      font: inherit;
+      line-height: 1;
+      padding: 0.45rem 0.9rem;
+      border: 1px solid var(--border, #ddd);
+      border-radius: 6px;
+      background: var(--entry, #fff);
+      color: var(--primary, #333);
+      cursor: pointer;
+    }
+    .listen-player button:hover { filter: brightness(0.96); }
+    .listen-player button:disabled { opacity: 0.5; cursor: default; }
+    .listen-player .lp-status {
+      flex: 1 1 100%;
+      color: var(--secondary, #666);
+      font-size: 0.82rem;
+      min-height: 1.1em;
+    }
+    .post-content .lp-active {
+      background: var(--mark-bg, rgba(255, 230, 0, 0.35));
+      border-radius: 3px;
+    }
+  </style>
+  <button class="lp-play" type="button" aria-label="Listen to this post">Listen</button>
+  <button class="lp-stop" type="button" aria-label="Stop reading" hidden>Stop</button>
+  <span class="lp-speed" role="group" aria-label="Reading speed">
+    <button class="lp-rate" type="button" aria-label="Change reading speed">1x</button>
+  </span>
+  <span class="lp-status" role="status" aria-live="polite"></span>
+</div>
+<script src="{{ "js/listen.js" | relURL }}" defer></script>

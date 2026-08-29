@@ -17,6 +17,10 @@ params:
   image_format: "webp"
   goatcounter: "architsingh"
 
+  # Text-to-speech: "Listen to this post" player (Web Speech API)
+  tts:
+    enabled: true
+
   # SEO Settings
   metaDescription: "Archit Singh’s blog on first-principles systems thinking, covering AI agent architectures, cognitive science, and resilient engineering."
   canonicalURL: "https://archit15singh.github.io/"

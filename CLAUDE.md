@@ -77,6 +77,20 @@ Images are configured to auto-convert to **WebP** (`image_format: webp` in confi
 - Reference in frontmatter as `/images/uploads/filename.jpg` (Hugo handles WebP conversion at build time)
 - Use Playwright to screenshot previews: `playwright screenshot --full-page http://localhost:1313/posts/slug/ preview.png`
 
+## Text-to-Speech ("Listen to this post")
+
+Client-side player using the Web Speech API — no audio files, no deps, no build changes.
+
+- **Toggle**: `params.tts.enabled` in config.yml (global); set `tts: false` in a post's frontmatter to hide it on that post.
+- **Files**: `layouts/_default/single.html` (override of the theme's, byte-identical except the injected `partial "listen.html"` above `.post-content`), `layouts/partials/listen.html` (player markup + scoped inline CSS), `static/js/listen.js` (speech logic, deferred, loaded only on post pages).
+- **Behavior**: text is read from `.post-content`, split into ≤300-char sentence chunks (avoids the Safari long-utterance cutoff bug), code blocks/pre/footnotes skipped, active paragraph highlighted, rate toggle 1x–2x, watchdog restarts a stalled chunk on flaky mobile synthesizers, `speechSynthesis.cancel()` on unload.
+- **Verify**: `hugo server` then `node /var/folders/3d/y46y2yvs7pz05l35lp_1wjzc0000gn/T/opencode/tts-test.js` (asserts state machine + no console errors). Player appears on `public/posts/*/index.html`, never on the homepage.
+
+## Hugo Gotchas
+
+- **`default` treats `false` as empty**: `(.Param "tts") | default true` returns `true` even when frontmatter sets `tts: false`. Use `and .Site.Params.tts.enabled (ne (.Param "tts") false)` for a per-post opt-out.
+- When overriding a theme template, keep it a byte-identical copy + injection, so upstream `git diff` against the submodule stays a one-liner.
+
 ## Site Configuration Hotspots
 
 Key settings in `config.yml` that affect behavior:
