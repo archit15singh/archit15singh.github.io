@@ -92,6 +92,28 @@ And the definition of a tech lead is worth etching in stone: it is *"not a point
 
 ---
 
+## The project playbook
+
+The single biggest gap in most senior-to-tech-lead material is that it tells you to "own projects" without telling you what owning a project actually involves day to day. Here is the operating core, and it reads less like philosophy and more like a job description.
+
+Every consequential project you lead runs on a fixed skeleton, whether or not you formalize it:
+
+**The collaboration framework.** Establish early how the work is broken down, how the team coordinates, and where the seams are. Ambiguity about process is what turns into late, tangled delivery.
+
+**The risk list.** Maintain an explicit, living list of what could derail delivery — dependencies, unknown technologies, scope creeping in. Naming a risk out loud is most of the way to managing it.
+
+**Status in stakeholder language.** When you report, speak in the units stakeholders care about: milestones, progress, risks, scope, expected completion. Not implementation detail. This single habit is what separates engineering communication from leadership communication.
+
+**Team focus.** Protect the team's attention from the endless parade of tangential demands. "No" said by a tech lead to protect delivery is leadership, not obstruction.
+
+**Delegation.** Hand pieces of the project to others — not just tasks, but the responsibility and visibility that come with them. A project you delegate well is a project you've grown people on.
+
+The mental model that frames all of this: **take the ambiguous, messy, cross-org project nobody wants and do just enough work on it to make it manageable by someone else.** You are not there to do all the work. You are there to make the work doable *by the team*, and to carry the coordination that nobody else will.
+
+One honest expectation to set: the boredom threshold is real. Much of project leadership is bureaucratic overhead — status updates, alignment meetings, unglamorous follow-ups. That overhead *is* the job. If you find it beneath you, you will quietly stop being a tech lead and go back to being the senior engineer only you could be.
+
+---
+
 ## The operating playbook
 
 This is the dense core: how you actually spend your days once you're past Senior.
@@ -120,9 +142,58 @@ Techniques: shift toward asking questions instead of giving answers, pull in exa
 
 Mentorship gives advice; sponsorship gives **opportunity and visibility**. When critical work comes to you, your first question must become *"who could be both successful with and grown by this work?"* Then scaffold it for their success and let it be theirs, including letting them take an approach you wouldn't. Rule of thumb: keep a sponsorship journal and sponsor someone at least a few times a month, but also make sure you still do *some* direct technical work yourself.
 
+New tech leads tend to collapse four distinct leadership modes into one and reach for the easiest. Keep them separate in your head:
+
+- **Mentoring** — give advice drawn from your experience. Cheap, safe, and the least useful for the other person's growth.
+- **Coaching** — help someone reason their way to their own answer instead of handing them yours. Slower, but it builds the muscle.
+- **Sponsoring** — spend your own credibility to create opportunity and visibility for them. The scarcest and most growth-producing, because it risks something of yours.
+- **Giving feedback** — change or reinforce behavior. The direct lever, easy to get wrong, essential to get right.
+
+The pattern to watch for: people who are senior but not advancing often mentor everyone and sponsor no one. Sponsorship is how careers actually get made — by others spending social capital on you, and eventually you on them. Giving someone a visible, developmental assignment is worth more than a year of advice.
+
 ### Stay aligned with authority
 
 This is the one most ambitious ICs resist, and it is the one that decides whether they get the title at all. Your organizational authority flows from alignment with your direct manager, who is your *bestowing sponsor*. "To lead, you have to follow." People who make the jump don't fight their manager's initiatives. They make their own work *advance* the manager's goals, so the manager becomes a willing advocate.
+
+### Decisions: doors and records
+
+Decision-making is a technical-lead skill, and it has two small frameworks worth stealing.
+
+**One-way versus two-way doors.** Classify every decision before you spend a day on it. A *one-way door* is hard or impossible to reverse, so it deserves slow, careful investigation. A *two-way door* is reversible, so decide it quickly and move on. The trap the framework guards against is treating every decision like constitutional law — and the corollary truth that waiting for perfect information usually just makes you slow, not right.
+
+**Decision records.** Capture each significant decision as a tiny artifact: the decision, the context that made it reasonable, and the anticipated consequences — and keep the history when the decision later changes. This is how a team's judgment becomes durable machinery instead of tribal knowledge that dies when the person who made the call leaves.
+
+One more discipline from the same school, already noted above: **seek consent, not consensus.** A decision you are *waiting* on is often a decision you are avoiding making. Make the call that's blocking others rather than endlessly facilitating discussion.
+
+### Product thinking for the tech lead
+
+Strong teams are not handed requirements and told to build them; the engineers participate in determining the solution. That makes product thinking part of the job. The cleanest entry point is the four product risks, and your awareness of them should not stop at the one you own:
+
+- **Value** — do users actually want this?
+- **Usability** — can they use it?
+- **Feasibility** — can we actually build it? Your natural home.
+- **Business viability** — does it work as a business?
+
+You obviously own feasibility. But a strong technical leader at least understands the other three, because they keep you from building something feasible that nobody wants. Practically, this means settling explicit ownership with your product partner for specifications, rollouts, business stakeholders, engineering coordination, and design coordination — then running the product manager + tech lead pair as a joint leadership unit rather than a handoff chain. The tech lead's job is to understand the product and business context well enough to translate it into technical direction.
+
+### Architecture, made conversationally
+
+Do not start architecture leadership with giant architecture books. Start with how architecture actually gets made by teams. The myth is the lone architect handing down a finished design; the reality, at any real scale, is a distributed practice with a few mechanisms that keep a large system coherent without a single hero:
+
+- **Decision records** — the same artifacts from above.
+- **A technology radar** — a living map of what the org trusts, trials, and avoids.
+- **Team-sourced principles** — a short list everyone contributed to, which generates far more buy-in than one dictated.
+- **An advisory forum** — a standing place where architecture gets debated by the people who'll live with it.
+
+Two mental models make this sane. The first is that **architecture should evolve through small changes and feedback loops** — a stream of reversible, incremental steps, not one heroic end-state migration. The second is Conway's Law, the observer's truth that **systems tend to mirror the communication structures that build them**: if you want a certain system shape, start with the team shape. Team boundaries and architecture boundaries are two views of the same decision.
+
+### Conflict and the human layer
+
+The staff-plus canon is curiously thin on the messy human layer, which is exactly where a tech lead spends real hours. Two honest corrections.
+
+**Meetings are not information transfer.** They are places where people bring motivations, histories, and agendas. Reading that layer — why someone is pushing a point, whose status is at stake, what an objection is *really* about — is what turns a competent meeting-runner into someone who can actually move a group.
+
+**Conflict is cheapest early.** Technical disagreement metastasizes into interpersonal conflict when it's ignored. The move is to recognize the tension early and mediate it as a substantive disagreement before it hardens into personalities. Naming the disagreement out loud, in good faith, is nearly always better than letting it fester. And an uncomfortable truth worth accepting early: senior ICs who distinguish themselves from what the room wants often manage their bosses more than they complain about them. Managing up is a skill — communicating in your manager's language, giving them easy-to-answer useful questions, and making their goals advance — not a political indulgence.
 
 ---
 
@@ -139,6 +210,30 @@ All the operating savvy is worthless if it never converts to the title, because,
 **Level-defining projects.** Whether or not your company formally requires one, take on the work that "will stretch and develop you into a better engineer." Having done one gives you dispositive evidence of level-defining impact.
 
 The uncomfortable truth underneath all of this: even the most capable people often have *done the work* but not converted it into **recognized** impact. That gap is precisely what a sponsor closes.
+
+---
+
+## The operational layer: leading through failure
+
+Most discussions of technical leadership quietly assume everything is going normally. A good chunk of your job as a tech lead happens when it is not — an incident, an outage, a fire in someone else's system that lands on your team. This is the capability the field forgets to teach, and it is worth internalizing before you need it, because you can't improvise your way through a crisis on the job.
+
+The core move: **separate coordination from debugging.** The single worst thing you can do in an incident is turn every senior person into another debugger and nobody into a coordinator. Assign one person to run the response — the incident commander — whose job is coordination, communication, and decisions, explicitly *not* becoming another hands-on debugger. Give the response a clear command, defined roles, and a working incident record so the state of the world is written down rather than held in someone's head. Declare the incident early; declaring it is low-cost and reversible, while failing to declare it costs you coordination exactly when you need it most.
+
+Then the part that outlasts the incident: **the postmortem.** Blamelessness is not about being nice. It is an information-quality mechanism. Blaming people causes them to hide information, and an after-action review that can't get honest information cannot learn anything. The discipline is to fix the system that let the mistake happen, not the person who made it. A team that runs genuine, blameless postmortems compounds its reliability; a team that runs blame sessions merely learns to cover its tracks.
+
+---
+
+## Time, attention, and the network
+
+One capability the senior-to-staff canon treats as a given deserves to be explicit: **your time becomes the scarce resource as you advance, so choosing what to work on becomes a core competency in itself.** The "work on what matters" discipline above is the theory; the practice is relentlessly refusing the seductive low-value work that a senior person is handed all day. Most tech leads are overwhelmed not because there's too much to do, but because they've never learned to say no to most of it, including the parts that feel flattering.
+
+Three habits protect your attention.
+
+**Lead by distributing, not hoarding.** The healthiest organizations treat "lead engineer" as a *responsibility attached to a project* rather than a permanent caste. That lets many engineers practice leadership at small stakes instead of concentrating it in one gatekeeper who becomes the bottleneck. If you are the only person who can coordinate a project, you are not leading — you are throttling.
+
+**Build a network of peers.** Among the strongest and most repeated advice from people already doing the role is this unglamorous one: deliberately build a network of peers. These are your honest sounding boards, your cross-team informants, and your co-conspirators for change that no single team can make alone. Nurture it before you're in crisis, because a network built at the moment you need it is no network at all.
+
+**Protect focus ruthlessly.** Engineering depth and leadership availability pull in opposite directions, and a tech lead — unlike a manager — is expected to keep some of both. Schedule the deep technical work as if it were a meeting, defend it, and treat a calendar with no protected focus as a plan to stagnate. The boredom threshold from the project playbook cuts both ways: the coordination you resent and the focus you keep are the same job.
 
 ---
 
@@ -185,32 +280,40 @@ Six to ten deliberately paced hours across the three waves beats months of scatt
 
 ## The material, collated and ranked
 
-If you want a map before you start, here is the field collated and ranked by how much practical value each piece provides at the Senior to Staff/Principal transition. Tier 1 shapes everything; the lower tiers fill in the edges.
+If you want a map before you start, here is the field collated and ranked by how much practical value each piece provides at the Senior to Tech Lead to Staff/Principal transition. The ranking is by ROI, not prestige or literary merit, and it is deliberately weighted toward the transition you are in right now. Tier 1 shapes everything; the lower tiers fill in the edges.
+
+A working rule for ordering: the corpus bridges the gap between *abstract staff thinking* and *what you actually do Monday morning as a tech lead*. So the reading should move from the concrete mechanics of running one project, outward to the wider staff-plus concerns — not the other way around. You want the project-execution and product-partnership material before the sponsorship and executive-communication material, or the latter floats free of any situation you can apply it to.
 
 **Tier 1: read first. Highest impact for the transition.**
 
-1. The canonical book-length treatment of the staff-plus role. Organizes the entire job into big-picture thinking, project execution, and levelling up others, and is the single most practical manual for influence without authority.
-2. The guide collection that defines the role's archetypes and its day-to-day operating model: how to choose work, measure quality, stay aligned with authority, and get the title. The stories in it are the raw material every other framework restates.
-3. The management-track classic, specifically its tech-lead chapter and its senior-skills list. This is the manager's perspective you will be negotiating against, so it is worth reading even if you never manage.
+1. **The project-lead playbook.** The single most immediately useful piece for an early tech lead, and one the original corpus undersold. It tells you exactly what you're responsible for on a project: the collaboration framework, the risk list, the status updates, the stakeholder communication, keeping the team focused, and delegation. Unlike most leadership writing, it does not stop at principles — it hands you a job description.
+2. **The canonical book-length treatment of the staff-plus role.** Organizes the entire job into big-picture thinking, project execution, and levelling up others, and is the single most practical manual for influence without authority.
+3. **The guide collection that defines the role's archetypes and its daily operating model.** How to choose work, create space for others, stay aligned with authority, and get the title. The first-person stories in it are the raw material every other framework restates.
+4. **The management-track classic, specifically its tech-lead chapter.** This is the best description of the *immediate* transition you're making: tech lead is fundamentally a leadership role attached to responsibility for a project outcome, not simply the most senior coder. It is the manager's perspective you'll be negotiating against, worth reading even if you never manage.
 
 **Tier 2: essential texture. Mine heavily once you have the vocabulary.**
 
-4. The essay on the engineer-versus-manager pendulum, to keep the two tracks straight and to know when to swing between them.
-5. The essay on engineering levels, which dismantles the default "management is the only promotion" story.
-6. The talk on the hidden, non-promotable glue work that holds teams together, and how to keep it from quietly capping your career.
-7. A clear senior-engineer job description, written as an explicit boundary between what belongs to the engineer and what belongs to the manager.
+5. **The delegated-project-leadership essay.** Describes distributing project-lead responsibility across engineers and shows how that naturally trains stakeholder communication, concise writing, and ownership — you learn the leadership moves by doing them, at smaller stakes.
+6. **The engineer–product-manager material.** The biggest genuine gap in the original corpus. Strong engineering teams aren't handed requirements and told to implement them; engineers participate in determining the solution. Internalize the four product risks — value, usability, feasibility, business viability — and settle explicit ownership for specs, rollouts, and business stakeholders. Run PM and tech lead as a joint leadership pair.
+7. **The small decision frameworks.** Two to grab: the one-way/two-way door test (one-way doors get slow care, two-way doors get fast decisions, and waiting for perfect information usually just makes you slow), and the decision record — capture decision, context, consequences, and keep the history when it changes. These turn gut judgment into repeatable machinery.
+8. **The conversational-architecture material.** The counterweight to the central-architect myth: architecture gets made by teams, not handed down. Distributed mechanisms — decision records, advisory forums, team-sourced principles, a technology radar — keep a large system coherent without a single hero. Pair it with the evolutionary-architecture idea that systems should improve through small changes and feedback loops, not one heroic end-state migration.
+9. **The essay on the engineer-versus-manager pendulum**, to keep the two tracks straight and to know when to swing between them.
+10. **The essay on the hidden, non-promotable glue work** that holds teams together, and how to keep it from quietly capping your career.
+11. **A clear senior-engineer job description**, written as an explicit boundary between what belongs to the engineer and what belongs to the manager.
 
-**Tier 3: case studies and future-state models. Read later, for breadth.**
+**Tier 3: case studies, future-state models, and the operationally-forgotten. Read later, for breadth.**
 
-8. First-person accounts of operating at staff-plus day to day: what the calendar actually looks like, how much coding a staff engineer does, and how the mindset and focus shift.
-9. The reflections of a principal engineer on why the role is really about influence, not individual technical heroics, and why its problems are always people problems.
-10. Essays on engineering maturity and mental models, which sharpen the judgment the frameworks assume you already have.
+12. **First-person accounts of operating at staff-plus day to day:** what the calendar actually looks like, how much coding a staff engineer does, how the mindset and focus shift.
+13. **The reflections of a principal engineer** on why the role is really about influence rather than technical heroics, and why its problems are always people problems.
+14. **Essays on engineering maturity and mental models**, which sharpen the judgment the frameworks assume you already have.
+15. **The operational-leadership material** — the one capability the original corpus almost completely missed. How to run an incident without improvising: separate coordination from debugging, assign clear roles, declare early, and treat the postmortem as an information-quality mechanism, where blame is banned not to be kind but because it makes people hide information and kills organizational learning.
+16. **The time-and-attention material.** Worth treating as a capability of its own. As you advance, your time becomes the scarce resource, which makes *choosing what to work on* a core competency. Favor work where there's both room and attention; expect the "what only you can do" category to get narrower and deeper.
 
-The ranking is by practical value, not by literary merit, and it is deliberately weighted toward the transition you are in now. The tier-two and tier-three material becomes more useful the further you go, so there is no rule to read it all before moving up. Read Tier 1, run a wave or two, then let the material pick your next thread.
+The lower tiers become more useful the further you go, so there is no rule to read everything before moving up. Read Tier 1, run a wave or two, then let the material pick your next thread. If you internalize only Tier 1 plus the decision and conversational-architecture pieces in Tier 2, you have the 80/20 of the whole field.
 
 ---
 
-## The operating model, in ten lines
+## The operating model, in fourteen lines
 
 Everything above, compressed to the core.
 
@@ -218,11 +321,15 @@ Everything above, compressed to the core.
 2. **Leadership ≠ management, and technical leadership is just as valid.**
 3. **Know your archetype** (Tech Lead, Architect, Solver, Right Hand) and whether your org values it.
 4. **Own the big picture** so good decisions happen before they get expensive.
-5. **The agreement is the work.** Seek consent, not consensus.
-6. **Refuse snacking and preening;** work where there's room and attention; finish things.
-7. **Create space for others** and change your mind when you should.
-8. **Sponsor, don't merely mentor:** give opportunity and visibility, not advice.
-9. **Stay aligned with authority** and make the title a team effort with your sponsor-manager.
-10. **Guard against the glue trap:** keep investing in the deep skill your title certifies.
+5. **Run the project, not just the code:** collaboration framework, risk list, stakeholder status, delegation.
+6. **The agreement is the work.** Seek consent, not consensus.
+7. **Classify decisions:** one-way doors get care, two-way doors get speed; write decision records.
+8. **Think product, not just plumbing:** value, usability, feasibility, viability — and own your PM partnership.
+9. **Make architecture conversationally:** decision records, radar, principles, advisory forum, small feedback loops.
+10. **Refuse snacking and preening;** work where there's room and attention; finish things.
+11. **Create space for others** and change your mind when you should.
+12. **Sponsor, don't merely mentor:** give opportunity and visibility, and keep mentoring, coaching, and feedback distinct.
+13. **Stay aligned with authority**, make the title a team effort, and separate coordination from debugging when it blows up.
+14. **Guard against the glue trap** and protect your focus: your time is the scarcest resource you spend.
 
 Prove it to yourself, not to a reviewer. Pick one item, *create space for others* is a good first, and run it at your actual job for two weeks. Watch your meetings shrink and your org's dependence on you shift from "the go-to person" to "the person who grew the team." That, more than any title, is the model working.
