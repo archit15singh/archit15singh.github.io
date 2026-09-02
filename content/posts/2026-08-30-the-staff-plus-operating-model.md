@@ -191,6 +191,8 @@ Decision-making is a technical-lead skill, and it has two small frameworks worth
 
 One more discipline from the same school, already noted above: **seek consent, not consensus.** A decision you are *waiting* on is often a decision you are avoiding making. Make the call that's blocking others rather than endlessly facilitating discussion.
 
+The hardest stall is a genuine disagreement between two experienced engineers who are both right about different things, and the mechanism that breaks it loose is worth having in your pocket: **shift the debate from opinions to proposals.** When the argument is "I think approach A is better," ask both sides to write a short proposal, not a paragraph of conviction — the problem, the approach, the trade-offs, the risks, the assumptions. The act of writing forces each person to surface what they are actually betting on, and it reframes the conversation from ego to evidence, so you can compare the risks head to head instead of the confidence. If the disagreement survives even that, and the decision is reversible, stop arguing and run a timeboxed experiment: try the cheaper or more promising option for a defined period and let the results, not the loudest voice, settle it. Data resolves more debates than persuasion ever will, and a two-week trial costs far less than a quarter of deferred decision.
+
 ### Product thinking for the tech lead
 
 Strong teams are not handed requirements and told to build them; the engineers participate in determining the solution. That makes product thinking part of the job. The cleanest entry point is the four product risks, and your awareness of them should not stop at the one you own:

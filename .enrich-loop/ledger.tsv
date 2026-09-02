@@ -9,3 +9,5 @@ round	queries	new_sources	areas	dry	added_capability
 8	2	larahogan.me/delegation-is-an-art, leadshift.dev, mentorcruise.com, pointer.io
 delegation mechanics	no	fully-handoff-vs-task-assignment, transfer-authority, delegate-to-who-grows-most, support-from-behind, delegate-but-verify/cadence, messy-project-with-safety-net, reverse-delegation trap
 9	2	themlarchitect.com, pragmaticengineer.com, tonyandrewmeyer.com, grocto.substack.com	maintaining technical credibility when coding less	no	less-code-more-credibility paradox, stay-in-the-work (design/arch reviews, postmortems, incident analysis, run-own-software), judgment-stays-calibrated, don-t-compete-with-ICs
+10	2	vibhorchandel.com, em-tools.io, cio.com	disagreement resolution (proposal-based + experiments)	no	shift-opinions-to-proposals (problem/approach/tradeoffs/risks/assumptions), timeboxed experiment to let evidence decide
+11	dry-probe: remote/distributed + escalation	marginal; remote-coordination is a real-but-secondary niche, escalation overlaps existing conflict/decision sections	assessment: dry	no	(dry: no distinct new capability adopted)
