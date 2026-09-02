@@ -1,6 +1,6 @@
 ---
 title: "The Staff+ Operating Model: a practical field guide to technical leadership"
-description: "A field guide for Senior SWE → Tech Lead → Staff/Principal: leadership without authority, the four archetypes, the three work pillars, the promotion arithmetic, and the traps that quietly stall careers. Now with the operating depth: real time-allocation numbers, the horizon of focus, incident-command mechanics, the room, decision reversibility, and the PM partnership."
+description: "A field guide for Senior SWE → Tech Lead → Staff/Principal: leadership without authority, the four archetypes, the four work pillars, the promotion arithmetic, and the traps that quietly stall careers. Now with the operating depth: real time-allocation numbers, the horizon of focus, incident-command mechanics, the room, decision reversibility, the PM partnership, plus how to source the work itself, present to executives, set the technical bar, and write strategy bottom-up."
 date: 2026-08-30T01:07:00+05:30
 tags:
   - Engineering
@@ -65,9 +65,9 @@ Two caveats that almost nobody mentions:
 
 ---
 
-## The three pillars of technical work
+## The pillars of technical work
 
-If the archetypes answer *who you are*, the pillars answer *what you actually do*. Most serious technical tracks rest on three.
+If the archetypes answer *who you are*, the pillars answer *what you actually do*. Most serious technical tracks rest on a small set.
 
 **Big-picture thinking.** Understand the context across teams so good decisions happen before they become costly. "Good decisions need context" is the entire philosophy. This is where *being the glue* lives: teams left alone settle into local maxima, solving only their own problem. The glue person holds the cross-team context and stops the org from optimizing the wrong thing.
 
