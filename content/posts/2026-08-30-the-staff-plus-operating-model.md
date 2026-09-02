@@ -1,6 +1,6 @@
 ---
 title: "The Staff+ Operating Model: a practical field guide to technical leadership"
-description: "A field guide for Senior SWE → Tech Lead → Staff/Principal: leadership without authority, the four archetypes, the three work pillars, the promotion arithmetic, and the traps that quietly stall careers. Dense, practical, and ready to run at your job on Monday."
+description: "A field guide for Senior SWE → Tech Lead → Staff/Principal: leadership without authority, the four archetypes, the three work pillars, the promotion arithmetic, and the traps that quietly stall careers. Now with the operating depth: real time-allocation numbers, the horizon of focus, incident-command mechanics, the room, decision reversibility, and the PM partnership."
 date: 2026-08-30T01:07:00+05:30
 tags:
   - Engineering
