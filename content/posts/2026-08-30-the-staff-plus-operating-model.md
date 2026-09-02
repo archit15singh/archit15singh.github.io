@@ -290,53 +290,6 @@ The leader's side of this is rarely told, because most of the writing is aimed a
 
 ---
 
-## How to keep mining it yourself, in three waves
-
-This post is a synthesis. But the real payoff comes from running the trajectory yourself. The field compounds when you mine it recursively, in waves rather than one long read. Here is a repeatable three-wave method, tuned to this specific corner of engineering.
-
-**Wave 1: build the shared vocabulary.** Go broad and fast. Read the core operating guides: the archetypes, how to choose work, how to create space for others, how to find a sponsor, and what a level-defining project looks like. Then read five or six first-person stories of people already doing the role. Stop when you can restate the operating model in your own words. This wave is a few focused hours and its only output is a shared framework you can talk about.
-
-**Wave 2: go deep on the mechanics.** Pick the single richest written treatment of the role and read it cover to cover in its intended order: big picture, then execution, then influence. Pair it with the canonical essay on the hidden, non-promotable work that holds teams together. This is where the model stops being vocabulary and becomes procedure. You should come out of this wave able to *run* a cross-team project, not just describe one.
-
-**Wave 3: mine the network, not just the canon.** This is the recursion that actually compounds. Every time you read something that lands, chase the sources it cites and the debates it references. Most good writers publish a mapped reading list of the work they respect. Pull on those threads, and within a couple of rounds the same operating principles start showing up under different names and framings. That cross-verification, seeing the same idea survive independent restatement, is how you know it is a real principle and not one person's tic. Set a stop condition so it does not become an infinite scroll: three to five rounds, or until a fresh round stops adding new ideas.
-
-Six to ten deliberately paced hours across the three waves beats months of scattered reading. Each wave makes the next one land harder. If you only do one, do Wave 1 plus Wave 2; that combination alone is the 80/20 of the field.
-
-## The material, collated and ranked
-
-If you want a map before you start, here is the field collated and ranked by how much practical value each piece provides at the Senior to Tech Lead to Staff/Principal transition. The ranking is by ROI, not prestige or literary merit, and it is deliberately weighted toward the transition you are in right now. Tier 1 shapes everything; the lower tiers fill in the edges.
-
-A working rule for ordering: the corpus bridges the gap between *abstract staff thinking* and *what you actually do Monday morning as a tech lead*. So the reading should move from the concrete mechanics of running one project, outward to the wider staff-plus concerns — not the other way around. You want the project-execution and product-partnership material before the sponsorship and executive-communication material, or the latter floats free of any situation you can apply it to.
-
-**Tier 1: read first. Highest impact for the transition.**
-
-1. **The project-lead playbook.** The single most immediately useful piece for an early tech lead, and one the original corpus undersold. It tells you exactly what you're responsible for on a project: the collaboration framework, the risk list, the status updates, the stakeholder communication, keeping the team focused, and delegation. Unlike most leadership writing, it does not stop at principles — it hands you a job description.
-2. **The canonical book-length treatment of the staff-plus role.** Organizes the entire job into big-picture thinking, project execution, and levelling up others, and is the single most practical manual for influence without authority.
-3. **The guide collection that defines the role's archetypes and its daily operating model.** How to choose work, create space for others, stay aligned with authority, and get the title. The first-person stories in it are the raw material every other framework restates.
-4. **The management-track classic, specifically its tech-lead chapter.** This is the best description of the *immediate* transition you're making: tech lead is fundamentally a leadership role attached to responsibility for a project outcome, not simply the most senior coder. It is the manager's perspective you'll be negotiating against, worth reading even if you never manage.
-
-**Tier 2: essential texture. Mine heavily once you have the vocabulary.**
-
-5. **The delegated-project-leadership essay.** Describes distributing project-lead responsibility across engineers and shows how that naturally trains stakeholder communication, concise writing, and ownership — you learn the leadership moves by doing them, at smaller stakes.
-6. **The engineer–product-manager material.** The biggest genuine gap in the original corpus. Strong engineering teams aren't handed requirements and told to implement them; engineers participate in determining the solution. Internalize the four product risks — value, usability, feasibility, business viability — and settle explicit ownership for specs, rollouts, and business stakeholders. Run PM and tech lead as a joint leadership pair.
-7. **The small decision frameworks.** Two to grab: the one-way/two-way door test (one-way doors get slow care, two-way doors get fast decisions, and waiting for perfect information usually just makes you slow), and the decision record — capture decision, context, consequences, and keep the history when it changes. These turn gut judgment into repeatable machinery.
-8. **The conversational-architecture material.** The counterweight to the central-architect myth: architecture gets made by teams, not handed down. Distributed mechanisms — decision records, advisory forums, team-sourced principles, a technology radar — keep a large system coherent without a single hero. Pair it with the evolutionary-architecture idea that systems should improve through small changes and feedback loops, not one heroic end-state migration.
-9. **The essay on the engineer-versus-manager pendulum**, to keep the two tracks straight and to know when to swing between them.
-10. **The essay on the hidden, non-promotable glue work** that holds teams together, and how to keep it from quietly capping your career.
-11. **A clear senior-engineer job description**, written as an explicit boundary between what belongs to the engineer and what belongs to the manager.
-
-**Tier 3: case studies, future-state models, and the operationally-forgotten. Read later, for breadth.**
-
-12. **First-person accounts of operating at staff-plus day to day:** what the calendar actually looks like, how much coding a staff engineer does, how the mindset and focus shift.
-13. **The reflections of a principal engineer** on why the role is really about influence rather than technical heroics, and why its problems are always people problems.
-14. **Essays on engineering maturity and mental models**, which sharpen the judgment the frameworks assume you already have.
-15. **The operational-leadership material** — the one capability the original corpus almost completely missed. How to run an incident without improvising: separate coordination from debugging, assign clear roles, declare early, and treat the postmortem as an information-quality mechanism, where blame is banned not to be kind but because it makes people hide information and kills organizational learning.
-16. **The time-and-attention material.** Worth treating as a capability of its own. As you advance, your time becomes the scarce resource, which makes *choosing what to work on* a core competency. Favor work where there's both room and attention; expect the "what only you can do" category to get narrower and deeper.
-
-The lower tiers become more useful the further you go, so there is no rule to read everything before moving up. Read Tier 1, run a wave or two, then let the material pick your next thread. If you internalize only Tier 1 plus the decision and conversational-architecture pieces in Tier 2, you have the 80/20 of the whole field.
-
----
-
 ## The operating model, in fourteen lines
 
 Everything above, compressed to the core.
