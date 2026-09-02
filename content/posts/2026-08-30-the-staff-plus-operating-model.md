@@ -273,6 +273,12 @@ Three habits protect your attention.
 
 **Protect focus ruthlessly.** Engineering depth and leadership availability pull in opposite directions, and a tech lead — unlike a manager — is expected to keep some of both. Schedule the deep technical work as if it were a meeting, defend it, and treat a calendar with no protected focus as a plan to stagnate. The boredom threshold from the project playbook cuts both ways: the coordination you resent and the focus you keep are the same job.
 
+Protecting focus is only half the skill. The other half is *declining the work that would eat it*, and that is where most senior people stall, because saying no to people they want to keep on their side feels like a career risk. The mechanics that keep it from being one start with intent. Yes to everything reads as unreliable, because you end up dropping things or shipping them late; a thoughtful no reads as judgment, because it says you know what matters and protect it. Senior leaders respect someone who manages priorities well more than they respect a saint who accepts everything.
+
+The individual moves come from treating a decline as a redirect rather than a refusal. Name what you're already committed to and tie the ask to it: "I'm fully on the migration this quarter, so I can't take this on well right now." Offer the alternative that still advances the requester's goal, including handing it to someone who'd grow from it, rather than leaving them empty-handed. Turn execution into guidance where the request genuinely matters to you: take it at the strategic level, decline the full day-to-day. And say no promptly. The person who asked needs time to reorganize, and a late no is worse than an early one, because it turns a manageable request into a last-minute emergency that boomerangs back to you anyway.
+
+Two cautions keep this honest. First, decline the *work*, not the person; the relationship you're actually preserving is the one that lets you say yes to the next, better thing. Second, and counterintuitively, the most effective no is often a yes to something slightly different. When a request is almost right, restructure it into the version you can genuinely commit to, so you protect your time without closing the door on the working relationship.
+
 ---
 
 ## The judgment check: the pendulum and the ladder
