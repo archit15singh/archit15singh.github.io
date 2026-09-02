@@ -1,12 +1,3 @@
-round	queries	new_sources	areas	dry
-0	3	25	seed-audit	0
-1	5	14	time/horizon/incident/glue	0
-2	3	8	room-visibility/twoway-door-surgery	0
-3	0	2	pm-partnership-handoff	0
-final	-	-	description-update+antislop	dry
-4	2	executives-presentation-staffeng	presenting-up-executive-layer	0
-5	1	lalitm-find-problems-staff	problem-discovery-sponge-loop	0
-6	2	staffeng-engineering-strategy	exec-comm|problem-discovery|strategy-bottomup	0
-7	2	staffeng-path-reilly-leaddev	standard-setting-rolemodel-pillar	0
-8	4	interviews-90days-(out-of-scope)	probe-remaining-themes->saturated	dry
-final	-	-	description-update	dry
+round	queries	new_sources	areas	dry	added_capability
+1	3	staffeng.com, lethain.com, devladder.substack.com	peer/cross-functional managing-across	no	unit-of-trade relationships, easy-to-say-yes requests, gratitude systems, per-partner cadences, unsticking cross-team projects, trust-before-title
+2	3	leaddev.com, revolgy.com, dsinnovators.com, em-tools.io	making the business case for technical work	no	debt/risk translated per-stakeholder, interest-payment costing, ARR-at-risk framing, bounded-sprint ask shape, board exit-timeline tie
