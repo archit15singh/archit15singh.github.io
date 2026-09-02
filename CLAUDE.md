@@ -106,7 +106,7 @@ Key settings in `config.yml` that affect behavior:
 
 ## Content Enrichment Loop (Staff+ post workflow)
 
-A repeatable loop was used to recursively enrich the Staff+ operating-model post (content/posts/2026-08-30-the-staff-plus-operating-model.md) from primary sources, converging over 4 rounds. Patterns that worked:
+A repeatable loop was used to recursively enrich the Staff+ operating-model post (content/posts/2026-08-30-the-staff-plus-operating-model.md) from primary sources. It ran 4 rounds in one session (reaching the then-dry point), then a later session ran a further 10 productive rounds (312→358 lines) plus one dry confirm pass. Patterns that worked:
 
 - **Round pattern**: websearch on genuinely-thin sub-areas → find primary sources (staffeng.com, lethain.com, leaddev.com, noidea.dog/glue, blog4ems, greatcircle.com IC piece) → weave only *additive* (non-redundant) insight into existing sections (no new headings) → run anti-slop check → hugo build → commit + push main.
 - **Loop artifacts**: `.enrich-loop/ledger.tsv` (round/queries/new_sources/areas/dry) tracks saturation. The in-memory ledger survives across my session but isn't committed; keep it updated if resuming.
@@ -115,5 +115,6 @@ A repeatable loop was used to recursively enrich the Staff+ operating-model post
 ### Gotchas
 - **Semantic Scholar keyless rate limit**: `lit_search.py search` returned `HTTP 429` with no S2_API_KEY (1 req/s limits). For this kind of practitioner-topic research, plain `websearch`/`webfetch` was the right tool anyway — the canon is blog posts/books, not papers.
 - **Saturation is qualitative here**: "100% coverage" ended up meaning "every operating capability the primary canon surfaces is developed somewhere in the post," not "every possible source cited." 4 rounds hit the point where further searches stopped adding distinct capabilities (measure: fresh rounds adding 0 new capabilities → dry).
-- **Banned-word check nuance**: "leverage" as noun/adjective (e.g. "highest-leverage", "reads as leverage") is fine; only *verb* usage is banned. The regex `\bleverage\b(?!s)(?=\s+(the|this|to|a)...)` catches the verb form.
+- **Banned-word check nuance**: "leverage" as noun/adjective (e.g. "highest-leverage", "reads as leverage") is fine; only *verb* usage is banned. The regex `\bleverage\b(?!s)(?=\s+(the|this|to|a)...)` catches the verb form — and also false-positives on adjective "high-leverage", so eyeball any hit before "fixing" it.
+- **Anti-slop regex false positives**: the `rg "not just .* but "` pattern over-matches legitimate contrasts where "but" simply appears later in the sentence with no crutch structure (e.g. "map who holds influence, not just the org chart, and notice..." — no "but Y"). Also `rg "—"` counting em dashes across a multi-line `sed` window can catch a *pre-existing* adjacent line; restrict the window to exactly the new paragraph before judging the count.
 - **Lit_search is single-token under zsh**: don't store `python3 .../lit_search.py` in a variable; call the executable path directly.
