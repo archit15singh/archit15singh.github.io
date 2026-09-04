@@ -48,123 +48,132 @@ This list structures a decade across four layers: **foundations** (epistemology,
 
 ### 🧠 Epistemology: Foundations of "Knowing"
 
-* *The Problems of Philosophy* – Bertrand Russell
-* *An Introduction to the Theory of Knowledge* – Robert Audi
-* *Knowledge and Its Limits* – Timothy Williamson
-* *Epistemology: Classic Problems and Contemporary Responses* – Dancy & Sosa (eds.)
-* *The Blackwell Guide to Epistemology* – Greco & Sosa (eds.)
-* *Virtue Epistemology* – Fairweather & Zagzebski (eds.)
-* *Philosophical Issues in Classical Indian Epistemology* – Bimal Krishna Matilal
+* *The Problems of Philosophy* – Bertrand Russell — the sharpest 100-page intro to epistemology ever written; start here before anything heavier.
+* *An Introduction to the Theory of Knowledge* – Robert Audi — the standard university textbook, systematic and thorough without being impenetrable.
+* *Knowledge and Its Limits* – Timothy Williamson — the "knowledge-first" book that reframed epistemology by treating knowledge as a primitive rather than breaking it into justified-true-belief components.
+* *Epistemology: Classic Problems and Contemporary Responses* – Dancy & Sosa (eds.) — a solid anthology pairing canonical questions with modern responses; good for finding which direction pulls you.
+* *The Blackwell Guide to Epistemology* – Greco & Sosa (eds.) — broader than Dancy & Sosa, covers virtue epistemology, social epistemology, and the full contemporary landscape.
+* *Virtue Epistemology* – Fairweather & Zagzebski (eds.) — the foundational collection for the "virtue turn" in epistemology; pairs well with the moral philosophy of character-based ethics.
+* *Philosophical Issues in Classical Indian Epistemology* – Bimal Krishna Matilal — the best bridge into Nyāya and Buddhist logic traditions, which developed argumentation and perception theory centuries before Western analytic philosophy caught up.
 
 ### 📚 Symbolic Systems: Language, Logic, Computation
 
-* *Syntactic Structures* – Noam Chomsky
-* *Society of Mind* – Marvin Minsky
-* *Introduction to the Theory of Computation* – Michael Sipser
-* *Cognitive Science: An Introduction* – Friedenberg & Silverman
-* *How to Read and Do Proofs* – Daniel Solow
-* *Philosophical Investigations* – Ludwig Wittgenstein
-* *Mind Design II* – John Haugeland (ed.)
+* *Syntactic Structures* – Noam Chomsky — the book that launched generative grammar and rewired linguistics, cognitive science, and computational theory in one shot.
+* *Society of Mind* – Marvin Minsky — the weird, ambitious thesis that intelligence emerges from dumb agents competing and cooperating; still the best non-neural-network theory of mind.
+* *Introduction to the Theory of Computation* – Michael Sipser — the cleanest intro to automata, complexity, and decidability; the one CS theory textbook people actually finish.
+* *Cognitive Science: An Introduction* – Friedenberg & Silverman — a rare single-volume overview that covers linguistics, AI, philosophy, and neuroscience without collapsing into a survey course.
+* *How to Read and Do Proofs* – Daniel Solow — the shortest path to mathematical maturity; every proof technique you need, explained without condescension.
+* *Philosophical Investigations* – Ludwig Wittgenstein — the book that killed the picture theory of meaning and invented the language-game; every AI discussion about meaning eventually comes back here.
+* *Mind Design II* – John Haugeland (ed.) — the essential anthology of classic AI and cognitive science papers; the best way to see where connectionism, embodiment, and symbolic AI collided.
 
 ### 🤖 Artificial Intelligence: From Basics to Deep Learning
 
-* *Artificial Intelligence: A Modern Approach* – Russell & Norvig
-* *Pattern Recognition and Machine Learning* – Christopher Bishop
-* *Deep Learning* – Goodfellow, Bengio, Courville
-* *Probabilistic Robotics* – Thrun, Burgard, Fox
-* *Reinforcement Learning: An Introduction* – Sutton & Barto
-* *Bayesian Reasoning and Machine Learning* – David Barber
-* *Programming Collective Intelligence* – Toby Segaran
+* *Artificial Intelligence: A Modern Approach* – Russell & Norvig — the canonical AI textbook, the one every CS program uses; broad enough to map the entire field.
+* *Pattern Recognition and Machine Learning* – Christopher Bishop — the Bayesian ML bible; dense but unmatched for probabilistic thinking about models.
+* *Deep Learning* – Goodfellow, Bengio, Courville — the book that defined the modern deep learning curriculum; start with the math prerequisites before diving in.
+* *Probabilistic Robotics* – Thrun, Burgard, Fox — the definitive reference for robot perception and SLAM; rigorous and practical in equal measure.
+* *Reinforcement Learning: An Introduction* – Sutton & Barto — the clear, patient intro to RL that rewards slow reading; the foundational text for anyone building agents that learn from environment interaction.
+* *Bayesian Reasoning and Machine Learning* – David Barber — the most accessible treatment of graphical models and variational inference; bridges statistics and ML better than Bishop for some readers.
+* *Programming Collective Intelligence* – Toby Segaran — the hands-on opposite of Bishop; builds real recommendation, clustering, and search systems from scratch with no framework overhead.
 
 ### 🧬 Cognition: Understanding Mental Processes
 
-* *Cognitive Psychology: A Student’s Handbook* – Eysenck & Keane
-* *Thinking, Fast and Slow* – Daniel Kahneman
-* *How the Mind Works* – Steven Pinker
-* *Vision: A Computational Investigation* – David Marr
-* *Cognition: Exploring the Science of the Mind* – Daniel Reisberg
-* *Sources of Power* – Gary Klein
-* *The Cognitive Neurosciences* – Michael Gazzaniga (ed.)
+* *Cognitive Psychology: A Student's Handbook* – Eysenck & Keane — the standard undergrad textbook that covers attention, memory, language, and decision-making without dumbing anything down.
+* *Thinking, Fast and Slow* – Daniel Kahneman — the book that made dual-process theory popular culture; essential even if you've absorbed its ideas from secondary sources.
+* *How the Mind Works* – Steven Pinker — the ambitious, controversial argument that the mind is a system of evolved computational modules; a masterclass in big-think cognitive science.
+* *Vision: A Computational Investigation* – David Marr — the foundational text on computational vision; his three-level analysis (algorithm, representation, implementation) is a thinking tool that generalizes far beyond vision.
+* *Cognition: Exploring the Science of the Mind* – Daniel Reisberg — the most balanced intro textbook, pairing classic experiments with current debates.
+* *Sources of Power* – Gary Klein — the book that showed naturalistic decision-making isn't the biased mess Kahneman describes; pattern recognition in experts is real and effective.
+* *The Cognitive Neurosciences* – Michael Gazzaniga (ed.) — the definitive reference on the brain-cognition interface; thick enough to use as a doorstop, comprehensive enough to answer any question.
 
 ### 💾 Memory: From Molecules to Minds
 
-* *Memory: From Mind to Molecules* – Squire & Kandel
-* *Working Memory* – Alan Baddeley
-* *The Seven Sins of Memory* – Daniel Schacter
-* *Human Memory: Theory and Practice* – Baddeley & Anderson
-* *The Hippocampus as a Cognitive Map* – O’Keefe & Nadel
-* *Learning and Memory: From Brain to Behavior* – Bear, Connors, Paradiso
-* *Make It Stick* – Brown, Roediger, McDaniel
+* *Memory: From Mind to Molecules* – Squire & Kandel — the bridge between molecular neuroscience and cognitive psychology; the two worlds of memory research in one volume.
+* *Working Memory* – Alan Baddeley — the architect of the working memory model explains the theory and its evidence; dense but rewarding.
+* *The Seven Sins of Memory* – Daniel Schacter — the accessible, entertaining taxonomy of how memory fails; the kind of pop-sci book that actually teaches you something durable.
+* *Human Memory: Theory and Practice* – Baddeley & Anderson — the textbook companion to Baddeley's working memory work, covering the full landscape from encoding to retrieval.
+* *The Hippocampus as a Cognitive Map* – O'Keefe & Nadel — the foundational text that established the hippocampus as a spatial map, launching the entire cognitive map field.
+* *Learning and Memory: From Brain to Behavior* – Bear, Connors, Paradiso — the neurobio textbook that grounds memory in synapses, cells, and circuits; pairs with Schacter for the cognitive side.
+* *Make It Stick* – Brown, Roediger, McDaniel — the book that killed the learning styles myth and made spaced retrieval and interleaving mainstream; the most useful book on this list for day-to-day studying.
 
 ### ⚙️ Cognitive Systems & Cognitive Science
 
-* *Cognitive Science: An Introduction* – Stillings, Weisler, Hauff
-* *How Can the Human Mind Occur in the Physical Universe?* – John Anderson
-* *The Distributed Mind* – Robert Rupert
-* *Connectionist Models of Cognition* – Jacobs & Jordan (eds.)
-* *Situated Cognition* – Cohen, Good, Pollack (eds.)
-* *The Oxford Handbook of Cognitive Science* – Margolis, Samuels, Stich (eds.)
+* *Cognitive Science: An Introduction* – Stillings, Weisler, Hauff — the classic textbook that maps the interdisciplinary territory of cognitive science from a computational perspective.
+* *How Can the Human Mind Occur in the Physical Universe?* – John Anderson — the ACT-R theory as a full computational account of cognition; the most ambitious attempt to unify all of cognitive psychology in one architecture.
+* *The Distributed Mind* – Robert Rupert — the best critical treatment of extended cognition; argues the extended mind thesis is weaker than its proponents claim, which makes it a better read.
+* *Connectionist Models of Cognition* – Jacobs & Jordan (eds.) — the neural network side of cognitive science before deep learning ate everything; still the right entry point for understanding connectionism.
+* *Situated Cognition* – Cohen, Good, Pollack (eds.) — the embodiment/grounding school's collected arguments against disembodied computation.
+* *The Oxford Handbook of Cognitive Science* – Margolis, Samuels, Stich (eds.) — the field's comprehensive reference; the place to go when you need to know what cognitive science thinks about anything.
 
 ### 🦾 Mind, Human-AI Augmentation & Prosthetics
 
-* *Natural-Born Cyborgs* – Andy Clark
-* *Supersizing the Mind* – Andy Clark
-* *How We Became Posthuman* – N. Katherine Hayles
-* *Brain-Computer Interfaces* – Wolpaw & Wolpaw
-* *Neuroprosthetics* – Horch & Dhillon
-* *The Cyborg Experiments* – Morra & Fromberger
-* *Wired for War* – P.W. Singer
+* *Natural-Born Cyborgs* – Andy Clark — the argument that humans have always been cyborgs; our tools don't extend us, they *are* us.
+* *Supersizing the Mind* – Andy Clark — the extended mind thesis in full; the philosophical foundation for thinking about tools as cognitive components.
+* *How We Became Posthuman* – N. Katherine Hayles — the literary-theory counterweight to Clark; traces how information lost its body and why that matters for AI and embodiment.
+* *Brain-Computer Interfaces* – Wolpaw & Wolpaw — the technical reference for BCI systems; covers signal processing, paradigms, and the state of the field.
+* *Neuroprosthetics* – Horch & Dhillon — the engineering side of brain-machine interfaces; hardware, codecs, and the gap between lab and clinic.
+* *The Cyborg Experiments* – Morra & Fromberger — a history of experimental cybernetics that shows the field's weird, wonderful origins.
+* *Wired for War* – P.W. Singer — the journalistic account of how robots changed warfare; the best book on the human side of military AI.
 
 ### 🔧 Applied AI & Practical Applications
 
-* *Hands-On Machine Learning* – Aurélien Géron
-* *Designing Data-Intensive Applications* – Martin Kleppmann
-* *Machine Learning Engineering* – Andriy Burkov
-* *Building ML Powered Applications* – Emmanuel Ameisen
-* *Feature Engineering* – Zheng & Casari
-* *MLOps* – Treveil & Shukla
-* *Building Intelligent Systems* – Geoffrey Hulten
+* *Hands-On Machine Learning* – Aurélien Géron — the book people actually use; builds real models with scikit-learn and TensorFlow, no handwaving.
+* *Designing Data-Intensive Applications* – Martin Kleppmann — the systems design bible; if you build anything that stores or moves data, this is your reference.
+* *Machine Learning Engineering* – Andriy Burkov — the gap between "I trained a model" and "it works in production"; covers deployment, monitoring, and ML system design.
+* *Building ML Powered Applications* – Emmanuel Ameisen — the end-to-end walkthrough from data collection to deployment; shorter and more opinionated than Burkov.
+* *Feature Engineering* – Zheng & Casari — the practical side of feature work that textbooks skip; Kaggle competition veterans sharing what actually moves metrics.
+* *MLOps* – Treveil & Shukla — the operational playbook for ML teams; covers the CI/CD/monitoring stack specific to machine learning.
+* *Building Intelligent Systems* – Geoffrey Hulten — a clear framework for designing AI products that handle the messy reality of user needs, data pipelines, and deployment constraints.
 
 ### 📐 Engineering: Reliable Systems & Software
 
-* *The Pragmatic Programmer* – Hunt & Thomas
-* *Design Patterns* – Gamma, Helm, Johnson, Vlissides
-* *Clean Code* – Robert Martin
-* *Site Reliability Engineering* – Beyer et al.
-* *The Mythical Man-Month* – Frederick Brooks
-* *Release It!* – Michael Nygard
-* *Systems Performance* – Brendan Gregg
+* *The Pragmatic Programmer* – Hunt & Thomas — the book that made "don't repeat yourself" and "tracer bullets" part of every developer's vocabulary; as relevant now as in 1999.
+* *Design Patterns* – Gamma, Helm, Johnson, Vlissides — the Gang of Four catalog; some patterns age better than others, but knowing the vocabulary is non-negotiable.
+* *Clean Code* – Robert Martin — controversial in retrospect, but the discipline of readable naming and small functions still matters more than most style guides admit.
+* *Site Reliability Engineering* – Beyer et al. — Google's playbook for keeping systems alive; the operational mindset every engineer should internalize.
+* *The Mythical Man-Month* – Frederick Brooks — the book that should be mandatory reading before anyone adds a headcount to a late project; Brooks's Law still holds.
+* *Release It!* – Michael Nygard — the anti-pattern catalog for production systems; circuit breakers, bulkheads, and the failure modes that wake you at 3 AM.
+* *Systems Performance* – Brendan Gregg — the deepest treatment of performance analysis on Linux; the flame graphs alone changed how the industry debugs systems.
 
 ### 🖥️ Human-Computer Interaction (HCI)
 
-* *Designing Interactions* – Bill Moggridge
-* *Don’t Make Me Think* – Steve Krug
-* *The Design of Everyday Things* – Don Norman
-* *About Face* – Cooper, Reimann, Cronin, Noessel
+* *Designing Interactions* – Bill Moggridge — the history of interaction design told through the people who invented it; the field's origin story.
+* *Don't Make Me Think* – Steve Krug — the 100-page guide to making websites obvious; the title is the entire UX philosophy.
+* *The Design of Everyday Things* – Don Norman — the book that made affordances and signifiers part of everyday language; still the best argument for user-centered design.
+* *About Face* – Cooper, Reimann, Cronin, Noessel — the goal-directed design methodology for software interaction; the most complete reference on UI behavior and flow.
+* *Interaction Design: Beyond Human-Computer Interaction* – Rogers, Sharp, Preece — the comprehensive textbook that balances theory, methods, and practice; the standard university course text.
+* *The UX Book* – Hartson & Pyla — the agile UX process manual; practical, hands-on, and strong on evaluation methods that most design books gloss over.
 
 ### 🧑‍🔬 Neuro-Inspiration & Computational Neuroscience
 
-* *Theoretical Neuroscience* – Dayan & Abbott
-* *Principles of Neural Science* – Kandel, Schwartz, Jessell
-* *Spiking Neuron Models* – Gerstner & Kistler
+* *Theoretical Neuroscience* – Dayan & Abbott — the gold standard for computational neuroscience; the math behind neural coding, plasticity, and dynamics.
+* *Principles of Neural Science* – Kandel, Schwartz, Jessell — the neuroscience bible; every chapter is someone's entire PhD topic, and it still reads.
+* *Spiking Neuron Models* – Gerstner & Kistler — the bridge between biology and spiking neural networks; the book for building biologically grounded models.
+* *From Neuron to Cognition via Computational Neuroscience* – Arbib, Bonaiuto, Rinzel (eds.) — the modern successor to the Dayan & Abbott tradition, tracing a path from cells and circuits to behavior and cognition.
+* *Modeling Neural Circuits Made Simple with Python* – Robert Rosenbaum — the accessible, code-first intro to computational neuroscience; pairs biophysics with Python implementations from the first chapter.
 
 ### 🔍 AI Interpretability & Explainable AI
 
-* *Interpretable Machine Learning* – Christoph Molnar
-* *Causality* – Judea Pearl
+* *Interpretable Machine Learning* – Christoph Molnar — the free, open-source guide to SHAP, LIME, and every interpretability method; the standard reference for practitioners.
+* *Causality* – Judea Pearl — the book that formalized causal inference with do-calculus; the mathematical foundation for moving beyond correlation in ML.
+* *The Alignment Problem* – Brian Christian — the most readable account of how alignment research intersects with interpretability, bias, and value learning; 400+ interviews distilled into one narrative.
+* *Explainable AI: Interpreting, Explaining and Visualizing Deep Learning* – Samek et al. (eds.) — the Springer handbook on XAI; covers feature visualization, network dissection, and adversarial robustness across 22 chapters.
 
 ### 🛡️ AI Safety & Alignment
 
-* *Superintelligence* – Nick Bostrom
-* *Human Compatible* – Stuart Russell
+* *Superintelligence* – Nick Bostrom — the book that made the control problem mainstream; the 2014 landscape before deep learning dominance, but the core arguments haven't aged.
+* *Human Compatible* – Stuart Russell — the clearest technical introduction to alignment for a general audience; the Bayesian "uncertain preferences" solution is the most actionable framework.
+* *The Coming Wave* – Mustafa Suleyman — the containment problem from a DeepMind co-founder; prescient about agentic AI and the governance gap between capability and readiness.
+* *If Anyone Builds It, Everyone Dies* – Eliezer Yudkowsky & Nate Soares — the strongest articulation of the existential risk case; the title's "if" is deliberate, and the final section outlines what could still be done.
+* *Life 3.0* – Max Tegmark — the big-picture survey of AI futures from physics to philosophy; the most balanced book on whether superintelligence helps or kills.
 
 ### 🌀 Systems Thinking & Meta-Cognition (Additions)
 
-* *Thinking in Systems* – Donella Meadows
-* *The Fifth Discipline* – Peter Senge
-* *The Beginning of Infinity* – David Deutsch
-* *The Reflective Practitioner* – Donald Schön
-* *Rationality: From AI to Zombies* – Eliezer Yudkowsky
+* *Thinking in Systems* – Donella Meadows — the shortest path to systems thinking; leverage points, feedback loops, and why simple interventions backfire.
+* *The Fifth Discipline* – Peter Senge — the organizational systems classic; learning organizations, mental models, and shared vision as systems-level properties.
+* *The Beginning of Infinity* – David Deutsch — the argument that all problems are soluble given the right knowledge; a philosophical foundation for optimism about human problem-solving.
+* *The Reflective Practitioner* – Donald Schön — the theory of professional knowledge-as-practice; how experts think in action, not just about action.
+* *Rationality: From AI to Zombies* – Eliezer Yudkowsky — the compendium of rationality essays that built the alignment community's intellectual culture; Book 3 (Machine in the Ghost) is the essential section.
 
 ## Integration Over a Decade
 
