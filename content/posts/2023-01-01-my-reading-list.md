@@ -71,6 +71,8 @@ This list structures a decade across four layers: **foundations** (epistemology,
 
 * *Artificial Intelligence: A Modern Approach* – Russell & Norvig — the canonical AI textbook, the one every CS program uses; broad enough to map the entire field.
 * *Pattern Recognition and Machine Learning* – Christopher Bishop — the Bayesian ML bible; dense but unmatched for probabilistic thinking about models.
+* *The Elements of Statistical Learning* – Hastie, Tibshirani, Friedman — the statistical foundation of modern ML; where boosting, random forests, and lasso were first made rigorous.
+* *An Introduction to Statistical Learning* – James, Witten, Hastie, Tibshirani — the accessible companion to ESL; the gentlest real path into statistical learning for anyone without a math background.
 * *Deep Learning* – Goodfellow, Bengio, Courville — the book that defined the modern deep learning curriculum; start with the math prerequisites before diving in.
 * *Probabilistic Robotics* – Thrun, Burgard, Fox — the definitive reference for robot perception and SLAM; rigorous and practical in equal measure.
 * *Reinforcement Learning: An Introduction* – Sutton & Barto — the clear, patient intro to RL that rewards slow reading; the foundational text for anyone building agents that learn from environment interaction.
