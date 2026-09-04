@@ -81,6 +81,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *The Elements of Statistical Learning* – Hastie, Tibshirani, Friedman — the statistical foundation of modern ML; where boosting, random forests, and lasso were first made rigorous.
 * *An Introduction to Statistical Learning* – James, Witten, Hastie, Tibshirani — the accessible companion to ESL; the gentlest real path into statistical learning for anyone without a math background.
 * *Deep Learning* – Goodfellow, Bengio, Courville — the book that defined the modern deep learning curriculum; start with the math prerequisites before diving in.
+* *Speech and Language Processing* – Jurafsky & Martin — the definitive NLP textbook, now covering transformers, LLMs, and RAG; the reference for the language side of AI that the ML books deliberately skip.
 * *Probabilistic Robotics* – Thrun, Burgard, Fox — the definitive reference for robot perception and SLAM; rigorous and practical in equal measure.
 * *Reinforcement Learning: An Introduction* – Sutton & Barto — the clear, patient intro to RL that rewards slow reading; the foundational text for anyone building agents that learn from environment interaction.
 * *Reinforcement Learning from Human Feedback* – Nathan Lambert (2025) — the first book-length treatment of RLHF and LLM post-training; covers PPO, DPO, GRPO, and reward modeling, the alignment stack behind modern chat models.
