@@ -89,6 +89,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *Cognition: Exploring the Science of the Mind* – Daniel Reisberg — the most balanced intro textbook, pairing classic experiments with current debates.
 * *Sources of Power* – Gary Klein — the book that showed naturalistic decision-making isn't the biased mess Kahneman describes; pattern recognition in experts is real and effective.
 * *The Cognitive Neurosciences* – Michael Gazzaniga (ed.) — the definitive reference on the brain-cognition interface; thick enough to use as a doorstop, comprehensive enough to answer any question.
+* *Then I Am Myself the World* – Christof Koch (2024) — the leading IIT proponent's accessible case that consciousness is a measurable causal power; the best recent bridge between neuroscience and the AI question of whether machines can feel.
 * *Bayesian Models of Cognition* – Griffiths, Chater, Tenenbaum (2024) — the definitive Bayesian cognitive science textbook from MIT Press; reverse-engineers the mind's computational strategy for getting so much from so little.
 
 ### 💾 Memory: From Molecules to Minds
@@ -109,6 +110,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *The Distributed Mind* – Robert Rupert — the best critical treatment of extended cognition; argues the extended mind thesis is weaker than its proponents claim, which makes it a better read.
 * *Connectionist Models of Cognition* – Jacobs & Jordan (eds.) — the neural network side of cognitive science before deep learning ate everything; still the right entry point for understanding connectionism.
 * *Situated Cognition* – Cohen, Good, Pollack (eds.) — the embodiment/grounding school's collected arguments against disembodied computation.
+* *The Embodied Mind* – Varela, Thompson, Rosch — the canonical origin of embodied/enactive cognition; still the sharpest synthesis of cognitive science, phenomenology, and Buddhist mind science.
 * *The Oxford Handbook of Cognitive Science* – Margolis, Samuels, Stich (eds.) — the field's comprehensive reference; the place to go when you need to know what cognitive science thinks about anything.
 
 ### 🦾 Mind, Human-AI Augmentation & Prosthetics
@@ -196,6 +198,8 @@ Some of these books bridge multiple sections. If you're reading one, its pair in
 * *Society of Mind* (Symbolic Systems) → *Connectionist Models of Cognition* (Cognitive Systems): Minsky's agent-based architecture and connectionism offer competing visions of how intelligence emerges from simple components.
 * *Reinforcement Learning from Human Feedback* (AI) → *Human Compatible* (AI Safety): Lambert shows how preference alignment works in practice; Russell argues what it can't yet solve.
 * *AI Engineering* (Applied AI) → *Designing Data-Intensive Applications* (Engineering): Huyen's evaluation ecosystem and Kleppmann's storage systems are the two halves of operating anything at scale.
+* *The Embodied Mind* (Cognitive Systems) → *The Distributed Mind* (Cognitive Systems): Varela proposed enaction decades before Rupert critiqued extended cognition; the two books bracket the whole embodiment debate.
+* *Then I Am Myself the World* (Cognition) → *Superintelligence* (AI Safety): Koch's measurable-consciousness framework is exactly what Bostrom needs to argue about whether a superintelligent agent would suffer.
 
 ## Integration Over a Decade
 
