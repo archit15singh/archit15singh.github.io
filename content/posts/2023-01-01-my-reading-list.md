@@ -101,6 +101,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *The Cognitive Neurosciences* – Michael Gazzaniga (ed.) — the definitive reference on the brain-cognition interface; thick enough to use as a doorstop, comprehensive enough to answer any question.
 * *Then I Am Myself the World* – Christof Koch (2024) — the leading IIT proponent's accessible case that consciousness is a measurable causal power; the best recent bridge between neuroscience and the AI question of whether machines can feel.
 * *Bayesian Models of Cognition* – Griffiths, Chater, Tenenbaum (2024) — the definitive Bayesian cognitive science textbook from MIT Press; reverse-engineers the mind's computational strategy for getting so much from so little.
+* *Consciousness Explained* – Daniel Dennett — the anti-mysterian counterpoint to Koch; the "multiple drafts" functionalist account of consciousness that argues the hard problem dissolves once you model it computationally.
 
 ### 💾 Memory: From Molecules to Minds
 
@@ -202,6 +203,8 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *The Reflective Practitioner* – Donald Schön — the theory of professional knowledge-as-practice; how experts think in action, not just about action.
 * *Rationality: From AI to Zombies* – Eliezer Yudkowsky — the compendium of rationality essays that built the alignment community's intellectual culture; Book 3 (Machine in the Ghost) is the essential section.
 * *The Complex World* – David Krakauer (2024) — the Santa Fe Institute president's introduction to complexity science; traces how evolution, computation, and nonlinear dynamics produce the first scientific framework for understanding purposeful systems.
+* *Complexity: A Guided Tour* – Melanie Mitchell — the best single accessible tour of complexity science; cellular automata, networks, and emergence explained so well you can actually use the ideas.
+* *Network Science* – Albert-László Barabási — the canonical textbook for scale-free networks; the six-degrees, power-law, and robustness machinery behind modern network analysis.
 
 ## Cross-Domain Connections
 
@@ -221,6 +224,8 @@ Some of these books bridge multiple sections. If you're reading one, its pair in
 * *The Embodied Mind* (Cognitive Systems) → *Cybernetics* (Systems Thinking): Varela's enactive cognition descends directly from Wiener's feedback-loop cybernetics; the thread runs three generations.
 * *Probability Theory* (Foundations) → *Bayesian Reasoning and Machine Learning* (AI): Jaynes gives you the first-principles logic that Barber then turns into working graphical models.
 * *Logicomix* (Epistemology) → *Philosophical Investigations* (Symbolic Systems): read the comic for Russell's quest, then Wittgenstein's reply that the whole project was built on a mistake.
+* *Then I Am Myself the World* (Cognition) → *Consciousness Explained* (Cognition): Koch defends integrated-information theory, Dennett argues the whole framing is wrong; the sharpest consciousness debate in book form.
+* *Network Science* (Systems Thinking) → *Complexity: A Guided Tour* (Systems Thinking): Barabási supplies the math of connectivity; Mitchell supplies the conceptual map of emergence they fit into.
 
 ## Integration Over a Decade
 
