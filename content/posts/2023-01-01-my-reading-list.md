@@ -55,6 +55,13 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *The Blackwell Guide to Epistemology* – Greco & Sosa (eds.) — broader than Dancy & Sosa, covers virtue epistemology, social epistemology, and the full contemporary landscape.
 * *Virtue Epistemology* – Fairweather & Zagzebski (eds.) — the foundational collection for the "virtue turn" in epistemology; pairs well with the moral philosophy of character-based ethics.
 * *Philosophical Issues in Classical Indian Epistemology* – Bimal Krishna Matilal — the best bridge into Nyāya and Buddhist logic traditions, which developed argumentation and perception theory centuries before Western analytic philosophy caught up.
+* *Logicomix* – Apostolos Doxiadis & Christos Papadimitriou — the graphic novel about Russell's agonized search for absolute truth in the foundations of mathematics; the most fun way to meet Frege, Gödel, and Wittgenstein before reading their actual books.
+
+### 🧮 Foundations: Probability, Physics & Molecular Machinery
+
+* *Probability Theory: The Logic of Science* – E.T. Jaynes — the deepest treatment of probability as extended logic, not just measure theory; rewires how you reason about uncertainty and is the mathematical heart of every Bayesian book on this list.
+* *The Feynman Lectures on Physics* – Richard Feynman — the volume that set the standard for how physics should be taught; even if you never do particle physics, the first two volumes permanently shift your model of how the world actually works.
+* *Nanosystems* – K. Eric Drexler — the quietly mind-blowing physics-based textbook on molecular machinery and computation; reads like hard sci-fi but is a serious account of where engineering bottoms out.
 
 ### 📚 Symbolic Systems: Language, Logic, Computation
 
@@ -153,6 +160,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *Interaction Design: Beyond Human-Computer Interaction* – Rogers, Sharp, Preece — the comprehensive textbook that balances theory, methods, and practice; the standard university course text.
 * *The UX Book* – Hartson & Pyla — the agile UX process manual; practical, hands-on, and strong on evaluation methods that most design books gloss over.
 * *Human Spatial Computing* – Reginé Gilbert & Doug North Cook (2025) — the first accessible OUP text on spatial computing; bridges HCI with the augmented-environment concerns of the Human-AI Augmentation section.
+* *Sentient Design* – Josh Clark & Veronika Kindred (2026) — the canonical take on AI as a design material; the pattern library for adaptive, agent-based interfaces that none of the classic HCI books cover.
 
 ### 🧑‍🔬 Neuro-Inspiration & Computational Neuroscience
 
@@ -205,6 +213,8 @@ Some of these books bridge multiple sections. If you're reading one, its pair in
 * *The Embodied Mind* (Cognitive Systems) → *The Distributed Mind* (Cognitive Systems): Varela proposed enaction decades before Rupert critiqued extended cognition; the two books bracket the whole embodiment debate.
 * *Then I Am Myself the World* (Cognition) → *Superintelligence* (AI Safety): Koch's measurable-consciousness framework is exactly what Bostrom needs to argue about whether a superintelligent agent would suffer.
 * *The Embodied Mind* (Cognitive Systems) → *Cybernetics* (Systems Thinking): Varela's enactive cognition descends directly from Wiener's feedback-loop cybernetics; the thread runs three generations.
+* *Probability Theory* (Foundations) → *Bayesian Reasoning and Machine Learning* (AI): Jaynes gives you the first-principles logic that Barber then turns into working graphical models.
+* *Logicomix* (Epistemology) → *Philosophical Investigations* (Symbolic Systems): read the comic for Russell's quest, then Wittgenstein's reply that the whole project was built on a mistake.
 
 ## Integration Over a Decade
 
