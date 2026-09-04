@@ -161,6 +161,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *The UX Book* – Hartson & Pyla — the agile UX process manual; practical, hands-on, and strong on evaluation methods that most design books gloss over.
 * *Human Spatial Computing* – Reginé Gilbert & Doug North Cook (2025) — the first accessible OUP text on spatial computing; bridges HCI with the augmented-environment concerns of the Human-AI Augmentation section.
 * *Sentient Design* – Josh Clark & Veronika Kindred (2026) — the canonical take on AI as a design material; the pattern library for adaptive, agent-based interfaces that none of the classic HCI books cover.
+* *Universal Principles of Design* – Lidwell, Holden, Butler — the 200-entry cross-disciplinary encyclopedia of design laws (Abbe Principle to Zeigarnick Effect); the single best reference for naming and applying the mechanisms behind the classic UX texts.
 
 ### 🧑‍🔬 Neuro-Inspiration & Computational Neuroscience
 
