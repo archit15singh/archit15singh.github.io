@@ -95,6 +95,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *Vision: A Computational Investigation* – David Marr — the foundational text on computational vision; his three-level analysis (algorithm, representation, implementation) is a thinking tool that generalizes far beyond vision.
 * *Cognition: Exploring the Science of the Mind* – Daniel Reisberg — the most balanced intro textbook, pairing classic experiments with current debates.
 * *Sources of Power* – Gary Klein — the book that showed naturalistic decision-making isn't the biased mess Kahneman describes; pattern recognition in experts is real and effective.
+* *Bounded Rationality: The Adaptive Toolbox* – Gigerenzer & Selten (eds.) — the canonical counterpoint to the biases school; argues smart, fast-and-frugal heuristics beat optimization under uncertainty, and gives the conditions where each one works.
 * *The Cognitive Neurosciences* – Michael Gazzaniga (ed.) — the definitive reference on the brain-cognition interface; thick enough to use as a doorstop, comprehensive enough to answer any question.
 * *Then I Am Myself the World* – Christof Koch (2024) — the leading IIT proponent's accessible case that consciousness is a measurable causal power; the best recent bridge between neuroscience and the AI question of whether machines can feel.
 * *Bayesian Models of Cognition* – Griffiths, Chater, Tenenbaum (2024) — the definitive Bayesian cognitive science textbook from MIT Press; reverse-engineers the mind's computational strategy for getting so much from so little.
@@ -210,6 +211,7 @@ Some of these books bridge multiple sections. If you're reading one, its pair in
 * *The Alignment Problem* (AI Interpretability) → *Human Compatible* (AI Safety): Christian provides the research narrative, Russell provides the technical framework; together they cover the full alignment picture.
 * *Bayesian Models of Cognition* (Cognition) → *Bayesian Reasoning and Machine Learning* (AI): Griffiths bridges human and machine Bayesian inference; Barber provides the technical machinery.
 * *Society of Mind* (Symbolic Systems) → *Connectionist Models of Cognition* (Cognitive Systems): Minsky's agent-based architecture and connectionism offer competing visions of how intelligence emerges from simple components.
+* *Thinking, Fast and Slow* (Cognition) → *Bounded Rationality* (Cognition): Kahneman catalogues the biases, Gigerenzer argues the same heuristics are ecologically rational; read them as an argument, not two reference books.
 * *Reinforcement Learning from Human Feedback* (AI) → *Human Compatible* (AI Safety): Lambert shows how preference alignment works in practice; Russell argues what it can't yet solve.
 * *AI Engineering* (Applied AI) → *Designing Data-Intensive Applications* (Engineering): Huyen's evaluation ecosystem and Kleppmann's storage systems are the two halves of operating anything at scale.
 * *The Embodied Mind* (Cognitive Systems) → *The Distributed Mind* (Cognitive Systems): Varela proposed enaction decades before Rupert critiqued extended cognition; the two books bracket the whole embodiment debate.
