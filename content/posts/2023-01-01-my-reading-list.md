@@ -65,6 +65,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *How to Read and Do Proofs* – Daniel Solow — the shortest path to mathematical maturity; every proof technique you need, explained without condescension.
 * *Philosophical Investigations* – Ludwig Wittgenstein — the book that killed the picture theory of meaning and invented the language-game; every AI discussion about meaning eventually comes back here.
 * *Mind Design II* – John Haugeland (ed.) — the essential anthology of classic AI and cognitive science papers; the best way to see where connectionism, embodiment, and symbolic AI collided.
+* *Mathematical Structure of Syntactic Merge* – Marcolli, Chomsky, Berwick (2025) — Chomsky's own late-career formalization of Merge as a Hopf algebra; a mathematical capstone for *Syntactic Structures*.
 
 ### 🤖 Artificial Intelligence: From Basics to Deep Learning
 
@@ -73,6 +74,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *Deep Learning* – Goodfellow, Bengio, Courville — the book that defined the modern deep learning curriculum; start with the math prerequisites before diving in.
 * *Probabilistic Robotics* – Thrun, Burgard, Fox — the definitive reference for robot perception and SLAM; rigorous and practical in equal measure.
 * *Reinforcement Learning: An Introduction* – Sutton & Barto — the clear, patient intro to RL that rewards slow reading; the foundational text for anyone building agents that learn from environment interaction.
+* *Reinforcement Learning from Human Feedback* – Nathan Lambert (2025) — the first book-length treatment of RLHF and LLM post-training; covers PPO, DPO, GRPO, and reward modeling, the alignment stack behind modern chat models.
 * *Bayesian Reasoning and Machine Learning* – David Barber — the most accessible treatment of graphical models and variational inference; bridges statistics and ML better than Bishop for some readers.
 * *Programming Collective Intelligence* – Toby Segaran — the hands-on opposite of Bishop; builds real recommendation, clustering, and search systems from scratch with no framework overhead.
 
@@ -126,6 +128,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *Feature Engineering* – Zheng & Casari — the practical side of feature work that textbooks skip; Kaggle competition veterans sharing what actually moves metrics.
 * *MLOps* – Treveil & Shukla — the operational playbook for ML teams; covers the CI/CD/monitoring stack specific to machine learning.
 * *Building Intelligent Systems* – Geoffrey Hulten — a clear framework for designing AI products that handle the messy reality of user needs, data pipelines, and deployment constraints.
+* *AI Engineering* – Chip Huyen (2025) — the definitive guide to building applications with foundation models; evaluation, RAG, fine-tuning, and cost/latency trade-offs for production LLM systems.
 
 ### 📐 Engineering: Reliable Systems & Software
 
@@ -188,6 +191,8 @@ Some of these books bridge multiple sections. If you're reading one, its pair in
 * *The Alignment Problem* (AI Interpretability) → *Human Compatible* (AI Safety): Christian provides the research narrative, Russell provides the technical framework; together they cover the full alignment picture.
 * *Bayesian Models of Cognition* (Cognition) → *Bayesian Reasoning and Machine Learning* (AI): Griffiths bridges human and machine Bayesian inference; Barber provides the technical machinery.
 * *Society of Mind* (Symbolic Systems) → *Connectionist Models of Cognition* (Cognitive Systems): Minsky's agent-based architecture and connectionism offer competing visions of how intelligence emerges from simple components.
+* *Reinforcement Learning from Human Feedback* (AI) → *Human Compatible* (AI Safety): Lambert shows how preference alignment works in practice; Russell argues what it can't yet solve.
+* *AI Engineering* (Applied AI) → *Designing Data-Intensive Applications* (Engineering): Huyen's evaluation ecosystem and Kleppmann's storage systems are the two halves of operating anything at scale.
 
 ## Integration Over a Decade
 
