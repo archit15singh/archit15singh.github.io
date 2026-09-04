@@ -150,6 +150,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *The Mythical Man-Month* – Frederick Brooks — the book that should be mandatory reading before anyone adds a headcount to a late project; Brooks's Law still holds.
 * *Release It!* – Michael Nygard — the anti-pattern catalog for production systems; circuit breakers, bulkheads, and the failure modes that wake you at 3 AM.
 * *Systems Performance* – Brendan Gregg — the deepest treatment of performance analysis on Linux; the flame graphs alone changed how the industry debugs systems.
+* *Software Engineering at Google* – Winters, Manshreck, Wright — the definitive "programming integrated over time" account; how code, review, testing, and culture hold up a codebase meant to last decades.
 
 ### 🖥️ Human-Computer Interaction (HCI)
 
