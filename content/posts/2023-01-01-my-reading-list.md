@@ -40,7 +40,7 @@ Over the past few years, I’ve found myself at the intersection of philosophy, 
 
 ## Why This Journey?
 
-This list structures a decade across four layers: **foundations** (epistemology, how we know what we know), **mechanics** (AI, cognition, symbolic systems), **applications** (engineering, ML, HCI), and **integration** (systems thinking that connects everything). Each book isn’t isolated; it’s a thread in a cognitive tapestry I’ll weave intentionally.
+This list structures a decade across four layers: **foundations** (epistemology, how we know what we know), **mechanics** (AI, cognition, symbolic systems), **applications** (engineering, ML, HCI), and **integration** (systems thinking that connects everything). Each book isn’t isolated; it’s a thread in a larger intellectual map I’m building intentionally.
 
 ---
 
@@ -85,6 +85,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *Cognition: Exploring the Science of the Mind* – Daniel Reisberg — the most balanced intro textbook, pairing classic experiments with current debates.
 * *Sources of Power* – Gary Klein — the book that showed naturalistic decision-making isn't the biased mess Kahneman describes; pattern recognition in experts is real and effective.
 * *The Cognitive Neurosciences* – Michael Gazzaniga (ed.) — the definitive reference on the brain-cognition interface; thick enough to use as a doorstop, comprehensive enough to answer any question.
+* *Bayesian Models of Cognition* – Griffiths, Chater, Tenenbaum (2024) — the definitive Bayesian cognitive science textbook from MIT Press; reverse-engineers the mind's computational strategy for getting so much from so little.
 
 ### 💾 Memory: From Molecules to Minds
 
@@ -95,6 +96,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *The Hippocampus as a Cognitive Map* – O'Keefe & Nadel — the foundational text that established the hippocampus as a spatial map, launching the entire cognitive map field.
 * *Learning and Memory: From Brain to Behavior* – Bear, Connors, Paradiso — the neurobio textbook that grounds memory in synapses, cells, and circuits; pairs with Schacter for the cognitive side.
 * *Make It Stick* – Brown, Roediger, McDaniel — the book that killed the learning styles myth and made spaced retrieval and interleaving mainstream; the most useful book on this list for day-to-day studying.
+* *Why We Remember* – Charan Ranganath (2024) — the accessible, NYT bestseller from a leading neuroscientist; reframes memory as a predictive system for navigating the future, not an archive of the past.
 
 ### ⚙️ Cognitive Systems & Cognitive Science
 
@@ -110,7 +112,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *Natural-Born Cyborgs* – Andy Clark — the argument that humans have always been cyborgs; our tools don't extend us, they *are* us.
 * *Supersizing the Mind* – Andy Clark — the extended mind thesis in full; the philosophical foundation for thinking about tools as cognitive components.
 * *How We Became Posthuman* – N. Katherine Hayles — the literary-theory counterweight to Clark; traces how information lost its body and why that matters for AI and embodiment.
-* *Brain-Computer Interfaces* – Wolpaw & Wolpaw — the technical reference for BCI systems; covers signal processing, paradigms, and the state of the field.
+* *Brain-Computer Interfaces* – Wolpaw & Wolpaw — the technical reference for BCI systems; covers signal processing, experimental designs, and the state of the field.
 * *Neuroprosthetics* – Horch & Dhillon — the engineering side of brain-machine interfaces; hardware, codecs, and the gap between lab and clinic.
 * *The Cyborg Experiments* – Morra & Fromberger — a history of experimental cybernetics that shows the field's weird, wonderful origins.
 * *Wired for War* – P.W. Singer — the journalistic account of how robots changed warfare; the best book on the human side of military AI.
@@ -174,11 +176,23 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *The Beginning of Infinity* – David Deutsch — the argument that all problems are soluble given the right knowledge; a philosophical foundation for optimism about human problem-solving.
 * *The Reflective Practitioner* – Donald Schön — the theory of professional knowledge-as-practice; how experts think in action, not just about action.
 * *Rationality: From AI to Zombies* – Eliezer Yudkowsky — the compendium of rationality essays that built the alignment community's intellectual culture; Book 3 (Machine in the Ghost) is the essential section.
+* *The Complex World* – David Krakauer (2024) — the Santa Fe Institute president's introduction to complexity science; traces how evolution, computation, and nonlinear dynamics produce the first scientific framework for understanding purposeful systems.
+
+## Cross-Domain Connections
+
+Some of these books bridge multiple sections. If you're reading one, its pair in the other domain will deepen the material.
+
+* *Causality* (AI Interpretability) → *Knowledge and Its Limits* (Epistemology): Pearl's causal hierarchy maps directly onto the epistemological question of what counts as evidence.
+* *Vision: A Computational Investigation* (Cognition) → *Theoretical Neuroscience* (Neuro-Inspiration): Marr's three levels are the shared language between computational cognitive science and computational neuroscience.
+* *Supersizing the Mind* (Human-AI Augmentation) → *The Distributed Mind* (Cognitive Systems): Clark and Rupert disagree on whether cognition extends into the environment; read both sides.
+* *The Alignment Problem* (AI Interpretability) → *Human Compatible* (AI Safety): Christian provides the research narrative, Russell provides the technical framework; together they cover the full alignment picture.
+* *Bayesian Models of Cognition* (Cognition) → *Bayesian Reasoning and Machine Learning* (AI): Griffiths bridges human and machine Bayesian inference; Barber provides the technical machinery.
+* *Society of Mind* (Symbolic Systems) → *Connectionist Models of Cognition* (Cognitive Systems): Minsky's agent-based architecture and connectionism offer competing visions of how intelligence emerges from simple components.
 
 ## Integration Over a Decade
 
-By interleaving these texts, I'll connect epistemology to AI, cognition to engineering, and theory to practice, achieving deep, integrative knowledge. Each book is not an isolated read but part of a broader cognitive tapestry I'll weave intentionally.
+By interleaving these texts, I'll connect epistemology to AI, cognition to engineering, and theory to practice, achieving deep, integrative knowledge. Each book isn't isolated; it's a thread in a larger intellectual map I'm building intentionally.
 
 Through annotation, monthly synthesis, hands-on projects, spaced review, and annual reflection, I'll ensure I internalize and apply this knowledge effectively.
 
-Ultimately, this reading list isn’t just about intellectual curiosity—it’s my manifesto for intentional, integrated, lifelong learning, shaping me into the systems thinker and AI engineer I aim to become.
+Ultimately, this reading list is my manifesto for intentional, integrated, lifelong learning—shaping me into the systems thinker and AI engineer I aim to become.
