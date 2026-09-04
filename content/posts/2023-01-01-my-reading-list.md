@@ -157,6 +157,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 ### 🧑‍🔬 Neuro-Inspiration & Computational Neuroscience
 
 * *Theoretical Neuroscience* – Dayan & Abbott — the gold standard for computational neuroscience; the math behind neural coding, plasticity, and dynamics.
+* *Theoretical Neuroscience: Understanding Cognition* – Xiao-Jing Wang (2025) — the modern cognitive-focused successor to Dayan & Abbott; network models of working memory and decision making with a clear eye on the AI interface.
 * *Principles of Neural Science* – Kandel, Schwartz, Jessell — the neuroscience bible; every chapter is someone's entire PhD topic, and it still reads.
 * *Spiking Neuron Models* – Gerstner & Kistler — the bridge between biology and spiking neural networks; the book for building biologically grounded models.
 * *From Neuron to Cognition via Computational Neuroscience* – Arbib, Bonaiuto, Rinzel (eds.) — the modern successor to the Dayan & Abbott tradition, tracing a path from cells and circuits to behavior and cognition.
@@ -178,7 +179,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *If Anyone Builds It, Everyone Dies* – Eliezer Yudkowsky & Nate Soares — the strongest articulation of the existential risk case; the title's "if" is deliberate, and the final section outlines what could still be done.
 * *Life 3.0* – Max Tegmark — the big-picture survey of AI futures from physics to philosophy; the most balanced book on whether superintelligence helps or kills.
 
-### 🌀 Systems Thinking & Meta-Cognition (Additions)
+### 🌀 Systems Thinking & Meta-Cognition
 
 * *Thinking in Systems* – Donella Meadows — the shortest path to systems thinking; leverage points, feedback loops, and why simple interventions backfire.
 * *Cybernetics* – Norbert Wiener (1948) — the origin of the field; control and communication in animal and machine, the book that turned feedback into a universal principle.
