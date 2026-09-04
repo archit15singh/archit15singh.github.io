@@ -181,6 +181,8 @@ This list structures a decade across four layers: **foundations** (epistemology,
 ### 🌀 Systems Thinking & Meta-Cognition (Additions)
 
 * *Thinking in Systems* – Donella Meadows — the shortest path to systems thinking; leverage points, feedback loops, and why simple interventions backfire.
+* *Cybernetics* – Norbert Wiener (1948) — the origin of the field; control and communication in animal and machine, the book that turned feedback into a universal principle.
+* *General System Theory* – Ludwig von Bertalanffy — the other founding pillar next to Wiener; isomorphisms across systems, from biology to sociology, that give systems thinking its cross-domain power.
 * *The Fifth Discipline* – Peter Senge — the organizational systems classic; learning organizations, mental models, and shared vision as systems-level properties.
 * *The Beginning of Infinity* – David Deutsch — the argument that all problems are soluble given the right knowledge; a philosophical foundation for optimism about human problem-solving.
 * *The Reflective Practitioner* – Donald Schön — the theory of professional knowledge-as-practice; how experts think in action, not just about action.
@@ -201,6 +203,7 @@ Some of these books bridge multiple sections. If you're reading one, its pair in
 * *AI Engineering* (Applied AI) → *Designing Data-Intensive Applications* (Engineering): Huyen's evaluation ecosystem and Kleppmann's storage systems are the two halves of operating anything at scale.
 * *The Embodied Mind* (Cognitive Systems) → *The Distributed Mind* (Cognitive Systems): Varela proposed enaction decades before Rupert critiqued extended cognition; the two books bracket the whole embodiment debate.
 * *Then I Am Myself the World* (Cognition) → *Superintelligence* (AI Safety): Koch's measurable-consciousness framework is exactly what Bostrom needs to argue about whether a superintelligent agent would suffer.
+* *The Embodied Mind* (Cognitive Systems) → *Cybernetics* (Systems Thinking): Varela's enactive cognition descends directly from Wiener's feedback-loop cybernetics; the thread runs three generations.
 
 ## Integration Over a Decade
 
