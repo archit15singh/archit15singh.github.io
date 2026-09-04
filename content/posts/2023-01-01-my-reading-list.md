@@ -166,6 +166,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 
 * *Interpretable Machine Learning* – Christoph Molnar — the free, open-source guide to SHAP, LIME, and every interpretability method; the standard reference for practitioners.
 * *Causality* – Judea Pearl — the book that formalized causal inference with do-calculus; the mathematical foundation for moving beyond correlation in ML.
+* *Applied Causal Inference Powered by ML and AI* – Chernozhukov, Hansen, Kallus, Spindler, Syrgkanis (2024) — the modern double-machine-learning companion to Pearl; how to do debiased causal inference when the confounding is high-dimensional and the models are deep.
 * *The Alignment Problem* – Brian Christian — the most readable account of how alignment research intersects with interpretability, bias, and value learning; 400+ interviews distilled into one narrative.
 * *Explainable AI: Interpreting, Explaining and Visualizing Deep Learning* – Samek et al. (eds.) — the Springer handbook on XAI; covers feature visualization, network dissection, and adversarial robustness across 22 chapters.
 
