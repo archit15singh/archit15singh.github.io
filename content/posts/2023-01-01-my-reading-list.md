@@ -73,6 +73,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *Philosophical Investigations* – Ludwig Wittgenstein — the book that killed the picture theory of meaning and invented the language-game; every AI discussion about meaning eventually comes back here.
 * *Mind Design II* – John Haugeland (ed.) — the essential anthology of classic AI and cognitive science papers; the best way to see where connectionism, embodiment, and symbolic AI collided.
 * *Mathematical Structure of Syntactic Merge* – Marcolli, Chomsky, Berwick (2025) — Chomsky's own late-career formalization of Merge as a Hopf algebra; a mathematical capstone for *Syntactic Structures*.
+* *Gödel, Escher, Bach* – Douglas Hofstadter — the classic that ties together recursion, self-reference, formal systems, music, and cognition; the single best bridge between the Symbolic Systems and Cognition sections.
 
 ### 🤖 Artificial Intelligence: From Basics to Deep Learning
 
