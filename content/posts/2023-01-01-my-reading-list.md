@@ -148,6 +148,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *About Face* – Cooper, Reimann, Cronin, Noessel — the goal-directed design methodology for software interaction; the most complete reference on UI behavior and flow.
 * *Interaction Design: Beyond Human-Computer Interaction* – Rogers, Sharp, Preece — the comprehensive textbook that balances theory, methods, and practice; the standard university course text.
 * *The UX Book* – Hartson & Pyla — the agile UX process manual; practical, hands-on, and strong on evaluation methods that most design books gloss over.
+* *Human Spatial Computing* – Reginé Gilbert & Doug North Cook (2025) — the first accessible OUP text on spatial computing; bridges HCI with the augmented-environment concerns of the Human-AI Augmentation section.
 
 ### 🧑‍🔬 Neuro-Inspiration & Computational Neuroscience
 
