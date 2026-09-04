@@ -133,6 +133,7 @@ This list structures a decade across four layers: **foundations** (epistemology,
 * *Neuroprosthetics* – Horch & Dhillon — the engineering side of brain-machine interfaces; hardware, codecs, and the gap between lab and clinic.
 * *The Cyborg Experiments* – Morra & Fromberger — a history of experimental cybernetics that shows the field's weird, wonderful origins.
 * *Wired for War* – P.W. Singer — the journalistic account of how robots changed warfare; the best book on the human side of military AI.
+* *Augmented Human Intelligence* – Erik J. Larson & Chee-We Ng (2024) — the modern anchor for this section; argues we should build AI that extends human judgment rather than mimics it, the clearest recent statement of the augmentation thesis.
 
 ### 🔧 Applied AI & Practical Applications
 
