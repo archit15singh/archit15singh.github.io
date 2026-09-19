@@ -27,9 +27,6 @@ Luffy, tool design, control planes, observability, failure modes.
 - [Hard constraints belong in code](/posts/2026-03-23-hard-constraints-belong-in-code/)
 - [Building Luffy](/posts/2026-07-31-luffy-pr-review-agent/)
 - [Vital Few](/posts/2026-09-20-vital-few/)
-- [Ungrounded co-design](/posts/2026-09-20-ungrounded-codesign/)
-- [A word list is not a language](/posts/2026-09-20-a-word-list-is-not-a-language/)
-- [There is no inside](/posts/2026-09-20-there-is-no-inside/)
 - Artifact: [Luffy](/projects/#luffy)
 - Artifact: [Vital Few](/projects/#vital-few)
 
