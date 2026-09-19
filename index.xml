@@ -10,31 +10,7 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Sep 2026 02:55:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>There is no inside</title>
-      <link>https://archit15singh.github.io/posts/2026-09-20-there-is-no-inside/</link>
-      <pubDate>Sun, 20 Sep 2026 02:55:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-09-20-there-is-no-inside/</guid>
-      <description>I asked the agent for a filter and got fourteen files. Every one was an interface to two others. Gray box needs a box.</description>
-    </item>
-    
-    <item>
-      <title>A word list is not a language</title>
-      <link>https://archit15singh.github.io/posts/2026-09-20-a-word-list-is-not-a-language/</link>
-      <pubDate>Sun, 20 Sep 2026 02:44:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-09-20-a-word-list-is-not-a-language/</guid>
-      <description>I gave the agent a glossary harvested from the repo, and the next plan got longer. A list of every name the compiler has is a pile of collisions, not a shared language.</description>
-    </item>
-    
-    <item>
-      <title>Ungrounded co-design</title>
-      <link>https://archit15singh.github.io/posts/2026-09-20-ungrounded-codesign/</link>
-      <pubDate>Sun, 20 Sep 2026 02:30:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-09-20-ungrounded-codesign/</guid>
-      <description>I typed &amp;#39;add search&amp;#39; and agreed to 1,400 lines of ranking features I never signed off. A plan dump reads as a spec, and silence reads as acceptance.</description>
-    </item>
-    
+    <lastBuildDate>Sun, 20 Sep 2026 02:00:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vital Few: compress a field, then stop</title>
       <link>https://archit15singh.github.io/posts/2026-09-20-vital-few/</link>
