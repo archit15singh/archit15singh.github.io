@@ -10,20 +10,36 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2026 01:07:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Sep 2026 02:00:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Career</title>
-      <link>https://archit15singh.github.io/tags/career/</link>
-      <pubDate>Sun, 30 Aug 2026 01:07:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/tags/career/</guid>
+      <title>Agents</title>
+      <link>https://archit15singh.github.io/tags/agents/</link>
+      <pubDate>Sun, 20 Sep 2026 02:00:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/tags/agents/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AI</title>
+      <link>https://archit15singh.github.io/tags/ai/</link>
+      <pubDate>Sun, 20 Sep 2026 02:00:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/tags/ai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Engineering</title>
       <link>https://archit15singh.github.io/tags/engineering/</link>
-      <pubDate>Sun, 30 Aug 2026 01:07:00 +0530</pubDate>
+      <pubDate>Sun, 20 Sep 2026 02:00:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/tags/engineering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Career</title>
+      <link>https://archit15singh.github.io/tags/career/</link>
+      <pubDate>Sun, 30 Aug 2026 01:07:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/tags/career/</guid>
       <description></description>
     </item>
     
@@ -64,22 +80,6 @@
       <link>https://archit15singh.github.io/tags/webspeech/</link>
       <pubDate>Sun, 30 Aug 2026 00:45:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/tags/webspeech/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Agents</title>
-      <link>https://archit15singh.github.io/tags/agents/</link>
-      <pubDate>Fri, 31 Jul 2026 00:45:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/tags/agents/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AI</title>
-      <link>https://archit15singh.github.io/tags/ai/</link>
-      <pubDate>Fri, 31 Jul 2026 00:45:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/tags/ai/</guid>
       <description></description>
     </item>
     
