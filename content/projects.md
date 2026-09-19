@@ -60,7 +60,7 @@ An agent skill that compresses a field. Name an object, compete, commit, stop. T
 
 **Thesis.** Ordering is the product. The list is not. Stop is a four-check (frame names the ontology, k is from the front, item-1 witness is yes, no further search), not a feeling.
 
-**Architecture.** `name → instance → siblings → rank → ontology → frame → explode → cca → hypothesis-rank → top-k → extract loop`. Rank geometry is Juran, Zwicky, Chamberlin, Simon. Recursion is bounded.
+**Architecture.** `name → instance → siblings → rank → ontology → frame → explode → cca → hypothesis-rank → top-k → extract loop`. Each move derives from one property of a trustworthy cut: Zwicky/Wohlin completeness, Juran's cut, cross-consistency, Chamberlin/Platt/Pugh disagreement, Simon's stop. Recursion is bounded.
 
 **Implementation.** [SKILL.md](https://github.com/archit15singh/vital-few/blob/main/SKILL.md) is the runbook. [LOOP.md](https://github.com/archit15singh/vital-few/blob/main/LOOP.md) is the spec. Copy both into the agent's skills directory.
 
