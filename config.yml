@@ -51,7 +51,7 @@ params:
       I'm Archit Singh, an engineer building reliable AI-agent and security systems.
       I believe AI systems need memory, deterministic constraints, evaluation, and observability — not just better prompts.
       I built [Memori](https://github.com/archit15singh/memori) and [Luffy](https://github.com/archit15singh/luffy-pr-review-agent).
-      I research agent memory, agent reliability, AI security, and enterprise systems.
+      I research [agent memory, agent reliability, AI security, and enterprise systems](/research/).
       Evidence lives on [GitHub](https://github.com/archit15singh), in benchmarks, on [Projects](/projects/), and in the technical writing below.
 
   # Social Icons
@@ -104,21 +104,27 @@ languages:
       series: series
     menu:
       main:
+        - name: Research
+          url: research/
+          weight: 1
         - name: Projects
           url: projects/
-          weight: 1
+          weight: 2
         - name: Writing
           url: archives
-          weight: 2
+          weight: 3
+        - name: Speaking
+          url: speaking/
+          weight: 4
         - name: About
           url: about/
-          weight: 3
+          weight: 5
+        - name: Contact
+          url: contact/
+          weight: 6
         - name: Search
           url: search/
           weight: 10
-        - name: Tags
-          url: tags/
-          weight: 11
 
 outputs:
   home:

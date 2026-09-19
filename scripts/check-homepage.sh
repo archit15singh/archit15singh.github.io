@@ -62,11 +62,29 @@ if [[ ! -f "$about" ]]; then
   exit 1
 fi
 
-python3 - "$home" "$projects" "$about" <<'PY'
+research="$root/public/research/index.html"
+speaking="$root/public/speaking/index.html"
+contact="$root/public/contact/index.html"
+for f in "$research" "$speaking" "$contact"; do
+  if [[ ! -f "$f" ]]; then
+    echo "FAIL: missing $f" >&2
+    exit 1
+  fi
+done
+
+if find "$root/public" -iname 'playbook.html' -o -iname 'current_state.json' | grep -q .; then
+  echo "FAIL: playbook.html or current_state.json shipped in public/" >&2
+  exit 1
+fi
+echo "PASS: playbook.html and current_state.json not in public/"
+
+python3 - "$home" "$projects" "$about" "$research" "$speaking" "$contact" <<'PY'
 import sys
 from pathlib import Path
 
-home, projects, about = (Path(p).read_text(encoding="utf-8", errors="replace").lower() for p in sys.argv[1:])
+home, projects, about, research, speaking, contact = (
+    Path(p).read_text(encoding="utf-8", errors="replace").lower() for p in sys.argv[1:]
+)
 
 def need(label, pred):
     if not pred:
@@ -74,10 +92,11 @@ def need(label, pred):
         sys.exit(1)
     print(f"PASS: {label}")
 
-need("nav: Projects", "projects/" in home and ">projects<" in home)
-need("nav: Writing", ">writing<" in home)
-need("nav: About", "about/" in home and ">about<" in home)
-need("home links to /projects/", "/projects/" in home or "href=projects/" in home or "href=/projects" in home)
+for label in ("research", "projects", "writing", "speaking", "about", "contact"):
+    need(f"nav: {label}", f">{label}<" in home)
+
+need("home links to /projects/", "projects/" in home)
+need("home links to /research/", "research/" in home)
 
 need("projects: Memori flagship", "memori" in projects and "flagship" in projects)
 need("projects: Luffy", "luffy" in projects)
@@ -86,7 +105,15 @@ need("projects: Luffy GitHub", "github.com/archit15singh/luffy-pr-review-agent" 
 for heading in ("problem", "thesis", "architecture", "implementation", "results", "lessons", "code", "research"):
     need(f"projects spine: {heading}", heading in projects)
 
+need("research: Memory for AI agents", "memory for ai agents" in research)
+need("research: Reliable agent systems", "reliable agent systems" in research)
+need("research: AI × security", "ai" in research and "security" in research)
+need("research: AI-native software engineering", "ai-native software engineering" in research)
+
 need("about: five-question who", "engineer building reliable ai-agent and security systems" in about)
-need("about: links to projects", "/projects/" in about or "href=projects/" in about or "href=/projects" in about)
-print("PASS: projects/about/nav check")
+need("about: links to projects", "projects/" in about)
+need("speaking page exists", "speaking" in speaking and ("contact" in speaking or "invitat" in speaking))
+need("contact: GitHub", "github.com/archit15singh" in contact)
+need("contact: LinkedIn", "linkedin.com/in/archit15singh" in contact)
+print("PASS: full 0-30d IA check")
 PY

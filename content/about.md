@@ -9,6 +9,8 @@ I'm Archit Singh, an engineer building reliable AI-agent and security systems. I
 
 The method is first-principles systems thinking, applied across agent systems, security, and engineering.
 
+- Programs: [Research](/research/)
 - Work: [Projects](/projects/)
 - Evidence: [GitHub](https://github.com/archit15singh)
+- [Contact](/contact/)
 - Longer identity note: [Who Am I?](/posts/2022-01-01-who-am-i/)
