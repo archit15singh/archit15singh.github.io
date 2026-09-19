@@ -37,7 +37,13 @@ Luffy, tool design, control planes, observability, failure modes.
 
 Agent attacks, fraud, identity, social engineering, behavioral security.
 
-No public write-up in this program yet. The line is live: AI-enabled attacks, email/fraud systems, agent security, entity intelligence. New work lands here instead of as a disconnected post.
+The artifacts so far are detection PRs.
+
+- [Potential Proxy Execution Via SetupUGC](https://github.com/SigmaHQ/sigma/issues/6153) ([rule](https://github.com/SigmaHQ/sigma/pull/6152)). `setupugc.exe` as a signed LOLBin on Windows 10/11 and Server 2025.
+- [Exclude Kea DHCP from CAP_NET_RAW](https://github.com/elastic/detection-rules/pull/6468). The building block was firing on a legitimate `/usr/sbin/kea-dhcp4`.
+- [AWS discard_regex values with spaces](https://github.com/wazuh/wazuh/pull/37849). Unquoted Security Hub values split as extra arguments.
+
+Write-ups for this line go here.
 
 ## 4 · AI-native software engineering
 

@@ -9,7 +9,7 @@ params:
   # General Settings
   DateFormat: "January 2, 2006"
   env: production
-  description: "Engineer building reliable AI-agent and security systems. Memory, deterministic constraints, evaluation, and observability — not just better prompts. Memori, Luffy, GitHub."
+  description: "Engineer building reliable AI-agent and security systems. Memory, deterministic constraints, evaluation, observability. Memori, Luffy, Vital Few. PyCon India 2025."
   author: "Archit Singh"
   defaultTheme: auto
   comments: false
@@ -22,7 +22,7 @@ params:
     enabled: true
 
   # SEO Settings
-  metaDescription: "Archit Singh — engineer building reliable AI-agent and security systems. Research in agent memory, agent reliability, AI security, and enterprise systems. Evidence on GitHub."
+  metaDescription: "Archit Singh, engineer building reliable AI-agent and security systems. Agent memory, agent reliability, AI security, AI-native engineering. Memori, Luffy, Vital Few. PyCon India 2025."
   canonicalURL: "https://archit15singh.github.io/"
 
   # Display Settings
@@ -49,10 +49,11 @@ params:
     Title: "AI Agents × Security × Systems"
     Content: >
       I'm Archit Singh, an engineer building reliable AI-agent and security systems.
-      I believe AI systems need memory, deterministic constraints, evaluation, and observability — not just better prompts.
-      I built [Memori](https://github.com/archit15singh/memori) and [Luffy](https://github.com/archit15singh/luffy-pr-review-agent).
-      I research [agent memory, agent reliability, AI security, and enterprise systems](/research/).
-      Evidence lives on [GitHub](https://github.com/archit15singh), in benchmarks, on [Projects](/projects/), and in the technical writing below.
+      Those systems need memory, deterministic constraints, evaluation, and observability.
+      I built [Memori](https://github.com/archit15singh/memori), [Luffy](https://github.com/archit15singh/luffy-pr-review-agent), and [Vital Few](https://github.com/archit15singh/vital-few).
+      In September 2025 I gave [Memory is the Agent](/speaking/) at PyCon India.
+      I research [agent memory, agent reliability, AI security, and AI-native engineering](/research/).
+      Evidence lives on [GitHub](https://github.com/archit15singh), on [Projects](/projects/), and in the writing below.
 
   # Social Icons
   socialIcons:
