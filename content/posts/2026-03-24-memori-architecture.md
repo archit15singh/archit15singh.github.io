@@ -276,7 +276,7 @@ What it is: a memory system that a developer can install in one command, that an
 
 ```bash
 # install
-pip install memori-python
+pip install py-memori
 
 # agent stores a lesson at end of session
 memori store "WAL mode deadlock in SQLite requires explicit BEGIN IMMEDIATE" \

@@ -18,7 +18,7 @@ Persistent memory for AI coding agents. Rust core, SQLite, FTS5, vector search. 
 
 **Architecture.** Hybrid search with RRF, access decay scoring, cosine deduplication. Brute-force over an index until the collection size forces otherwise.
 
-**Implementation.** Python bindings, a CLI designed for agents, Claude Code integration, a published package and crate.
+**Implementation.** Python bindings, a CLI designed for agents, Claude Code integration, a published package with prebuilt wheels for Linux (manylinux), macOS, and Windows, and a Rust crate.
 
 **Results.** About 190 tests, benchmarks, and a retrieval loop that actually survives across sessions.
 
