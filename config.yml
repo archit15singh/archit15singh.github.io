@@ -9,7 +9,7 @@ params:
   # General Settings
   DateFormat: "January 2, 2006"
   env: production
-  description: "Engineer building reliable AI-agent and security systems. Memory, deterministic constraints, evaluation, observability. Memori, Luffy, Vital Few. PyCon India 2025."
+  description: "Engineer building reliable AI-agent and security systems. Memory, deterministic constraints, evaluation, observability. Memori, Luffy. PyCon India 2025."
   author: "Archit Singh"
   defaultTheme: auto
   comments: false
@@ -22,7 +22,7 @@ params:
     enabled: true
 
   # SEO Settings
-  metaDescription: "Archit Singh, engineer building reliable AI-agent and security systems. Agent memory, agent reliability, AI security, AI-native engineering. Memori, Luffy, Vital Few. PyCon India 2025."
+  metaDescription: "Archit Singh, engineer building reliable AI-agent and security systems. Agent memory, agent reliability, AI security, AI-native engineering. Memori, Luffy. PyCon India 2025."
   canonicalURL: "https://archit15singh.github.io/"
 
   # Display Settings
@@ -50,7 +50,7 @@ params:
     Content: >
       I'm Archit Singh, an engineer building reliable AI-agent and security systems.
       Those systems need memory, deterministic constraints, evaluation, and observability.
-      I built [Memori](/projects/#memori--flagship), [Luffy](/projects/#luffy), and [Vital Few](/projects/#vital-few).
+      I built [Memori](/projects/#memori--flagship) and [Luffy](/projects/#luffy).
       In September 2025 I gave [Memory is the Agent](/speaking/) at PyCon India.
       I research [agent memory, agent reliability, AI security, and AI-native engineering](/research/).
       Evidence lives on [GitHub](https://github.com/archit15singh), on [Projects](/projects/), and in the writing below.

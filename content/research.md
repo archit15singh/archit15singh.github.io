@@ -28,9 +28,7 @@ Luffy, tool design, control planes, observability, failure modes.
 - [Designing CLI tools for AI agents](/posts/2026-02-28-designing-cli-tools-for-ai-agents/)
 - [Hard constraints belong in code](/posts/2026-03-23-hard-constraints-belong-in-code/)
 - [Building Luffy](/posts/2026-07-31-luffy-pr-review-agent/)
-- [Vital Few](/posts/2026-09-20-vital-few/)
 - Artifact: [Luffy](/projects/#luffy)
-- Artifact: [Vital Few](/projects/#vital-few)
 - Artifact: [Idea Generator](/projects/#also-original)
 
 ## 3 · AI × security
