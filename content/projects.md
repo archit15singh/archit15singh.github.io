@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-description: "Memori and Luffy — original systems for reliable AI agents. Code on GitHub, write-ups here."
+description: "Memori, Luffy, and Vital Few — original systems for reliable AI agents. Code on GitHub, write-ups here."
 url: "/projects/"
 showToc: true
 comments: false
@@ -51,3 +51,23 @@ A comment-triggered PR review control plane. The agent can shell into the worksp
 **Code.** [github.com/archit15singh/luffy-pr-review-agent](https://github.com/archit15singh/luffy-pr-review-agent)
 
 **Research.** [Building Luffy](/posts/2026-07-31-luffy-pr-review-agent/)
+
+## Vital Few
+
+An agent skill that compresses a field. Name an object, compete, commit, stop. Two files, no runtime.
+
+**Problem.** Give an agent a terse pointer and it tours the field. Stars get ranked. The tail expands. You still do not know what you would work tomorrow.
+
+**Thesis.** Ordering is the product. The list is not. Stop is a four-check (frame names the ontology, k is from the front, item-1 witness is yes, no further search), not a feeling.
+
+**Architecture.** `name → instance → siblings → rank → ontology → frame → explode → cca → hypothesis-rank → top-k → extract loop`. Rank geometry is Juran, Zwicky, Chamberlin, Simon. Recursion is bounded.
+
+**Implementation.** [SKILL.md](https://github.com/archit15singh/vital-few/blob/main/SKILL.md) is the runbook. [LOOP.md](https://github.com/archit15singh/vital-few/blob/main/LOOP.md) is the spec. Copy both into the agent's skills directory.
+
+**Results.** One worked pass in-repo: `anthropic autonomous vulnerability patcher` → closed-loop CRS, witness as proof object as item 1.
+
+**Lessons.** Implementing the top-k inside the ranking loop is a fail. Running the candidates is the next loop.
+
+**Code.** [github.com/archit15singh/vital-few](https://github.com/archit15singh/vital-few)
+
+**Research.** [Vital Few: compress a field, then stop](/posts/2026-09-20-vital-few/)
