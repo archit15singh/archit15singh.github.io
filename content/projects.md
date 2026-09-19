@@ -6,7 +6,7 @@ showToc: true
 comments: false
 ---
 
-These are the artifacts. Posts argue. These prove.
+These are the artifacts. Posts argue. These prove. Memory, tools, deterministic constraints, evaluation, observability, security, human control.
 
 ## Memori — flagship
 

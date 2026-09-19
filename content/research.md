@@ -8,7 +8,7 @@ comments: false
 
 Posts are chapters. These are the programs they belong to.
 
-The through-line is [The Reliable AI Agent Stack](/projects/): memory, tools, deterministic constraints, evaluation, observability, security, and human control.
+The through-line lives on [Projects](/projects/): memory, tools, deterministic constraints, evaluation, observability, security, and human control.
 
 ## 1 · Memory for AI agents
 
@@ -19,6 +19,7 @@ Memori, architectures, retrieval, decay, identity, evaluation.
 - [Memori recursive design](/posts/2026-04-10-memori-recursive-design/)
 - Talk: [Memory is the Agent](/speaking/)
 - Artifact: [Memori](/projects/#memori--flagship)
+- Artifact: [Chronicle](/projects/#also-original)
 
 ## 2 · Reliable agent systems
 
@@ -30,6 +31,7 @@ Luffy, tool design, control planes, observability, failure modes.
 - [Vital Few](/posts/2026-09-20-vital-few/)
 - Artifact: [Luffy](/projects/#luffy)
 - Artifact: [Vital Few](/projects/#vital-few)
+- Artifact: [Idea Generator](/projects/#also-original)
 
 ## 3 · AI × security
 
@@ -41,8 +43,6 @@ The artifacts so far are detection PRs.
 - [Exclude Kea DHCP from CAP_NET_RAW](https://github.com/elastic/detection-rules/pull/6468). The building block was firing on a legitimate `/usr/sbin/kea-dhcp4`.
 - [AWS discard_regex values with spaces](https://github.com/wazuh/wazuh/pull/37849). Unquoted Security Hub values split as extra arguments.
 
-Write-ups for this line go here.
-
 ## 4 · AI-native software engineering
 
 Coding agents, architecture, productivity, staff+ engineering, evaluation.
@@ -51,3 +51,4 @@ Coding agents, architecture, productivity, staff+ engineering, evaluation.
 - [The Staff+ operating model](/posts/2026-08-30-the-staff-plus-operating-model/)
 - [Listen to this post](/posts/2026-08-30-adding-text-to-speech-to-a-hugo-blog/)
 - Artifact: [Free Model Eval](/projects/#also-original)
+- Artifact: [Sim Bangalore](/projects/#also-original)

@@ -50,7 +50,7 @@ params:
     Content: >
       I'm Archit Singh, an engineer building reliable AI-agent and security systems.
       Those systems need memory, deterministic constraints, evaluation, and observability.
-      I built [Memori](https://github.com/archit15singh/memori), [Luffy](https://github.com/archit15singh/luffy-pr-review-agent), and [Vital Few](https://github.com/archit15singh/vital-few).
+      I built [Memori](/projects/#memori--flagship), [Luffy](/projects/#luffy), and [Vital Few](/projects/#vital-few).
       In September 2025 I gave [Memory is the Agent](/speaking/) at PyCon India.
       I research [agent memory, agent reliability, AI security, and AI-native engineering](/research/).
       Evidence lives on [GitHub](https://github.com/archit15singh), on [Projects](/projects/), and in the writing below.
