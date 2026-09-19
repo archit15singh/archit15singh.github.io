@@ -6,7 +6,7 @@ showToc: true
 comments: false
 ---
 
-Posts are chapters. These are the programs they belong to.
+Posts are chapters. These are the programs they belong to. I ship the system, the rule, or the talk first. The post is what got written down after.
 
 The through-line lives on [Projects](/projects/): memory, tools, deterministic constraints, evaluation, observability, security, and human control.
 
@@ -37,7 +37,7 @@ Luffy, tool design, control planes, observability, failure modes.
 
 Agent attacks, fraud, identity, social engineering, behavioral security.
 
-The artifacts so far are detection PRs.
+These PRs are the same stack. Identity, false positives, and constraints, written as detection rules the way [Memori](/projects/#memori--flagship) and [Luffy](/projects/#luffy) write them for agents.
 
 - [Potential Proxy Execution Via SetupUGC](https://github.com/SigmaHQ/sigma/issues/6153) ([rule](https://github.com/SigmaHQ/sigma/pull/6152)). `setupugc.exe` as a signed LOLBin on Windows 10/11 and Server 2025.
 - [Exclude Kea DHCP from CAP_NET_RAW](https://github.com/elastic/detection-rules/pull/6468). The building block was firing on a legitimate `/usr/sbin/kea-dhcp4`.
