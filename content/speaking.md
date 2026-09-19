@@ -20,4 +20,10 @@ Most production “AI” still behaves like a stateless function. The talk is th
 
 *Sketch-note companion to the talk, by Sway Strokes.*
 
+## Watch the talk
+
+{{< youtube id="0pZB2Xg0gKo" start="2" >}}
+
+[Watch on YouTube](https://www.youtube.com/watch?v=0pZB2Xg0gKo)
+
 Invitations on the same thesis: [Contact](/contact/).
