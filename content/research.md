@@ -17,6 +17,7 @@ Memori, architectures, retrieval, decay, identity, evaluation.
 - [Forging AI’s lasting memory](/posts/2024-01-01-ai-memory/)
 - [Memori architecture](/posts/2026-03-24-memori-architecture/)
 - [Memori recursive design](/posts/2026-04-10-memori-recursive-design/)
+- Talk: [Memory is the Agent](/speaking/)
 - Artifact: [Memori](/projects/#memori--flagship)
 
 ## 2 · Reliable agent systems
@@ -44,8 +45,9 @@ Write-ups for this line go here.
 
 ## 4 · AI-native software engineering
 
-Coding agents, architecture, productivity, staff+ engineering.
+Coding agents, architecture, productivity, staff+ engineering, evaluation.
 
 - [The AI-augmented developer playbook](/posts/2026-01-26-ai-augmented-developer-playbook/)
 - [The Staff+ operating model](/posts/2026-08-30-the-staff-plus-operating-model/)
 - [Listen to this post](/posts/2026-08-30-adding-text-to-speech-to-a-hugo-blog/)
+- Artifact: [Free Model Eval](/projects/#also-original)

@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-description: "Memori, Luffy, and Vital Few — original systems for reliable AI agents. Code on GitHub, write-ups here."
+description: "Memori, Luffy, Vital Few, and other original systems. Code on GitHub, write-ups here."
 url: "/projects/"
 showToc: true
 comments: false
@@ -25,6 +25,8 @@ Persistent memory for AI coding agents. Rust core, SQLite, FTS5, vector search. 
 **Lessons.** Designing the CLI for agents made it better for humans. Hard constraints belong in code, not in the prompt.
 
 **Code.** [github.com/archit15singh/memori](https://github.com/archit15singh/memori) · [py-memori on PyPI](https://pypi.org/project/py-memori/) · [memori-ai-core on crates.io](https://crates.io/crates/memori-ai-core) · [docs.rs](https://docs.rs/crate/memori-ai-core/latest)
+
+**Talk.** [Memory is the Agent](/speaking/), PyCon India 2025.
 
 **Research.**
 - [Architecture decisions](/posts/2026-03-24-memori-architecture/)
@@ -71,3 +73,15 @@ An agent skill that compresses a field. Name an object, compete, commit, stop. T
 **Code.** [github.com/archit15singh/vital-few](https://github.com/archit15singh/vital-few)
 
 **Research.** [Vital Few: compress a field, then stop](/posts/2026-09-20-vital-few/)
+
+## Also original
+
+GitHub only. No post yet.
+
+**[Free Model Eval](https://github.com/archit15singh/free-model-eval).** Six free-tier coding models through OpenCode, eleven variants, ten tasks. Welch t-test, Bonferroni, Cohen's d. The grader is a different model from the one under test.
+
+**[Chronicle](https://github.com/archit15singh/chronicle-engineering).** Engineering knowledge dies when people leave. Chronicle rebuilds the decision graph from the repo: PRs, architecture, incidents. Document search is the wrong product.
+
+**[Idea Generator](https://github.com/archit15singh/idea-generator).** An OpenCode skill that is a DAG. Ingest YC companies in a constrained market, descend, cut a wedge, score founder-fit. Gates and typed receipts live in `idea_factory/`. The prompts do not.
+
+**[Sim Bangalore](https://github.com/archit15singh/sim-bangalore).** 243 BBMP wards, one synthetic agent per resident, A* on road plus Metro, a scorecard for WFH / fare / ORR-closure experiments. The foundation is a port of [Sim Francisco](https://github.com/tejasprabhune/simfrancisco). The Bangalore population, calibration, and policy core are the original work.
