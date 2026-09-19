@@ -24,7 +24,7 @@ Persistent memory for AI coding agents. Rust core, SQLite, FTS5, vector search. 
 
 **Lessons.** Designing the CLI for agents made it better for humans. Hard constraints belong in code, not in the prompt.
 
-**Code.** [github.com/archit15singh/memori](https://github.com/archit15singh/memori)
+**Code.** [github.com/archit15singh/memori](https://github.com/archit15singh/memori) · [py-memori on PyPI](https://pypi.org/project/py-memori/) · [memori-ai-core on crates.io](https://crates.io/crates/memori-ai-core) · [docs.rs](https://docs.rs/crate/memori-ai-core/latest)
 
 **Research.**
 - [Architecture decisions](/posts/2026-03-24-memori-architecture/)

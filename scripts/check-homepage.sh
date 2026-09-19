@@ -72,11 +72,11 @@ for f in "$research" "$speaking" "$contact"; do
   fi
 done
 
-if find "$root/public" -iname 'playbook.html' -o -iname 'current_state.json' | grep -q .; then
-  echo "FAIL: playbook.html or current_state.json shipped in public/" >&2
+if find "$root/public" \( -iname 'playbook.html' -o -iname 'current_state.json' -o -iname 'search-online-about-me.json' \) | grep -q .; then
+  echo "FAIL: local dump shipped in public/" >&2
   exit 1
 fi
-echo "PASS: playbook.html and current_state.json not in public/"
+echo "PASS: playbook.html, current_state.json, search-online-about-me.json not in public/"
 
 python3 - "$home" "$projects" "$about" "$research" "$speaking" "$contact" <<'PY'
 import sys
@@ -102,6 +102,9 @@ need("projects: Memori flagship", "memori" in projects and "flagship" in project
 need("projects: Luffy", "luffy" in projects)
 need("projects: Memori GitHub", "github.com/archit15singh/memori" in projects)
 need("projects: Luffy GitHub", "github.com/archit15singh/luffy-pr-review-agent" in projects)
+need("projects: py-memori PyPI", "pypi.org/project/py-memori" in projects)
+need("projects: memori-ai-core crates.io", "crates.io/crates/memori-ai-core" in projects)
+need("projects: memori-ai-core docs.rs", "docs.rs/crate/memori-ai-core" in projects)
 for heading in ("problem", "thesis", "architecture", "implementation", "results", "lessons", "code", "research"):
     need(f"projects spine: {heading}", heading in projects)
 
