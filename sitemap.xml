@@ -157,7 +157,15 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://archit15singh.github.io/about/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://archit15singh.github.io/archives/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/projects/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
