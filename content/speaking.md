@@ -1,10 +1,15 @@
 ---
 title: "Speaking"
-description: "Talks and invitations — Archit Singh on reliable AI agents and security systems."
+description: "Talks on agent memory and reliable AI systems — Archit Singh."
 url: "/speaking/"
 comments: false
 ---
 
-No public talk page yet. Invitations for reliable AI agents, agent memory, and AI × security: use [Contact](/contact/).
+## PyCon India 2025
 
-When a talk exists, it will be listed here and pointed at the matching [Research](/research/) program.
+**[Memory is the Agent: Architecting Stateful Reasoning](https://cfp.in.pycon.org/2025/talk/XN3P7N/)**  
+13 September 2025, 11:30. [Speaker profile](https://cfp.in.pycon.org/2025/speaker/FE9SPU/).
+
+Most production “AI” still behaves like a stateless function. The talk is the public precursor to [Memori](/projects/#memori--flagship): a write → retrieve → reflect → update loop, and a minimal schema (Identity, Principles, Focus, Signals). Program: [Memory for AI agents](/research/#1--memory-for-ai-agents).
+
+Invitations on the same thesis: [Contact](/contact/).

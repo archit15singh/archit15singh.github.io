@@ -115,7 +115,9 @@ need("research: AI-native software engineering", "ai-native software engineering
 
 need("about: five-question who", "engineer building reliable ai-agent and security systems" in about)
 need("about: links to projects", "projects/" in about)
-need("speaking page exists", "speaking" in speaking and ("contact" in speaking or "invitat" in speaking))
+need("speaking: PyCon talk URL", "cfp.in.pycon.org/2025/talk/xn3p7n" in speaking)
+need("speaking: PyCon speaker URL", "cfp.in.pycon.org/2025/speaker/fe9spu" in speaking)
+need("speaking: talk title", "memory is the agent" in speaking)
 need("contact: GitHub", "github.com/archit15singh" in contact)
 need("contact: LinkedIn", "linkedin.com/in/archit15singh" in contact)
 print("PASS: full 0-30d IA check")
