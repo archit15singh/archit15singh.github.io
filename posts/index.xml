@@ -10,7 +10,15 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Sep 2026 02:00:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Sep 2026 02:30:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ungrounded co-design</title>
+      <link>https://archit15singh.github.io/posts/2026-09-20-ungrounded-codesign/</link>
+      <pubDate>Sun, 20 Sep 2026 02:30:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-09-20-ungrounded-codesign/</guid>
+      <description>You skim the plan, type go, and get the wrong feature. The model counted silence as acceptance and wrote defaults into every unsigned branch.</description>
+    </item>
+    
     <item>
       <title>Vital Few: compress a field, then stop</title>
       <link>https://archit15singh.github.io/posts/2026-09-20-vital-few/</link>
