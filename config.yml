@@ -52,7 +52,7 @@ params:
       I believe AI systems need memory, deterministic constraints, evaluation, and observability — not just better prompts.
       I built [Memori](https://github.com/archit15singh/memori) and [Luffy](https://github.com/archit15singh/luffy-pr-review-agent).
       I research agent memory, agent reliability, AI security, and enterprise systems.
-      Evidence lives on [GitHub](https://github.com/archit15singh), in benchmarks, and in the technical writing below.
+      Evidence lives on [GitHub](https://github.com/archit15singh), in benchmarks, on [Projects](/projects/), and in the technical writing below.
 
   # Social Icons
   socialIcons:
@@ -104,15 +104,21 @@ languages:
       series: series
     menu:
       main:
-        - name: Archive
+        - name: Projects
+          url: projects/
+          weight: 1
+        - name: Writing
           url: archives
-          weight: 5
+          weight: 2
+        - name: About
+          url: about/
+          weight: 3
         - name: Search
           url: search/
           weight: 10
         - name: Tags
           url: tags/
-          weight: 10
+          weight: 11
 
 outputs:
   home:

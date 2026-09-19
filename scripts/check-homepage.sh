@@ -50,3 +50,43 @@ need("intro title: AI Agents × Security × Systems",
      "ai agents" in low and "security" in low and "systems" in low)
 print("PASS: homepage five-answer check")
 PY
+
+projects="$root/public/projects/index.html"
+about="$root/public/about/index.html"
+if [[ ! -f "$projects" ]]; then
+  echo "FAIL: missing $projects" >&2
+  exit 1
+fi
+if [[ ! -f "$about" ]]; then
+  echo "FAIL: missing $about" >&2
+  exit 1
+fi
+
+python3 - "$home" "$projects" "$about" <<'PY'
+import sys
+from pathlib import Path
+
+home, projects, about = (Path(p).read_text(encoding="utf-8", errors="replace").lower() for p in sys.argv[1:])
+
+def need(label, pred):
+    if not pred:
+        print(f"FAIL: {label}", file=sys.stderr)
+        sys.exit(1)
+    print(f"PASS: {label}")
+
+need("nav: Projects", "projects/" in home and ">projects<" in home)
+need("nav: Writing", ">writing<" in home)
+need("nav: About", "about/" in home and ">about<" in home)
+need("home links to /projects/", "/projects/" in home or "href=projects/" in home or "href=/projects" in home)
+
+need("projects: Memori flagship", "memori" in projects and "flagship" in projects)
+need("projects: Luffy", "luffy" in projects)
+need("projects: Memori GitHub", "github.com/archit15singh/memori" in projects)
+need("projects: Luffy GitHub", "github.com/archit15singh/luffy-pr-review-agent" in projects)
+for heading in ("problem", "thesis", "architecture", "implementation", "results", "lessons", "code", "research"):
+    need(f"projects spine: {heading}", heading in projects)
+
+need("about: five-question who", "engineer building reliable ai-agent and security systems" in about)
+need("about: links to projects", "/projects/" in about or "href=projects/" in about or "href=/projects" in about)
+print("PASS: projects/about/nav check")
+PY
