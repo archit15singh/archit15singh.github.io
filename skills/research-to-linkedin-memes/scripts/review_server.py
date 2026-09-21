@@ -1,7 +1,8 @@
 """Local review UI for meme-post-generator (agent-in-the-loop).
 
-Serves a page showing a plain-language explainer of the source paper/concept plus
-the current option batch (read from options.json) and lets the human edit copy and
+Serves a page showing a plain-language explainer of the concept (analogy, how-it-
+works steps, examples, an ASCII visual -- deliberately NOT citing the source paper)
+plus the current option batch (read from options.json) and lets the human edit copy and
 Select one (final). options.json is either a bare options array (legacy) or the v2
 shape {"explainer": {...}, "options": [...]}; the explainer panel renders when
 present. There is no in-page "generate more":
@@ -52,13 +53,16 @@ PAGE = """<!doctype html><html><head><meta charset=utf-8>
  .sel{background:var(--accent);color:#fff} .sel:hover{background:var(--accent-h)}
  .done{display:none;background:var(--ok);border:1px solid var(--ok-line);color:var(--ok-ink);padding:16px 18px;border-radius:12px;margin:20px auto 0;max-width:64ch;font-size:14px}
  code{background:var(--bg);border:1px solid var(--line);padding:2px 7px;border-radius:6px;font-size:12.5px}
- .explain{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:0 auto 28px;max-width:78ch;box-shadow:var(--shadow)}
- .explain .paper{font-size:12px;color:var(--muted);margin:0 0 10px}
- .explain .paper a{color:var(--accent-h);text-decoration:none} .explain .paper a:hover{text-decoration:underline}
- .explain h2{font-size:18px;font-weight:700;margin:0 0 8px;letter-spacing:-.01em}
- .explain p{margin:0 0 12px;font-size:14.5px;line-height:1.6;color:#d7dade}
- .explain .lbl{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
- .explain .eg{background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:12px 14px;margin:0 0 14px}
+ .explain{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:0 auto 28px;max-width:80ch;box-shadow:var(--shadow)}
+ .explain h2{font-size:19px;font-weight:700;margin:0 0 6px;letter-spacing:-.01em}
+ .explain .hook{font-size:15px;color:var(--accent-h);font-weight:600;margin:0 0 12px}
+ .explain p{margin:0 0 14px;font-size:14.5px;line-height:1.65;color:#d7dade}
+ .explain .lbl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:16px 0 6px}
+ .explain .analogy{background:var(--bg);border:1px solid var(--line);border-left:3px solid #8b5cf6;border-radius:8px;padding:12px 14px;margin:0 0 6px;font-style:italic;color:#e2e4e8}
+ .explain ol{margin:0 0 6px;padding-left:20px} .explain ol li{margin:0 0 6px;font-size:14px;line-height:1.55}
+ .explain ul.eg{list-style:none;margin:0;padding:0}
+ .explain ul.eg li{background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:10px 13px;margin:0 0 8px;font-size:13.5px;line-height:1.5}
+ .explain pre{background:#0b0d12;border:1px solid var(--line);border-radius:8px;padding:14px;overflow:auto;font-size:12.5px;line-height:1.4;color:#cfe3ff;margin:0 0 6px}
  .chips{display:flex;flex-wrap:wrap;gap:7px} .chip{font-size:12px;background:var(--panel2);border:1px solid #3a4a5f;color:#cdd3da;border-radius:999px;padding:4px 11px}
 </style></head><body>
 <div class=wrap>
@@ -80,14 +84,20 @@ function ingest(data){
 }
 function renderExplain(e){
  if(!e){explain.style.display='none'; return;}
- const p=e.paper||{}; const link=p.url||p.doi;
- const paperline = p.title ? `<div class=paper>Source: ${link?`<a href="${esc(link)}" target=_blank rel=noopener>${esc(p.title)}</a>`:esc(p.title)}${p.authors?', '+esc(p.authors):''}${p.year?' ('+p.year+')':''}</div>` : '';
- const chips = (e.taxonomy||[]).map(t=>`<span class=chip>${esc(t)}</span>`).join('');
- explain.innerHTML = `${paperline}
-  <h2>${esc(e.concept||'The concept')}</h2>
+ // No source-paper reference is rendered on purpose (see SKILL.md): the idea is
+ // taught in plain words, not cited.
+ const steps=(e.how_it_works||[]).map(s=>`<li>${esc(s)}</li>`).join('');
+ const egs=(e.examples||[]).map(x=>`<li>${esc(x)}</li>`).join('');
+ const chips=(e.taxonomy||[]).map(t=>`<span class=chip>${esc(t)}</span>`).join('');
+ explain.innerHTML = `
+  <h2>${esc(e.concept||'The idea')}</h2>
+  ${e.hook?`<div class=hook>${esc(e.hook)}</div>`:''}
   <p>${esc(e.plain||'')}</p>
-  ${e.example?`<div class=lbl>Example</div><div class=eg>${esc(e.example)}</div>`:''}
-  ${chips?`<div class=lbl>How we searched it</div><div class=chips>${chips}</div>`:''}`;
+  ${e.analogy?`<div class=lbl>Picture it</div><div class=analogy>${esc(e.analogy)}</div>`:''}
+  ${steps?`<div class=lbl>How it works</div><ol>${steps}</ol>`:''}
+  ${e.visual?`<div class=lbl>The shape of it</div><pre>${esc(e.visual)}</pre>`:''}
+  ${egs?`<div class=lbl>Examples</div><ul class=eg>${egs}</ul>`:''}
+  ${chips?`<div class=lbl>Angles we explored</div><div class=chips>${chips}</div>`:''}`;
  explain.style.display='block';
 }
 function render(){
