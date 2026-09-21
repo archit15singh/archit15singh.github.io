@@ -26,7 +26,7 @@ Ran end-to-end on `content/posts/2026-03-23-hard-constraints-belong-in-code.md` 
 - **When a Claude agent (e.g. Claude Code) is running this, you need NO `ANTHROPIC_API_KEY`.** The agent *is* the model — it does step 2 (fit-notes) and step 4 (match + captions + LinkedIn copy) directly in-conversation. The `anthropic`-SDK scripts in steps 2/4 are only for the standalone/built-tool case.
 - **Rendering**: the interactive tool renders via the Imgflip API (reliable across any template). If you have no account, the local Pillow render (step 5) is the zero-key, watermark-free fallback — but it only handles templates you've written a region map for.
 
-So the minimal run is: seed bank once (step 1) → agent picks template + writes captions/copy (steps 3-4, in-conversation) → render (Imgflip API, or local Pillow fallback) → review in the browser UI + select/regenerate (Interactive review UI section). Generation needs no `ANTHROPIC_API_KEY` when an agent drives it; Imgflip rendering needs the env creds.
+So the minimal run is: seed bank once (step 1) → agent picks template + writes captions/copy (steps 3-4, in-conversation) → render (Imgflip API, or local Pillow fallback) → review in the browser UI and select one (ask the agent to "regenerate" in chat for a fresh batch; see Interactive review UI). Generation needs no `ANTHROPIC_API_KEY` when an agent drives it; Imgflip rendering needs the env creds.
 
 ## Prerequisites
 
@@ -242,24 +242,19 @@ This is the actual review loop, verified end-to-end (a blog URL → 3 rendered o
    cd /tmp/meme-run && python3 /path/to/skills/meme-post-generator/scripts/review_server.py
    open http://localhost:8765/
    ```
-4. **Watch for the action** — the agent monitors `action.json` in the run dir:
+4. **Watch for the selection** — the agent uses a looping monitor so it catches the click (not a one-shot wait):
    ```bash
-   until [ -f action.json ]; do sleep 1; done; cat action.json
+   cd <run dir>; while true; do until [ -f action.json ]; do sleep 1; done; echo "$(cat action.json)"; rm -f action.json; done
    ```
-5. **Handle the action**:
-   - `{"type":"select","id":"B","post":"..."}` → **final**. The server has already saved the chosen meme image + post text into `output/<timestamp>/`; tell the user the path. Done.
-   - `{"type":"regenerate","prompt":"funnier, lean into the safety angle"}` → the agent writes a **fresh batch of 3** steered by that prompt to `options.json` (replacing the old batch), re-renders, and the page auto-refreshes. Delete `action.json` and go back to watching.
-   - `{"type":"regenerate","prompt":""}` (empty steer) → the driving agent **invents its own one-line creative steer** for that round and uses it, so an empty "Generate more" still explores new ground instead of repeating the last vibe. Keep these short and varied, e.g. *"try an unexpected template"*, *"go drier and deadpan"*, *"make it a spicy hot-take"*, *"punchier, fewer words"*, *"lead with the counterintuitive claim"*. Note in your reply which self-steer you used so the user can see the direction.
+5. **Handle the selection** — `{"type":"select","id":"B","post":"..."}` → **final**. The server has already saved the chosen meme image + post text into `output/<timestamp>/`; tell the user the path. Done.
 
-**Files (all in the run dir, all gitignored):** `options.json` (current batch, agent→UI), `action.json` (user action, UI→agent), `output/<ts>/` (final meme + `post.txt` + `selection.json`). The skill ships a `.gitignore` so none of these land in the repo even if the run dir is inside it.
+**Regeneration is a chat request, not a UI control.** There is no "generate more" button. To get a different batch, the user simply tells the agent **"regenerate"** in chat (optionally with a steer, e.g. "funnier, lean into the safety angle"). The agent writes a fresh `options.json` (replace, not append) to the run dir and the open page **auto-refreshes** to it — the page polls `options.json` and swaps in any new batch. A bare "regenerate" with no steer means the agent picks its own short creative direction (e.g. *"try unexpected templates"*, *"go absurd and meme-native"*, *"punchier, fewer words"*). Because the human drives each round from chat, there is no runaway self-steering tree and no round cap to enforce.
 
-**Regenerate semantics:** replace, not append — a fresh 3 each round, the prompt steer compounds. Keeps the page clean.
-
-**Stop the recursion after N rounds.** The generate-more tree is capped at **N = 5** regenerate rounds (agent counts them across the loop). On reaching the cap, stop auto-generating: write no new batch, and tell the user plainly they've hit the regenerate limit — pick from the current batch, or restart the skill with a fresh angle. This prevents an unbounded self-steering tree from spinning (and burning tokens) forever. A user-typed steer and an empty self-steer both count toward N.
+**Files (all in the run dir, all gitignored):** `options.json` (current batch, agent→UI, page polls it for refresh), `action.json` (the select, UI→agent), `output/<ts>/` (final meme + `post.txt` + `selection.json`). The skill ships a `.gitignore` so none of these land in the repo even if the run dir is inside it.
 
 ## When you build a fuller standalone version
 
-To run without an agent watching, replace the file-relay with a backend that calls Claude directly on generate/regenerate (needs `ANTHROPIC_API_KEY`) and keep the same `review_server.py` page. Everything else — bank, matching prompt, Imgflip render, output folder — is unchanged. Keep it local; nothing here needs hosting or auth.
+To run without an agent watching, add a backend that calls Claude directly to generate the batch (needs `ANTHROPIC_API_KEY`) — including a regenerate control back in the page if you want it self-service — and keep the same `review_server.py` page. Everything else — bank, matching prompt, Imgflip render, output folder — is unchanged. Keep it local; nothing here needs hosting or auth.
 
 ## Gotchas
 
