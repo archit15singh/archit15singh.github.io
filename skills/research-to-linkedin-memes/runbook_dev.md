@@ -57,7 +57,7 @@ Verified ids: Drake `181913649` (2 boxes), Two Buttons `87743020` (3), Gru's Pla
 
 **Two hard rules (verified with the user):**
 - **Never reference the source paper anywhere the user sees** — not in the explainer's rendered fields, the captions, or the post. Teach the idea in your own words + a coined plain name. Keep the real paper only in the private `paper` field on disk.
-- **LinkedIn post craft**: hook < ~10 words in line 1 (before the ~140-210 char fold); white space (1-3 sentence paragraphs, single-line sentences, blank lines); shape = hook → payoff → substance (manual `→` bullets) → a closing question; ≤1 emoji, no hashtag spam; ~600-1,300 chars. Hook types that work: contrarian, specific number, pain-point, unexpected comparison.
+- **LinkedIn post craft** (guidance, not a rulebook): a short hook in line 1 that lands before the "see more" fold; white space (short paragraphs, single-line sentences, blank lines); shape = hook → payoff → substance (manual `→` bullets) → a closing question; emoji only if it earns it, no hashtag spam; keep it tight. Hook types that pull: contrarian, specific number, pain-point, unexpected comparison.
 
 ## 4a. Render via Imgflip API (default) — UA header is REQUIRED
 
@@ -146,6 +146,6 @@ git checkout main -q && git pull --rebase origin main -q
 ## Context worth keeping
 
 - **Agent-in-the-loop, no API key**: the whole generate/regenerate loop runs with the driving agent as the model; the file relay (`options.json` out, `action.json` in) is the only glue. A standalone version would swap in an `ANTHROPIC_API_KEY` backend + the openalex CLI.
-- **Recursion cap**: taxonomy tree at depth 2, ~3-5 nodes/level; stop a branch when nodes stop adding a *distinct* angle. Same saturation rule as any recursive research loop.
+- **Recursion**: keep the taxonomy tree shallow; stop a branch when nodes stop adding a *distinct* angle. Same saturation rule as any recursive research loop — a few sharp angles beat an exhaustive map.
 - **Voice**: say-it-plain + deslop + `WRITING-GUIDE.md` for everything — replies, explainer, captions, post copy.
 - **Public repo hygiene**: run in a scratch dir; the skill's `.gitignore` covers `options.json`/`action.json`/`output/`/`bank/`/pycache; never commit generated memes or an Imgflip password.
