@@ -16,7 +16,7 @@
       <link>https://archit15singh.github.io/posts/2026-08-30-the-staff-plus-operating-model/</link>
       <pubDate>Sun, 30 Aug 2026 01:07:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-08-30-the-staff-plus-operating-model/</guid>
-      <description>A field guide for Senior SWE → Tech Lead → Staff/Principal: leadership without authority, the four archetypes, the four work pillars, the promotion arithmetic, and the traps that quietly stall careers. Now with the operating depth: real time-allocation numbers, the horizon of focus, incident-command mechanics, the room, decision reversibility, the PM partnership, plus how to source the work itself, present to executives, set the technical bar, and write strategy bottom-up.</description>
+      <description>A field guide for Senior SWE to Tech Lead to Staff/Principal: leadership without authority, the four archetypes, four work pillars, and career traps.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <link>https://archit15singh.github.io/posts/2026-08-30-adding-text-to-speech-to-a-hugo-blog/</link>
       <pubDate>Sun, 30 Aug 2026 00:45:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-08-30-adding-text-to-speech-to-a-hugo-blog/</guid>
-      <description>How every post on this site got a read-aloud button with the Web Speech API: the two approach families, the six browser bugs that shaped the code, the accessibility decisions, and the two Hugo traps that could have dropped the whole feature silently.</description>
+      <description>How every post got a read-aloud button with the Web Speech API: the two approaches, the browser bugs that shaped the code, and two silent Hugo traps.</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@
       <link>https://archit15singh.github.io/posts/2026-07-31-luffy-pr-review-agent/</link>
       <pubDate>Fri, 31 Jul 2026 00:45:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-07-31-luffy-pr-review-agent/</guid>
-      <description>A comment-triggered PR review control plane. Hermes Agent, OpenRouter, Claude Opus 5, and a hub memory that actually grows. Built it on a real Odoo bug, captured the full agentic loop, and got a REQUEST CHANGES the code earned. Here is the system, the numbers, and a slice of the trace.</description>
+      <description>A comment-triggered PR review control plane: Hermes Agent, OpenRouter, Claude Opus 5, and a hub memory that grows—built on a real Odoo bug.</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <link>https://archit15singh.github.io/posts/2026-04-10-memori-recursive-design/</link>
       <pubDate>Thu, 09 Apr 2026 10:00:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-04-10-memori-recursive-design/</guid>
-      <description>Agent memory is not a storage problem. It is a retrieval problem -- and the architecture of Memori follows directly from that shift in framing. This post walks through the conceptual core: why memory is really three problems, what each design decision reduces to, and why the system stores rules about how to use itself.</description>
+      <description>Agent memory is a retrieval problem, not a storage one. Why memory is really three problems—and why Memori stores rules about how to use itself.</description>
     </item>
     
     <item>
@@ -48,7 +48,7 @@
       <link>https://archit15singh.github.io/posts/2026-03-24-memori-architecture/</link>
       <pubDate>Tue, 24 Mar 2026 10:00:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-03-24-memori-architecture/</guid>
-      <description>A deep dive into the engineering decisions behind Memori -- a persistent memory system for AI coding agents built on Rust, SQLite, and fastembed. Covers hybrid search with RRF, access decay scoring, cosine deduplication, and why I deliberately chose brute-force over indexing.</description>
+      <description>The engineering behind Memori, a persistent memory system for AI coding agents: hybrid RRF search, access-decay scoring, and cosine deduplication.</description>
     </item>
     
     <item>
@@ -56,7 +56,7 @@
       <link>https://archit15singh.github.io/posts/2026-02-28-designing-cli-tools-for-ai-agents/</link>
       <pubDate>Sat, 28 Feb 2026 00:00:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-02-28-designing-cli-tools-for-ai-agents/</guid>
-      <description>A practitioner&amp;#39;s guide to designing command-line tools that AI coding agents can use effectively -- covering output modes, error design, behavioral snippets, and the subtle art of making machines help themselves.</description>
+      <description>Designing command-line tools AI coding agents can actually use: output modes, error design, behavioral snippets, and making machines help themselves.</description>
     </item>
     
     <item>
@@ -64,7 +64,7 @@
       <link>https://archit15singh.github.io/posts/2026-01-26-ai-augmented-developer-playbook/</link>
       <pubDate>Mon, 26 Jan 2026 10:00:00 +0000</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-01-26-ai-augmented-developer-playbook/</guid>
-      <description>A practical playbook for shifting from code-producing craftsman to AI-orchestrating architect, using abstract thinking, pattern libraries, and rigorous validation to ship higher-leverage systems.</description>
+      <description>Shifting from code-producing craftsman to AI-orchestrating architect: abstract thinking, pattern libraries, and rigorous validation for higher leverage.</description>
     </item>
     
   </channel>

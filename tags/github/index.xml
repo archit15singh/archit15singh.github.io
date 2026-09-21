@@ -16,7 +16,7 @@
       <link>https://archit15singh.github.io/posts/2026-07-31-luffy-pr-review-agent/</link>
       <pubDate>Fri, 31 Jul 2026 00:45:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-07-31-luffy-pr-review-agent/</guid>
-      <description>A comment-triggered PR review control plane. Hermes Agent, OpenRouter, Claude Opus 5, and a hub memory that actually grows. Built it on a real Odoo bug, captured the full agentic loop, and got a REQUEST CHANGES the code earned. Here is the system, the numbers, and a slice of the trace.</description>
+      <description>A comment-triggered PR review control plane: Hermes Agent, OpenRouter, Claude Opus 5, and a hub memory that grows—built on a real Odoo bug.</description>
     </item>
     
   </channel>
