@@ -146,6 +146,6 @@ git checkout main -q && git pull --rebase origin main -q
 ## Context worth keeping
 
 - **Agent-in-the-loop, no API key**: the whole generate/regenerate loop runs with the driving agent as the model; the file relay (`options.json` out, `action.json` in) is the only glue. A standalone version would swap in an `ANTHROPIC_API_KEY` backend + the openalex CLI.
-- **Recursion cap**: taxonomy tree at depth 2, ~3-5 nodes/level; stop a branch when nodes stop adding a *distinct* angle. Same saturation rule as any recursive research loop.
+- **Recursion**: keep the taxonomy tree shallow; stop a branch when nodes stop adding a *distinct* angle. Same saturation rule as any recursive research loop — a few sharp angles beat an exhaustive map.
 - **Voice**: say-it-plain + deslop + `WRITING-GUIDE.md` for everything — replies, explainer, captions, post copy.
 - **Public repo hygiene**: run in a scratch dir; the skill's `.gitignore` covers `options.json`/`action.json`/`output/`/`bank/`/pycache; never commit generated memes or an Imgflip password.
