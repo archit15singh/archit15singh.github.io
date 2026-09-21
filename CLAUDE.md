@@ -50,6 +50,17 @@ Deploy is GitHub Pages via the workflow in `.github/workflows/gh-pages.yml`, tri
 
 Hugo installed locally: `hugo v0.166.0+extended` (extended is required for PaperMod's asset pipeline). Install with `brew install hugo` if missing.
 
+## Session Introspection Loop (codify-context)
+
+After a session that hit real friction in this repo, run `/codify-context` scoped to this repo to fold the lessons into this file. The three UTC/minify/CDN gotchas above and the Release / PR Workflow section grew this way. Keep it self-contained: write only to this repo's own docs, never to `~/.claude` or any other repo.
+
+It can run unattended on `/loop`: each pass pulls new lessons from the latest session, edits this CLAUDE.md, then branches (`archits/pr/<name>`), pushes, opens a PR, and merges, all inside this repo. Guardrails for the automated pass:
+
+- Only this repo. Never touch `~/.claude`, the vendored theme, or any other repo.
+- Branch first (`archits/pr/<name>`); never commit on `main`.
+- Verify `hugo --gc --minify` builds with no ERROR before merging, even for a docs-only change (a broken fenced block or shortcode still fails the build).
+- No friction, no PR: if the pass finds nothing already-uncovered, it exits without opening one.
+
 ## Architecture: Hugo + PaperMod
 
 This site uses **Hugo with the PaperMod theme**, vendored (copied into `themes/hugo-PaperMod/`, tracked directly in this repo — not a git submodule, so there is no `.gitmodules` and no `git submodule update` path). Customizations are minimal and isolated:
@@ -105,6 +116,9 @@ Client-side player using the Web Speech API — no audio files, no deps, no buil
 - **`default` treats `false` as empty**: `(.Param "tts") | default true` returns `true` even when frontmatter sets `tts: false`. Use `and .Site.Params.tts.enabled (ne (.Param "tts") false)` for a per-post opt-out.
 - When overriding a theme template, keep it a byte-identical copy + injection, so upstream `git diff` against the submodule stays a one-liner.
 - **`gh` resolves to the submodule's repo**: with `themes/hugo-PaperMod` present, `gh run list` / `gh repo view` target `adityatelange/hugo-PaperMod`. Always pass `-R archit15singh/archit15singh.github.io`.
+- **`buildFuture` is judged in UTC, and so is CI**: a post date is compared against *now* as an absolute instant. An early-of-day date like `2026-09-22T10:00:00+05:30` is `04:30Z`, still the future if you build before then, so Hugo silently drops the post locally, and the GitHub Pages build (which runs in UTC) drops it too. Use an early IST time already past in UTC, like the other posts (`~00:45` to `01:30 +05:30`). Symptom: `hugo` reports one fewer page and the post dir is missing from the output.
+- **`--minify` strips the quotes off HTML attributes**: built pages emit `href=https://...` with no quotes, so `grep 'href="https://...'` over the output finds nothing even when the link is there. Grep the unquoted form (`href=https://`) or the bare host string when verifying links or asset references in built HTML.
+- **GitHub Pages serves stale HTML from its CDN after a green deploy**: the Actions run can be green while `curl` still returns the previous page for up to about a minute. Cache-bust with a `?cb=<ts>` query plus `Cache-Control: no-cache`, and poll until the new content appears before calling it live.
 
 ## Site Configuration Hotspots
 
