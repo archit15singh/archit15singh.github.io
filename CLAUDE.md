@@ -36,6 +36,20 @@ Use `playwright screenshot --full-page --viewport-size="1280,3000" <url> <output
 
 Use `gh` for GitHub operations (issues, PRs, runs, releases) instead of web scraping—it's faster and more reliable. Run `gh --help` for all commands.
 
+## Release / PR Workflow (ship + verify)
+
+Deploy is GitHub Pages via the workflow in `.github/workflows/gh-pages.yml`, triggered on merge to `main`. Ship any change through this loop:
+
+1. **Branch**: work on `archits/pr/<name>` (never `main`).
+2. **Verify locally**: `hugo --gc --minify -d /tmp/hugo-verify` must finish with **no ERROR** (the `languageCode`/`languageName`/`.Language.*` deprecation WARNs are pre-existing and benign). Smoke the dev server: `hugo server`, then curl `http://localhost:1313/` and a post page for `200`.
+3. **PR**: open against `main` with `gh pr create -R archit15singh/archit15singh.github.io` and request review. `gh` resolves to the vendored theme's repo, so **always pass `-R archit15singh/archit15singh.github.io`**.
+4. **Merge**: merge the PR to `main` (only after review/approval).
+5. **Verify main locally**: check out `main`, pull, and re-run the `hugo --gc --minify` build to confirm the merged tree is clean.
+6. **Wait for deploy green**: `gh run list -R archit15singh/archit15singh.github.io -b main -L 3` — watch the Pages build go green. On failure: `gh run view --log-failed`, fix, re-push.
+7. **Verify live**: confirm the change is live at https://archit15singh.github.io/ (Pages can lag a minute or two past the green run).
+
+Hugo installed locally: `hugo v0.166.0+extended` (extended is required for PaperMod's asset pipeline). Install with `brew install hugo` if missing.
+
 ## Architecture: Hugo + PaperMod
 
 This site uses **Hugo with the PaperMod theme**, vendored (copied into `themes/hugo-PaperMod/`, tracked directly in this repo — not a git submodule, so there is no `.gitmodules` and no `git submodule update` path). Customizations are minimal and isolated:
