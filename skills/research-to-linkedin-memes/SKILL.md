@@ -25,19 +25,19 @@ The paper is *fuel*, not content. Do **not** name the paper, its authors, its ti
 
 ### LinkedIn post craft (from what actually gets read)
 
-Hold every `linkedin_post` to this, on top of the writing bar:
+These are what tends to work, not a rulebook — use judgment:
 
-- **Hook in line one, under ~10 words**, and it must land before the "see more" fold (~140-210 chars in). The first two lines decide 80% of whether anyone reads on. Best hook types: contrarian claim, a specific number, a pain-point confession, or an unexpected comparison.
-- **White space is the format.** Short paragraphs, 1-3 sentences each; single-line sentences; blank line between beats. Dense blocks get scrolled past no matter how good the idea.
-- **Shape:** hook → the payoff in the next line or two → the substance (a short framework, contrast, or story, manual `→`/`-` bullets if listing) → a closing question that invites a reply.
-- **Restraint:** at most one emoji and only if it earns its place; ALL CAPS almost never; no hashtag spam. Target a tight ~600-1,300 characters for a meme post (the meme carries the joke; the copy earns the click).
+- **A short hook in line one** that lands before the "see more" fold. The opening decides whether anyone reads on. Hooks that pull: a contrarian claim, a specific number, a pain-point confession, an unexpected comparison.
+- **White space is the format.** Short paragraphs, single-line sentences, a blank line between beats. Dense blocks get scrolled past no matter how good the idea.
+- **Shape:** hook → the payoff → the substance (a short framework, contrast, or story; manual `→`/`-` bullets if listing) → a closing question that invites a reply.
+- **Restraint:** emoji only if it earns its place, ALL CAPS almost never, no hashtag spam. Keep it tight — the meme carries the joke, the copy earns the click.
 
 ## Decisions this bakes in
 
 - **Audience**: you, to ship LinkedIn content more often and actually understand what you post. Not a SaaS.
 - **Human in the loop**: the agent drafts several options; you review and Select one. Never auto-post.
-- **Source of truth is a real paper.** Ground the meme + post in an actual work found via `openalex` (or recursive online research), so the LinkedIn post can cite something real and the explainer teaches something true.
-- **The UI teaches, not just picks.** The review page carries a plain-language explainer of the paper's concept + a worked example, above the meme options.
+- **Source of truth is a real paper.** Ground the meme + post in an actual work found via `openalex` (or recursive online research) so the idea is true — but keep the source private (see the no-reference rule); it's fuel, not a citation.
+- **The UI teaches, not just picks.** The review page carries a plain-language explainer of the concept — analogy, steps, examples, a small visual — above the meme options.
 - **Rendering**: Imgflip `caption_image` API by default (auto-places text in any template); local Pillow is the no-account, watermark-free fallback.
 - **Regeneration is a chat request**, not a UI control (see Interactive review UI).
 
@@ -73,13 +73,13 @@ Start from whatever the user gives — a topic, a concept, a paper id, or an arX
 
 `search` returns `id, title, year, cited_by_count, relevance_score, blended_score, authors, doi`. Pick a strong, real paper (high blended score, on-topic, ideally open-access so you can read it). If the user gave a link, resolve it and read the abstract/paper.
 
-**Recursive online research (also valid):** when OpenAlex is thin or the concept is practitioner-canon (blog-shaped, not paper-shaped), use `WebSearch`/`WebFetch` instead — search the concept, read the best primary sources, and treat those as the "paper." The rest of the pipeline is identical; the explainer just cites the source you actually used.
+**Recursive online research (also valid):** when OpenAlex is thin or the concept is practitioner-canon (blog-shaped, not paper-shaped), use `WebSearch`/`WebFetch` instead — search the concept, read the best primary sources, and treat those as the "paper." The rest of the pipeline is identical; the source stays private provenance either way.
 
 ### 2. Break the concept into a taxonomy, search each node
 
 Decompose the paper's core idea into a small **recursive tree** of sub-concepts (the ontology of the idea), then search each node to collate meme/LinkedIn angles from across the tree — not just the top-line claim.
 
-- Write the tree: the concept → its 3-5 child sub-concepts → (optionally) one more level on the richest child. **Cap depth at 2 and ~3-5 nodes per level.** Stop expanding a branch as soon as new nodes stop adding a *distinct* angle (same saturation rule as any recursive research loop — consecutive dry nodes = done).
+- Write the tree: the concept → a handful of child sub-concepts → optionally one more level on the richest child. Keep it shallow and stop expanding a branch as soon as new nodes stop adding a *distinct* angle (the usual saturation rule — consecutive dry nodes = done). The point is a few sharp angles, not an exhaustive map.
 - For each node, do a quick `openalex search` and/or `WebSearch` to find the sharpest framing, contrast, or surprising result at that node.
 - **Collate + rank angles**: across all nodes, list candidate meme/post angles and rank by (a) how surprising/clickable and (b) how faithful to the source. The top 3 distinct angles become your 3 options in step 5.
 
@@ -161,7 +161,7 @@ open http://localhost:8765/
 cd /tmp/meme-run; while true; do until [ -f action.json ]; do sleep 1; done; echo "$(cat action.json)"; rm -f action.json; done
 ```
 
-The page shows the **explainer panel** (paper, concept, plain explanation, example, taxonomy chips) above the meme grid. On `{"type":"select","id":"B","post":"..."}` the server saves the meme + `post.txt` + `selection.json` + `explainer.json` into `output/<timestamp>/`; tell the user the path. Done.
+The page shows the **explainer panel** (concept, hook, analogy, steps, visual, examples, angle chips — never the paper) above the meme grid. On `{"type":"select","id":"B","post":"..."}` the server saves the meme + `post.txt` + `selection.json` + `explainer.json` into `output/<timestamp>/`; tell the user the path. Done.
 
 **Regeneration is a chat request.** No button. The user says "regenerate" (optionally with a steer); the agent writes a fresh `options.json` and the open page auto-refreshes (it polls `options.json`). A bare "regenerate" → the agent picks its own short creative steer. The human drives each round, so there's no runaway loop.
 
@@ -170,7 +170,7 @@ The page shows the **explainer panel** (paper, concept, plain explanation, examp
 ## Gotchas
 
 - **`openalex -o json` — `-o` is a GLOBAL flag before the subcommand** (`openalex -o json search ...`), not after. `search ... -o json` errors with "unrecognized arguments".
-- **Cap the taxonomy recursion**: depth 2, ~3-5 nodes/level, stop a branch when it stops adding a distinct angle. Unbounded concept-tree search burns time and tokens for diminishing returns.
+- **Keep the taxonomy shallow**: stop a branch when it stops adding a distinct angle. Unbounded concept-tree search burns time and tokens for diminishing returns.
 - `box_count` mismatch is the #1 render failure — Imgflip silently mis-renders a wrong count. `box_count` is the *default* slot count; emit exactly that many and validate before rendering.
 - Free Imgflip accounts keep a minimal watermark and downsize to 500×500; `no_watermark` is Premium. Local Pillow avoids both.
 - **Imgflip `caption_image` returns HTTP 403 to Python `urllib`'s default user-agent.** Set `headers={"User-Agent":"Mozilla/5.0"}` on the render POST *and* when downloading `meme_url`. A 403 here is the UA, not bad creds.
