@@ -1,6 +1,6 @@
 ---
 title: "Designing CLI Tools for AI Agents: Lessons from Building Memori"
-description: "A practitioner's guide to designing command-line tools that AI coding agents can use effectively -- covering output modes, error design, behavioral snippets, and the subtle art of making machines help themselves."
+description: "Designing command-line tools AI coding agents can actually use: output modes, error design, behavioral snippets, and making machines help themselves."
 date: 2026-02-28T00:00:00+05:30
 tags:
   - AI
@@ -11,7 +11,7 @@ categories:
 cover:
   hidden: false
   relative: false
-  image: "/images/uploads/designing-cli-tools-for-ai-agents-banner.jpeg"
+  image: "/images/uploads/designing-cli-tools-for-ai-agents-banner.webp"
   alt: "Abstract black hole with accretion disk -- the gravity well of good design pulls everything into alignment"
   caption: ""
 editPost:

@@ -131,7 +131,8 @@
     if (saved) {
       voiceSel.value = saved;
     } else {
-      const stored = localStorage.getItem(VOICE_KEY);
+      let stored = null;
+      try { stored = localStorage.getItem(VOICE_KEY); } catch (e) { /* storage blocked */ }
       if (stored && voices.some((v) => v.name === stored)) voiceSel.value = stored;
     }
     selectedVoice =
@@ -390,8 +391,10 @@
   voiceSel.addEventListener("change", () => {
     const voices = allVoices();
     selectedVoice = voices.find((v) => v.name === voiceSel.value) || null;
-    if (selectedVoice) localStorage.setItem(VOICE_KEY, selectedVoice.name);
-    else localStorage.removeItem(VOICE_KEY);
+    try {
+      if (selectedVoice) localStorage.setItem(VOICE_KEY, selectedVoice.name);
+      else localStorage.removeItem(VOICE_KEY);
+    } catch (e) { /* storage blocked */ }
     if (mode === "playing") {
       const t = gen;
       SYNTH.cancel();

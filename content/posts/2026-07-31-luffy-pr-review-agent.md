@@ -1,6 +1,6 @@
 ---
 title: "Building Luffy: a PR review agent you can audit"
-description: "A comment-triggered PR review control plane. Hermes Agent, OpenRouter, Claude Opus 5, and a hub memory that actually grows. Built it on a real Odoo bug, captured the full agentic loop, and got a REQUEST CHANGES the code earned. Here is the system, the numbers, and a slice of the trace."
+description: "A comment-triggered PR review control plane: Hermes Agent, OpenRouter, Claude Opus 5, and a hub memory that grows—built on a real Odoo bug."
 date: 2026-07-31T00:45:00+05:30
 tags:
   - AI
@@ -12,7 +12,7 @@ categories:
 cover:
   hidden: false
   relative: false
-  image: "/images/uploads/luffy-banner.jpeg"
+  image: "/images/uploads/luffy-banner.webp"
   alt: "Luffy — a comment-triggered PR review agent with growing hub memory"
   caption: ""
 editPost:

@@ -1,6 +1,6 @@
 ---
 title: "My Reading List for the next 10 years and Why"
-description: "A decade-long, first-principles roadmap through epistemology, symbolic systems, cognition, memory, AI, human-AI augmentation, and engineering—mapping the foundational texts that will shape my journey as a systems thinker and AI engineer."
+description: "A decade-long, first-principles roadmap through epistemology, cognition, memory, and AI—the foundational texts shaping my path as a systems thinker."
 date: 2023-01-01T12:00:00.000Z
 tags:
   - Reading
@@ -31,7 +31,6 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: false
 UseHugoToc: true
-image_format: "webp"
 ---
 
 # My Reading List for the Next 10 Years and Why

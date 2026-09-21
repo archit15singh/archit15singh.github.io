@@ -1,6 +1,6 @@
 ---
 title: "Listen to this post: free text-to-speech on a Hugo blog"
-description: "How every post on this site got a read-aloud button with the Web Speech API: the two approach families, the six browser bugs that shaped the code, the accessibility decisions, and the two Hugo traps that could have dropped the whole feature silently."
+description: "How every post got a read-aloud button with the Web Speech API: the two approaches, the browser bugs that shaped the code, and two silent Hugo traps."
 date: 2026-08-30T00:45:00+05:30
 tags: [Engineering, WebSpeech, Accessibility, Hugo]
 categories: [Engineering]
