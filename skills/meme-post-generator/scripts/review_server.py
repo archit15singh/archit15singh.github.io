@@ -23,29 +23,47 @@ PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8765
 PAGE = """<!doctype html><html><head><meta charset=utf-8>
 <title>Meme post review</title>
 <style>
- body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;background:#0f1115;color:#e8eaed;margin:0;padding:32px}
- h1{font-size:20px;font-weight:600;margin:0 0 4px} .sub{color:#9aa0a6;margin:0 0 24px;font-size:13px}
- .grid{display:flex;gap:20px;flex-wrap:wrap}
- .card{background:#1a1d23;border:1px solid #2a2e37;border-radius:14px;padding:16px;width:360px;display:flex;flex-direction:column}
- .card img{width:100%;border-radius:8px;background:#000}
- .tpl{font-size:12px;color:#9aa0a6;margin:10px 0 4px}
- textarea{width:100%;box-sizing:border-box;background:#0f1115;color:#e8eaed;border:1px solid #2a2e37;border-radius:8px;padding:10px;font:inherit;font-size:13px;resize:vertical}
- .post{height:120px} .btn{margin-top:10px;padding:10px 14px;border:0;border-radius:8px;font-weight:600;cursor:pointer}
- .sel{background:#3b82f6;color:#fff} .sel:hover{background:#2f6fe0}
- .regen{background:#1a1d23;border:1px solid #2a2e37;border-radius:14px;padding:16px;margin-top:24px;max-width:756px}
- .regen textarea{height:70px} .gen{background:#22303f;color:#e8eaed;border:1px solid #3a4a5f}.gen:hover{background:#2b3d50}
- .done{display:none;background:#132b16;border:1px solid #1f5127;color:#a6e6b0;padding:14px;border-radius:10px;margin-top:20px;max-width:756px}
- code{background:#0f1115;padding:2px 6px;border-radius:4px}
+ :root{--bg:#0f1115;--panel:#171a21;--panel2:#1e222b;--line:#2a2e37;--ink:#e8eaed;--muted:#9aa0a6;
+   --accent:#2563eb;--accent-h:#1d4ed8;--ok:#132b16;--ok-line:#1f5127;--ok-ink:#b6efc0;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.28)}
+ *{box-sizing:border-box}
+ body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(120% 90% at 50% -10%,#151926 0%,var(--bg) 55%);
+   color:var(--ink);margin:0;padding:40px 24px;line-height:1.5;-webkit-font-smoothing:antialiased}
+ .wrap{max-width:1120px;margin:0 auto}
+ header{max-width:64ch;margin:0 auto 28px;text-align:center}
+ h1{font-size:26px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
+ .sub{color:var(--muted);margin:0;font-size:14px}
+ .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;align-items:start}
+ .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;
+   box-shadow:var(--shadow);transition:transform .15s ease,border-color .15s ease}
+ .card:hover{transform:translateY(-3px);border-color:#39414f}
+ .card img{width:100%;border-radius:10px;background:#000;display:block}
+ .tpl{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:12px 2px 6px}
+ textarea{width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:11px;
+   font:inherit;font-size:13.5px;line-height:1.45;resize:vertical}
+ textarea:focus-visible{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+ .post{height:132px}
+ .btn{margin-top:12px;padding:11px 16px;border:0;border-radius:10px;font-weight:600;font-size:14px;cursor:pointer;transition:background .12s ease}
+ .btn:focus-visible{outline:2px solid var(--accent-h);outline-offset:2px}
+ .sel{background:var(--accent);color:#fff} .sel:hover{background:var(--accent-h)}
+ .regen{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;margin:28px auto 0;max-width:64ch;box-shadow:var(--shadow)}
+ .regen textarea{height:76px}
+ .gen{background:var(--panel2);color:var(--ink);border:1px solid #3a4a5f}.gen:hover{background:#28303c}
+ .done{display:none;background:var(--ok);border:1px solid var(--ok-line);color:var(--ok-ink);padding:16px 18px;border-radius:12px;margin:20px auto 0;max-width:64ch;font-size:14px}
+ code{background:var(--bg);border:1px solid var(--line);padding:2px 7px;border-radius:6px;font-size:12.5px}
 </style></head><body>
-<h1>Pick a meme + post</h1>
-<p class=sub>Edit the copy if you want, then Select one to finalize -- or write a steer and Generate more.</p>
+<div class=wrap>
+<header>
+ <h1>Pick a meme + post</h1>
+ <p class=sub>Edit the copy if you want, then Select one to finalize -- or write a steer and Generate more.</p>
+</header>
 <div class=grid id=grid></div>
 <div class=regen>
- <div class=tpl>Not quite right? Tell the agent how to steer the next batch:</div>
+ <div class=tpl>Steer the next batch</div>
  <textarea id=prompt placeholder="e.g. funnier, lean into the safety angle, try Distracted Boyfriend, punchier captions..."></textarea>
  <button class="btn gen" onclick="regen()">Generate more options</button>
 </div>
 <div class=done id=done></div>
+</div>
 <script>
 let OPTS=[];
 async function load(){OPTS=await (await fetch('/options.json?_='+Date.now())).json();render()}
