@@ -1,0 +1,7 @@
+# Runtime artifacts — kept on local disk, never committed
+options.json
+action.json
+output/
+bank/
+template.img
+meme.png
