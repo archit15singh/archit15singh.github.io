@@ -5,3 +5,5 @@ output/
 bank/
 template.img
 meme.png
+__pycache__/
+*.pyc
