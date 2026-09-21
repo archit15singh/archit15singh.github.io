@@ -116,6 +116,7 @@ For each option return JSON: {{"template_name","captions":[...],"linkedin_post"}
 - captions MUST have exactly as many entries as that template's box_count.
 - linkedin_post: 2-4 short lines, a hook + why the post matters + a soft CTA. No hashtag spam, no emojis unless they land.
 Return a JSON array of 3 options, nothing else.
+The linkedin_post copy MUST clear this repo's writing bar (see Writing the post copy below).
 
 FIT NOTES:
 {notes}
@@ -131,6 +132,16 @@ json.dump(opts, open("options.json","w"), indent=2)
 print(json.dumps(opts, indent=2)[:800])
 PY
 ```
+
+### 4b. Writing the post copy (quality bar)
+
+The `linkedin_post` on every option is real published writing under your name, so hold it to the repo's editorial standard, not generic LLM voice:
+
+- **`WRITING-GUIDE.md`** (repo root) is the source of truth — specific over vague, a real voice with "I"/"we", one surprising sentence, direct not hedged, and the Tier-1 banned-word list. The copy must pass it.
+- **Run `/deslop`** over each drafted post before it reaches the UI — strip AI tells, filler, and the banned words. When an agent is driving the loop, invoke the `deslop` skill on the copy; don't just eyeball it.
+- **Borrow `/pr-writeup`'s framing**: lead with the outcome/idea the blog post delivers to the reader, not a description of the post ("I wrote about X"). Hook first, the payoff, then a soft nudge to read.
+
+Net: the meme carries the joke; the copy earns the click and reads like you wrote it.
 
 ### 5. Render (default: local Pillow, no account, no watermark)
 
@@ -238,10 +249,13 @@ This is the actual review loop, verified end-to-end (a blog URL → 3 rendered o
 5. **Handle the action**:
    - `{"type":"select","id":"B","post":"..."}` → **final**. The server has already saved the chosen meme image + post text into `output/<timestamp>/`; tell the user the path. Done.
    - `{"type":"regenerate","prompt":"funnier, lean into the safety angle"}` → the agent writes a **fresh batch of 3** steered by that prompt to `options.json` (replacing the old batch), re-renders, and the page auto-refreshes. Delete `action.json` and go back to watching.
+   - `{"type":"regenerate","prompt":""}` (empty steer) → the driving agent **invents its own one-line creative steer** for that round and uses it, so an empty "Generate more" still explores new ground instead of repeating the last vibe. Keep these short and varied, e.g. *"try an unexpected template"*, *"go drier and deadpan"*, *"make it a spicy hot-take"*, *"punchier, fewer words"*, *"lead with the counterintuitive claim"*. Note in your reply which self-steer you used so the user can see the direction.
 
 **Files (all in the run dir, all gitignored):** `options.json` (current batch, agent→UI), `action.json` (user action, UI→agent), `output/<ts>/` (final meme + `post.txt` + `selection.json`). The skill ships a `.gitignore` so none of these land in the repo even if the run dir is inside it.
 
 **Regenerate semantics:** replace, not append — a fresh 3 each round, the prompt steer compounds. Keeps the page clean.
+
+**Stop the recursion after N rounds.** The generate-more tree is capped at **N = 5** regenerate rounds (agent counts them across the loop). On reaching the cap, stop auto-generating: write no new batch, and tell the user plainly they've hit the regenerate limit — pick from the current batch, or restart the skill with a fresh angle. This prevents an unbounded self-steering tree from spinning (and burning tokens) forever. A user-typed steer and an empty self-steer both count toward N.
 
 ## When you build a fuller standalone version
 
