@@ -117,7 +117,7 @@ Each entry: `{"id","name","box_count",...}`. `box_count` = number of text slots 
 
 ### 5. Generate the meme + post options
 
-As the driving agent (no API key needed), turn the top 3 ranked angles into 3 options. For each: pick a template whose rhetorical move fits the angle, write exactly `box_count` captions, and write the `linkedin_post` copy following **LinkedIn post craft** above (scroll-stopping hook, white space, closing question) and the **no source-paper reference** rule. Run `/deslop` over every caption and post before rendering.
+As the driving agent (no API key needed), turn the top 3 ranked angles into 3 options. For each: pick a template whose rhetorical move fits the angle, write exactly `box_count` captions, and write the `linkedin_post` copy. Write everything in the skill's voice — **`/say-it-plain` + `/deslop` + WRITING-GUIDE** — and follow **LinkedIn post craft** above (scroll-stopping hook, white space, closing question) and the **no source-paper reference** rule. Run `/deslop` over every caption and post before rendering.
 
 Each option: `{"id","template","template_id","captions":[...],"post"}`.
 
