@@ -33,6 +33,8 @@ python3 -c "import json;b={t['name']:t for t in json.load(open('bank/templates.j
 ```
 Verified ids: Drake `181913649` (2 boxes), Two Buttons `87743020` (3), Gru's Plan `131940431` (4), Distracted Boyfriend `112126428` (3), Anakin Padme 4 Panel `322841258` (3), Epic Handshake `135256802` (3), Always Has Been `252600902` (2), UNO Draw 25 `217743513` (2), Waiting Skeleton `4087833` (2).
 
+**Template selection**: match each angle's rhetorical move against the full menu in `scripts/template-fitnotes_dev.md` (40+ templates → the move each nails). Pick the closest fit, use 3 *distinct* templates, and vary across runs — don't default to Drake/Two Buttons/Always-Has-Been every time.
+
 ## 3. options.json (v2 schema the UI reads)
 
 ```json

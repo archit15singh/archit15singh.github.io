@@ -113,11 +113,15 @@ curl -s "https://api.imgflip.com/get_memes" \
   | python3 -c "import sys,json; json.dump(json.load(sys.stdin)['data']['memes'], open('bank/templates.json','w'), indent=2)"
 ```
 
-Each entry: `{"id","name","box_count",...}`. `box_count` = number of text slots (Drake=2, Two Buttons=3, Gru's Plan=4). **Emit exactly `box_count` captions.** Optionally write a one-line "use when…" fit-note per template so matching is by meaning, not name.
+Each entry: `{"id","name","box_count",...}`. `box_count` = number of text slots (Drake=2, Two Buttons=3, Gru's Plan=4). **Emit exactly `box_count` captions.**
+
+The skill ships **`scripts/template-fitnotes_dev.md`** — a menu of templates mapped to the *rhetorical move* each one nails (with ids + box counts). That menu is the searchable space for step 5; you don't need to re-derive fit-notes from the raw bank. (Regenerate the menu only if the bank drifts.)
 
 ### 5. Generate the meme + post options
 
-As the driving agent (no API key needed), turn the top 3 ranked angles into 3 options. For each: pick a template whose rhetorical move fits the angle, write exactly `box_count` captions, and write the `linkedin_post` copy. Write everything in the skill's voice — **`/say-it-plain` + `/deslop` + WRITING-GUIDE** — and follow **LinkedIn post craft** above (scroll-stopping hook, white space, closing question) and the **no source-paper reference** rule. Run `/deslop` over every caption and post before rendering.
+As the driving agent (no API key needed), turn the top 3 ranked angles into 3 options. For each: **search the whole `template-fitnotes_dev.md` menu and pick the template whose rhetorical move most precisely mirrors that angle's logic** — a preference → Drake, a decision agony → Two Buttons, an unanswered catch → Anakin/Padme, a both-camps-agree → Epic Handshake, a fatal-flaw plan → Gru, an escalation → Expanding Brain, etc. Then write exactly `box_count` captions and the `linkedin_post` copy.
+
+**Do not default to the same few templates.** Match by meaning, not by habit. The three options must use **three distinct templates**, and across runs on similar topics, deliberately reach for ones you haven't used — the menu has 40+ for a reason. If two angles both seem to want Drake, keep the better fit on Drake and find the next-best template for the other. Write everything in the skill's voice — **`/say-it-plain` + `/deslop` + WRITING-GUIDE** — and follow **LinkedIn post craft** above (scroll-stopping hook, white space, closing question) and the **no source-paper reference** rule. Run `/deslop` over every caption and post before rendering.
 
 Each option: `{"id","template","template_id","captions":[...],"post","filename"}`. **You (the agent) write `filename`** — an elaborate, human-readable title that makes the saved meme easy to understand and find later by name alone (e.g. `llm-attention-skips-the-middle-of-long-prompts-distracted-boyfriend`). It's your judgment, not a code-generated slug; the server only sanitizes it for the filesystem. Don't put the source paper in it.
 
