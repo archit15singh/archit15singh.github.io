@@ -10,7 +10,15 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Apr 2026 10:00:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Sep 2026 01:30:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Self-Improving AI Agents: A Recursive Taxonomy</title>
+      <link>https://archit15singh.github.io/posts/2026-09-22-self-improving-agents-taxonomy/</link>
+      <pubDate>Tue, 22 Sep 2026 01:30:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-09-22-self-improving-agents-taxonomy/</guid>
+      <description>Six families of self-improving AI agent, 109 methods, ranked: what each one changes about itself, how durable that change is, and the handful that matter.</description>
+    </item>
+    
     <item>
       <title>Memori: The Recursive Design of Agent Memory</title>
       <link>https://archit15singh.github.io/posts/2026-04-10-memori-recursive-design/</link>

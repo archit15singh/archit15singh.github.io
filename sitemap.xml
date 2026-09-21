@@ -2,17 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://archit15singh.github.io/</loc>
-    <lastmod>2026-08-30T01:07:00+05:30</lastmod>
+    <loc>https://archit15singh.github.io/tags/agents/</loc>
+    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://archit15singh.github.io/tags/career/</loc>
-    <lastmod>2026-08-30T01:07:00+05:30</lastmod>
+    <loc>https://archit15singh.github.io/categories/ai/</loc>
+    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/ai/</loc>
+    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/</loc>
+    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://archit15singh.github.io/categories/</loc>
+    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/engineering/</loc>
+    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/posts/</loc>
+    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/research/</loc>
+    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/posts/2026-09-22-self-improving-agents-taxonomy/</loc>
+    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/</loc>
+    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/career/</loc>
     <lastmod>2026-08-30T01:07:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -22,22 +62,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://archit15singh.github.io/tags/engineering/</loc>
-    <lastmod>2026-08-30T01:07:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://archit15singh.github.io/tags/leadership/</loc>
-    <lastmod>2026-08-30T01:07:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/</loc>
-    <lastmod>2026-08-30T01:07:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/</loc>
     <lastmod>2026-08-30T01:07:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -72,16 +97,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://archit15singh.github.io/tags/agents/</loc>
-    <lastmod>2026-07-31T00:45:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/ai/</loc>
-    <lastmod>2026-07-31T00:45:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://archit15singh.github.io/posts/2026-07-31-luffy-pr-review-agent/</loc>
     <lastmod>2026-07-31T00:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -89,11 +104,6 @@
   </url><url>
     <loc>https://archit15singh.github.io/tags/github/</loc>
     <lastmod>2026-07-31T00:45:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/categories/ai/</loc>
-    <lastmod>2026-04-09T10:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
