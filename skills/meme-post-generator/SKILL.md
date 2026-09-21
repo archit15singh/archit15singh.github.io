@@ -14,17 +14,29 @@ These were settled up front — do not re-litigate them, just follow:
 - **Audience**: you, so you ship LinkedIn posts more often. Not a SaaS, no accounts, no billing.
 - **Human in the loop**: AI generates several options; you review and approve. Never auto-post.
 - **Template bank**: curated, seeded from Imgflip's top 100. Each template carries a written "use when…" fit-note plus its `box_count` (how many text slots). The AI matches a post against those notes, not raw names.
-- **Rendering**: Imgflip `caption_image` API (needs a free Imgflip account).
+- **Rendering**: local Pillow render is the default (free, no account, no watermark, 1200×1200). Imgflip `caption_image` API is the optional alternative (free account, but Free tier stamps a watermark and returns 500×500).
 - **Publish path**: no LinkedIn API. Show the post text (copy button) + the meme (download); the human pastes into LinkedIn and uses LinkedIn's own preview before it goes live.
 - **Input**: paste a blog URL; the tool fetches and extracts the main text.
 - **Stack (when the tool is built)**: local Python backend + a small web UI, run on the laptop. Claude API for matching, captions, and post copy. No hosting, no auth.
 
+## Fastest path (verified, zero keys)
+
+Ran end-to-end on `content/posts/2026-03-23-hard-constraints-belong-in-code.md` — matched **Drake Hotline Bling**, wrote captions, rendered a real meme. What made it one-shot:
+
+- **When a Claude agent (e.g. Claude Code) is running this, you need NO `ANTHROPIC_API_KEY`.** The agent *is* the model — it does step 2 (fit-notes) and step 4 (match + captions + LinkedIn copy) directly in-conversation. The `anthropic`-SDK scripts in steps 2/4 are only for the standalone/built-tool case.
+- **Render with Pillow locally (step 5) — no Imgflip account at all**, watermark-free, 1200×1200. This is the default.
+- Only reach for the Imgflip API (step 5, alternative) if you specifically want its font placement; on the Free tier it adds a watermark and downsizes to 500×500, so the local render is the better file to post.
+
+So the minimal run is: seed bank once (step 1) → agent picks template + writes captions/copy (steps 3-4, in-conversation) → local Pillow render (step 5) → review + paste (step 6). No secrets required.
+
 ## Prerequisites
 
+Nothing required when a Claude agent drives it and you render locally. Optional, only for the standalone tool or the Imgflip API render:
+
 ```bash
-export ANTHROPIC_API_KEY=...          # Claude API
-export IMGFLIP_USERNAME=...           # free account at imgflip.com/signup
-export IMGFLIP_PASSWORD=...
+export ANTHROPIC_API_KEY=...          # only for the standalone (non-agent) match/caption scripts
+export IMGFLIP_USERNAME=...           # only for the Imgflip API render; free account at imgflip.com/signup
+export IMGFLIP_PASSWORD=...           # NEVER paste this into a chat — set it in the shell
 ```
 
 Model: default to the latest capable Claude (e.g. `claude-opus-4-8` for the taste-heavy match/caption step; a cheaper Sonnet is fine for bulk fit-note writing).
@@ -121,7 +133,57 @@ print(json.dumps(opts, indent=2)[:800])
 PY
 ```
 
-### 5. Render each option with Imgflip
+### 5. Render (default: local Pillow, no account, no watermark)
+
+This is the verified path. Download the chosen template image, draw the captions with the Impact font, auto-fit each caption to its region. The example below is the **Drake** layout that shipped (two stacked panels, text on the right half of each); other templates need their own box regions — see the note after.
+
+```bash
+python3 - <<'PY'
+from PIL import Image, ImageDraw, ImageFont
+import json, urllib.request
+FONT = "/System/Library/Fonts/Supplemental/Impact.ttf"   # macOS; any bold TTF works
+
+opts = json.load(open("options.json"))
+o = opts[0]                                              # the human's pick
+tpl = {t['id']:t for t in json.load(open('bank/templates.json'))}[o['template_id']]
+urllib.request.urlretrieve(tpl['url'], "template.img")
+img = Image.open("template.img").convert("RGB"); W,H = img.size
+d = ImageDraw.Draw(img)
+
+def wrap(text, font, maxw):
+    words, lines, cur = text.split(), [], ""
+    for w in words:
+        t=(cur+" "+w).strip()
+        if d.textlength(t, font=font)<=maxw: cur=t
+        else: lines.append(cur); cur=w
+    if cur: lines.append(cur)
+    return lines
+
+def draw_block(text, box):                               # auto-shrink to fit the region
+    x0,y0,x1,y1 = box; maxw=x1-x0; size=64
+    while size>20:
+        font=ImageFont.truetype(FONT,size); lines=wrap(text,font,maxw)
+        if size*1.15*len(lines) <= (y1-y0): break
+        size-=2
+    font=ImageFont.truetype(FONT,size); lh=size*1.15
+    y=y0+((y1-y0)-lh*len(lines))/2
+    for ln in lines:
+        x=x0+(maxw-d.textlength(ln,font=font))/2
+        d.text((x,y),ln,font=font,fill="white",stroke_width=max(2,size//18),stroke_fill="black")
+        y+=lh
+
+# Drake regions: right half of the top and bottom panels
+draw_block(o["captions"][0], (int(W*0.52),40,W-40,H//2-40))
+draw_block(o["captions"][1], (int(W*0.52),H//2+40,W-40,H-40))
+img.save("meme.png"); print("saved meme.png", img.size)
+PY
+```
+
+**Per-template box regions**: text placement is template-specific and is the one thing this step can get wrong. Drake = right half of each panel (above). Two Buttons = the two button labels + the sweating figure. Distracted Boyfriend = three people. Store a small region map per template you actually use, or eyeball the downloaded image once and hardcode the boxes. This is exactly why step 6 gates on a human looking at the result.
+
+### 5 (alternative). Render with the Imgflip API
+
+Only if you want Imgflip's own placement and accept the Free-tier watermark + 500×500 output. Needs the env vars from Prerequisites — **never inline a password**.
 
 ```bash
 python3 - <<'PY'
@@ -139,7 +201,7 @@ json.dump(opts, open("options.json","w"), indent=2)
 PY
 ```
 
-`caption_image` needs `template_id` + one `boxes[n][text]` per slot. On multi-box templates prefer the `boxes[]` form over the legacy `text0/text1`.
+`caption_image` needs `template_id` + one `boxes[n][text]` per slot; it auto-places text in each template's default boxes (why it needs no region map). On multi-box templates prefer the `boxes[]` form over the legacy `text0/text1`.
 
 ### 6. Review + paste (the approval gate)
 
@@ -165,5 +227,8 @@ The web UI wraps steps 3-6: one URL field, a "generate" button, three cards (mem
 
 - `box_count` mismatch is the #1 failure — Imgflip silently mis-renders if you send the wrong number of boxes. `box_count` is the template's *default* slot count (some accept more); emit exactly `box_count` captions as the safe default and validate that length before calling `caption_image`.
 - The regex HTML extractor in step 3 is a placeholder; real posts need `trafilatura` or a readability lib or the meme captions get polluted by nav text.
-- Free Imgflip accounts keep a minimal watermark; `no_watermark` needs Premium and costs $0.01/creation after 100/month. The free `caption_image` render itself is fine for personal use.
+- Free Imgflip accounts keep a minimal watermark AND downsize the result to 500×500; `no_watermark` needs Premium ($0.01/creation after 100/month). The local Pillow render avoids both — prefer it for the file you actually post.
+- **Text placement is per-template.** The local render must know each template's box regions (Drake = right half of each panel). Get it from the downloaded image once; a wrong region is the most likely visible defect. The Imgflip API sidesteps this by auto-placing into default boxes.
+- macOS ships Impact at `/System/Library/Fonts/Supplemental/Impact.ttf` (the classic meme font). Any bold TTF works if Impact is absent.
+- **Never paste an Imgflip password into a chat.** Set it as a shell env var. If one leaks, rotate it. (Free meme account = low stakes, but the habit matters.)
 - Meme taste is the thing most likely to be wrong — that is exactly why this generates options and gates on a human, never auto-posts.
