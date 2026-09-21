@@ -1,7 +1,10 @@
 """Local review UI for meme-post-generator (agent-in-the-loop).
 
-Serves a page showing the current option batch (read from options.json) and lets
-the human edit copy and Select one (final). There is no in-page "generate more":
+Serves a page showing a plain-language explainer of the source paper/concept plus
+the current option batch (read from options.json) and lets the human edit copy and
+Select one (final). options.json is either a bare options array (legacy) or the v2
+shape {"explainer": {...}, "options": [...]}; the explainer panel renders when
+present. There is no in-page "generate more":
 to get a different batch the user asks the driving Claude agent to "regenerate" in
 chat; the agent writes a fresh options.json and the page auto-refreshes to it
 (it polls options.json and swaps in any new batch).
@@ -49,59 +52,90 @@ PAGE = """<!doctype html><html><head><meta charset=utf-8>
  .sel{background:var(--accent);color:#fff} .sel:hover{background:var(--accent-h)}
  .done{display:none;background:var(--ok);border:1px solid var(--ok-line);color:var(--ok-ink);padding:16px 18px;border-radius:12px;margin:20px auto 0;max-width:64ch;font-size:14px}
  code{background:var(--bg);border:1px solid var(--line);padding:2px 7px;border-radius:6px;font-size:12.5px}
+ .explain{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:0 auto 28px;max-width:78ch;box-shadow:var(--shadow)}
+ .explain .paper{font-size:12px;color:var(--muted);margin:0 0 10px}
+ .explain .paper a{color:var(--accent-h);text-decoration:none} .explain .paper a:hover{text-decoration:underline}
+ .explain h2{font-size:18px;font-weight:700;margin:0 0 8px;letter-spacing:-.01em}
+ .explain p{margin:0 0 12px;font-size:14.5px;line-height:1.6;color:#d7dade}
+ .explain .lbl{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
+ .explain .eg{background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:12px 14px;margin:0 0 14px}
+ .chips{display:flex;flex-wrap:wrap;gap:7px} .chip{font-size:12px;background:var(--panel2);border:1px solid #3a4a5f;color:#cdd3da;border-radius:999px;padding:4px 11px}
 </style></head><body>
 <div class=wrap>
 <header>
- <h1>Pick a meme + post</h1>
- <p class=sub>Edit the copy if you want, then Select one to finalize. Want a different batch? Just tell the agent "regenerate" -- this page updates on its own.</p>
+ <h1>Learn it, then meme it</h1>
+ <p class=sub>Read the concept below, then pick the meme + post that lands it best. Edit any copy, then Select to finalize. Want a different batch? Tell the agent "regenerate" -- this page updates on its own.</p>
 </header>
+<div class=explain id=explain style=display:none></div>
 <div class=grid id=grid></div>
 <div class=done id=done></div>
 </div>
 <script>
 let OPTS=[];
-async function load(){OPTS=await (await fetch('/options.json?_='+Date.now())).json();render()}
+// options.json is either a bare array (legacy) or {explainer, options} (v2).
+function esc(s){return (s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function ingest(data){
+ if(Array.isArray(data)){OPTS=data; return null;}
+ OPTS=data.options||[]; return data.explainer||null;
+}
+function renderExplain(e){
+ if(!e){explain.style.display='none'; return;}
+ const p=e.paper||{}; const link=p.url||p.doi;
+ const paperline = p.title ? `<div class=paper>Source: ${link?`<a href="${esc(link)}" target=_blank rel=noopener>${esc(p.title)}</a>`:esc(p.title)}${p.authors?', '+esc(p.authors):''}${p.year?' ('+p.year+')':''}</div>` : '';
+ const chips = (e.taxonomy||[]).map(t=>`<span class=chip>${esc(t)}</span>`).join('');
+ explain.innerHTML = `${paperline}
+  <h2>${esc(e.concept||'The concept')}</h2>
+  <p>${esc(e.plain||'')}</p>
+  ${e.example?`<div class=lbl>Example</div><div class=eg>${esc(e.example)}</div>`:''}
+  ${chips?`<div class=lbl>How we searched it</div><div class=chips>${chips}</div>`:''}`;
+ explain.style.display='block';
+}
 function render(){
  grid.innerHTML='';
  OPTS.forEach(o=>{
   const c=document.createElement('div');c.className='card';
-  c.innerHTML=`<img src="${o.meme_url}"><div class=tpl>${o.template}</div>
-   <textarea class=post id="p_${o.id}">${o.post}</textarea>
+  c.innerHTML=`<img src="${o.meme_url}"><div class=tpl>${esc(o.template)}</div>
+   <textarea class=post id="p_${o.id}">${esc(o.post)}</textarea>
    <button class="btn sel" onclick="pick('${o.id}')">Select this</button>`;
   grid.appendChild(c);
  });
 }
+async function load(){renderExplain(ingest(await (await fetch('/options.json?_='+Date.now())).json()));render()}
 async function pick(id){
  const post=document.getElementById('p_'+id).value;
  const r=await (await fetch('/action',{method:'POST',headers:{'Content-Type':'application/json'},
    body:JSON.stringify({type:'select',id,post})})).json();
  const o=OPTS.find(x=>x.id===id);
  done.style.display='block';
- done.innerHTML=`<b>Selected option ${id} (${o.template}).</b> Saved to <code>${r.path||'output/'}</code>. Upload the image and paste the copy into LinkedIn. You can close this tab.`;
+ done.innerHTML=`<b>Selected option ${id} (${esc(o.template)}).</b> Saved to <code>${esc(r.path||'output/')}</code>. Upload the image and paste the copy into LinkedIn. You can close this tab.`;
  window.scrollTo(0,document.body.scrollHeight);
 }
 // Auto-refresh: when the agent writes a fresh options.json (you asked it to
-// "regenerate"), swap the new batch in without a manual reload.
+// "regenerate"), swap the new batch (and explainer) in without a manual reload.
 let seen=null;
 async function poll(){
- const o=await (await fetch('/options.json?_='+Date.now())).json();
- const sig=JSON.stringify(o.map(x=>x.meme_url));
- if(seen && sig!==seen){done.style.display='none';render_from(o)}
+ const data=await (await fetch('/options.json?_='+Date.now())).json();
+ const e=ingest(data); const sig=JSON.stringify(OPTS.map(x=>x.meme_url));
+ if(seen && sig!==seen){done.style.display='none';renderExplain(e);render()}
  seen=sig; setTimeout(poll,1500);
 }
-function render_from(o){OPTS=o;render()}
 load().then(()=>{seen=JSON.stringify(OPTS.map(x=>x.meme_url));poll()});
 </script></body></html>"""
 
 
 def save_selection(action):
     """Download the selected meme + write the post text into a dated output/ folder."""
-    opts = json.load(open(os.path.join(HERE, "options.json")))
+    data = json.load(open(os.path.join(HERE, "options.json")))
+    # v2 schema is {explainer, options}; legacy is a bare options array.
+    opts = data["options"] if isinstance(data, dict) else data
+    explainer = data.get("explainer") if isinstance(data, dict) else None
     chosen = next((o for o in opts if o["id"] == action["id"]), None)
     if not chosen:
         return {"ok": False, "error": "unknown option id"}
     outdir = os.path.join(HERE, "output", time.strftime("%Y%m%d-%H%M%S"))
     os.makedirs(outdir, exist_ok=True)
+    if explainer:
+        json.dump(explainer, open(os.path.join(outdir, "explainer.json"), "w"), indent=2)
     ext = chosen["meme_url"].rsplit(".", 1)[-1] if chosen.get("meme_url") else "png"
     if chosen.get("meme_url"):
         req = urllib.request.Request(chosen["meme_url"], headers={"User-Agent": "Mozilla/5.0"})
