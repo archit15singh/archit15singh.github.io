@@ -1,11 +1,13 @@
 """Local review UI for meme-post-generator (agent-in-the-loop).
 
-Serves a page showing the current option batch (read from options.json), lets the
-human edit copy and either Select one (final) or type a steer and Generate more.
+Serves a page showing the current option batch (read from options.json) and lets
+the human edit copy and Select one (final). There is no in-page "generate more":
+to get a different batch the user asks the driving Claude agent to "regenerate" in
+chat; the agent writes a fresh options.json and the page auto-refreshes to it
+(it polls options.json and swaps in any new batch).
 
-Actions are written to action.json, which the driving Claude agent watches:
-  {"type":"select","id":"B","post":"..."}      -> agent renders/saves the final
-  {"type":"regenerate","prompt":"funnier..."}  -> agent writes a fresh options.json
+The Select action is written to action.json, which the agent watches:
+  {"type":"select","id":"B","post":"..."}  -> agent confirms the saved final
 
 On Select the server also saves the chosen meme image + post text into a dated
 output/ folder so you have durable files to upload and paste.
@@ -45,23 +47,15 @@ PAGE = """<!doctype html><html><head><meta charset=utf-8>
  .btn{margin-top:12px;padding:11px 16px;border:0;border-radius:10px;font-weight:600;font-size:14px;cursor:pointer;transition:background .12s ease}
  .btn:focus-visible{outline:2px solid var(--accent-h);outline-offset:2px}
  .sel{background:var(--accent);color:#fff} .sel:hover{background:var(--accent-h)}
- .regen{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;margin:28px auto 0;max-width:64ch;box-shadow:var(--shadow)}
- .regen textarea{height:76px}
- .gen{background:var(--panel2);color:var(--ink);border:1px solid #3a4a5f}.gen:hover{background:#28303c}
  .done{display:none;background:var(--ok);border:1px solid var(--ok-line);color:var(--ok-ink);padding:16px 18px;border-radius:12px;margin:20px auto 0;max-width:64ch;font-size:14px}
  code{background:var(--bg);border:1px solid var(--line);padding:2px 7px;border-radius:6px;font-size:12.5px}
 </style></head><body>
 <div class=wrap>
 <header>
  <h1>Pick a meme + post</h1>
- <p class=sub>Edit the copy if you want, then Select one to finalize -- or write a steer and Generate more.</p>
+ <p class=sub>Edit the copy if you want, then Select one to finalize. Want a different batch? Just tell the agent "regenerate" -- this page updates on its own.</p>
 </header>
 <div class=grid id=grid></div>
-<div class=regen>
- <div class=tpl>Steer the next batch</div>
- <textarea id=prompt placeholder="e.g. funnier, lean into the safety angle, try Distracted Boyfriend, punchier captions..."></textarea>
- <button class="btn gen" onclick="regen()">Generate more options</button>
-</div>
 <div class=done id=done></div>
 </div>
 <script>
@@ -86,21 +80,17 @@ async function pick(id){
  done.innerHTML=`<b>Selected option ${id} (${o.template}).</b> Saved to <code>${r.path||'output/'}</code>. Upload the image and paste the copy into LinkedIn. You can close this tab.`;
  window.scrollTo(0,document.body.scrollHeight);
 }
-async function regen(){
- await fetch('/action',{method:'POST',headers:{'Content-Type':'application/json'},
-   body:JSON.stringify({type:'regenerate',prompt:prompt.value})});
- done.style.display='block';
- done.innerHTML='<b>Sent to the agent.</b> A fresh batch is being generated -- this page refreshes when it is ready.';
- poll();
-}
+// Auto-refresh: when the agent writes a fresh options.json (you asked it to
+// "regenerate"), swap the new batch in without a manual reload.
 let seen=null;
 async function poll(){
  const o=await (await fetch('/options.json?_='+Date.now())).json();
  const sig=JSON.stringify(o.map(x=>x.meme_url));
- if(seen && sig!==seen){seen=sig;done.style.display='none';return load();}
- seen=seen||sig; setTimeout(poll,1500);
+ if(seen && sig!==seen){done.style.display='none';render_from(o)}
+ seen=sig; setTimeout(poll,1500);
 }
-load();
+function render_from(o){OPTS=o;render()}
+load().then(()=>{seen=JSON.stringify(OPTS.map(x=>x.meme_url));poll()});
 </script></body></html>"""
 
 
