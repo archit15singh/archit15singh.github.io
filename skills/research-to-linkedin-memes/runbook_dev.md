@@ -127,7 +127,7 @@ sleep 1 && open http://localhost:8765/
 # looping watcher (catches EVERY click, not one-shot):
 cd /tmp/meme-run; while true; do until [ -f action.json ]; do sleep 1; done; echo "$(cat action.json)"; rm -f action.json; done
 ```
-Select saves `output/<ts>/` with `meme.jpg` + `post.txt` + `selection.json` + `explainer.json`.
+Select saves to `~/linkedin-memes/<agent-authored-title>.png` (+ matching `.txt` for the post copy) — flat, searchable by title, survives scratch-dir cleanup. The title is the option's agent-written `filename` (code only sanitizes it), not a generated slug.
 Regenerate = say "regenerate" in chat; agent rewrites `options.json`; page auto-refreshes (polls it).
 
 ## 6. UI design values (verified)

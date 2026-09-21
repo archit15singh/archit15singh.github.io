@@ -119,7 +119,7 @@ Each entry: `{"id","name","box_count",...}`. `box_count` = number of text slots 
 
 As the driving agent (no API key needed), turn the top 3 ranked angles into 3 options. For each: pick a template whose rhetorical move fits the angle, write exactly `box_count` captions, and write the `linkedin_post` copy. Write everything in the skill's voice — **`/say-it-plain` + `/deslop` + WRITING-GUIDE** — and follow **LinkedIn post craft** above (scroll-stopping hook, white space, closing question) and the **no source-paper reference** rule. Run `/deslop` over every caption and post before rendering.
 
-Each option: `{"id","template","template_id","captions":[...],"post"}`.
+Each option: `{"id","template","template_id","captions":[...],"post","filename"}`. **You (the agent) write `filename`** — an elaborate, human-readable title that makes the saved meme easy to understand and find later by name alone (e.g. `llm-attention-skips-the-middle-of-long-prompts-distracted-boyfriend`). It's your judgment, not a code-generated slug; the server only sanitizes it for the filesystem. Don't put the source paper in it.
 
 ### 6. Render
 
@@ -161,11 +161,11 @@ open http://localhost:8765/
 cd /tmp/meme-run; while true; do until [ -f action.json ]; do sleep 1; done; echo "$(cat action.json)"; rm -f action.json; done
 ```
 
-The page shows the **explainer panel** (concept, hook, analogy, steps, visual, examples, angle chips — never the paper) above the meme grid. On `{"type":"select","id":"B","post":"..."}` the server saves the meme + `post.txt` + `selection.json` + `explainer.json` into `output/<timestamp>/`; tell the user the path. Done.
+The page shows the **explainer panel** (concept, hook, analogy, steps, visual, examples, angle chips — never the paper) above the meme grid. On `{"type":"select","id":"B","post":"..."}` the server saves the meme as a single descriptively-named `.png` (searchable by title) with a matching `.txt` of the post copy, in `~/linkedin-memes/` (durable home dir, not the scratch run dir); tell the user the path. Done.
 
 **Regeneration is a chat request.** No button. The user says "regenerate" (optionally with a steer); the agent writes a fresh `options.json` and the open page auto-refreshes (it polls `options.json`). A bare "regenerate" → the agent picks its own short creative steer. The human drives each round, so there's no runaway loop.
 
-**Files (run dir, all gitignored):** `options.json` (v2 batch), `taxonomy.json` (optional), `action.json` (the select), `output/<ts>/` (final meme + `post.txt` + `selection.json` + `explainer.json`).
+**Files:** in the run dir (all gitignored) — `options.json` (v2 batch), `taxonomy.json` (optional), `action.json` (the select). The final selection is saved OUTSIDE the run dir, in `~/linkedin-memes/<agent-authored-title>.png` + a matching `.txt` for the post copy, so it survives scratch-dir cleanup and is searchable by filename. The title is the option's agent-written `filename` (the code only sanitizes it); the source paper is never encoded in it.
 
 ## Gotchas
 
