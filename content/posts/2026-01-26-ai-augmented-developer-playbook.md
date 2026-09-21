@@ -1,6 +1,6 @@
 ---
 title: "The AI-Augmented Developer Playbook: Architect, Delegate, Validate"
-description: "A practical playbook for shifting from code-producing craftsman to AI-orchestrating architect, using abstract thinking, pattern libraries, and rigorous validation to ship higher-leverage systems."
+description: "Shifting from code-producing craftsman to AI-orchestrating architect: abstract thinking, pattern libraries, and rigorous validation for higher leverage."
 date: 2026-01-26T10:00:00.000Z
 tags:
   - AI
@@ -31,7 +31,6 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: false
 UseHugoToc: true
-image_format: "webp"
 ---
 
 # The AI-Augmented Developer Playbook

@@ -38,13 +38,13 @@ Use `gh` for GitHub operations (issues, PRs, runs, releases) instead of web scra
 
 ## Architecture: Hugo + PaperMod
 
-This site uses **Hugo with the PaperMod theme** as a git submodule (`themes/hugo-PaperMod/`). Customizations are minimal and isolated:
+This site uses **Hugo with the PaperMod theme**, vendored (copied into `themes/hugo-PaperMod/`, tracked directly in this repo — not a git submodule, so there is no `.gitmodules` and no `git submodule update` path). Customizations are minimal and isolated:
 
-- **Custom partials** (`layouts/partials/`): Only `analytics.html`, `extend_footer.html`, `extend_head.html` — for GoatCounter analytics, footer mods, and head meta tags
-- **Theme inheritance**: Layout files from the submodule are extended via Hugo's `extends` block, not replaced
-- **No custom CSS/JS**: Styling is theme-provided (Tailwind-based); modifications go through config.yml parameters, not custom assets
+- **Custom partials** (`layouts/partials/`): `analytics.html`, `extend_footer.html`, `extend_head.html`, `listen.html` — for GoatCounter analytics, footer/head additions, and the TTS player
+- **Theme inheritance**: Overrides live in this repo's `layouts/`, which shadow the theme's same-named files; the theme's own files are used otherwise
+- **Custom CSS/JS**: `assets/css/extended/dracula.css` (code-block theme) and `static/js/listen.js` (TTS player) are project-owned, alongside config.yml params
 
-**To modify the theme**: Edit `layouts/partials/` or `config.yml` params, not the submodule itself. The submodule is read-only from this repo's perspective.
+**To modify the theme**: Prefer editing this repo's `layouts/partials/` or `config.yml` params rather than the vendored theme files. Treat the vendored copy as read-only by convention (nothing enforces it — the files are ordinary tracked files, and the vendored `footer.html` already carries site branding).
 
 ## Post Creation Workflow
 
@@ -71,10 +71,10 @@ cover:
 
 ## Image Handling
 
-Images are configured to auto-convert to **WebP** (`image_format: webp` in config.yml).
+There is **no automatic WebP conversion** — Hugo serves whatever file you commit. Optimize images before committing (e.g. `cwebp -q 65 in.jpeg -o out.webp` for banners) and reference the optimized file directly.
 
 - Place images in `static/images/uploads/`
-- Reference in frontmatter as `/images/uploads/filename.jpg` (Hugo handles WebP conversion at build time)
+- Reference in frontmatter with the exact committed filename, e.g. `/images/uploads/filename.webp`
 - Use Playwright to screenshot previews: `playwright screenshot --full-page http://localhost:1313/posts/slug/ preview.png`
 
 ## Text-to-Speech ("Listen to this post")

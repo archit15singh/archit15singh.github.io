@@ -14,16 +14,11 @@ params:
   defaultTheme: auto
   comments: false
   disableScrollToTop: true
-  image_format: "webp"
   goatcounter: "architsingh"
 
   # Text-to-speech: "Listen to this post" player (Web Speech API)
   tts:
     enabled: true
-
-  # SEO Settings
-  metaDescription: "Archit Singh, engineer building reliable AI-agent and security systems. Agent memory, agent reliability, AI security, AI-native engineering. Memori, Luffy. PyCon India 2025."
-  canonicalURL: "https://archit15singh.github.io/"
 
   # Display Settings
   ShowReadingTime: true

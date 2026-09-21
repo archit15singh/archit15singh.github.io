@@ -1,6 +1,6 @@
 ---
 title: "Building Persistent Memory for AI Agents: Architecture Decisions in Memori"
-description: "A deep dive into the engineering decisions behind Memori -- a persistent memory system for AI coding agents built on Rust, SQLite, and fastembed. Covers hybrid search with RRF, access decay scoring, cosine deduplication, and why I deliberately chose brute-force over indexing."
+description: "The engineering behind Memori, a persistent memory system for AI coding agents: hybrid RRF search, access-decay scoring, and cosine deduplication."
 date: 2026-03-24T10:00:00+05:30
 tags:
   - AI
@@ -11,7 +11,7 @@ categories:
 cover:
   hidden: false
   relative: false
-  image: "/images/uploads/memori-architecture-banner.jpeg"
+  image: "/images/uploads/memori-architecture-banner.webp"
   alt: "Abstract circuit nodes interconnected -- persistent memory architecture for AI agents"
   caption: ""
 editPost:

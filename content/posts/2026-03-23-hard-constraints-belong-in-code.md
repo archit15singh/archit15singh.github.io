@@ -1,6 +1,6 @@
 ---
 title: "Hard Constraints Belong in Code: The Probabilistic-Deterministic Hybrid Agent Pattern"
-description: "LLMs are probabilistic reasoners - great at exploring solution spaces using model priors, bad at guaranteeing correctness. Deterministic code is the opposite. The right architecture for high-stakes decisions wires them together: model priors for exploration, code for enforcement."
+description: "LLMs explore solution spaces; deterministic code guarantees correctness. High-stakes architecture wires both: model priors to explore, code to enforce."
 date: 2026-03-23T10:00:00+05:30
 tags:
   - AI
@@ -10,7 +10,7 @@ categories:
 cover:
   hidden: false
   relative: false
-  image: "/images/uploads/hard-constraints-belong-in-code-banner.jpeg"
+  image: "/images/uploads/hard-constraints-belong-in-code-banner.webp"
   alt: "Control panel with dials and gauges - deterministic precision and probabilistic exploration in one system"
   caption: ""
 editPost:
