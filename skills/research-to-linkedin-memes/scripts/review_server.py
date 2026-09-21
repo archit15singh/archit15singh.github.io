@@ -14,13 +14,13 @@ The Select action is written to action.json, which the agent watches:
   {"type":"select","id":"B","post":"..."}  -> agent confirms the saved final
 
 On Select the server also saves the chosen meme image + post text into a dated
-output/ folder so you have durable files to upload and paste.
+a descriptively-named .png (+ matching .txt) in ~/linkedin-memes/ so you have durable, searchable files to upload and paste.
 
 Run from a working dir that contains options.json:
   IMGFLIP_* not needed here (rendering happens agent-side); this only serves + saves.
   python3 review_server.py [port]
 """
-import json, os, sys, time, urllib.request
+import io, json, os, re, sys, urllib.request
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 HERE = os.getcwd()                       # options.json / action.json / output live here
@@ -117,7 +117,7 @@ async function pick(id){
    body:JSON.stringify({type:'select',id,post})})).json();
  const o=OPTS.find(x=>x.id===id);
  done.style.display='block';
- done.innerHTML=`<b>Selected option ${id} (${esc(o.template)}).</b> Saved to <code>${esc(r.path||'output/')}</code>. Upload the image and paste the copy into LinkedIn. You can close this tab.`;
+ done.innerHTML=`<b>Selected option ${id} (${esc(o.template)}).</b> Saved to <code>${esc(r.path||'~/linkedin-memes/')}</code>. Upload the image and paste the copy into LinkedIn. You can close this tab.`;
  window.scrollTo(0,document.body.scrollHeight);
 }
 // Auto-refresh: when the agent writes a fresh options.json (you asked it to
@@ -133,8 +133,21 @@ load().then(()=>{seen=JSON.stringify(OPTS.map(x=>x.meme_url));poll()});
 </script></body></html>"""
 
 
+SAVE_ROOT = os.path.join(os.path.expanduser("~"), "linkedin-memes")
+
+
+def _safe_name(text, maxlen=120):
+    """Make an agent-authored title safe for a filename WITHOUT rewriting its meaning:
+    drop filesystem-unsafe characters, collapse whitespace to hyphens, cap length."""
+    s = re.sub(r"[^\w\s-]", "", (text or "")).strip()
+    s = re.sub(r"[\s_-]+", "-", s)
+    return s[:maxlen].strip("-") or "meme"
+
+
 def save_selection(action):
-    """Download the selected meme + write the post text into a dated output/ folder."""
+    """Save the selected meme as one descriptively-named .png in ~/linkedin-memes/
+    (searchable by title alone), with the post copy as a matching .txt sidecar. The
+    title is the agent-authored `filename` on the option; the code only sanitizes it."""
     data = json.load(open(os.path.join(HERE, "options.json")))
     # v2 schema is {explainer, options}; legacy is a bare options array.
     opts = data["options"] if isinstance(data, dict) else data
@@ -142,17 +155,25 @@ def save_selection(action):
     chosen = next((o for o in opts if o["id"] == action["id"]), None)
     if not chosen:
         return {"ok": False, "error": "unknown option id"}
-    outdir = os.path.join(HERE, "output", time.strftime("%Y%m%d-%H%M%S"))
-    os.makedirs(outdir, exist_ok=True)
-    if explainer:
-        json.dump(explainer, open(os.path.join(outdir, "explainer.json"), "w"), indent=2)
-    ext = chosen["meme_url"].rsplit(".", 1)[-1] if chosen.get("meme_url") else "png"
+    os.makedirs(SAVE_ROOT, exist_ok=True)
+    # Prefer the agent's own elaborate title; fall back to concept/post only if absent.
+    title = chosen.get("filename") or (explainer or {}).get("concept") \
+        or action.get("post") or chosen.get("post") or " ".join(chosen.get("captions", []))
+    base = _safe_name(title)
+    name, n = base, 2
+    while os.path.exists(os.path.join(SAVE_ROOT, name + ".png")):  # don't clobber an earlier pick
+        name, n = f"{base}-{n}", n + 1
+    png_path = os.path.join(SAVE_ROOT, name + ".png")
     if chosen.get("meme_url"):
         req = urllib.request.Request(chosen["meme_url"], headers={"User-Agent": "Mozilla/5.0"})
-        open(os.path.join(outdir, f"meme.{ext}"), "wb").write(urllib.request.urlopen(req).read())
-    open(os.path.join(outdir, "post.txt"), "w").write(action.get("post", chosen.get("post", "")))
-    json.dump(chosen, open(os.path.join(outdir, "selection.json"), "w"), indent=2)
-    return {"ok": True, "path": os.path.relpath(outdir, HERE)}
+        raw = urllib.request.urlopen(req).read()
+        try:  # honor .png even though Imgflip serves jpg
+            from PIL import Image
+            Image.open(io.BytesIO(raw)).convert("RGB").save(png_path, "PNG")
+        except Exception:
+            open(png_path, "wb").write(raw)  # fall back to raw bytes under the .png name
+    open(os.path.join(SAVE_ROOT, name + ".txt"), "w").write(action.get("post", chosen.get("post", "")))
+    return {"ok": True, "path": png_path}
 
 
 class H(BaseHTTPRequestHandler):
