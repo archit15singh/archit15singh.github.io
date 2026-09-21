@@ -38,9 +38,15 @@ Verified ids: Drake `181913649` (2 boxes), Two Buttons `87743020` (3), Gru's Pla
 ```json
 {
   "explainer": {
-    "paper": {"title":"...","authors":"...","year":2023,"url":"https://...","doi":"..."},
-    "concept": "one-line idea", "plain": "plain, exact, jargon-free explanation",
-    "example": "one concrete worked example", "taxonomy": ["node1","node2","node3"]
+    "paper": {"title":"...","authors":"...","year":2023,"url":"...","doi":"..."},   // PRIVATE provenance; never rendered, never posted
+    "concept": "plain descriptive name (NOT the paper's branded term)",
+    "hook": "one line that makes it click",
+    "plain": "plain, exact, jargon-free explanation",
+    "analogy": "everyday analogy",
+    "how_it_works": ["step 1","step 2","step 3"],
+    "examples": ["example 1","example 2 (different domain)","example 3"],
+    "visual": "small ASCII diagram (rendered monospace)",
+    "taxonomy": ["node1","node2","node3"]
   },
   "options": [
     {"id":"A","template":"Drake Hotline Bling","template_id":"181913649",
@@ -48,6 +54,10 @@ Verified ids: Drake `181913649` (2 boxes), Two Buttons `87743020` (3), Gru's Pla
   ]
 }
 ```
+
+**Two hard rules (verified with the user):**
+- **Never reference the source paper anywhere the user sees** — not in the explainer's rendered fields, the captions, or the post. Teach the idea in your own words + a coined plain name. Keep the real paper only in the private `paper` field on disk.
+- **LinkedIn post craft**: hook < ~10 words in line 1 (before the ~140-210 char fold); white space (1-3 sentence paragraphs, single-line sentences, blank lines); shape = hook → payoff → substance (manual `→` bullets) → a closing question; ≤1 emoji, no hashtag spam; ~600-1,300 chars. Hook types that work: contrarian, specific number, pain-point, unexpected comparison.
 
 ## 4a. Render via Imgflip API (default) — UA header is REQUIRED
 

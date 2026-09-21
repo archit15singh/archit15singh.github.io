@@ -19,6 +19,19 @@ Every piece of text this skill produces — your chat replies, the concept expla
 
 If you can swap the topic and the sentence still works, it's slop — rewrite it.
 
+### Never reference the source paper in anything the user sees
+
+The paper is *fuel*, not content. Do **not** name the paper, its authors, its title, or its branded technique name in the explainer, the meme captions, or the LinkedIn post. Teach the idea in your own plain framing and, where a name helps, a plain descriptive one you coin ("branch-and-backtrack reasoning"), never the paper's term. Keep the real citation only in the on-disk `explainer.json`/`selection.json` provenance (never posted, never rendered) so you can trace it later. A LinkedIn post that reads like a citation is a worse post.
+
+### LinkedIn post craft (from what actually gets read)
+
+Hold every `linkedin_post` to this, on top of the writing bar:
+
+- **Hook in line one, under ~10 words**, and it must land before the "see more" fold (~140-210 chars in). The first two lines decide 80% of whether anyone reads on. Best hook types: contrarian claim, a specific number, a pain-point confession, or an unexpected comparison.
+- **White space is the format.** Short paragraphs, 1-3 sentences each; single-line sentences; blank line between beats. Dense blocks get scrolled past no matter how good the idea.
+- **Shape:** hook → the payoff in the next line or two → the substance (a short framework, contrast, or story, manual `→`/`-` bullets if listing) → a closing question that invites a reply.
+- **Restraint:** at most one emoji and only if it earns its place; ALL CAPS almost never; no hashtag spam. Target a tight ~600-1,300 characters for a meme post (the meme carries the joke; the copy earns the click).
+
 ## Decisions this bakes in
 
 - **Audience**: you, to ship LinkedIn content more often and actually understand what you post. Not a SaaS.
@@ -74,17 +87,23 @@ Keep the tree in the run dir as `taxonomy.json` if useful; the node names also f
 
 ### 3. Write the concept explainer (the learning panel)
 
-Draft a short, plain-language explainer of the paper's concept — this is what makes the UI a learning tool, not just a picker. Write it in the skill's voice (say-it-plain + deslop + WRITING-GUIDE), as an object:
+Draft a rich, plain-language explainer so the reader *gets it intuitively* — this is what makes the UI a learning tool, not just a picker. Write it in the skill's voice (say-it-plain + deslop + WRITING-GUIDE), and give it an analogy, the mechanism as steps, several examples, and a small visual. **Do not put the paper's name/authors in the rendered fields** — keep `paper` only as private provenance (the UI never renders it):
 
 ```json
 {
-  "paper": {"title": "...", "authors": "Shinn et al.", "year": 2023, "url": "https://...", "doi": "..."},
-  "concept": "One-line name of the idea",
+  "paper": {"title": "...", "authors": "...", "year": 2023, "url": "...", "doi": "..."},
+  "concept": "Plain descriptive name of the idea (NOT the paper's branded term)",
+  "hook": "One line that makes the idea click.",
   "plain": "2-4 sentences: what the idea is, in plain words, exact but jargon-free.",
-  "example": "One concrete worked example a reader can picture.",
+  "analogy": "One everyday analogy a non-expert can picture.",
+  "how_it_works": ["step 1", "step 2", "step 3", "step 4"],
+  "examples": ["concrete example 1", "example 2 from a different domain", "example 3"],
+  "visual": "A small ASCII diagram (rendered in a monospace block) that shows the shape of the idea.",
   "taxonomy": ["node1", "node2", "node3"]
 }
 ```
+
+The server renders `hook`, `plain`, `analogy`, `how_it_works` (numbered), `visual` (monospace), `examples` (list), and `taxonomy` (chips). `paper` is intentionally not rendered.
 
 ### 4. Seed the meme template bank (one time)
 
@@ -98,7 +117,7 @@ Each entry: `{"id","name","box_count",...}`. `box_count` = number of text slots 
 
 ### 5. Generate the meme + post options
 
-As the driving agent (no API key needed), turn the top 3 ranked angles into 3 options. For each: pick a template whose rhetorical move fits the angle, write exactly `box_count` captions, and write the `linkedin_post` copy. The copy leads with the reader's payoff (borrow `/pr-writeup` framing), cites the real paper, and clears the writing bar. Run `/deslop` over every caption and post.
+As the driving agent (no API key needed), turn the top 3 ranked angles into 3 options. For each: pick a template whose rhetorical move fits the angle, write exactly `box_count` captions, and write the `linkedin_post` copy following **LinkedIn post craft** above (scroll-stopping hook, white space, closing question) and the **no source-paper reference** rule. Run `/deslop` over every caption and post before rendering.
 
 Each option: `{"id","template","template_id","captions":[...],"post"}`.
 
