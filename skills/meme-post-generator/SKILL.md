@@ -14,7 +14,7 @@ These were settled up front — do not re-litigate them, just follow:
 - **Audience**: you, so you ship LinkedIn posts more often. Not a SaaS, no accounts, no billing.
 - **Human in the loop**: AI generates several options; you review and approve. Never auto-post.
 - **Template bank**: curated, seeded from Imgflip's top 100. Each template carries a written "use when…" fit-note plus its `box_count` (how many text slots). The AI matches a post against those notes, not raw names.
-- **Rendering**: local Pillow render is the default (free, no account, no watermark, 1200×1200). Imgflip `caption_image` API is the optional alternative (free account, but Free tier stamps a watermark and returns 500×500).
+- **Rendering**: the **interactive tool defaults to the Imgflip `caption_image` API** — it auto-places text into each template's boxes, so any template in the bank renders correctly with no per-template layout code. Needs a free account (env creds) and, on the Free tier, adds a small watermark + returns 500×500. Local Pillow is the fallback (no account, watermark-free, 1200×1200) but needs a hand-built text-region map per template, so it does not scale across the bank on its own.
 - **Publish path**: no LinkedIn API. Show the post text (copy button) + the meme (download); the human pastes into LinkedIn and uses LinkedIn's own preview before it goes live.
 - **Input**: paste a blog URL; the tool fetches and extracts the main text.
 - **Stack (when the tool is built)**: local Python backend + a small web UI, run on the laptop. Claude API for matching, captions, and post copy. No hosting, no auth.
@@ -24,10 +24,9 @@ These were settled up front — do not re-litigate them, just follow:
 Ran end-to-end on `content/posts/2026-03-23-hard-constraints-belong-in-code.md` — matched **Drake Hotline Bling**, wrote captions, rendered a real meme. What made it one-shot:
 
 - **When a Claude agent (e.g. Claude Code) is running this, you need NO `ANTHROPIC_API_KEY`.** The agent *is* the model — it does step 2 (fit-notes) and step 4 (match + captions + LinkedIn copy) directly in-conversation. The `anthropic`-SDK scripts in steps 2/4 are only for the standalone/built-tool case.
-- **Render with Pillow locally (step 5) — no Imgflip account at all**, watermark-free, 1200×1200. This is the default.
-- Only reach for the Imgflip API (step 5, alternative) if you specifically want its font placement; on the Free tier it adds a watermark and downsizes to 500×500, so the local render is the better file to post.
+- **Rendering**: the interactive tool renders via the Imgflip API (reliable across any template). If you have no account, the local Pillow render (step 5) is the zero-key, watermark-free fallback — but it only handles templates you've written a region map for.
 
-So the minimal run is: seed bank once (step 1) → agent picks template + writes captions/copy (steps 3-4, in-conversation) → local Pillow render (step 5) → review + paste (step 6). No secrets required.
+So the minimal run is: seed bank once (step 1) → agent picks template + writes captions/copy (steps 3-4, in-conversation) → render (Imgflip API, or local Pillow fallback) → review in the browser UI + select/regenerate (Interactive review UI section). Generation needs no `ANTHROPIC_API_KEY` when an agent drives it; Imgflip rendering needs the env creds.
 
 ## Prerequisites
 
@@ -219,9 +218,34 @@ Imgflip has its own AI endpoints that would collapse steps 2, 4, and 5 into one 
 
 Our path (free `get_memes` top-100 + Claude for matching/captions/post copy) gives more taste control at ~$0 of Imgflip spend. Reach for the paid endpoints only if the top-100 bank stops being enough.
 
-## When you build the actual tool
+## Interactive review UI (the built tool)
 
-The web UI wraps steps 3-6: one URL field, a "generate" button, three cards (meme + editable post text + copy/download), no login. Steps 1-2 are a one-time setup script. Keep it local; there is nothing here that needs hosting or auth.
+This is the actual review loop, verified end-to-end (a blog URL → 3 rendered options → browser select). It is **agent-in-the-loop**: the Claude agent generates and renders; a tiny local server (`scripts/review_server.py`) shows the batch in the browser and relays your click back to the agent through a watched file. No API key for generation; Imgflip env creds only for rendering.
+
+**How to run it** (agent does all of this):
+
+1. **Get the input** — you hand the agent a blog URL (it fetches + extracts, step 3) or paste raw text. The agent does NOT need an in-page input box; input arrives at invocation.
+2. **Generate the first batch** — the agent (as the model) writes 3 options: `{"id","template","template_id","captions":[...],"post"}`. Render each (Imgflip API default; see step 5), attach `meme_url`, and write the array to `options.json` in a scratch run dir (e.g. `/tmp/meme-run/`), **never the repo**.
+3. **Launch the UI** — from that run dir:
+   ```bash
+   cd /tmp/meme-run && python3 /path/to/skills/meme-post-generator/scripts/review_server.py
+   open http://localhost:8765/
+   ```
+4. **Watch for the action** — the agent monitors `action.json` in the run dir:
+   ```bash
+   until [ -f action.json ]; do sleep 1; done; cat action.json
+   ```
+5. **Handle the action**:
+   - `{"type":"select","id":"B","post":"..."}` → **final**. The server has already saved the chosen meme image + post text into `output/<timestamp>/`; tell the user the path. Done.
+   - `{"type":"regenerate","prompt":"funnier, lean into the safety angle"}` → the agent writes a **fresh batch of 3** steered by that prompt to `options.json` (replacing the old batch), re-renders, and the page auto-refreshes. Delete `action.json` and go back to watching.
+
+**Files (all in the run dir, all gitignored):** `options.json` (current batch, agent→UI), `action.json` (user action, UI→agent), `output/<ts>/` (final meme + `post.txt` + `selection.json`). The skill ships a `.gitignore` so none of these land in the repo even if the run dir is inside it.
+
+**Regenerate semantics:** replace, not append — a fresh 3 each round, the prompt steer compounds. Keeps the page clean.
+
+## When you build a fuller standalone version
+
+To run without an agent watching, replace the file-relay with a backend that calls Claude directly on generate/regenerate (needs `ANTHROPIC_API_KEY`) and keep the same `review_server.py` page. Everything else — bank, matching prompt, Imgflip render, output folder — is unchanged. Keep it local; nothing here needs hosting or auth.
 
 ## Gotchas
 
@@ -231,4 +255,6 @@ The web UI wraps steps 3-6: one URL field, a "generate" button, three cards (mem
 - **Text placement is per-template.** The local render must know each template's box regions (Drake = right half of each panel). Get it from the downloaded image once; a wrong region is the most likely visible defect. The Imgflip API sidesteps this by auto-placing into default boxes.
 - macOS ships Impact at `/System/Library/Fonts/Supplemental/Impact.ttf` (the classic meme font). Any bold TTF works if Impact is absent.
 - **Never paste an Imgflip password into a chat.** Set it as a shell env var. If one leaks, rotate it. (Free meme account = low stakes, but the habit matters.)
+- **Imgflip `caption_image` returns HTTP 403 to Python `urllib`'s default user-agent.** Plain `curl` works, but `urllib.request` is blocked until you set a header: `Request(url, data=..., headers={"User-Agent":"Mozilla/5.0"})`. Same header is needed when downloading the rendered `meme_url`. Found the hard way — a 403 here is the UA, not bad creds.
+- **Run the UI in a scratch dir, never the repo.** `options.json`/`action.json`/`output/` are generated at runtime; the shipped `.gitignore` covers them, but keeping the run dir out of the repo (e.g. `/tmp/meme-run/`) avoids any chance of committing generated images to a public repo.
 - Meme taste is the thing most likely to be wrong — that is exactly why this generates options and gates on a human, never auto-posts.
