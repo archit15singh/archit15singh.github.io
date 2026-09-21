@@ -1,0 +1,5 @@
+# Never commit secrets or runtime state — this tool is throwaway/local.
+config.json
+state/
+__pycache__/
+*.pyc

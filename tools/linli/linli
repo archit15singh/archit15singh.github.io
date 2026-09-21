@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# linli - thin wrapper so you can run ./linli from anywhere.
+exec python3 "$(dirname "$0")/linli.py" "$@"
