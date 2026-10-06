@@ -37,6 +37,7 @@ Agent attacks, fraud, identity, social engineering, behavioral security.
 
 These PRs are the same stack. Identity, false positives, and constraints, written as detection rules the way [Memori](/projects/#memori--flagship) and [Luffy](/projects/#luffy) write them for agents.
 
+- [The Browser Is the New Operating System](/posts/2026-10-07-the-browser-is-the-new-operating-system/) examines the browser as the capability broker for identity, data, devices, and isolation.
 - [Potential Proxy Execution Via SetupUGC](https://github.com/SigmaHQ/sigma/issues/6153) ([rule](https://github.com/SigmaHQ/sigma/pull/6152)). `setupugc.exe` as a signed LOLBin on Windows 10/11 and Server 2025.
 - [Exclude Kea DHCP from CAP_NET_RAW](https://github.com/elastic/detection-rules/pull/6468). The building block was firing on a legitimate `/usr/sbin/kea-dhcp4`.
 - [AWS discard_regex values with spaces](https://github.com/wazuh/wazuh/pull/37849). Unquoted Security Hub values split as extra arguments.
