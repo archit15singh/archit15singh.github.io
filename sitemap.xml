@@ -2,6 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://archit15singh.github.io/tags/ai/</loc>
+    <lastmod>2026-10-07T00:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/</loc>
+    <lastmod>2026-10-07T00:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/categories/</loc>
+    <lastmod>2026-10-07T00:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/posts/</loc>
+    <lastmod>2026-10-07T00:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/categories/security/</loc>
+    <lastmod>2026-10-07T00:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/security/</loc>
+    <lastmod>2026-10-07T00:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/systems/</loc>
+    <lastmod>2026-10-07T00:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/</loc>
+    <lastmod>2026-10-07T00:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/posts/2026-10-07-the-browser-is-the-new-operating-system/</loc>
+    <lastmod>2026-10-07T00:30:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://archit15singh.github.io/tags/agents/</loc>
     <lastmod>2026-09-22T01:30:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -12,27 +57,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://archit15singh.github.io/tags/ai/</loc>
-    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/</loc>
-    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/categories/</loc>
-    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://archit15singh.github.io/tags/engineering/</loc>
-    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/</loc>
     <lastmod>2026-09-22T01:30:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -43,11 +68,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://archit15singh.github.io/posts/2026-09-22-self-improving-agents-taxonomy/</loc>
-    <lastmod>2026-09-22T01:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/</loc>
     <lastmod>2026-09-22T01:30:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
