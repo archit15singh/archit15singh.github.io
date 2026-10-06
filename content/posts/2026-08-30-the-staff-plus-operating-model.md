@@ -12,8 +12,8 @@ categories:
 cover:
   hidden: false
   relative: false
-  image: "/images/uploads/staff-plus-leadership-banner.webp"
-  alt: "The Staff+ operating model — a practical field guide to technical leadership"
+  image: "/images/uploads/staff-plus-operating-model-cover.webp"
+  alt: "An Atlas-like figure holding a ringed planet overhead against black"
   caption: ""
 editPost:
   URL: ""

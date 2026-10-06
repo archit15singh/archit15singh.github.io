@@ -5,8 +5,8 @@ date: 2026-10-07T00:30:00+05:30
 tags: [AI, Security, Systems]
 categories: [Security]
 cover:
-  image: "/images/uploads/browser-operating-system-banner.webp"
-  alt: "A central browser window connected to abstract identity, storage, network, device, and security-boundary nodes"
+  image: "/images/uploads/browser-operating-system-cover.webp"
+  alt: "A dark editorial cover with the title The Browser Is the New Operating System"
   hidden: false
 ---
 

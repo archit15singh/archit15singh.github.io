@@ -12,8 +12,8 @@ categories:
 cover:
   hidden: false
   relative: false
-  image: "/images/uploads/self-improving-agents-taxonomy-banner.webp"
-  alt: "A branching map of self-improving agent families, from single-answer refinement to recursive self-modification"
+  image: "/images/uploads/self-improving-agents-cover.webp"
+  alt: "Layered human and wireframe hands reaching across a dark technical interface"
   caption: ""
 editPost:
   URL: ""
