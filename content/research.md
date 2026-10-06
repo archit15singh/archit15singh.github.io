@@ -48,6 +48,5 @@ Coding agents, architecture, productivity, staff+ engineering, evaluation.
 
 - [The AI-augmented developer playbook](/posts/2026-01-26-ai-augmented-developer-playbook/)
 - [The Staff+ operating model](/posts/2026-08-30-the-staff-plus-operating-model/)
-- [Listen to this post](/posts/2026-08-30-adding-text-to-speech-to-a-hugo-blog/)
 - Artifact: [Free Model Eval](/projects/#also-original)
 - Artifact: [Sim Bangalore](/projects/#also-original)
