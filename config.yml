@@ -60,6 +60,8 @@ params:
       url: "https://x.com/archit_singh15"
     - name: stackoverflow
       url: "https://stackoverflow.com/users/6245870/archit-singh"
+    - name: substack
+      url: "https://architsingh.substack.com/"
     - name: Rss
       url: "index.xml"
 
