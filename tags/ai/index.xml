@@ -10,7 +10,15 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Oct 2026 01:15:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Oct 2026 01:30:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Yes, Autonomous Kaggle-Solving Agents Already Exist</title>
+      <link>https://archit15singh.github.io/posts/2026-10-18-autonomous-kaggle-agents-already-exist/</link>
+      <pubDate>Sun, 18 Oct 2026 01:30:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-10-18-autonomous-kaggle-agents-already-exist/</guid>
+      <description>Autonomous Kaggle-solving agents are already built by Microsoft, Google and open source. Where the remaining opportunity lies: reproducibility, cost-aware experimentation and evaluation.</description>
+    </item>
+    
     <item>
       <title>Your Personal AI Operating System</title>
       <link>https://archit15singh.github.io/posts/2026-10-18-your-personal-ai-operating-system/</link>
