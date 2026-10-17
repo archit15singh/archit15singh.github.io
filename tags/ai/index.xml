@@ -10,7 +10,15 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2026 00:30:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Oct 2026 01:15:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Your Personal AI Operating System</title>
+      <link>https://archit15singh.github.io/posts/2026-10-18-your-personal-ai-operating-system/</link>
+      <pubDate>Sun, 18 Oct 2026 01:15:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-10-18-your-personal-ai-operating-system/</guid>
+      <description>A minimal personal AI stack for an Indian household: one control plane, ten workflows, seven life domains, five scheduled jobs, and explicit permission boundaries.</description>
+    </item>
+    
     <item>
       <title>The Browser Is the New Operating System</title>
       <link>https://archit15singh.github.io/posts/2026-10-07-the-browser-is-the-new-operating-system/</link>
