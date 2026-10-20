@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Writing on Archit&#39;s Space</title>
+    <link>https://archit15singh.github.io/tags/writing/</link>
+    <description>Recent content in Writing on Archit&#39;s Space</description>
+    <image>
+      <url>https://archit15singh.github.io/papermod-cover.png</url>
+      <link>https://archit15singh.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Oct 2026 00:01:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/writing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An engineering-first approach to technical thought leadership</title>
+      <link>https://archit15singh.github.io/posts/2026-10-21-engineering-first-thought-leadership/</link>
+      <pubDate>Wed, 21 Oct 2026 00:01:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-10-21-engineering-first-thought-leadership/</guid>
+      <description>A practical playbook for turning original engineering work into credible writing, reusable artifacts, and professional opportunities, with human review before publication.</description>
+    </item>
+    
+  </channel>
+</rss>

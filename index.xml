@@ -10,7 +10,15 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Oct 2026 01:30:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Oct 2026 00:01:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An engineering-first approach to technical thought leadership</title>
+      <link>https://archit15singh.github.io/posts/2026-10-21-engineering-first-thought-leadership/</link>
+      <pubDate>Wed, 21 Oct 2026 00:01:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-10-21-engineering-first-thought-leadership/</guid>
+      <description>A practical playbook for turning original engineering work into credible writing, reusable artifacts, and professional opportunities, with human review before publication.</description>
+    </item>
+    
     <item>
       <title>Yes, Autonomous Kaggle-Solving Agents Already Exist</title>
       <link>https://archit15singh.github.io/posts/2026-10-18-autonomous-kaggle-agents-already-exist/</link>
