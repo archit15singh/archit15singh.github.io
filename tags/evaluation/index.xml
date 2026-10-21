@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Evaluation on Archit&#39;s Space</title>
+    <link>https://archit15singh.github.io/tags/evaluation/</link>
+    <description>Recent content in Evaluation on Archit&#39;s Space</description>
+    <image>
+      <url>https://archit15singh.github.io/papermod-cover.png</url>
+      <link>https://archit15singh.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Oct 2026 19:00:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/evaluation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>You Cannot Grade an Agent You Only Read</title>
+      <link>https://archit15singh.github.io/posts/2026-10-21-grading-agents-through-their-interface/</link>
+      <pubDate>Wed, 21 Oct 2026 19:00:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-10-21-grading-agents-through-their-interface/</guid>
+      <description>Headless agent runs show you the final message and nothing else. Driving the real OpenCode TUI in a pseudo-terminal shows you the transcript, the pixels, and the tool calls behind it.</description>
+    </item>
+    
+  </channel>
+</rss>
