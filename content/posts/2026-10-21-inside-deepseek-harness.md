@@ -10,6 +10,8 @@ cover:
   hidden: false
 ---
 
+*Also available on [Archit’s Newsletter on Substack](https://architsingh.substack.com/p/the-model-is-not-the-agent-inside).*
+
 You ask a coding agent to fix a failing test. Somewhere, a model generates tokens. But tokens do not open files, decide which shell command is permitted, preserve a session after a crash, or establish that the test now passes. The execution system has to make those things happen.
 
 That system is the harness. Its decisions determine how reasoning becomes action, what the model sees next, and which failures remain recoverable. To understand an agent's reliability, we need to follow those boundaries in code.
