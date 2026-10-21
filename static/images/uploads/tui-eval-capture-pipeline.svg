@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc"><title id="title">Driving the OpenCode TUI from a script</title><desc id="desc">A script writes keystrokes into a pseudo-terminal where the real OpenCode TUI runs. The TUI emits a raw byte stream of full-screen repaints. Two independent readers consume that run: a terminal emulator replays the bytes into a screen buffer that becomes text and a PNG, and the OpenCode sqlite database supplies the structured session record. Keystroke delivery is gated on terminal quiescence.</desc><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#83d9c5"/></marker><marker id="arrowdim" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#6f8ba3"/></marker></defs><rect width="1200" height="720" fill="#101820"/><g font-family="Arial,sans-serif" fill="#f3f5f7"><text x="55" y="58" font-size="30" font-weight="700">One run of the TUI, two independent readers</text><text x="55" y="90" font-size="16" fill="#a9bac9">The pixel path answers "what did the interface show". The database path answers "what actually ran".</text>
+
+<rect x="55" y="130" width="330" height="96" rx="12" fill="#1c2b38" stroke="#456072"/><text x="75" y="162" font-size="20" font-weight="700">1  Script writes keystrokes</text><text x="75" y="189" font-size="15" fill="#c3d0da">pty.openpty() + TIOCSWINSZ</text><text x="75" y="210" font-size="15" fill="#c3d0da">delivery gated on quiescence</text>
+
+<path d="M385 178 L450 178" stroke="#83d9c5" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+<rect x="455" y="130" width="330" height="96" rx="12" fill="#1c2b38" stroke="#456072"/><text x="475" y="162" font-size="20" font-weight="700">2  The real opencode TUI</text><text x="475" y="189" font-size="15" fill="#c3d0da">full-screen repaint, cursor addressing</text><text x="475" y="210" font-size="15" fill="#c3d0da">grouping, disclosure, permission prompts</text>
+
+<path d="M785 178 L850 178" stroke="#83d9c5" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+<rect x="855" y="130" width="290" height="96" rx="12" fill="#2a1f33" stroke="#7a5f8f"/><text x="875" y="162" font-size="20" font-weight="700">3  Raw byte stream</text><text x="875" y="189" font-size="15" fill="#d3c6dd">a rendering, not a transcript</text><text x="875" y="210" font-size="15" fill="#d3c6dd">unreadable without an emulator</text>
+
+<path d="M1000 226 L1000 268 L700 268 L700 300" stroke="#83d9c5" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M1000 226 L1000 268 L480 268 L480 470" stroke="#6f8ba3" stroke-width="2" fill="none" stroke-dasharray="6 5" marker-end="url(#arrowdim)"/>
+
+<rect x="315" y="300" width="330" height="112" rx="12" fill="#1c2b38" stroke="#456072"/><text x="335" y="332" font-size="20" font-weight="700">4  pyte replays the bytes</text><text x="335" y="359" font-size="15" fill="#c3d0da">terminal emulator, cell by cell</text><text x="335" y="380" font-size="15" fill="#c3d0da">SGR colour, erase, cursor move</text><text x="335" y="401" font-size="15" fill="#c3d0da">yields a screen buffer</text>
+
+<path d="M645 356 L710 356" stroke="#83d9c5" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+<rect x="715" y="300" width="430" height="112" rx="12" fill="#1c2b38" stroke="#456072"/><text x="735" y="332" font-size="20" font-weight="700">5  screen.txt + PNG</text><text x="735" y="359" font-size="15" fill="#c3d0da">what the human saw, with colour</text><text x="735" y="380" font-size="15" fill="#c3d0da">Pillow rasterises Menlo cells</text><text x="735" y="401" font-size="15" fill="#c3d0da">assertable: "a + 2 commands row is present"</text>
+
+<rect x="315" y="470" width="330" height="112" rx="12" fill="#1c2b38" stroke="#456072"/><text x="335" y="502" font-size="20" font-weight="700">6  opencode.db (sqlite)</text><text x="335" y="529" font-size="15" fill="#c3d0da">session_v2 + session_message</text><text x="335" y="550" font-size="15" fill="#c3d0da">model, tokens, parts, tool state</text><text x="335" y="571" font-size="15" fill="#c3d0da">the run's authoritative record</text>
+
+<path d="M645 526 L710 526" stroke="#83d9c5" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+<rect x="715" y="470" width="430" height="112" rx="12" fill="#1c2b38" stroke="#456072"/><text x="735" y="502" font-size="20" font-weight="700">7  session.json</text><text x="735" y="529" font-size="15" fill="#c3d0da">messages, reasoning, tool calls, errors</text><text x="735" y="550" font-size="15" fill="#c3d0da">gradeable: "did bash run 3 times, any errors"</text><text x="735" y="571" font-size="15" fill="#c3d0da">survives a broken renderer</text>
+
+<text x="55" y="655" font-size="16" fill="#a9bac9">The screen can misrepresent a turn. The database cannot. Assert on both, because they fail differently.</text></g></svg>
