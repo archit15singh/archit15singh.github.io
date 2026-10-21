@@ -2,12 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://archit15singh.github.io/posts/2026-10-21-engineering-first-thought-leadership/</loc>
-    <lastmod>2026-10-21T00:01:00+05:30</lastmod>
+    <loc>https://archit15singh.github.io/tags/ai-agents/</loc>
+    <lastmod>2026-10-21T01:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://archit15singh.github.io/</loc>
+    <lastmod>2026-10-21T01:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/architecture/</loc>
+    <lastmod>2026-10-21T01:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/categories/</loc>
+    <lastmod>2026-10-21T01:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/deepseek/</loc>
+    <lastmod>2026-10-21T01:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/categories/engineering/</loc>
+    <lastmod>2026-10-21T01:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/posts/</loc>
+    <lastmod>2026-10-21T01:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/reliability/</loc>
+    <lastmod>2026-10-21T01:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/</loc>
+    <lastmod>2026-10-21T01:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/posts/2026-10-21-inside-deepseek-harness/</loc>
+    <lastmod>2026-10-21T01:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/posts/2026-10-21-engineering-first-thought-leadership/</loc>
     <lastmod>2026-10-21T00:01:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -17,32 +62,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://archit15singh.github.io/categories/</loc>
-    <lastmod>2026-10-21T00:01:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/categories/engineering/</loc>
-    <lastmod>2026-10-21T00:01:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://archit15singh.github.io/tags/engineering/</loc>
     <lastmod>2026-10-21T00:01:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://archit15singh.github.io/posts/</loc>
-    <lastmod>2026-10-21T00:01:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://archit15singh.github.io/tags/research/</loc>
-    <lastmod>2026-10-21T00:01:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/</loc>
     <lastmod>2026-10-21T00:01:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
