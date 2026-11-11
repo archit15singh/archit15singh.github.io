@@ -36,6 +36,9 @@ UseHugoToc: true
 format: "Technical note"
 ---
 
+> **Update, 12 November 2026:** Memori is now [Lorevell](https://github.com/archit15singh/lorevell). The current version uses Markdown notes as its source of truth and a rebuildable SQLite index. This article describes an earlier version; use the [current setup and rename guide](https://github.com/archit15singh/lorevell/blob/main/docs/rebrand.md) for installation and migration.
+
+
 # Designing CLI Tools for AI Agents
 
 Most CLI tools are designed for humans who can google error messages, read man pages, and ask Stack Overflow. AI agents can't do any of that. They get one shot at parsing your output, one chance to recover from an error, and they pay per token for everything you print.

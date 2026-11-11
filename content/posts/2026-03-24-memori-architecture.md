@@ -36,6 +36,9 @@ UseHugoToc: true
 format: "Technical note"
 ---
 
+> **Update, 12 November 2026:** Memori is now [Lorevell](https://github.com/archit15singh/lorevell). The current version uses Markdown notes as its source of truth and a rebuildable SQLite index. This article describes an earlier version; use the [current setup and rename guide](https://github.com/archit15singh/lorevell/blob/main/docs/rebrand.md) for installation and migration.
+
+
 # Building Persistent Memory for AI Agents
 
 Every AI coding agent session starts from zero. The agent doesn't remember that you spent three hours last Tuesday debugging a SQLite WAL-mode deadlock, or that you decided against a particular abstraction pattern after trying it twice, or that your project has a non-obvious deployment constraint that every new session will trip over unless you paste it into the prompt again.

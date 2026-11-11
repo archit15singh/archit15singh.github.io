@@ -36,6 +36,9 @@ UseHugoToc: true
 format: "Technical note"
 ---
 
+> **Update, 12 November 2026:** Memori is now [Lorevell](https://github.com/archit15singh/lorevell). The current version uses Markdown notes as its source of truth and a rebuildable SQLite index. This article describes an earlier version; use the [current setup and rename guide](https://github.com/archit15singh/lorevell/blob/main/docs/rebrand.md) for installation and migration.
+
+
 # Memori: The Recursive Design of Agent Memory
 
 [Memori](https://github.com/archit15singh/memori) is not primarily a database for notes. It is an attempt to turn agent memory into an engineered retrieval system.
