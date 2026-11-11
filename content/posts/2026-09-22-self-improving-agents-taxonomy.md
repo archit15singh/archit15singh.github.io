@@ -1,7 +1,8 @@
 ---
 title: "Self-Improving AI Agents: A Recursive Taxonomy"
 description: "Six families of self-improving AI agent, 109 methods, ranked: what each one changes about itself, how durable that change is, and the handful that matter."
-date: 2026-09-22T01:30:00+05:30
+date: 2026-07-29T00:01:00+05:30
+originalDate: 2026-09-22T01:30:00+05:30
 tags:
   - AI
   - Agents

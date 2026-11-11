@@ -1,7 +1,8 @@
 ---
 title: "Hard Constraints Belong in Code: The Probabilistic-Deterministic Hybrid Agent Pattern"
 description: "LLMs explore solution spaces; deterministic code guarantees correctness. High-stakes architecture wires both: model priors to explore, code to enforce."
-date: 2026-03-23T10:00:00+05:30
+date: 2026-05-20T00:01:00+05:30
+originalDate: 2026-03-23T10:00:00+05:30
 tags:
   - AI
   - Agents

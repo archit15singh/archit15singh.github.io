@@ -1,7 +1,8 @@
 ---
 title: "Your Personal AI Operating System"
 description: "A minimal personal AI stack for an Indian household: one control plane, ten workflows, seven life domains, five scheduled jobs, and explicit permission boundaries."
-date: 2026-10-18T01:15:00+05:30
+date: 2026-08-26T00:01:00+05:30
+originalDate: 2026-10-18T01:15:00+05:30
 tags: [AI, Productivity, Automation]
 categories: [AI]
 format: "Essay"

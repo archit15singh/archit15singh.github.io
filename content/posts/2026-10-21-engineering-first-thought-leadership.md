@@ -1,7 +1,8 @@
 ---
 title: "An engineering-first approach to technical thought leadership"
 description: "A practical playbook for turning original engineering work into credible writing, reusable artifacts, and professional opportunities, with human review before publication."
-date: 2026-10-21T00:01:00+05:30
+date: 2026-09-23T00:01:00+05:30
+originalDate: 2026-10-21T00:01:00+05:30
 tags: [Engineering, Research, Writing, Automation]
 categories: [Engineering]
 cover:

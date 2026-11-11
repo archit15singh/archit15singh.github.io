@@ -1,7 +1,8 @@
 ---
 title: "Yes, Autonomous Kaggle-Solving Agents Already Exist"
 description: "Autonomous Kaggle-solving agents are already built by Microsoft, Google and open source. Where the remaining opportunity lies: reproducibility, cost-aware experimentation and evaluation."
-date: 2026-10-18T01:30:00+05:30
+date: 2026-09-09T00:01:00+05:30
+originalDate: 2026-10-18T01:30:00+05:30
 tags: [AI, Agents, ML]
 categories: [AI]
 format: "Technical note"

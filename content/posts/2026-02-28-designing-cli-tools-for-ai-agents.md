@@ -1,7 +1,8 @@
 ---
 title: "Designing CLI Tools for AI Agents: Lessons from Building Memori"
 description: "Designing command-line tools AI coding agents can actually use: output modes, error design, behavioral snippets, and making machines help themselves."
-date: 2026-02-28T00:00:00+05:30
+date: 2026-05-06T00:01:00+05:30
+originalDate: 2026-02-28T00:00:00+05:30
 tags:
   - AI
   - Agents

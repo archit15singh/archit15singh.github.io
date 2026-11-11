@@ -1,7 +1,8 @@
 ---
 title: "The Browser Is the New Operating System"
 description: "The browser now brokers identity, data, devices, and isolation. Treating it as a harmless window above the operating system leaves the real security boundary unseen."
-date: 2026-10-07T00:30:00+05:30
+date: 2026-08-12T00:01:00+05:30
+originalDate: 2026-10-07T00:30:00+05:30
 tags: [AI, Security, Systems]
 categories: [Security]
 cover:
