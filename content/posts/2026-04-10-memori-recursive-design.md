@@ -1,7 +1,8 @@
 ---
 title: "Memori: The Recursive Design of Agent Memory"
 description: "Agent memory is a retrieval problem, not a storage one. Why memory is really three problems—and why Memori stores rules about how to use itself."
-date: 2026-04-09T10:00:00+05:30
+date: 2026-06-17T00:01:00+05:30
+originalDate: 2026-04-09T10:00:00+05:30
 tags:
   - AI
   - Agents

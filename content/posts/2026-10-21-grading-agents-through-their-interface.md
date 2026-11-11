@@ -1,7 +1,8 @@
 ---
 title: "You Cannot Grade an Agent You Only Read"
 description: "Final messages alone cannot show how an agent’s interface behaved. Driving the real OpenCode TUI in a pseudo-terminal shows you the transcript, the pixels, and the tool calls behind it."
-date: 2026-10-21T19:00:00+05:30
+date: 2026-10-21T00:01:00+05:30
+originalDate: 2026-10-21T19:00:00+05:30
 tags: [AI Agents, Evaluation, Terminal, OpenCode, Testing]
 categories: [Engineering]
 cover:

@@ -1,7 +1,8 @@
 ---
 title: "The Model Is Not the Agent — Inside DeepSeek Harness"
 description: "A source-code deep dive into the execution loop, tool calling, context management, and state that turn an LLM into a working agent."
-date: 2026-10-21T01:00:00+05:30
+date: 2026-10-07T00:01:00+05:30
+originalDate: 2026-10-21T01:00:00+05:30
 tags: [AI Agents, DeepSeek, Architecture, Reliability]
 categories: [Engineering]
 cover:

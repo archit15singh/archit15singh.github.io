@@ -1,7 +1,8 @@
 ---
 title: "My Reading List for the next 10 years and Why"
 description: "A decade-long, first-principles roadmap through epistemology, cognition, memory, and AI—the foundational texts shaping my path as a systems thinker."
-date: 2023-01-01T12:00:00.000Z
+date: 2026-03-25T00:01:00+05:30
+originalDate: 2023-01-01T12:00:00.000Z
 tags:
   - Reading
   - Mindset
