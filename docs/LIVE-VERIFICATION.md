@@ -17,3 +17,5 @@ Use this workflow for site content, layout, styling, scripts and deployment chan
 4. Reproduce issues, make scoped fixes on a new branch, verify locally, PR/merge and repeat the failing production path. Stop when the checklist is clear; report untested paths rather than calling partial coverage complete.
 
 Browser unavailable or concurrently controlled? Preserve the checklist/checkpoint and report that limit. Resume UI checks when available; source inspection and curl are complementary evidence, not substitutes for rendered interaction.
+
+Deployment retains only fingerprinted CSS/JS using `scripts/retain-published-assets.py`. Its recent-history recovery restores previously deleted hashes; the latest published tree then carries them forward. Preserve this step when changing deployment tooling. Ordinary HTML and removed content are still replaced each deployment.

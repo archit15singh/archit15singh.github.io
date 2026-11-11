@@ -21,6 +21,11 @@ jobs:
       - name: Build
         run: hugo --minify --cleanDestinationDir
 
+      - name: Retain assets referenced by cached pages
+        run: |
+          git fetch origin gh-pages --depth=6
+          python3 scripts/retain-published-assets.py public origin/gh-pages
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

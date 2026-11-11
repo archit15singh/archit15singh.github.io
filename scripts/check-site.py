@@ -4,6 +4,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 import sys
+import base64
+import hashlib
 
 
 class Page(HTMLParser):
@@ -12,6 +14,7 @@ class Page(HTMLParser):
         self.ids = set()
         self.links = []
         self.meta = {}
+        self.assets = []
         self.feed(text)
 
     def handle_starttag(self, tag, attrs):
@@ -20,6 +23,10 @@ class Page(HTMLParser):
             self.ids.add(attrs["id"])
         if tag == "a":
             self.links.append(attrs.get("href", ""))
+        if tag == "link" and "stylesheet" in attrs.get("rel", ""):
+            self.assets.append((attrs.get("href", ""), attrs.get("integrity")))
+        if tag in ("img", "script") and attrs.get("src"):
+            self.assets.append((attrs["src"], attrs.get("integrity")))
         if tag == "meta":
             self.meta[attrs.get("name", attrs.get("property", ""))] = attrs.get("content", "")
 
@@ -35,6 +42,17 @@ for path, page in pages.items():
         errors.append(f"{path}: invalid social handle")
     if "papermod-cover.png" in page.meta.get("og:image", ""):
         errors.append(f"{path}: stock theme social image")
+    for url, integrity in page.assets:
+        asset = urlparse(url)
+        if asset.netloc and asset.netloc != "archit15singh.github.io":
+            continue
+        target = root / asset.path.lstrip("/")
+        if not target.is_file():
+            errors.append(f"{path}: missing asset {url}")
+        elif integrity and integrity.startswith("sha256-"):
+            actual = "sha256-" + base64.b64encode(hashlib.sha256(target.read_bytes()).digest()).decode()
+            if actual != integrity:
+                errors.append(f"{path}: asset integrity mismatch {url}")
     for href in page.links:
         url = urlparse(href)
         if url.scheme or url.netloc or (url.path and not url.path.startswith("/")):
