@@ -14,7 +14,6 @@ body.list:has(.editorial-home) {background:var(--theme);}
 .editorial-home {display:block;min-height:0;margin:38px 0 0;}
 .workshop-intro {max-width:680px;margin-bottom:46px;}
 .workshop-intro h1 {font:normal clamp(42px,6vw,60px)/1.1 Georgia,serif;letter-spacing:-.04em;margin:14px 0 20px;}
-.name-dot {color:var(--portfolio-accent);}
 .intro-lead {font-size:22px;line-height:1.4;margin-bottom:12px;}
 .workshop-intro > p:not(.eyebrow):not(.intro-lead):not(.intro-links) {font-size:17px;line-height:1.7;color:var(--secondary);}
 .intro-links,.project-links {display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;margin-top:20px;}
