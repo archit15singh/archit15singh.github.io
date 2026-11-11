@@ -65,3 +65,11 @@ body:has(.editorial-home) .post-entry:not(:has(.entry-cover)) {grid-template-col
  #menu a {min-height:44px;display:inline-flex;align-items:center;}
 }
 @media(prefers-reduced-motion:reduce){html {scroll-behavior:auto;}}
+/* Keep every primary destination visible on narrow screens. */
+@media (max-width:600px) {
+ .nav {line-height:1.4;}
+ .logo {line-height:60px;}
+ #menu {flex-wrap:wrap;overflow:visible;white-space:normal;gap:0 18px;margin:0 24px 12px;}
+ #menu li + li {margin-inline-start:0;}
+ #menu a {min-height:40px;}
+}
