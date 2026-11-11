@@ -10,11 +10,11 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Oct 2026 01:30:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/agents/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Sep 2026 00:01:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/agents/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Yes, Autonomous Kaggle-Solving Agents Already Exist</title>
       <link>https://archit15singh.github.io/posts/2026-10-18-autonomous-kaggle-agents-already-exist/</link>
-      <pubDate>Sun, 18 Oct 2026 01:30:00 +0530</pubDate>
+      <pubDate>Wed, 09 Sep 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-10-18-autonomous-kaggle-agents-already-exist/</guid>
       <description>Autonomous Kaggle-solving agents are already built by Microsoft, Google and open source. Where the remaining opportunity lies: reproducibility, cost-aware experimentation and evaluation.</description>
     </item>
@@ -22,7 +22,7 @@
     <item>
       <title>Self-Improving AI Agents: A Recursive Taxonomy</title>
       <link>https://archit15singh.github.io/posts/2026-09-22-self-improving-agents-taxonomy/</link>
-      <pubDate>Tue, 22 Sep 2026 01:30:00 +0530</pubDate>
+      <pubDate>Wed, 29 Jul 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-09-22-self-improving-agents-taxonomy/</guid>
       <description>Six families of self-improving AI agent, 109 methods, ranked: what each one changes about itself, how durable that change is, and the handful that matter.</description>
     </item>
@@ -30,7 +30,7 @@
     <item>
       <title>Building Luffy: a PR review agent you can audit</title>
       <link>https://archit15singh.github.io/posts/2026-07-31-luffy-pr-review-agent/</link>
-      <pubDate>Fri, 31 Jul 2026 00:45:00 +0530</pubDate>
+      <pubDate>Wed, 01 Jul 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-07-31-luffy-pr-review-agent/</guid>
       <description>A comment-triggered PR review control plane: Hermes Agent, OpenRouter, Claude Opus 5, and a hub memory that grows—built on a real Odoo bug.</description>
     </item>
@@ -38,7 +38,7 @@
     <item>
       <title>Memori: The Recursive Design of Agent Memory</title>
       <link>https://archit15singh.github.io/posts/2026-04-10-memori-recursive-design/</link>
-      <pubDate>Thu, 09 Apr 2026 10:00:00 +0530</pubDate>
+      <pubDate>Wed, 17 Jun 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-04-10-memori-recursive-design/</guid>
       <description>Agent memory is a retrieval problem, not a storage one. Why memory is really three problems—and why Memori stores rules about how to use itself.</description>
     </item>
@@ -46,7 +46,7 @@
     <item>
       <title>Building Persistent Memory for AI Agents: Architecture Decisions in Memori</title>
       <link>https://archit15singh.github.io/posts/2026-03-24-memori-architecture/</link>
-      <pubDate>Tue, 24 Mar 2026 10:00:00 +0530</pubDate>
+      <pubDate>Wed, 03 Jun 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-03-24-memori-architecture/</guid>
       <description>The engineering behind Memori, a persistent memory system for AI coding agents: hybrid RRF search, access-decay scoring, and cosine deduplication.</description>
     </item>
@@ -54,7 +54,7 @@
     <item>
       <title>Hard Constraints Belong in Code: The Probabilistic-Deterministic Hybrid Agent Pattern</title>
       <link>https://archit15singh.github.io/posts/2026-03-23-hard-constraints-belong-in-code/</link>
-      <pubDate>Mon, 23 Mar 2026 10:00:00 +0530</pubDate>
+      <pubDate>Wed, 20 May 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-03-23-hard-constraints-belong-in-code/</guid>
       <description>LLMs explore solution spaces; deterministic code guarantees correctness. High-stakes architecture wires both: model priors to explore, code to enforce.</description>
     </item>
@@ -62,7 +62,7 @@
     <item>
       <title>Designing CLI Tools for AI Agents: Lessons from Building Memori</title>
       <link>https://archit15singh.github.io/posts/2026-02-28-designing-cli-tools-for-ai-agents/</link>
-      <pubDate>Sat, 28 Feb 2026 00:00:00 +0530</pubDate>
+      <pubDate>Wed, 06 May 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-02-28-designing-cli-tools-for-ai-agents/</guid>
       <description>Designing command-line tools AI coding agents can actually use: output modes, error design, behavioral snippets, and making machines help themselves.</description>
     </item>
@@ -70,7 +70,7 @@
     <item>
       <title>Forging AI’s Lasting Memory: Lessons from Asimov and First Principles</title>
       <link>https://archit15singh.github.io/posts/2024-01-01-ai-memory/</link>
-      <pubDate>Mon, 01 Jan 2024 10:00:00 +0000</pubDate>
+      <pubDate>Wed, 08 Apr 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2024-01-01-ai-memory/</guid>
       <description>Why modern AI agents forget, how Asimov&amp;#39;s positronic robots managed memory, and a first-principles guide to memory that endures across sessions.</description>
     </item>

@@ -10,11 +10,11 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2026 19:00:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/categories/engineering/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Oct 2026 00:01:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/categories/engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>You Cannot Grade an Agent You Only Read</title>
       <link>https://archit15singh.github.io/posts/2026-10-21-grading-agents-through-their-interface/</link>
-      <pubDate>Wed, 21 Oct 2026 19:00:00 +0530</pubDate>
+      <pubDate>Wed, 21 Oct 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-10-21-grading-agents-through-their-interface/</guid>
       <description>Final messages alone cannot show how an agent’s interface behaved. Driving the real OpenCode TUI in a pseudo-terminal shows you the transcript, the pixels, and the tool calls behind it.</description>
     </item>
@@ -22,7 +22,7 @@
     <item>
       <title>The Model Is Not the Agent — Inside DeepSeek Harness</title>
       <link>https://archit15singh.github.io/posts/2026-10-21-inside-deepseek-harness/</link>
-      <pubDate>Wed, 21 Oct 2026 01:00:00 +0530</pubDate>
+      <pubDate>Wed, 07 Oct 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-10-21-inside-deepseek-harness/</guid>
       <description>A source-code deep dive into the execution loop, tool calling, context management, and state that turn an LLM into a working agent.</description>
     </item>
@@ -30,7 +30,7 @@
     <item>
       <title>An engineering-first approach to technical thought leadership</title>
       <link>https://archit15singh.github.io/posts/2026-10-21-engineering-first-thought-leadership/</link>
-      <pubDate>Wed, 21 Oct 2026 00:01:00 +0530</pubDate>
+      <pubDate>Wed, 23 Sep 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-10-21-engineering-first-thought-leadership/</guid>
       <description>A practical playbook for turning original engineering work into credible writing, reusable artifacts, and professional opportunities, with human review before publication.</description>
     </item>
@@ -38,7 +38,7 @@
     <item>
       <title>The Staff&#43; Operating Model: a practical field guide to technical leadership</title>
       <link>https://archit15singh.github.io/posts/2026-08-30-the-staff-plus-operating-model/</link>
-      <pubDate>Sun, 30 Aug 2026 01:07:00 +0530</pubDate>
+      <pubDate>Wed, 15 Jul 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-08-30-the-staff-plus-operating-model/</guid>
       <description>A field guide for Senior SWE to Tech Lead to Staff/Principal: leadership without authority, the four archetypes, four work pillars, and career traps.</description>
     </item>
@@ -46,7 +46,7 @@
     <item>
       <title>Building Luffy: a PR review agent you can audit</title>
       <link>https://archit15singh.github.io/posts/2026-07-31-luffy-pr-review-agent/</link>
-      <pubDate>Fri, 31 Jul 2026 00:45:00 +0530</pubDate>
+      <pubDate>Wed, 01 Jul 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-07-31-luffy-pr-review-agent/</guid>
       <description>A comment-triggered PR review control plane: Hermes Agent, OpenRouter, Claude Opus 5, and a hub memory that grows—built on a real Odoo bug.</description>
     </item>

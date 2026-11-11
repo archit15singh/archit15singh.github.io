@@ -10,11 +10,11 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jul 2026 00:45:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jul 2026 00:01:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building Luffy: a PR review agent you can audit</title>
       <link>https://archit15singh.github.io/posts/2026-07-31-luffy-pr-review-agent/</link>
-      <pubDate>Fri, 31 Jul 2026 00:45:00 +0530</pubDate>
+      <pubDate>Wed, 01 Jul 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-07-31-luffy-pr-review-agent/</guid>
       <description>A comment-triggered PR review control plane: Hermes Agent, OpenRouter, Claude Opus 5, and a hub memory that grows—built on a real Odoo bug.</description>
     </item>

@@ -10,11 +10,11 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2026 19:00:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Oct 2026 00:01:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>You Cannot Grade an Agent You Only Read</title>
       <link>https://archit15singh.github.io/posts/2026-10-21-grading-agents-through-their-interface/</link>
-      <pubDate>Wed, 21 Oct 2026 19:00:00 +0530</pubDate>
+      <pubDate>Wed, 21 Oct 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-10-21-grading-agents-through-their-interface/</guid>
       <description>Final messages alone cannot show how an agent’s interface behaved. Driving the real OpenCode TUI in a pseudo-terminal shows you the transcript, the pixels, and the tool calls behind it.</description>
     </item>
