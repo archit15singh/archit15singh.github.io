@@ -39,6 +39,17 @@
   </div>
   {{- end }}
 
+  {{- if eq .Section "posts" }}
+  <aside class="read-next" aria-labelledby="read-next-title">
+    <h2 id="read-next-title">Keep exploring</h2>
+    {{- with .Site.RegularPages.Related . | first 2 }}
+    <ul>{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
+    {{- end }}
+    <p><a href="/research/">Explore the research areas</a> · <a href="/projects/">Inspect the projects</a></p>
+    <p><a href="/index.xml">Follow via RSS</a> · <a href="/contact/">Discuss this work</a></p>
+  </aside>
+  {{- end }}
+
   <footer class="post-footer">
     {{- if .Params.tags }}
     <ul class="post-tags">

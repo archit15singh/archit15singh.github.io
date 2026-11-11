@@ -44,7 +44,7 @@ need("built: Luffy evidence URL", "github.com/archit15singh/luffy-pr-review-agen
 need("research: agent memory", "agent memory" in low)
 need("research: agent reliability", "agent reliability" in low)
 need("research: AI security", "ai security" in low)
-need("research: enterprise systems", "enterprise systems" in low)
+need("research: AI-native engineering", "ai-native engineering" in low)
 need("evidence: GitHub", "github.com/archit15singh" in low)
 need("intro title: AI Agents × Security × Systems",
      "ai agents" in low and "security" in low and "systems" in low)
