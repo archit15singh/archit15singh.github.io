@@ -32,6 +32,7 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: false
 UseHugoToc: true
+format: "Technical note"
 ---
 
 # Memori: The Recursive Design of Agent Memory

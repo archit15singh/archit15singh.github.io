@@ -4,64 +4,54 @@ description: "Memori, Luffy, and other original systems. Code on GitHub, write-u
 url: "/projects/"
 showToc: true
 comments: false
+hideMeta: true
+tts: false
+disableShare: true
+ShowPostNavLinks: false
 ---
 
-These are the artifacts. Posts argue. These prove. Memory, tools, deterministic constraints, evaluation, observability, security, human control.
+These projects explore how agents retain context, execute tools and expose enough information to investigate a failure. Each has source code and a longer account of its design.
 
 ## Memori — flagship
 
-Persistent memory for AI coding agents. Rust core, SQLite, FTS5, vector search. One file. No API dependency.
+Memori stores memory for AI coding agents in a local SQLite database. Its Rust core combines full-text and vector search, with Python bindings and a CLI. Retrieval does not require a hosted API.
 
-**Problem.** Every agent session starts from zero. Context you already paid for is gone the next time you open the repo.
+I built it around a recurring problem: useful context from one coding session is often unavailable in the next. Capturing notes is only part of the solution. The agent also needs to retrieve the right information while working.
 
-**Thesis.** Memory is not a notes database. It is three jobs: capture useful state, preserve it cheaply, retrieve the right item at the right moment. If previously learned information cannot be recovered when needed, memory did not happen.
+The implementation combines search results with reciprocal rank fusion, reduces duplicate memories using cosine similarity, and adjusts ranking using access history. The [architecture article](/posts/2026-03-24-memori-architecture/) explains those choices and their trade-offs.
 
-**Architecture.** Hybrid search with RRF, access decay scoring, cosine deduplication. Brute-force over an index until the collection size forces otherwise.
+You can install the published packages or follow the repository instructions. Tests and benchmark code are included; retrieval quality still needs to be evaluated against the queries and expected answers of the workload you intend to use it for.
 
-**Implementation.** Python bindings, a CLI designed for agents, Claude Code integration, a published package with prebuilt wheels for Linux (manylinux), macOS, and Windows, and a Rust crate.
-
-**Results.** About 190 tests, benchmarks, and a retrieval loop that actually survives across sessions.
-
-**Lessons.** Designing the CLI for agents made it better for humans. Hard constraints belong in code, not in the prompt.
-
-**Code.** [github.com/archit15singh/memori](https://github.com/archit15singh/memori) · [py-memori on PyPI](https://pypi.org/project/py-memori/) · [memori-ai-core on crates.io](https://crates.io/crates/memori-ai-core) · [docs.rs](https://docs.rs/crate/memori-ai-core/latest)
-
-**Talk.** [Memory is the Agent](/speaking/), PyCon India 2025.
-
-**Research.**
-- [Architecture decisions](/posts/2026-03-24-memori-architecture/)
-- [Recursive design](/posts/2026-04-10-memori-recursive-design/)
-- [CLI tools for AI agents](/posts/2026-02-28-designing-cli-tools-for-ai-agents/)
-- [Hard constraints belong in code](/posts/2026-03-23-hard-constraints-belong-in-code/)
+- [Source and setup](https://github.com/archit15singh/memori#readme)
+- [Python package](https://pypi.org/project/py-memori/) · [Rust crate](https://crates.io/crates/memori-ai-core) · [API documentation](https://docs.rs/crate/memori-ai-core/latest)
+- [Architecture decisions](/posts/2026-03-24-memori-architecture/) · [Retrieval design](/posts/2026-04-10-memori-recursive-design/)
+- [Designing the CLI](/posts/2026-02-28-designing-cli-tools-for-ai-agents/) · [Enforcing constraints in code](/posts/2026-03-23-hard-constraints-belong-in-code/)
+- [PyCon India talk](/speaking/)
 
 ## Luffy
 
-A comment-triggered PR review control plane. The agent can shell into the workspace, reproduce failures, post a structured review, store a redacted trace, and grow hub memory so the next run on that repo is not starting from zero.
+Luffy is a GitHub PR review agent triggered by a comment. It can inspect code, run commands to reproduce a suspected bug, and post a structured review. It retains repository-specific memory and saves a redacted trace so the run can be examined later.
 
-**Problem.** Most PR bots read a diff, emit soft prose, and vanish. No memory of the last review. No package you can open later to see which tools ran. No honest score when the code is wrong.
+A GitHub Actions workflow runs Hermes Agent through OpenRouter. The model is selected explicitly. The [design article](/posts/2026-07-31-luffy-pr-review-agent/) follows the workflow from the initial comment through tool execution, review output and saved memory.
 
-**Thesis.** Agents need state, observability, and a control plane. Not a better prompt.
+In one recorded Odoo review, Luffy returned REQUEST CHANGES with a score of 42/100. The run used ten API calls, took about four minutes and cost roughly $0.59. Those figures describe that run; they do not establish review accuracy across repositories. The saved trace lets you inspect how it reached the result.
 
-**Architecture.** GitHub comment → Actions → Hermes Agent through OpenRouter → tools in the workspace → structured Markdown review → redacted trace → hub memory.
+- [Source and setup](https://github.com/archit15singh/luffy-pr-review-agent#readme)
+- [Recorded run and traces](https://github.com/archit15singh/luffy-pr-review-agent/tree/main/docs/showcase)
+- [Building Luffy](/posts/2026-07-31-luffy-pr-review-agent/)
 
-**Implementation.** You type `@luffy review this pr`. Model choice is explicit. Memory is per-repo and accumulates.
+## Other projects {#also-original}
 
-**Results.** Live Odoo review on a real bug: REQUEST CHANGES, score 42/100, ten API calls, about four minutes, roughly $0.59. The trace package is in the repo under `docs/showcase/`.
-
-**Lessons.** If you cannot audit the loop, you do not have a review agent. You have a comment generator.
-
-**Code.** [github.com/archit15singh/luffy-pr-review-agent](https://github.com/archit15singh/luffy-pr-review-agent)
-
-**Research.** [Building Luffy](/posts/2026-07-31-luffy-pr-review-agent/)
-
-## Also original
-
-GitHub only. No post yet.
+These repositories cover evaluation, engineering knowledge and simulation.
 
 **[Free Model Eval](https://github.com/archit15singh/free-model-eval).** Six free-tier coding models through OpenCode, eleven variants, ten tasks. Welch t-test, Bonferroni, Cohen's d. The grader is a different model from the one under test.
 
-**[Chronicle](https://github.com/archit15singh/chronicle-engineering).** Engineering knowledge dies when people leave. Chronicle rebuilds the decision graph from the repo: PRs, architecture, incidents. Document search is the wrong product.
+**[Chronicle](https://github.com/archit15singh/chronicle-engineering).** Reconstructs engineering decisions from repository history, PRs and incidents, aiming to preserve the reasoning behind changes.
 
-**[Idea Generator](https://github.com/archit15singh/idea-generator).** An OpenCode skill that is a DAG. Ingest YC companies in a constrained market, descend, cut a wedge, score founder-fit. Gates and typed receipts live in `idea_factory/`. The prompts do not.
+**[Idea Generator](https://github.com/archit15singh/idea-generator).** An OpenCode workflow for exploring business ideas in a constrained market. It uses YC company data, staged comparisons and explicit checks to narrow candidates.
 
-**[Sim Bangalore](https://github.com/archit15singh/sim-bangalore).** 243 BBMP wards, one synthetic agent per resident, A* on road plus Metro, a scorecard for WFH / fare / ORR-closure experiments. The foundation is a port of [Sim Francisco](https://github.com/tejasprabhune/simfrancisco). The Bangalore population, calibration, and policy core are the original work.
+**[Sim Bangalore](https://github.com/archit15singh/sim-bangalore).** A simulation of Bengaluru across 243 BBMP wards, with synthetic residents and road/Metro routing. It compares scenarios such as remote work, fare changes and ORR closures. The foundation is a port of [Sim Francisco](https://github.com/tejasprabhune/simfrancisco). The Bangalore population, calibration, and policy core are the original work.
+
+## Use or discuss the work
+
+Start with the linked repository instructions and report reproducible issues there. For a technical collaboration or talk, [get in touch](/contact/).

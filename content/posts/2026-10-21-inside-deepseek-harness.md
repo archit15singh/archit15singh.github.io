@@ -8,6 +8,7 @@ cover:
   image: "/images/uploads/deepseek-harness-execution.svg"
   alt: "Source-verified DeepSeek Harness execution loop and state boundaries"
   hidden: false
+format: "Technical note"
 ---
 
 *Also available on [Archit’s Newsletter on Substack](https://architsingh.substack.com/p/the-model-is-not-the-agent-inside).*

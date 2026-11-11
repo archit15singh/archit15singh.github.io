@@ -29,21 +29,28 @@ hideSummary: false
 searchHidden: false
 ShowReadingTime: true
 ShowBreadCrumbs: true
+format: "Reference guide"
 ---
 
-Most writing about the technical leadership path is noise shaped like signal: clickbait ladders, ten-point checklists, motivational platitudes sold as frameworks. This post is the opposite. It distills the field's harder-won lessons into one working model for the stretch from Senior Software Engineer to Tech Lead to Staff or Principal, with no fluff and no name-dropping.
+Moving from Senior Engineer toward Staff or Principal changes the scope of the job. Technical decisions increasingly depend on coordinating teams, resolving disagreements and choosing which problems deserve attention.
 
-It answers one question: **what actually changes as you move up the technical track, and what do you do differently on Monday?**
+This guide brings together practitioner frameworks for that transition. It asks what changes in the work and which practices you can try on your next project. The advice needs to be adapted to your organization; titles alone say little about the responsibilities involved.
 
 ---
+
+## Start here
+
+This is a reference guide; you do not need to read it in order. For a short route, read [leadership without authority](#the-core-reframe-leadership-without-authority), [the four archetypes](#the-four-archetypes), then [the operating model in fourteen lines](#the-operating-model-in-fourteen-lines).
+
+If you are leading a project now, start with [the project playbook](#the-project-playbook). If you are deciding how to spend your time, use [time, attention and the network](#time-attention-and-the-network). Pick one practice to test in your next working week.
 
 ## The core reframe: leadership without authority
 
-Everything downstream hangs off a single uncomfortable premise: **past Senior, your code stops being your edge. Your influence over people who do not report to you becomes it.**
+Beyond Senior, technical depth remains important, but more of your impact depends on decisions and work shared with people who do not report to you.
 
 One principal engineer put the bluntest version of it: *"Once at a certain level, all problems are solved by people. There is no such thing as 'purely technical problems'... influencing people to do what we want is harder still."* And the standard list of senior skills leads with: *"How to run a meeting, and no, being the person who talks the most in the meeting is not the same thing as running it."*
 
-This is the shift that breaks most people. The real bar for seniority isn't technical output. It's stated plainly in the field's definition of maturity: **"the degree to which other people want to work with you is a direct indication on how successful you'll be."** Nobody defines the role by the code you shipped. Everyone defines it by the *shape of the team that forms around you.*
+The transition can be difficult because producing good code no longer captures the whole job. One account of engineering maturity puts particular weight on collaboration: **"the degree to which other people want to work with you is a direct indication on how successful you'll be."** That is one useful lens on the role, alongside technical judgment and the outcomes of the systems you help build.
 
 ---
 
@@ -56,9 +63,9 @@ Before you optimize your workflow, you need to know *which kind* of senior IC yo
 3. **Solver** is the person pulled in when the hardest problem will not die. They grind it to resolution and hand it to a team to maintain.
 4. **Right Hand** is the strategic advisor to senior leadership, working problems at the intersection of technology, business, and organization.
 
-Your practice: identify which archetype matches your current work, then get honest about whether it is the one your org rewards. Being a Solver in an org that rewards Architects is a silent career killer.
+Your practice: identify which archetype matches your current work, then get honest about whether it is the one your org rewards. Being a Solver in an org that rewards Architects is a source of mismatched expectations.
 
-Two caveats that almost nobody mentions:
+Two caveats matter when applying these archetypes:
 
 - **These are organizational-design tools, not relationship coaches.** Most of this material is systems thinking: "given an org of this shape, here's what breaks." The interpersonal layer, the hard conversations and motivation, is thinner. Get that elsewhere.
 - **Not every org needs every archetype.** Staff roles "come in a lot of shapes, but not all orgs will need all kinds." Role-fit beats brute-force title-chasing. And Senior is a *tenure* level: you don't have to go further to be successful.

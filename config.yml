@@ -1,6 +1,6 @@
 baseURL: "https://archit15singh.github.io/"
 languageCode: "en-us"
-title: "Archit's Space"
+title: "Archit Singh"
 pagination:
   pagerSize: 10
 theme: hugo-PaperMod
@@ -28,7 +28,7 @@ params:
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
   ShowToc: true
-  images: ["papermod-cover.png"]
+  images: ["images/social/archit-singh.png"]
 
   # Features
   ShowShareButtons: true

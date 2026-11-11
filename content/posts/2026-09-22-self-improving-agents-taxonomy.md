@@ -33,6 +33,7 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: false
 UseHugoToc: true
+format: "Reference guide"
 ---
 
 # Self-Improving AI Agents: A Recursive Taxonomy

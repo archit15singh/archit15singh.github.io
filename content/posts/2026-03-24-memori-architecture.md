@@ -32,6 +32,7 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: false
 UseHugoToc: true
+format: "Technical note"
 ---
 
 # Building Persistent Memory for AI Agents

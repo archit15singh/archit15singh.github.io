@@ -1,6 +1,6 @@
 ---
 title: "You Cannot Grade an Agent You Only Read"
-description: "Headless agent runs show you the final message and nothing else. Driving the real OpenCode TUI in a pseudo-terminal shows you the transcript, the pixels, and the tool calls behind it."
+description: "Final messages alone cannot show how an agent’s interface behaved. Driving the real OpenCode TUI in a pseudo-terminal shows you the transcript, the pixels, and the tool calls behind it."
 date: 2026-10-21T19:00:00+05:30
 tags: [AI Agents, Evaluation, Terminal, OpenCode, Testing]
 categories: [Engineering]
@@ -8,6 +8,7 @@ cover:
   image: "/images/uploads/tui-eval-capture-pipeline.svg"
   alt: "Keystrokes into a pseudo-terminal, the OpenCode TUI paints, and two readers consume the run: a terminal emulator and the OpenCode sqlite database"
   hidden: false
+format: "Technical note"
 ---
 
 I wanted to check whether a skill actually did its job. The skill ran a goal prompt through OpenCode, called a handful of tools, and left a session behind. Then I read the final message, and the final message told me exactly what I wanted to hear.
@@ -45,7 +46,7 @@ $ seq 1 400
 400
 ```
 
-So `medium` is bounded too, just at a much higher ceiling. The claim I actually wanted to make is narrower and holds: `low` is the only level that guarantees no tool output reaches the transcript at all.
+So `medium` is bounded too, just at a much higher ceiling. The claim I actually wanted to make is narrower and holds: `low` suppressed tool output in the runs I captured.
 
 ## Getting the pixels
 
@@ -91,7 +92,7 @@ where session_id = ? order by seq;
 
 `session_message.data` is JSON. An assistant message carries a `content` array where each part is `text`, `reasoning`, or `tool`, and a tool part carries its `name` and `state.status`. That gives the machine-readable version of a run: how many tools fired, which ones, whether any errored, how many tokens the reasoning cost, which model actually answered.
 
-I trust the database over the event stream for the same reason I trust it over the screenshot. The JSON event stream from `opencode run --format json` intermittently exits zero with empty stdout, and the final `step_finish` event is dropped in the v2 client. The database carries the model id, the token counts, and the idle outcome every time.
+I trust the database over the event stream for the same reason I trust it over the screenshot. The JSON event stream from `opencode run --format json` intermittently exits zero with empty stdout, and the final `step_finish` event is dropped in the v2 client. In the runs I inspected, the database retained the model id, token counts and idle outcome even when the event stream was incomplete.
 
 ## Two more gotchas that cost real time
 

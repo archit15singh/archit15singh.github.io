@@ -2,15 +2,9 @@
 <footer class="footer">
     <div class="container">
         <div class="content has-text-centered">
-            <p>
-                <strong>Archit's Space</strong> - Sharing knowledge one post at a time
-                <br>
-                Crafted with ❤️ by Archit Singh</a>
-                <br>
-                Connect with me on
-                <a href="https://github.com/archit15singh" target="_blank">GitHub</a>,
-                <a href="https://www.linkedin.com/in/archit15singh" target="_blank">LinkedIn</a>,
-                and <a href="https://x.com/archit_singh15" target="_blank">Twitter</a>
+            <p><strong>Archit Singh</strong> · Reliable AI agents &amp; security systems<br>
+                <a href="/projects/">Projects</a> · <a href="/speaking/">Speaking</a> ·
+                <a href="mailto:contact.architsingh@gmail.com">Email</a> · <a href="/index.xml">RSS</a>
             </p>
         </div>
     </div>
@@ -33,12 +27,13 @@
             e.preventDefault();
             var id = this.getAttribute("href").substr(1);
             if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                document.getElementById(decodeURIComponent(id))?.scrollIntoView({
                     behavior: "smooth"
                 });
             } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+                document.getElementById(decodeURIComponent(id))?.scrollIntoView();
             }
+            if (id === "main") document.getElementById("main").focus({preventScroll: true});
             if (id === "top") {
                 history.replaceState(null, null, " ");
             } else {

@@ -31,6 +31,7 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: false
 UseHugoToc: true
+format: "Reference guide"
 ---
 
 # My Reading List for the Next 10 Years and Why

@@ -1,0 +1,8 @@
+{{- with .Params.format }}<span class="article-format">{{ . }}</span> · {{ end -}}
+{{- if not .Date.IsZero -}}
+  <span title="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</span>
+{{- end }}
+
+{{- if (.Param "ShowReadingTime") -}}
+  &nbsp;·&nbsp;{{ printf "%d min" .ReadingTime }}
+{{- end -}}

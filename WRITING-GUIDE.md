@@ -156,7 +156,7 @@ Cross-project consensus on what marks AI-generated prose. Watch for these everyw
 2. **Run the checklist in §4.** Kill every banned word, filler phrase, and structural tell.
 3. **Build locally** with `hugo server` and `hugo --minify --cleanDestinationDir`. Confirm the post appears in `public/posts/` (date must be past/current or it silently drops).
 4. **Add the cover image** to `static/images/uploads/`.
-5. **Push to `main`** — the GitHub Actions workflow deploys to Pages.
+5. **Open a PR** from `archits/pr/<name>` against `main`; merge only after review/approval, following `CLAUDE.md`.
 6. **Verify live** with `curl` on the published URL, then open it.
 
 ---
