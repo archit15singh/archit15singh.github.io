@@ -1,17 +1,34 @@
 <section class="home-info editorial-home" aria-labelledby="intro-title">
-  <p class="eyebrow">Archit Singh / Engineering notes &amp; working systems</p>
-  <h1 id="intro-title"><span class="hero-line">AI Agents × Security</span><span class="hero-line hero-accent">× Systems</span></h1>
-  <p class="intro-lead">I build reliable AI-agent and security systems.</p>
-  <p>My work asks how agents remember useful context, act within explicit limits and leave a record we can evaluate.</p>
-  <p class="home-actions"><a href="/projects/">Explore the projects <span aria-hidden="true">↗</span></a><a href="/speaking/">Talks &amp; workshops</a><a href="/contact/">Get in touch</a></p>
-  <div class="selected-work">
-    <h2>Start here</h2>
-    <a class="selected-item" href="/projects/#memori--flagship"><span class="eyebrow">01 / Project</span><strong>Memori</strong><span>Persistent memory for coding agents. Rust, SQLite and hybrid retrieval.</span></a>
-    <a class="selected-item" href="/projects/#luffy"><span class="eyebrow">02 / Project</span><strong>Luffy</strong><span>A PR review agent that records its tool calls and retains repository context.</span></a>
-    <a class="selected-item" href="/posts/2026-10-21-grading-agents-through-their-interface/"><span class="eyebrow">03 / Read</span><strong>You Cannot Grade an Agent You Only Read</strong><span>What I learned by capturing an agent’s terminal interface and checking its execution records.</span></a>
-    <a class="selected-item" href="/speaking/#watch-the-talk"><span class="eyebrow">04 / Watch</span><strong>Memory is the Agent</strong><span>My PyCon India 2025 talk on stateful reasoning.</span></a>
-  </div>
-  <p class="home-follow">Research: <a href="/research/">agent memory, agent reliability, AI security, and AI-native engineering</a>.<br>Code: <a href="https://github.com/archit15singh/memori">Memori source</a> · <a href="https://github.com/archit15singh/luffy-pr-review-agent">Luffy source</a> · <a href="https://github.com/archit15singh">GitHub</a></p>
-  <h2 class="latest-heading">Latest writing</h2>
-  <p class="home-follow">Original investigations, reference guides and essays. <a href="/archives/">Browse the archive</a> · <a href="/index.xml">Follow via RSS</a></p>
+  <header class="workshop-intro">
+    <p class="eyebrow">Software, experiments &amp; notes</p>
+    <h1 id="intro-title">Archit Singh<span class="name-dot" aria-hidden="true">.</span></h1>
+    <p class="intro-lead">I build reliable AI-agent and security systems.</p>
+    <p>I’m interested in what happens between a model’s answer and a working system: how agents remember, use tools, recover from failures and explain what they did.</p>
+    <p class="intro-links"><a href="/about/">About me</a><a href="https://github.com/archit15singh">GitHub</a><a href="/speaking/">Speaking</a><a href="/contact/">Get in touch</a></p>
+  </header>
+  <section class="workbench" aria-labelledby="workbench-title">
+    <div class="section-heading"><h2 id="workbench-title">On the workbench</h2><a href="/projects/">All projects <span aria-hidden="true">↗</span></a></div>
+    <div class="project-grid">
+      <article class="workshop-project">
+        <a class="project-visual" href="/projects/#memori--flagship"><img src="/images/workshop/memori.svg" width="640" height="250" alt="Memori architecture sketch: a coding agent writes to and retrieves from a local SQLite memory store."></a>
+        <div class="project-copy"><p class="eyebrow">Agent memory · Rust / SQLite</p><h3><a href="/projects/#memori--flagship">Memori</a></h3><p>Useful context should survive the next coding session. Memori stores it locally and combines full-text and vector search to retrieve it.</p><p class="project-links"><a href="/posts/2026-03-24-memori-architecture/">Design decisions</a><a href="https://github.com/archit15singh/memori">Source code ↗</a></p></div>
+      </article>
+      <article class="workshop-project">
+        <a class="project-visual" href="/projects/#luffy"><img src="/images/workshop/luffy.svg" width="640" height="250" alt="Luffy execution sketch: a pull request leads to tool execution, then a review and saved trace."></a>
+        <div class="project-copy"><p class="eyebrow">PR review · Tools / Traces</p><h3><a href="/projects/#luffy">Luffy</a></h3><p>A review comment leaves questions. Luffy runs tools, retains repository context and saves a trace you can inspect after the review.</p><p class="project-links"><a href="/posts/2026-07-31-luffy-pr-review-agent/">How it works</a><a href="https://github.com/archit15singh/luffy-pr-review-agent">Source code ↗</a></p></div>
+      </article>
+    </div>
+  </section>
+  <section class="reading-paths" aria-labelledby="reading-paths-title">
+    <div class="section-heading"><h2 id="reading-paths-title">Questions I’m exploring</h2></div>
+    <ul>
+      <li><a href="/posts/2026-10-21-grading-agents-through-their-interface/">How do you check what an agent actually did?</a><span>Terminal captures, execution records and what the final reply misses.</span></li>
+      <li><a href="/posts/2026-10-21-inside-deepseek-harness/">What makes a model into a working agent?</a><span>A source-code walkthrough of tools, state and recovery.</span></li>
+      <li><a href="/posts/2026-03-23-hard-constraints-belong-in-code/">Which rules belong in code instead of prompts?</a><span>Making limits enforceable outside the model.</span></li>
+    </ul>
+    <p class="topic-links">Browse by subject: <a href="/research/#1--memory-for-ai-agents">Agent memory</a> · <a href="/research/#2--reliable-agent-systems">Reliability</a> · <a href="/research/#3--ai--security">Security</a> · <a href="/research/#4--ai-native-software-engineering">AI-native engineering</a></p>
+  </section>
+  <aside class="speaking-note"><span class="eyebrow">From the stage</span><p>I presented <a href="/speaking/#watch-the-talk">Memory is the Agent</a> at PyCon India 2025. <a href="/speaking/">Watch the talk or explore speaking topics ↗</a></p></aside>
+  <div class="section-heading latest-heading"><h2>Latest writing</h2><a href="/archives/">Full archive ↗</a></div>
+  <p class="home-follow">Technical notes, longer guides and occasional essays. Follow via <a href="/index.xml">RSS</a> or <a href="https://architsingh.substack.com/">Substack</a>.</p>
 </section>

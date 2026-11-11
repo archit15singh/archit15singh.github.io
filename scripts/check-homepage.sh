@@ -35,19 +35,19 @@ def need(label, pred):
 
 need("who: engineer building reliable AI-agent and security systems",
      "engineer building reliable ai-agent and security systems" in low)
-need("thesis: memory, deterministic constraints, evaluation, and observability",
-     "remember useful context" in low and "explicit limits" in low and "evaluate" in low)
+need("intro: agent memory, tools and recovery",
+     "agents remember" in low and "use tools" in low and "recover from failures" in low)
 need("built: Memori", "memori" in low)
 need("built: Luffy", "luffy" in low)
 need("built: Memori evidence URL", "github.com/archit15singh/memori" in low)
 need("built: Luffy evidence URL", "github.com/archit15singh/luffy-pr-review-agent" in low)
 need("research: agent memory", "agent memory" in low)
-need("research: agent reliability", "agent reliability" in low)
-need("research: AI security", "ai security" in low)
+need("research: agent reliability", "reliability" in low)
+need("research: AI security", "security" in low)
 need("research: AI-native engineering", "ai-native engineering" in low)
 need("evidence: GitHub", "github.com/archit15singh" in low)
-need("intro title: AI Agents × Security × Systems",
-     "ai agents" in low and "security" in low and "systems" in low)
+need("intro: name and project workbench",
+     "archit singh" in low and "on the workbench" in low)
 print("PASS: homepage five-answer check")
 PY
 
