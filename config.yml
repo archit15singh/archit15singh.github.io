@@ -9,7 +9,7 @@ params:
   # General Settings
   DateFormat: "January 2, 2006"
   env: production
-  description: "Engineer building reliable AI-agent and security systems. Memory, deterministic constraints, evaluation, observability. Memori, Luffy. PyCon India 2025."
+  description: "Archit Singh, Senior Software Engineer at Abnormal AI. Email security, AI agents and detection at billion-message scale. Open-source tools, research and talks."
   author: "Archit Singh"
   defaultTheme: auto
   comments: false
@@ -41,11 +41,11 @@ params:
 
   # Home Info
   homeInfoParams:
-    Title: "AI Agents × Security × Systems"
+    Title: "Email Security × AI Agents × Scale"
     Content: >
-      I'm Archit Singh, an engineer building reliable AI-agent and security systems.
+      I'm Archit Singh, a Senior Software Engineer at Abnormal AI, building AI agents and detection systems for email security.
       Those systems need memory, deterministic constraints, evaluation, and observability.
-      I built [Memori](/projects/#memori--flagship) and [Luffy](/projects/#luffy).
+      I build [Lorevell (formerly Memori)](/projects/#lorevell) and [Luffy](/projects/#luffy).
       In September 2025 I gave [Memory is the Agent](/speaking/) at PyCon India.
       I research [agent memory, agent reliability, AI security, and AI-native engineering](/research/).
       Evidence lives on [GitHub](https://github.com/archit15singh), on [Projects](/projects/), and in the writing below.

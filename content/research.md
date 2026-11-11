@@ -16,13 +16,13 @@ For implementation details and repository links, see [Projects](/projects/).
 
 ## 1 · Memory for AI agents
 
-Memori, architectures, retrieval, decay, identity, evaluation.
+Lorevell (formerly Memori), local knowledge, retrieval, continuity and evaluation.
 
 - [Forging AI’s lasting memory](/posts/2024-01-01-ai-memory/)
 - [Memori architecture](/posts/2026-03-24-memori-architecture/)
 - [Memori recursive design](/posts/2026-04-10-memori-recursive-design/)
 - Talk: [Memory is the Agent](/speaking/)
-- Artifact: [Memori](/projects/#memori--flagship)
+- Artifact: [Lorevell (formerly Memori)](/projects/#lorevell)
 - Artifact: [Chronicle](/projects/#also-original)
 
 ## 2 · Reliable agent systems

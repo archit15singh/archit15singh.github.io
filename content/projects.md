@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-description: "Memori, Luffy, and other original systems. Code on GitHub, write-ups here."
+description: "Lorevell, Luffy, SpliceForge and other original systems. Code and engineering notes by Archit Singh."
 url: "/projects/"
 showToc: true
 comments: false
@@ -12,20 +12,20 @@ ShowPostNavLinks: false
 
 These projects explore how agents retain context, execute tools and expose enough information to investigate a failure. Each has source code and a longer account of its design.
 
-## Memori — flagship
+<span id="memori--flagship"></span>
 
-Memori stores memory for AI coding agents in a local SQLite database. Its Rust core combines full-text and vector search, with Python bindings and a CLI. Retrieval does not require a hosted API.
+## Lorevell (formerly Memori) {#lorevell}
 
-I built it around a recurring problem: useful context from one coding session is often unavailable in the next. Capturing notes is only part of the solution. The agent also needs to retrieve the right information while working.
+Local knowledge for humans and agents. Lorevell keeps notes in plain Markdown files that you can read, edit and carry between tools. Markdown is the source of truth; SQLite is a rebuildable search index.
 
-The implementation combines search results with reciprocal rank fusion, reduces duplicate memories using cosine similarity, and adjusts ranking using access history. The [architecture article](/posts/2026-03-24-memori-architecture/) explains those choices and their trade-offs.
+Its Rust core supports full-text and local vector search. The CLI connects the vault to existing coding agents, including Claude Code and Codex, for recall and bounded knowledge consolidation. The agent supplies the reasoning; Lorevell supplies the files, retrieval and validation around it.
 
-You can install the published packages or follow the repository instructions. Tests and benchmark code are included; retrieval quality still needs to be evaluated against the queries and expected answers of the workload you intend to use it for.
+The current repository documents the breaking 2.0 interface and installation from source. Older Memori packages and benchmarks describe earlier versions; they do not establish the behavior or performance of the current vault. Follow the current setup and migration instructions before switching an existing installation.
 
-- [Source and setup](https://github.com/archit15singh/memori#readme)
-- [Python package](https://pypi.org/project/py-memori/) · [Rust crate](https://crates.io/crates/memori-ai-core) · [API documentation](https://docs.rs/crate/memori-ai-core/latest)
-- [Architecture decisions](/posts/2026-03-24-memori-architecture/) · [Retrieval design](/posts/2026-04-10-memori-recursive-design/)
-- [Designing the CLI](/posts/2026-02-28-designing-cli-tools-for-ai-agents/) · [Enforcing constraints in code](/posts/2026-03-23-hard-constraints-belong-in-code/)
+- [Source and current setup](https://github.com/archit15singh/lorevell#readme)
+- [Memori → Lorevell rename guide](https://github.com/archit15singh/lorevell/blob/main/docs/rebrand.md)
+- [Operational details and limits](https://github.com/archit15singh/lorevell/blob/main/docs/v2.md)
+- Earlier Memori design: [Architecture decisions](/posts/2026-03-24-memori-architecture/) · [Retrieval design](/posts/2026-04-10-memori-recursive-design/) · [Designing the CLI](/posts/2026-02-28-designing-cli-tools-for-ai-agents/)
 - [PyCon India talk](/speaking/)
 
 ## Luffy
@@ -39,6 +39,13 @@ In one recorded Odoo review, Luffy returned REQUEST CHANGES with a score of 42/1
 - [Source and setup](https://github.com/archit15singh/luffy-pr-review-agent#readme)
 - [Recorded run and traces](https://github.com/archit15singh/luffy-pr-review-agent/tree/main/docs/showcase)
 - [Building Luffy](/posts/2026-07-31-luffy-pr-review-agent/)
+
+## SpliceForge
+
+An AI-assisted video-editing tool built around Codex. I am developing an interview-to-story workflow and a companion evaluation harness. The repositories hold the implementation and current status; a repository alone does not establish editing quality or readiness for client work.
+
+- [Source and setup](https://github.com/archit15singh/spliceforge)
+- [Evaluation harness](https://github.com/archit15singh/video-editing-agent-bench)
 
 ## Other projects {#also-original}
 
