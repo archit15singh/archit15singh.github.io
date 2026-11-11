@@ -2,7 +2,7 @@
 
 ## Confirmed positioning
 
-Archit directly corrected the initial project-led copy: his primary professional identity is Senior Software Engineer at Abnormal AI, centered on email security, AI agents, security and billion-message scale. Lorevell remains an important independent project. SpliceForge and Luffy are additional independent work. This supersedes centering the personal brand on Lorevell.
+Archit directly corrected the initial project-led copy: his primary professional identity is Senior Software Engineer at Abnormal AI, centered on email security, AI agents, security and billion-message scale. Lorevell remains an important independent project. FootagePilot and Luffy are additional independent work. This supersedes centering the personal brand on Lorevell.
 
 ## Public evidence and claim boundaries
 
@@ -16,6 +16,10 @@ Archit directly corrected the initial project-led copy: his primary professional
 1. Abnormal AI role, email security, detection and AI agents.
 2. Reliability and distributed-systems engineering at platform scale.
 3. Public writing and PyCon India speaking.
-4. Independent projects: Lorevell, Luffy and SpliceForge.
+4. Independent projects: Lorevell, Luffy and FootagePilot.
 
 Use existing profile photos and identities. No new logos, employer endorsement or confidential work claims. This note records reviewed public evidence, not additional publishing authorization.
+
+## Product rename follow-up
+
+On 12 November 2026, the owner requested synchronization of the video editor name. GitHub repository metadata and `docs/NAMING.md` confirm FootagePilot is the current name and `archit15singh/footagepilot` the canonical repository. Current profile descriptions follow that spelling; historical sent messages and release evidence retain their original names.

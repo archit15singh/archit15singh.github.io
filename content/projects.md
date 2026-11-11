@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-description: "Lorevell, Luffy, SpliceForge and other original systems. Code and engineering notes by Archit Singh."
+description: "Lorevell, Luffy, FootagePilot and other original systems. Code and engineering notes by Archit Singh."
 url: "/projects/"
 showToc: true
 comments: false
@@ -40,12 +40,17 @@ In one recorded Odoo review, Luffy returned REQUEST CHANGES with a score of 42/1
 - [Recorded run and traces](https://github.com/archit15singh/luffy-pr-review-agent/tree/main/docs/showcase)
 - [Building Luffy](/posts/2026-07-31-luffy-pr-review-agent/)
 
-## SpliceForge
+<span id="spliceforge"></span>
 
-An AI-assisted video-editing tool built around Codex. I am developing an interview-to-story workflow and a companion evaluation harness. The repositories hold the implementation and current status; a repository alone does not establish editing quality or readiness for client work.
+## FootagePilot {#footagepilot}
 
-- [Source and setup](https://github.com/archit15singh/spliceforge)
-- [Evaluation harness](https://github.com/archit15singh/video-editing-agent-bench)
+An agent-driven video editor for real footage. The pipeline combines speech cleanup, local word alignment, Codex story planning, validated word-level cuts, captions and graphics, and HyperFrames or Remotion rendering with audio mixing.
+
+The repository records a real-footage run and four generated variations, with export checks and documented limits. Listening quality and general storytelling performance are not established by those technical checks. Follow the current setup instructions and inspect the example outputs before choosing it for a workflow.
+
+- [Source and setup](https://github.com/archit15singh/footagepilot)
+- [Real-footage findings](https://github.com/archit15singh/footagepilot/blob/main/docs/REAL-E2E-RESULTS.md)
+- [Naming and migration](https://github.com/archit15singh/footagepilot/blob/main/docs/NAMING.md)
 
 ## Other projects {#also-original}
 
