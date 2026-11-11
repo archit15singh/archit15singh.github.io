@@ -23,3 +23,50 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 #main:focus {outline: none;}
 @media (max-width: 480px) {.editorial-home {margin-top: 28px;} .selected-item {grid-template-columns: 1fr;} .selected-item .eyebrow {grid-row: auto;} .home-actions a {padding: 8px 0;} #menu a {min-height: 44px; display: inline-flex; align-items: center;}}
 @media (prefers-reduced-motion: reduce) {html {scroll-behavior: auto;} *, *::before, *::after {animation-duration: .01ms !important; transition-duration: .01ms !important;}}
+
+/* Portfolio polish: warm paper, deep ink, restrained botanical accent. */
+:root {--portfolio-accent: #315d49; --portfolio-surface: #f1f3ed;}
+.dark {--portfolio-accent: #b7d5a5; --portfolio-surface: #252d28;}
+body.list:has(.editorial-home) {background: var(--theme);}
+html {-webkit-font-smoothing: antialiased;}
+h1, h2, h3 {text-wrap: balance;}
+p {text-wrap: pretty;}
+.editorial-home {margin-top: 55px;}
+.editorial-home > .eyebrow {color: var(--portfolio-accent); border-top: 3px solid var(--portfolio-accent); padding-top: 16px;}
+.editorial-home h1 {font-size: clamp(40px, 6.5vw, 64px); max-width: 650px; letter-spacing: -.045em; line-height: 1.07; margin: 28px 0 22px;}
+.editorial-home h1 .hero-line {display: block;}
+.editorial-home h1 .hero-accent {color: var(--portfolio-accent); font-style: italic;}
+.intro-lead {font-size: 22px; max-width: 570px;}
+.editorial-home > p:not(.eyebrow):not(.intro-lead):not(.home-actions) {max-width: 600px;}
+.home-actions {align-items: center; margin: 26px 0 38px !important; font-size: 15px;}
+.home-actions a:first-child {background: var(--portfolio-accent); color: var(--theme); border-radius: 6px; padding: 12px 18px; text-decoration: none;}
+.home-actions a:first-child:hover {filter: brightness(.9);}
+.selected-work {display: grid; grid-template-columns: 1fr 1fr; gap: 14px; border: 0; margin-top: 42px;}
+.selected-work h2 {grid-column: 1 / -1; margin: 0 0 4px; font-size: 28px;}
+.selected-item {grid-template-columns: 1fr; align-content: start; gap: 12px; padding: 24px; border: 1px solid var(--border); border-radius: 10px; background: var(--entry); transition: border-color .15s ease, background-color .15s ease;}
+.selected-item:nth-of-type(-n+2) {background: var(--portfolio-surface);}
+.selected-item .eyebrow {grid-row: auto; color: var(--portfolio-accent); padding: 0;}
+.selected-item strong {font-family: Georgia, serif; font-size: 24px; font-weight: 500;}
+.selected-item:hover {border-color: var(--portfolio-accent);}
+.selected-item > span:last-child {color: var(--content); font-size: 15px;}
+.home-follow {margin-top: 24px !important;}
+.latest-heading {padding-top: 38px; margin-top: 36px !important; border-top: 1px solid var(--border); font-size: 30px;}
+body:has(.editorial-home) .post-entry {border: 0; border-bottom: 1px solid var(--border); border-radius: 0; padding: 24px 0; margin: 0; background: transparent; display: grid; grid-template-columns: minmax(0, 1fr) 150px; column-gap: 24px;}
+body:has(.editorial-home) .post-entry .entry-cover {grid-column: 2; grid-row: 1 / 4; margin: 0; align-self: center;}
+body:has(.editorial-home) .post-entry .entry-cover img {width: 150px; height: 105px; object-fit: cover; border-radius: 6px;}
+body:has(.editorial-home) .post-entry .entry-header, body:has(.editorial-home) .post-entry .entry-content, body:has(.editorial-home) .post-entry .entry-footer {grid-column: 1;}
+body:has(.editorial-home) .post-entry .entry-header h2 {font-family: Georgia, serif; font-size: 25px; line-height: 1.25; font-weight: 500;}
+body:has(.editorial-home) .post-entry .entry-content {-webkit-line-clamp: 2; font-size: 15px; margin: 10px 0;}
+body:has(.editorial-home) .post-entry:not(:has(.entry-cover)) {grid-template-columns: 1fr;}
+.post-title {font-family: Georgia, serif; letter-spacing: -.025em;}
+.post-content h2 {font-family: Georgia, serif; font-weight: 500; margin-top: 44px;}
+.post-content a {text-underline-offset: 4px;}
+@media (max-width: 560px) {
+  .editorial-home {margin-top: 30px;}
+  .selected-work {grid-template-columns: 1fr;}
+  .selected-item {padding: 20px;}
+  .home-actions {gap: 10px 18px;}
+  body:has(.editorial-home) .post-entry {grid-template-columns: minmax(0, 1fr) 88px; column-gap: 14px;}
+  body:has(.editorial-home) .post-entry .entry-cover img {width: 88px; height: 88px;}
+  body:has(.editorial-home) .post-entry .entry-header h2 {font-size: 21px;}
+}
