@@ -36,7 +36,7 @@ def need(label, pred):
 need("who: engineer building reliable AI-agent and security systems",
      "engineer building reliable ai-agent and security systems" in low)
 need("thesis: memory, deterministic constraints, evaluation, and observability",
-     "memory, deterministic constraints, evaluation, and observability" in low)
+     "remember useful context" in low and "explicit limits" in low and "evaluate" in low)
 need("built: Memori", "memori" in low)
 need("built: Luffy", "luffy" in low)
 need("built: Memori evidence URL", "github.com/archit15singh/memori" in low)
@@ -105,8 +105,8 @@ need("projects: Luffy GitHub", "github.com/archit15singh/luffy-pr-review-agent" 
 need("projects: py-memori PyPI", "pypi.org/project/py-memori" in projects)
 need("projects: memori-ai-core crates.io", "crates.io/crates/memori-ai-core" in projects)
 need("projects: memori-ai-core docs.rs", "docs.rs/crate/memori-ai-core" in projects)
-for heading in ("problem", "thesis", "architecture", "implementation", "results", "lessons", "code", "research"):
-    need(f"projects spine: {heading}", heading in projects)
+for evidence in ("retrieval", "benchmark", "recorded", "trace", "$0.59"):
+    need(f"projects evidence: {evidence}", evidence in projects)
 
 need("research: Memory for AI agents", "memory for ai agents" in research)
 need("research: Reliable agent systems", "reliable agent systems" in research)

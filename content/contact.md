@@ -11,7 +11,7 @@ ShowPostNavLinks: false
 
 For technical talks, engineering collaborations and relevant AI infrastructure roles, email **[contact.architsingh@gmail.com](mailto:contact.architsingh@gmail.com)**.
 
-For a talk invitation, include the audience, event date, format and expected session length. For a collaboration, describe the problem, existing evidence and what you would like to work on together.
+For a talk invitation, include the audience, event date, format and expected session length. For a collaboration, tell me what you are building and where you would like my involvement.
 
 - [Speaking topics, bio and recorded talk](/speaking/)
 - [Projects and source code](/projects/)

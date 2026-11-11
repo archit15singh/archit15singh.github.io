@@ -10,9 +10,9 @@ disableShare: true
 ShowPostNavLinks: false
 ---
 
-Posts are chapters. These are the programs they belong to. I ship the system, the rule, or the talk first. The post is what got written down after.
+My work is organized around four questions: how agents remember, how they execute reliably, how they interact with security boundaries, and how they change software engineering. These links connect the articles to related code and talks.
 
-The through-line lives on [Projects](/projects/): memory, tools, deterministic constraints, evaluation, observability, security, and human control.
+For implementation details and repository links, see [Projects](/projects/).
 
 ## 1 · Memory for AI agents
 
@@ -39,7 +39,7 @@ Luffy, tool design, control planes, observability, failure modes.
 
 Agent attacks, fraud, identity, social engineering, behavioral security.
 
-These PRs are the same stack. Identity, false positives, and constraints, written as detection rules the way [Memori](/projects/#memori--flagship) and [Luffy](/projects/#luffy) write them for agents.
+The contributions below address execution behavior, false positives and argument handling in security tools. They sit alongside my writing on the browser’s role in granting access to data and devices.
 
 - [The Browser Is the New Operating System](/posts/2026-10-07-the-browser-is-the-new-operating-system/) examines the browser as the capability broker for identity, data, devices, and isolation.
 - [Potential Proxy Execution Via SetupUGC](https://github.com/SigmaHQ/sigma/issues/6153) ([rule](https://github.com/SigmaHQ/sigma/pull/6152)). `setupugc.exe` as a signed LOLBin on Windows 10/11 and Server 2025.

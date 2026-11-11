@@ -32,23 +32,23 @@ ShowBreadCrumbs: true
 format: "Technical note"
 ---
 
-Most AI PR bots do the same thing. They read a diff, emit soft prose, and vanish. No memory of the last review on that repo. No package you can open later and see *which tools the model ran*. No honest score when the code is wrong.
+I wanted a PR reviewer whose findings I could investigate after the run. A review comment alone left questions unanswered: which files had the agent inspected, which commands had it run, and what context would survive for the next review?
 
-I built **[Luffy](https://github.com/archit15singh/luffy-pr-review-agent)** for the opposite job: a comment-triggered review control plane. You type `@luffy review this pr`. GitHub Actions runs Hermes Agent through OpenRouter. The agent can shell into the workspace, repro failures, and post a structured Markdown review. Then it stores a redacted trace and grows hub memory so the next run on that repo is not starting from zero.
+I built **[Luffy](https://github.com/archit15singh/luffy-pr-review-agent)** to make that process inspectable. You type `@luffy review this pr`. GitHub Actions runs Hermes Agent through OpenRouter. The agent can shell into the workspace, repro failures, and post a structured Markdown review. Then it stores a redacted trace and grows hub memory so the next run on that repo is not starting from zero.
 
 This post is how that system is put together, what broke on the way, and what a live run looked like when I pointed Claude Opus 5 at a real Odoo fix.
 
-Proof, not vibe: Actions run `30574256524` on a fork's PR #3. Model `anthropic/claude-opus-5`. **REQUEST CHANGES**, score **42/100**. Ten API calls, nine tool-call turns, twenty-six session messages, about four minutes of Hermes wall time, roughly **$0.59**. The full trace package lives in the repo under `docs/showcase/`.
+The recorded example: Actions run `30574256524` on a fork's PR #3. Model `anthropic/claude-opus-5`. **REQUEST CHANGES**, score **42/100**. Ten API calls, nine tool-call turns, twenty-six session messages, about four minutes of Hermes wall time, roughly **$0.59**. The full trace package lives in the repo under `docs/showcase/`.
 
 ---
 
-## The problem is systems, not "better prompts"
+## The execution and memory problems
 
 PR review fails for boring reasons.
 
 Humans skip things when the monorepo is huge. Consistency drifts. Institutional knowledge lives in Slack threads that die.
 
-Stateless LLM review fails for different boring reasons. It has no durable notes for *this* codebase. It often cannot prove a claim with a local repro. When the run ends, you get a comment blob and nothing you can replay.
+A review agent without persistent state loses repository context between runs. Without command execution, it cannot test a suspected failure locally. Without a saved trace, the review is difficult to investigate afterward.
 
 On something Odoo-sized, "clone the world and chat" is also an economics problem. Full checkouts burn minutes before the model even starts.
 
