@@ -8,6 +8,7 @@ cover:
   image: "/images/uploads/browser-operating-system-cover.webp"
   alt: "A dark editorial cover with the title The Browser Is the New Operating System"
   hidden: false
+format: "Technical note"
 ---
 
 The browser looks like the safest place on a computer because it looks like a window. A tab is a page. A page is an app. The operating system is somewhere underneath, doing serious things with files and processes while the browser shows us email, a spreadsheet, and a shopping cart.

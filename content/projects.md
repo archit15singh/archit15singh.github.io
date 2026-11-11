@@ -4,9 +4,13 @@ description: "Memori, Luffy, and other original systems. Code on GitHub, write-u
 url: "/projects/"
 showToc: true
 comments: false
+hideMeta: true
+tts: false
+disableShare: true
+ShowPostNavLinks: false
 ---
 
-These are the artifacts. Posts argue. These prove. Memory, tools, deterministic constraints, evaluation, observability, security, human control.
+Working systems and the evidence behind them: memory, tools, deterministic constraints, evaluation, observability, security and human control. Each project links to source; reported results describe specific implementations or runs, not general performance guarantees.
 
 ## Memori — flagship
 
@@ -20,7 +24,9 @@ Persistent memory for AI coding agents. Rust core, SQLite, FTS5, vector search. 
 
 **Implementation.** Python bindings, a CLI designed for agents, Claude Code integration, a published package with prebuilt wheels for Linux (manylinux), macOS, and Windows, and a Rust crate.
 
-**Results.** About 190 tests, benchmarks, and a retrieval loop that actually survives across sessions.
+**Evidence.** Published Python and Rust packages, repository tests and benchmark code. See the [source and reproduction instructions](https://github.com/archit15singh/memori#readme) for the current implementation.
+
+**Scope.** Local persistent memory and retrieval. Package availability and test counts do not establish retrieval quality for a particular workload; evaluate with representative queries and expected answers.
 
 **Lessons.** Designing the CLI for agents made it better for humans. Hard constraints belong in code, not in the prompt.
 
@@ -48,7 +54,11 @@ A comment-triggered PR review control plane. The agent can shell into the worksp
 
 **Results.** Live Odoo review on a real bug: REQUEST CHANGES, score 42/100, ten API calls, about four minutes, roughly $0.59. The trace package is in the repo under `docs/showcase/`.
 
-**Lessons.** If you cannot audit the loop, you do not have a review agent. You have a comment generator.
+**Inspect it.** Open the [showcase traces](https://github.com/archit15singh/luffy-pr-review-agent/tree/main/docs/showcase) and [setup instructions](https://github.com/archit15singh/luffy-pr-review-agent#readme).
+
+**Scope.** The Odoo example is one observed run, not a benchmark of review accuracy. Latency, cost and findings depend on the model, repository and task.
+
+**Lessons.** Execution traces make the review process inspectable.
 
 **Code.** [github.com/archit15singh/luffy-pr-review-agent](https://github.com/archit15singh/luffy-pr-review-agent)
 
@@ -65,3 +75,7 @@ GitHub only. No post yet.
 **[Idea Generator](https://github.com/archit15singh/idea-generator).** An OpenCode skill that is a DAG. Ingest YC companies in a constrained market, descend, cut a wedge, score founder-fit. Gates and typed receipts live in `idea_factory/`. The prompts do not.
 
 **[Sim Bangalore](https://github.com/archit15singh/sim-bangalore).** 243 BBMP wards, one synthetic agent per resident, A* on road plus Metro, a scorecard for WFH / fare / ORR-closure experiments. The foundation is a port of [Sim Francisco](https://github.com/tejasprabhune/simfrancisco). The Bangalore population, calibration, and policy core are the original work.
+
+## Use or discuss the work
+
+Start with the linked repository instructions and report reproducible issues there. For a technical collaboration or talk, [get in touch](/contact/).

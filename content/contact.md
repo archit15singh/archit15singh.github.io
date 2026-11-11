@@ -1,14 +1,20 @@
 ---
 title: "Contact"
-description: "GitHub, LinkedIn, and X for Archit Singh."
+description: "Contact Archit Singh for technical talks, engineering collaborations and AI infrastructure roles."
 url: "/contact/"
 comments: false
+hideMeta: true
+tts: false
+disableShare: true
+ShowPostNavLinks: false
 ---
 
-Evidence and code: [github.com/archit15singh](https://github.com/archit15singh)
+For technical talks, engineering collaborations and relevant AI infrastructure roles, email **[contact.architsingh@gmail.com](mailto:contact.architsingh@gmail.com)**.
 
-Distribution: [linkedin.com/in/archit15singh](https://www.linkedin.com/in/archit15singh)
+For a talk invitation, include the audience, event date, format and expected session length. For a collaboration, describe the problem, existing evidence and what you would like to work on together.
 
-Short notes: [x.com/archit_singh15](https://x.com/archit_singh15)
+- [Speaking topics, bio and recorded talk](/speaking/)
+- [Projects and source code](/projects/)
+- [LinkedIn](https://www.linkedin.com/in/archit15singh) · [GitHub](https://github.com/archit15singh) · [X](https://x.com/archit_singh15)
 
-Work: [Projects](/projects/). Programs: [Research](/research/).
+To follow new writing, use [RSS](/index.xml) or [Substack](https://architsingh.substack.com/).

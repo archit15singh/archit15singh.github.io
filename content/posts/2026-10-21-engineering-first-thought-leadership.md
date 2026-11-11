@@ -8,6 +8,7 @@ cover:
   image: "/images/uploads/engineering-first-thought-leadership.svg"
   alt: "Research flows into evidence, reusable artifacts, writing, and feedback. Human review comes before publication."
   hidden: false
+format: "Essay"
 ---
 
 I want my public writing to make it easier for people to understand the engineering work I care about: AI agents, security, and reliable systems. That means explaining decisions, showing what broke, and leaving enough evidence for someone else to check the result.

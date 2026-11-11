@@ -4,9 +4,10 @@ description: "A minimal personal AI stack for an Indian household: one control p
 date: 2026-10-18T01:15:00+05:30
 tags: [AI, Productivity, Automation]
 categories: [AI]
+format: "Essay"
 ---
 
-*Designed for an Indian household in Bengaluru · Married · Age 30 · Software engineer · October 2026*
+*An architecture proposal for household coordination, October 2026. This describes a design, not a verified deployment.*
 
 The goal is to automate the repetitive coordination in your life with a small, durable layer of infrastructure — without turning personal productivity into another engineering project.
 
@@ -14,7 +15,7 @@ You don't need 30 agents, 30 MCP servers or a custom application for every probl
 
 ## 1. The operating model
 
-**You + your wife** — goals, preferences, decisions, approvals.
+**Household members** — goals, preferences, decisions, approvals.
 
 **ChatGPT Plus** — primary control plane: chat, work, plugins, tasks, research, reasoning.
 

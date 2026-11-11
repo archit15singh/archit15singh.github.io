@@ -31,6 +31,7 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: false
 UseHugoToc: true
+format: "Reference guide"
 ---
 
 # The AI-Augmented Developer Playbook

@@ -3,6 +3,10 @@ title: "About"
 description: "Archit Singh, engineer building reliable AI-agent and security systems."
 url: "/about/"
 comments: false
+hideMeta: true
+tts: false
+disableShare: true
+ShowPostNavLinks: false
 ---
 
 I'm Archit Singh, an engineer building reliable AI-agent and security systems. I gave [Memory is the Agent](/speaking/) at PyCon India 2025. The systems are [Memori](/projects/#memori--flagship) and [Luffy](/projects/#luffy). Detection PRs sit under [AI × security](/research/#3--ai--security). Proof is [py-memori](https://pypi.org/project/py-memori/), [memori-ai-core](https://crates.io/crates/memori-ai-core), those PRs, and the talk.

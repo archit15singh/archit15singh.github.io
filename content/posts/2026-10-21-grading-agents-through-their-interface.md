@@ -8,6 +8,7 @@ cover:
   image: "/images/uploads/tui-eval-capture-pipeline.svg"
   alt: "Keystrokes into a pseudo-terminal, the OpenCode TUI paints, and two readers consume the run: a terminal emulator and the OpenCode sqlite database"
   hidden: false
+format: "Technical note"
 ---
 
 I wanted to check whether a skill actually did its job. The skill ran a goal prompt through OpenCode, called a handful of tools, and left a session behind. Then I read the final message, and the final message told me exactly what I wanted to hear.

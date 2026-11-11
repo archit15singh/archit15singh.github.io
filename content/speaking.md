@@ -3,7 +3,29 @@ title: "Speaking"
 description: "Talks on agent memory and reliable AI systems — Archit Singh."
 url: "/speaking/"
 comments: false
+hideMeta: true
+tts: false
+disableShare: true
+ShowPostNavLinks: false
 ---
+
+I speak about persistent agent memory, reliable execution and evaluating what an agent actually did. My talks connect design decisions to code, failure modes and reproducible examples.
+
+**[Invite me to speak](mailto:contact.architsingh@gmail.com?subject=Speaking%20invitation)** · [Watch my PyCon talk](#watch-the-talk)
+
+## Proposed sessions
+
+- **Memory is the Agent.** Capture, retrieval and continuity across sessions, grounded in Memori. For engineers building stateful agents.
+- **The model is not the agent.** Tools, permissions, recovery and observability in an agent harness. For teams moving beyond a prototype.
+- **Evaluating agents through their interface.** What final messages miss, and how terminal captures and execution records answer different questions. For agent-tool builders and evaluators.
+
+These are proposed topics, adaptable to a technical talk, demo or workshop after discussing audience and scope.
+
+## Short bio
+
+Archit Singh builds reliable AI-agent and security systems. His public projects include Memori, a persistent-memory system for coding agents, and Luffy, an auditable PR review agent. He presented “Memory is the Agent: Architecting Stateful Reasoning” at PyCon India 2025 and writes about agent memory, deterministic constraints, evaluation and observability.
+
+Organizer resources: [public speaker profile](https://cfp.in.pycon.org/2025/speaker/FE9SPU/) · [stage photograph](/images/uploads/pycon-2025-presenting.webp) · [projects](/projects/). Please confirm image reuse permissions before publication.
 
 ## PyCon India 2025
 

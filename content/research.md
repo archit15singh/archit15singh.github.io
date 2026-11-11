@@ -4,6 +4,10 @@ description: "Four research programs: memory for AI agents, reliable agent syste
 url: "/research/"
 showToc: true
 comments: false
+hideMeta: true
+tts: false
+disableShare: true
+ShowPostNavLinks: false
 ---
 
 Posts are chapters. These are the programs they belong to. I ship the system, the rule, or the talk first. The post is what got written down after.

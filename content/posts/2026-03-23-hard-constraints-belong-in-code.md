@@ -31,6 +31,7 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: false
 UseHugoToc: true
+format: "Technical note"
 ---
 
 # Hard Constraints Belong in Code

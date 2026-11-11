@@ -4,11 +4,12 @@ description: "Autonomous Kaggle-solving agents are already built by Microsoft, G
 date: 2026-10-18T01:30:00+05:30
 tags: [AI, Agents, ML]
 categories: [AI]
+format: "Technical note"
 ---
 
 As of October 18, 2026, the core idea has been built by multiple research groups, including Microsoft, Google and independent open-source developers.
 
-Some systems already do almost exactly what you described: take a Kaggle-style ML problem, generate modeling approaches, train models, evaluate performance, improve their code through repeated experiments and produce solutions.
+These systems implement a recurring experiment loop: take a Kaggle-style ML problem, generate modeling approaches, train models, evaluate performance, improve their code through repeated experiments and produce solutions.
 
 The opportunity isn't inventing this category. It's finding where the existing systems remain inefficient, unreliable, expensive or difficult to operate.
 
@@ -16,7 +17,7 @@ The opportunity isn't inventing this category. It's finding where the existing s
 
 ### Microsoft R&D-Agent
 
-*Very close match.*
+*A research-and-development loop for ML experiments.*
 
 Separates research (proposing improvements) from development (implementing them). Supports automated Kaggle feature engineering and model tuning, repeated experimentation and LLM-provider integrations.
 

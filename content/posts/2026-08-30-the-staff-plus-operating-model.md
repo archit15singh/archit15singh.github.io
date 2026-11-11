@@ -29,6 +29,7 @@ hideSummary: false
 searchHidden: false
 ShowReadingTime: true
 ShowBreadCrumbs: true
+format: "Reference guide"
 ---
 
 Most writing about the technical leadership path is noise shaped like signal: clickbait ladders, ten-point checklists, motivational platitudes sold as frameworks. This post is the opposite. It distills the field's harder-won lessons into one working model for the stretch from Senior Software Engineer to Tech Lead to Staff or Principal, with no fluff and no name-dropping.
@@ -36,6 +37,12 @@ Most writing about the technical leadership path is noise shaped like signal: cl
 It answers one question: **what actually changes as you move up the technical track, and what do you do differently on Monday?**
 
 ---
+
+## Start here
+
+This is a reference guide; you do not need to read it in order. For a short route, read [leadership without authority](#the-core-reframe-leadership-without-authority), [the four archetypes](#the-four-archetypes), then [the operating model in fourteen lines](#the-operating-model-in-fourteen-lines).
+
+If you are leading a project now, start with [the project playbook](#the-project-playbook). If you are deciding how to spend your time, use [time, attention and the network](#time-attention-and-the-network). Pick one practice to test in your next working week.
 
 ## The core reframe: leadership without authority
 

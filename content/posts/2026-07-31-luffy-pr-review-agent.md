@@ -29,6 +29,7 @@ hideSummary: false
 searchHidden: false
 ShowReadingTime: true
 ShowBreadCrumbs: true
+format: "Technical note"
 ---
 
 Most AI PR bots do the same thing. They read a diff, emit soft prose, and vanish. No memory of the last review on that repo. No package you can open later and see *which tools the model ran*. No honest score when the code is wrong.
