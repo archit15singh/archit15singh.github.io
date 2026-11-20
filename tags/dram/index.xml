@@ -12,19 +12,11 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Nov 2026 09:16:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/dram/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How AI demand puts upward pressure on DDR5 prices</title>
+      <title>How the AI buildout reaches your DDR5 bill</title>
       <link>https://archit15singh.github.io/posts/2026-11-20-how-ai-demand-raises-ddr5-prices/</link>
       <pubDate>Fri, 20 Nov 2026 09:16:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-11-20-how-ai-demand-raises-ddr5-prices/</guid>
-      <description>Follow two routes from AI infrastructure orders to PC memory costs, then see where the evidence stops.</description>
-    </item>
-    
-    <item>
-      <title>Why GPU rental and RAM prices can move in opposite directions</title>
-      <link>https://archit15singh.github.io/posts/2026-11-20-why-gpu-rent-and-ram-prices-diverge/</link>
-      <pubDate>Fri, 20 Nov 2026 09:09:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-11-20-why-gpu-rent-and-ram-prices-diverge/</guid>
-      <description>An AWS rate cut and a rising PC DRAM contract market show how installed capacity and fresh manufacturing respond to different constraints.</description>
+      <description>Trace HBM and server demand through wafer allocation, supply contracts, retail listings and GPU rental prices.</description>
     </item>
     
   </channel>

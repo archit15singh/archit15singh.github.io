@@ -12,19 +12,11 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Nov 2026 09:16:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/semiconductors/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How AI demand puts upward pressure on DDR5 prices</title>
+      <title>How the AI buildout reaches your DDR5 bill</title>
       <link>https://archit15singh.github.io/posts/2026-11-20-how-ai-demand-raises-ddr5-prices/</link>
       <pubDate>Fri, 20 Nov 2026 09:16:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-11-20-how-ai-demand-raises-ddr5-prices/</guid>
-      <description>Follow two routes from AI infrastructure orders to PC memory costs, then see where the evidence stops.</description>
-    </item>
-    
-    <item>
-      <title>What a sold-out HBM order book tells you</title>
-      <link>https://archit15singh.github.io/posts/2026-11-20-sold-out-hbm-contracts/</link>
-      <pubDate>Fri, 20 Nov 2026 09:11:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-11-20-sold-out-hbm-contracts/</guid>
-      <description>Follow a memory contract through deposits, shipment, deployment, and the economics of the application it ultimately serves.</description>
+      <description>Trace HBM and server demand through wafer allocation, supply contracts, retail listings and GPU rental prices.</description>
     </item>
     
   </channel>

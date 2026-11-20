@@ -12,11 +12,11 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Nov 2026 09:14:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/modeling/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The GPU break-even equation nobody shows you</title>
+      <title>GPU economics from break-even to cost per token</title>
       <link>https://archit15singh.github.io/posts/2026-11-20-gpu-break-even/</link>
       <pubDate>Fri, 20 Nov 2026 09:14:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-11-20-gpu-break-even/</guid>
-      <description>A per-GPU model for the price and billable hours needed to recover hardware, power, operations and the cost of capital.</description>
+      <description>Use a break-even calculator, a hardware-life model and three MLPerf runs to price the work a GPU can deliver.</description>
     </item>
     
   </channel>

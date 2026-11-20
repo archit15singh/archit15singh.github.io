@@ -12,19 +12,11 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Nov 2026 09:13:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/systems-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The AI buildout is a critical-path problem</title>
+      <title>What limits an AI cluster from delivery to peak load</title>
       <link>https://archit15singh.github.io/posts/2026-11-20-ai-buildout-critical-path/</link>
       <pubDate>Fri, 20 Nov 2026 09:13:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-11-20-ai-buildout-critical-path/</guid>
-      <description>A deployment model shows why getting GPUs four months early can buy zero months of revenue and how to find the milestone that matters.</description>
-    </item>
-    
-    <item>
-      <title>Where will the next AI infrastructure bottleneck move?</title>
-      <link>https://archit15singh.github.io/posts/2026-11-20-next-ai-infrastructure-bottleneck/</link>
-      <pubDate>Fri, 20 Nov 2026 09:08:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-11-20-next-ai-infrastructure-bottleneck/</guid>
-      <description>Track how scarcity can move from accelerator supply to power, networking, and customer demand using the throughput of one workload.</description>
+      <description>Model first billable capacity, moving bottlenecks and how a power cap changes inference queues.</description>
     </item>
     
   </channel>

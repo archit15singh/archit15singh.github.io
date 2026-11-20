@@ -77,12 +77,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://archit15singh.github.io/tags/modeling/</loc>
+    <loc>https://archit15singh.github.io/posts/2026-11-20-gpu-break-even/</loc>
     <lastmod>2026-11-20T09:14:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://archit15singh.github.io/posts/2026-11-20-gpu-break-even/</loc>
+    <loc>https://archit15singh.github.io/tags/modeling/</loc>
     <lastmod>2026-11-20T09:14:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -94,91 +94,6 @@
   </url><url>
     <loc>https://archit15singh.github.io/posts/2026-11-20-ai-buildout-critical-path/</loc>
     <lastmod>2026-11-20T09:13:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/2026-11-20-five-falsifiable-predictions/</loc>
-    <lastmod>2026-11-20T09:12:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/forecasting/</loc>
-    <lastmod>2026-11-20T09:12:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/hbm/</loc>
-    <lastmod>2026-11-20T09:11:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/2026-11-20-sold-out-hbm-contracts/</loc>
-    <lastmod>2026-11-20T09:11:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/local-ai/</loc>
-    <lastmod>2026-11-20T09:10:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/pc-hardware/</loc>
-    <lastmod>2026-11-20T09:10:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/2026-11-20-how-ai-infrastructure-affects-pc-builds/</loc>
-    <lastmod>2026-11-20T09:10:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/cloud-economics/</loc>
-    <lastmod>2026-11-20T09:09:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/2026-11-20-why-gpu-rent-and-ram-prices-diverge/</loc>
-    <lastmod>2026-11-20T09:09:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/capacity-planning/</loc>
-    <lastmod>2026-11-20T09:08:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/2026-11-20-next-ai-infrastructure-bottleneck/</loc>
-    <lastmod>2026-11-20T09:08:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/gpu-scheduling/</loc>
-    <lastmod>2026-11-20T09:07:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/power/</loc>
-    <lastmod>2026-11-20T09:07:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/2026-11-20-gpu-cluster-power-limit/</loc>
-    <lastmod>2026-11-20T09:07:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/depreciation/</loc>
-    <lastmod>2026-11-20T09:06:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/gpus/</loc>
-    <lastmod>2026-11-20T09:06:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/2026-11-20-gpu-economic-life/</loc>
-    <lastmod>2026-11-20T09:06:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -194,56 +109,6 @@
   </url><url>
     <loc>https://archit15singh.github.io/tags/cash-flow/</loc>
     <lastmod>2026-11-20T09:05:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/capital-markets/</loc>
-    <lastmod>2026-11-20T09:04:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/supply-chains/</loc>
-    <lastmod>2026-11-20T09:04:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/2026-11-20-circular-ai-financing/</loc>
-    <lastmod>2026-11-20T09:04:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/inference/</loc>
-    <lastmod>2026-11-20T09:03:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/performance-engineering/</loc>
-    <lastmod>2026-11-20T09:03:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/2026-11-20-true-cost-million-ai-tokens/</loc>
-    <lastmod>2026-11-20T09:03:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/2026-11-20-ai-demand-utilization-profit/</loc>
-    <lastmod>2026-11-20T09:02:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/observability/</loc>
-    <lastmod>2026-11-20T09:02:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/adoption/</loc>
-    <lastmod>2026-11-20T09:01:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/2026-11-20-strongest-bullish-countercase/</loc>
-    <lastmod>2026-11-20T09:01:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>

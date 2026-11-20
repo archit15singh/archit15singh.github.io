@@ -12,131 +12,43 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Nov 2026 09:16:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How AI demand puts upward pressure on DDR5 prices</title>
+      <title>How the AI buildout reaches your DDR5 bill</title>
       <link>https://archit15singh.github.io/posts/2026-11-20-how-ai-demand-raises-ddr5-prices/</link>
       <pubDate>Fri, 20 Nov 2026 09:16:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-11-20-how-ai-demand-raises-ddr5-prices/</guid>
-      <description>Follow two routes from AI infrastructure orders to PC memory costs, then see where the evidence stops.</description>
+      <description>Trace HBM and server demand through wafer allocation, supply contracts, retail listings and GPU rental prices.</description>
     </item>
     
     <item>
-      <title>There isn&#39;t one AI bubble. There are six different businesses.</title>
+      <title>Six AI businesses and five tests of the boom</title>
       <link>https://archit15singh.github.io/posts/2026-11-20-six-different-businesses/</link>
       <pubDate>Fri, 20 Nov 2026 09:15:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-11-20-six-different-businesses/</guid>
-      <description>Follow the invoices from DRAM fabs to paying AI users to see who earns revenue and who carries the risk.</description>
+      <description>Follow the money across six businesses, examine the strongest demand evidence and revisit five predictions in 2027.</description>
     </item>
     
     <item>
-      <title>The GPU break-even equation nobody shows you</title>
+      <title>GPU economics from break-even to cost per token</title>
       <link>https://archit15singh.github.io/posts/2026-11-20-gpu-break-even/</link>
       <pubDate>Fri, 20 Nov 2026 09:14:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-11-20-gpu-break-even/</guid>
-      <description>A per-GPU model for the price and billable hours needed to recover hardware, power, operations and the cost of capital.</description>
+      <description>Use a break-even calculator, a hardware-life model and three MLPerf runs to price the work a GPU can deliver.</description>
     </item>
     
     <item>
-      <title>The AI buildout is a critical-path problem</title>
+      <title>What limits an AI cluster from delivery to peak load</title>
       <link>https://archit15singh.github.io/posts/2026-11-20-ai-buildout-critical-path/</link>
       <pubDate>Fri, 20 Nov 2026 09:13:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-11-20-ai-buildout-critical-path/</guid>
-      <description>A deployment model shows why getting GPUs four months early can buy zero months of revenue and how to find the milestone that matters.</description>
+      <description>Model first billable capacity, moving bottlenecks and how a power cap changes inference queues.</description>
     </item>
     
     <item>
-      <title>Five predictions that could falsify my AI boom thesis</title>
-      <link>https://archit15singh.github.io/posts/2026-11-20-five-falsifiable-predictions/</link>
-      <pubDate>Fri, 20 Nov 2026 09:12:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-11-20-five-falsifiable-predictions/</guid>
-      <description>Five public indicators with deadlines, baseline values and rules for scoring a miss.</description>
-    </item>
-    
-    <item>
-      <title>What a sold-out HBM order book tells you</title>
-      <link>https://archit15singh.github.io/posts/2026-11-20-sold-out-hbm-contracts/</link>
-      <pubDate>Fri, 20 Nov 2026 09:11:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-11-20-sold-out-hbm-contracts/</guid>
-      <description>Follow a memory contract through deposits, shipment, deployment, and the economics of the application it ultimately serves.</description>
-    </item>
-    
-    <item>
-      <title>What the AI buildout changes for a PC builder</title>
-      <link>https://archit15singh.github.io/posts/2026-11-20-how-ai-infrastructure-affects-pc-builds/</link>
-      <pubDate>Fri, 20 Nov 2026 09:10:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-11-20-how-ai-infrastructure-affects-pc-builds/</guid>
-      <description>A matched DDR5 kit shows why posted price and stock both matter, especially for a local AI workstation.</description>
-    </item>
-    
-    <item>
-      <title>Why GPU rental and RAM prices can move in opposite directions</title>
-      <link>https://archit15singh.github.io/posts/2026-11-20-why-gpu-rent-and-ram-prices-diverge/</link>
-      <pubDate>Fri, 20 Nov 2026 09:09:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-11-20-why-gpu-rent-and-ram-prices-diverge/</guid>
-      <description>An AWS rate cut and a rising PC DRAM contract market show how installed capacity and fresh manufacturing respond to different constraints.</description>
-    </item>
-    
-    <item>
-      <title>Where will the next AI infrastructure bottleneck move?</title>
-      <link>https://archit15singh.github.io/posts/2026-11-20-next-ai-infrastructure-bottleneck/</link>
-      <pubDate>Fri, 20 Nov 2026 09:08:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-11-20-next-ai-infrastructure-bottleneck/</guid>
-      <description>Track how scarcity can move from accelerator supply to power, networking, and customer demand using the throughput of one workload.</description>
-    </item>
-    
-    <item>
-      <title>What happens when a GPU cluster hits a power limit?</title>
-      <link>https://archit15singh.github.io/posts/2026-11-20-gpu-cluster-power-limit/</link>
-      <pubDate>Fri, 20 Nov 2026 09:07:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-11-20-gpu-cluster-power-limit/</guid>
-      <description>Under the same site power cap, eight fast rack groups and twelve slower ones produce different queues. The better policy depends on the workload.</description>
-    </item>
-    
-    <item>
-      <title>Will GPUs become obsolete before they pay for themselves?</title>
-      <link>https://archit15singh.github.io/posts/2026-11-20-gpu-economic-life/</link>
-      <pubDate>Fri, 20 Nov 2026 09:06:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-11-20-gpu-economic-life/</guid>
-      <description>A reproducible three- versus five-year cash-flow model shows why a working GPU can fall short of earning back its purchase price.</description>
-    </item>
-    
-    <item>
-      <title>AI capex is climbing. What is happening to cash flow?</title>
+      <title>AI infrastructure cash flow and who finances the buildout</title>
       <link>https://archit15singh.github.io/posts/2026-11-20-ai-capex-cash-flow/</link>
       <pubDate>Fri, 20 Nov 2026 09:05:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/posts/2026-11-20-ai-capex-cash-flow/</guid>
-      <description>A filing-based comparison of Microsoft, Alphabet and Meta measures how much cash remained after equipment spending in the September quarters of 2025 and 2026.</description>
-    </item>
-    
-    <item>
-      <title>The circular money flows behind AI infrastructure</title>
-      <link>https://archit15singh.github.io/posts/2026-11-20-circular-ai-financing/</link>
-      <pubDate>Fri, 20 Nov 2026 09:04:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-11-20-circular-ai-financing/</guid>
-      <description>Anthropic&amp;#39;s AMD disclosure and CoreWeave&amp;#39;s NVIDIA agreements show how hardware supply, equity and capacity commitments can point in opposite directions.</description>
-    </item>
-    
-    <item>
-      <title>The true cost of serving one million AI tokens</title>
-      <link>https://archit15singh.github.io/posts/2026-11-20-true-cost-million-ai-tokens/</link>
-      <pubDate>Fri, 20 Nov 2026 09:03:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-11-20-true-cost-million-ai-tokens/</guid>
-      <description>Three public DeepSeek-R1 benchmark runs on the same rack show why a token cost estimate needs a latency target and an occupancy assumption.</description>
-    </item>
-    
-    <item>
-      <title>AI demand, GPU utilization and profit are three different metrics</title>
-      <link>https://archit15singh.github.io/posts/2026-11-20-ai-demand-utilization-profit/</link>
-      <pubDate>Fri, 20 Nov 2026 09:02:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-11-20-ai-demand-utilization-profit/</guid>
-      <description>CoreWeave&amp;#39;s Q3 2026 filing and a four-stage operating funnel show what each number can actually tell you.</description>
-    </item>
-    
-    <item>
-      <title>The strongest evidence against the AI bubble narrative</title>
-      <link>https://archit15singh.github.io/posts/2026-11-20-strongest-bullish-countercase/</link>
-      <pubDate>Fri, 20 Nov 2026 09:01:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/posts/2026-11-20-strongest-bullish-countercase/</guid>
-      <description>Paid usage, measured business adoption and infrastructure consumption make the bullish case, with different limits.</description>
+      <description>Compare three hyperscalers’ equipment spending, then follow the commitments, utilization and financing of a GPU operator.</description>
     </item>
     
     <item>
@@ -144,7 +56,7 @@
       <link>https://archit15singh.github.io/ai-infrastructure-reality-check/</link>
       <pubDate>Fri, 20 Nov 2026 09:00:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/ai-infrastructure-reality-check/</guid>
-      <description>Sixteen articles on the economics and engineering of the AI buildout, with source data, models and calculators.</description>
+      <description>Five articles on memory markets, GPU economics, physical deployment, cash flow and the evidence behind the AI boom.</description>
     </item>
     
     <item>
