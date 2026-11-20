@@ -2,17 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://archit15singh.github.io/tags/ai-infrastructure/</loc>
-    <lastmod>2026-11-20T09:16:00+05:30</lastmod>
+    <loc>https://archit15singh.github.io/posts/2026-11-20-online-migration-rollback-expires/</loc>
+    <lastmod>2026-11-20T20:10:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://archit15singh.github.io/</loc>
-    <lastmod>2026-11-20T09:16:00+05:30</lastmod>
+    <lastmod>2026-11-20T20:10:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://archit15singh.github.io/categories/</loc>
+    <lastmod>2026-11-20T20:10:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/data-engineering/</loc>
+    <lastmod>2026-11-20T20:10:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/distributed-systems/</loc>
+    <lastmod>2026-11-20T20:10:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/categories/engineering/</loc>
+    <lastmod>2026-11-20T20:10:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/posts/</loc>
+    <lastmod>2026-11-20T20:10:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/reliability/</loc>
+    <lastmod>2026-11-20T20:10:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/</loc>
+    <lastmod>2026-11-20T20:10:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/posts/2026-11-20-canaries-need-a-sample-budget/</loc>
+    <lastmod>2026-11-20T20:05:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/release-engineering/</loc>
+    <lastmod>2026-11-20T20:05:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/sre/</loc>
+    <lastmod>2026-11-20T20:05:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/ai-agents/</loc>
+    <lastmod>2026-11-20T20:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/posts/2026-11-20-agent-benchmarks-need-resource-budgets/</loc>
+    <lastmod>2026-11-20T20:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/evaluation/</loc>
+    <lastmod>2026-11-20T20:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://archit15singh.github.io/tags/ai-infrastructure/</loc>
     <lastmod>2026-11-20T09:16:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -22,17 +87,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://archit15singh.github.io/categories/engineering/</loc>
-    <lastmod>2026-11-20T09:16:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://archit15singh.github.io/posts/2026-11-20-how-ai-demand-raises-ddr5-prices/</loc>
-    <lastmod>2026-11-20T09:16:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/posts/</loc>
     <lastmod>2026-11-20T09:16:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -43,11 +98,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://archit15singh.github.io/series/</loc>
-    <lastmod>2026-11-20T09:16:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/</loc>
     <lastmod>2026-11-20T09:16:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -117,16 +167,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://archit15singh.github.io/tags/ai-agents/</loc>
-    <lastmod>2026-10-21T00:01:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/evaluation/</loc>
-    <lastmod>2026-10-21T00:01:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://archit15singh.github.io/tags/opencode/</loc>
     <lastmod>2026-10-21T00:01:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -153,11 +193,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://archit15singh.github.io/tags/deepseek/</loc>
-    <lastmod>2026-10-07T00:01:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://archit15singh.github.io/tags/reliability/</loc>
     <lastmod>2026-10-07T00:01:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

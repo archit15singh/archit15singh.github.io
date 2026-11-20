@@ -10,7 +10,31 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2026 00:01:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/reliability/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Nov 2026 20:10:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/reliability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An online migration can quietly lose its rollback</title>
+      <link>https://archit15singh.github.io/posts/2026-11-20-online-migration-rollback-expires/</link>
+      <pubDate>Fri, 20 Nov 2026 20:10:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-11-20-online-migration-rollback-expires/</guid>
+      <description>A copy can match at cutover and return stale data on rollback. Define how long the old path stays safe, then prove it with a write.</description>
+    </item>
+    
+    <item>
+      <title>A canary needs enough traffic to fail</title>
+      <link>https://archit15singh.github.io/posts/2026-11-20-canaries-need-a-sample-budget/</link>
+      <pubDate>Fri, 20 Nov 2026 20:05:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-11-20-canaries-need-a-sample-budget/</guid>
+      <description>A small rollout limits exposure, but it takes enough relevant traffic to detect a rare failure. A reproducible model shows the trade-off.</description>
+    </item>
+    
+    <item>
+      <title>An agent benchmark needs a resource budget</title>
+      <link>https://archit15singh.github.io/posts/2026-11-20-agent-benchmarks-need-resource-budgets/</link>
+      <pubDate>Fri, 20 Nov 2026 20:00:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-11-20-agent-benchmarks-need-resource-budgets/</guid>
+      <description>Anthropic moved a coding benchmark by six points without changing models. Here is how to tell a better agent from a better test environment.</description>
+    </item>
+    
     <item>
       <title>The Model Is Not the Agent — Inside DeepSeek Harness</title>
       <link>https://archit15singh.github.io/posts/2026-10-21-inside-deepseek-harness/</link>

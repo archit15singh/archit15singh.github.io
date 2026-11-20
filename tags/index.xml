@@ -10,7 +10,63 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Nov 2026 09:16:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Nov 2026 20:10:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Engineering</title>
+      <link>https://archit15singh.github.io/tags/data-engineering/</link>
+      <pubDate>Fri, 20 Nov 2026 20:10:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/tags/data-engineering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Distributed Systems</title>
+      <link>https://archit15singh.github.io/tags/distributed-systems/</link>
+      <pubDate>Fri, 20 Nov 2026 20:10:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/tags/distributed-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reliability</title>
+      <link>https://archit15singh.github.io/tags/reliability/</link>
+      <pubDate>Fri, 20 Nov 2026 20:10:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/tags/reliability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Release Engineering</title>
+      <link>https://archit15singh.github.io/tags/release-engineering/</link>
+      <pubDate>Fri, 20 Nov 2026 20:05:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/tags/release-engineering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SRE</title>
+      <link>https://archit15singh.github.io/tags/sre/</link>
+      <pubDate>Fri, 20 Nov 2026 20:05:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/tags/sre/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AI Agents</title>
+      <link>https://archit15singh.github.io/tags/ai-agents/</link>
+      <pubDate>Fri, 20 Nov 2026 20:00:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/tags/ai-agents/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evaluation</title>
+      <link>https://archit15singh.github.io/tags/evaluation/</link>
+      <pubDate>Fri, 20 Nov 2026 20:00:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/tags/evaluation/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>AI Infrastructure</title>
       <link>https://archit15singh.github.io/tags/ai-infrastructure/</link>
@@ -92,22 +148,6 @@
     </item>
     
     <item>
-      <title>AI Agents</title>
-      <link>https://archit15singh.github.io/tags/ai-agents/</link>
-      <pubDate>Wed, 21 Oct 2026 00:01:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/tags/ai-agents/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Evaluation</title>
-      <link>https://archit15singh.github.io/tags/evaluation/</link>
-      <pubDate>Wed, 21 Oct 2026 00:01:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/tags/evaluation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>OpenCode</title>
       <link>https://archit15singh.github.io/tags/opencode/</link>
       <pubDate>Wed, 21 Oct 2026 00:01:00 +0530</pubDate>
@@ -144,14 +184,6 @@
       <link>https://archit15singh.github.io/tags/deepseek/</link>
       <pubDate>Wed, 07 Oct 2026 00:01:00 +0530</pubDate>
       <guid>https://archit15singh.github.io/tags/deepseek/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reliability</title>
-      <link>https://archit15singh.github.io/tags/reliability/</link>
-      <pubDate>Wed, 07 Oct 2026 00:01:00 +0530</pubDate>
-      <guid>https://archit15singh.github.io/tags/reliability/</guid>
       <description></description>
     </item>
     
