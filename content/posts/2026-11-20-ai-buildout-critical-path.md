@@ -36,6 +36,8 @@ The model covers one cluster at one site. The operator can bill once the custome
 | Commissioning | Energization, cooling, GPUs, and fabric | 23 |
 | Contractual acceptance | Commissioning and customer readiness | 25 |
 
+{{< figure class="series-figure" src="/downloads/ai-infrastructure-reality-check/cluster-commissioning-timeline.webp" link="/downloads/ai-infrastructure-reality-check/cluster-commissioning-timeline.webp" alt="The baseline model puts GPU delivery in month 12, energization in month 20, and first billing after customer acceptance in month 25." caption="Teal marks the baseline critical path. The chart shows selected tasks, with switchgear and permitting dependencies retained in the model." width="1184" height="776" >}}
+
 Each task waits for its last prerequisite. The switchgear is ready in month 14 and the grid connection in month 20, so the crew can energize the site in month 20. Commissioning takes three months. Acceptance takes two. The grid connection is on the critical path, the chain of work that determines the earliest possible finish. Cooling has one month to slip before it pushes back commissioning. The fabric has four.
 
 An accelerator delivery in month 8 leaves the operator carrying the equipment four months longer, with billing still fixed at month 25. Paying for an earlier shipment may be worth it if it buys protection against a later shortage. Before signing, check whether the supplier can hold the shipment and who pays for storage and financing.
@@ -89,6 +91,8 @@ Every run gets the same 30 minutes of traffic. The queue receives 75 requests a 
 | 12 full-power groups | 10.0 | 83.3 | 69.4% | 1 min | 100% | 0 |
 | 8 full-power groups | 7.2 | 78.3 | 97.9% | 4 min | 54.2% | 200 |
 | 12 capped groups | 7.0 | 83.3 | 86.8% | 2 min | 100% | 40 |
+
+{{< figure class="series-figure" src="/downloads/ai-infrastructure-reality-check/power-cap-deadline-sensitivity.webp" link="/downloads/ai-infrastructure-reality-check/power-cap-deadline-sensitivity.webp" alt="At the 7.2 MW limit, 54.2% finish on time with eight full-power groups, 100% with twelve capped groups at 96 requests per minute, and 41.0% at 72." caption="The same arrival trace and power limit apply to all three cases. The last two rows change how much throughput a capped group retains." width="1184" height="664" >}}
 
 At 7.2 MW, eight groups at full power leave 200 requests in the queue at the peak. Twelve groups at reduced power bring the peak to 40. At 450 kW, each capped group in that run keeps 80% of its capacity on about 64% of its full power reservation.
 

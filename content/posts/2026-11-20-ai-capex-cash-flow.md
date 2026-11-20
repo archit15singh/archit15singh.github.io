@@ -19,6 +19,8 @@ aliases:
 
 From the September 2025 quarter to the same quarter in 2026, Microsoft, Alphabet and Meta brought in $9.6 billion more operating cash. They spent $62.5 billion more on property and equipment. After those purchases, the three companies had $8.41 billion left between them, down from $61.29 billion a year earlier. [Microsoft Form 10-Q](https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm) · [Alphabet results](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm) · [Meta results](https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm)
 
+{{< figure class="series-figure" src="/downloads/ai-infrastructure-reality-check/hyperscaler-cash-spend-bridge.webp" link="/downloads/ai-infrastructure-reality-check/hyperscaler-cash-spend-bridge.webp" alt="Combined cash remaining after equipment fell from $61.3B to $8.4B. Operating cash rose $9.6B while equipment cash spending rose $62.5B." caption="The bridge compares the same September quarter in each year. It uses consolidated cash flows and excludes the separate finance-lease adjustment." width="1184" height="696" >}}
+
 ## The same subtraction across three statements
 
 Each column compares the three months through September 30. Microsoft calls the 2026 period its fiscal first quarter. I take cash purchases or additions to property and equipment from the investing section, show the spend as a positive amount, and subtract it from operating cash flow. The filings report consolidated figures for all of each company's businesses.
@@ -90,3 +92,6 @@ A power contract describes capacity the operator expects to have. Before a GPU c
 Track paid reservations, metered hours and active GPU time separately. A customer can leave a prepaid GPU idle and still pay for the hour. At renewal, that unused capacity gives the customer a reason to reconsider the contract.
 
 CoreWeave reported a 62% adjusted EBITDA margin for the quarter. The largest adjustments in its reconciliation were $1.89 billion of depreciation and amortization and $846 million of net interest. Start with the $207 million of operating income, subtract the $846 million in interest, add $13 million in other income and deduct $83 million for taxes. That's how a profitable operating quarter becomes a $709 million net loss. [CoreWeave Q3 2026 results and non-GAAP reconciliation](https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm)
+
+
+{{< figure class="series-figure" src="/downloads/ai-infrastructure-reality-check/coreweave-net-loss-bridge.webp" link="/downloads/ai-infrastructure-reality-check/coreweave-net-loss-bridge.webp" alt="CoreWeave reported $207M operating income, $846M net interest expense, $13M other income, $83M income taxes, and a $709M net loss." caption="The bridge starts at CoreWeave’s reported operating income and ends at its GAAP net loss. Amounts are rounded to millions of dollars." width="1184" height="696" >}}
