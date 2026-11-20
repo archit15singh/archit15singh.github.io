@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="584" viewBox="0 0 1040 584" role="img" aria-labelledby="title desc">
+<title id="title">Who supplies what in the AI stack</title>
+<desc id="desc">Memory goes to accelerator makers. Accelerators, power, and facilities enable compute services. Compute providers sell capacity to model and application companies, which sell workflows to end customers. Buyers pay suppliers and can take on future utilization risk.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0l10 5-10 5z" fill="#92dfb9"/></marker></defs>
+<rect width="1040" height="584" rx="16" fill="#121b26"/>
+<g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+<g fill="#edf4fb"><text x="40" y="58" font-size="34" font-weight="700">Who supplies what in the AI stack</text><text x="40" y="91" font-size="20" fill="#bdcddd">Arrows show products and services. Payments flow back to suppliers.</text></g>
+<g fill="none" stroke="#92dfb9" stroke-width="3" marker-end="url(#arrow)">
+<path d="M152 199V234"/><path d="M152 324v33q0 10 10 10h278v37"/>
+<path d="M520 324v80"/><path d="M888 324v33q0 10-10 10H600v37"/><path d="M652 452h106"/>
+</g>
+<g fill="#1f2d3e" stroke="#476076">
+<rect x="40" y="112" width="224" height="82" rx="12"/><rect x="40" y="238" width="224" height="82" rx="12"/>
+<rect x="408" y="238" width="224" height="82" rx="12"/><rect x="776" y="238" width="224" height="82" rx="12"/>
+<rect x="391" y="410" width="258" height="84" rx="12"/><rect x="764" y="410" width="236" height="84" rx="12"/>
+</g>
+<g font-size="23" font-weight="700" fill="#f3f6fa">
+<text x="57" y="145">Memory</text><text x="57" y="271">Silicon</text><text x="425" y="271">Power</text><text x="793" y="271">Facilities</text><text x="409" y="444">Compute</text><text x="782" y="444">Applications</text>
+</g>
+<g font-size="17" fill="#bdcddd">
+<text x="57" y="173">DRAM and HBM</text><text x="57" y="297">Accelerators and fabric</text><text x="425" y="297">Energized capacity</text><text x="793" y="297">Space and cooling</text><text x="409" y="471">Billable GPU hours</text><text x="782" y="471">Paid use and renewals</text>
+<text x="40" y="552">Prepayments, deposits, debt and equity can fund delivery before the ordinary invoices are due.</text>
+</g>
+</g>
+</svg>

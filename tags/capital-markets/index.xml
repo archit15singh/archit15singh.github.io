@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Capital Markets on Archit Singh</title>
+    <link>https://archit15singh.github.io/tags/capital-markets/</link>
+    <description>Recent content in Capital Markets on Archit Singh</description>
+    <image>
+      <url>https://archit15singh.github.io/images/social/archit-singh.png</url>
+      <link>https://archit15singh.github.io/images/social/archit-singh.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Nov 2026 09:04:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/capital-markets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The circular money flows behind AI infrastructure</title>
+      <link>https://archit15singh.github.io/posts/2026-11-20-circular-ai-financing/</link>
+      <pubDate>Fri, 20 Nov 2026 09:04:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-11-20-circular-ai-financing/</guid>
+      <description>Anthropic&amp;#39;s AMD disclosure and CoreWeave&amp;#39;s NVIDIA agreements show how hardware supply, equity and capacity commitments can point in opposite directions.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Observability on Archit Singh</title>
+    <link>https://archit15singh.github.io/tags/observability/</link>
+    <description>Recent content in Observability on Archit Singh</description>
+    <image>
+      <url>https://archit15singh.github.io/images/social/archit-singh.png</url>
+      <link>https://archit15singh.github.io/images/social/archit-singh.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Nov 2026 09:02:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/observability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI demand, GPU utilization and profit are three different metrics</title>
+      <link>https://archit15singh.github.io/posts/2026-11-20-ai-demand-utilization-profit/</link>
+      <pubDate>Fri, 20 Nov 2026 09:02:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-11-20-ai-demand-utilization-profit/</guid>
+      <description>CoreWeave&amp;#39;s Q3 2026 filing and a four-stage operating funnel show what each number can actually tell you.</description>
+    </item>
+    
+  </channel>
+</rss>

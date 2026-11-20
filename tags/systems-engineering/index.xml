@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Systems Engineering on Archit Singh</title>
+    <link>https://archit15singh.github.io/tags/systems-engineering/</link>
+    <description>Recent content in Systems Engineering on Archit Singh</description>
+    <image>
+      <url>https://archit15singh.github.io/images/social/archit-singh.png</url>
+      <link>https://archit15singh.github.io/images/social/archit-singh.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Nov 2026 09:13:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/systems-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The AI buildout is a critical-path problem</title>
+      <link>https://archit15singh.github.io/posts/2026-11-20-ai-buildout-critical-path/</link>
+      <pubDate>Fri, 20 Nov 2026 09:13:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-11-20-ai-buildout-critical-path/</guid>
+      <description>A deployment model shows why getting GPUs four months early can buy zero months of revenue and how to find the milestone that matters.</description>
+    </item>
+    
+    <item>
+      <title>Where will the next AI infrastructure bottleneck move?</title>
+      <link>https://archit15singh.github.io/posts/2026-11-20-next-ai-infrastructure-bottleneck/</link>
+      <pubDate>Fri, 20 Nov 2026 09:08:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-11-20-next-ai-infrastructure-bottleneck/</guid>
+      <description>Track how scarcity can move from accelerator supply to power, networking, and customer demand using the throughput of one workload.</description>
+    </item>
+    
+  </channel>
+</rss>

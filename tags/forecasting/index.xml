@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Forecasting on Archit Singh</title>
+    <link>https://archit15singh.github.io/tags/forecasting/</link>
+    <description>Recent content in Forecasting on Archit Singh</description>
+    <image>
+      <url>https://archit15singh.github.io/images/social/archit-singh.png</url>
+      <link>https://archit15singh.github.io/images/social/archit-singh.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Nov 2026 09:12:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/forecasting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Five predictions that could falsify my AI boom thesis</title>
+      <link>https://archit15singh.github.io/posts/2026-11-20-five-falsifiable-predictions/</link>
+      <pubDate>Fri, 20 Nov 2026 09:12:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-11-20-five-falsifiable-predictions/</guid>
+      <description>Five public indicators with deadlines, baseline values and rules for scoring a miss.</description>
+    </item>
+    
+  </channel>
+</rss>

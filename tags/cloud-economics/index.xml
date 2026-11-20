@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cloud Economics on Archit Singh</title>
+    <link>https://archit15singh.github.io/tags/cloud-economics/</link>
+    <description>Recent content in Cloud Economics on Archit Singh</description>
+    <image>
+      <url>https://archit15singh.github.io/images/social/archit-singh.png</url>
+      <link>https://archit15singh.github.io/images/social/archit-singh.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Nov 2026 09:09:00 +0530</lastBuildDate><atom:link href="https://archit15singh.github.io/tags/cloud-economics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why GPU rental and RAM prices can move in opposite directions</title>
+      <link>https://archit15singh.github.io/posts/2026-11-20-why-gpu-rent-and-ram-prices-diverge/</link>
+      <pubDate>Fri, 20 Nov 2026 09:09:00 +0530</pubDate>
+      <guid>https://archit15singh.github.io/posts/2026-11-20-why-gpu-rent-and-ram-prices-diverge/</guid>
+      <description>An AWS rate cut and a rising PC DRAM contract market show how installed capacity and fresh manufacturing respond to different constraints.</description>
+    </item>
+    
+  </channel>
+</rss>
