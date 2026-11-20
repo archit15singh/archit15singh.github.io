@@ -19,7 +19,7 @@ Stripe's online migration write-up describes moving subscription data for a syst
 
 Here is a small example. A subscription starts at revision 1. By the time the copy finishes, both stores hold revision 2. A shadow comparison agrees, so the new read path takes over. The next write changes the new store to revision 3 only. Switch reads back and the user gets revision 2. Both stores can be perfectly healthy throughout.
 
-{{< figure src="/downloads/software-reliability/migration-revisions.webp" link="/downloads/software-reliability/migration-revisions.webp" alt="Both stores hold revision 2 at cutover. After a new-store-only write, the new store has revision 3 while a rollback still reads revision 2 from the old store." caption="Illustrative record history. Parity at the read cutover expires when the old store stops receiving writes." width="1200" height="675" >}}
+{{< figure class="series-figure" src="/downloads/software-reliability/migration-revisions.webp" link="/downloads/software-reliability/migration-revisions.webp" alt="Both stores hold revision 2 at cutover. After a new-store-only write, the new store has revision 3 while a rollback still reads revision 2 from the old store." caption="Illustrative record history. Parity at the read cutover expires when the old store stops receiving writes." width="1200" height="675" >}}
 
 A useful rollback rehearsal writes a new value after the cutover, restores the old read path, and verifies that the latest acknowledged value is still visible. Include deletion, retry and delayed update cases as well. A revision check matters when a backfill and a live write race. If the copy can overwrite a newer value, agreement measured before that interleaving says little about the eventual result.
 
