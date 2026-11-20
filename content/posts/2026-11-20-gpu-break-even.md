@@ -17,13 +17,13 @@ aliases:
 
 *Part of [The AI Infrastructure Reality Check](/ai-infrastructure-reality-check/).*
 
-A GPU can sell 90% of the hours in a year and still come up $1,212 short. In the deployment below, the operator realizes $2 an hour, pays for a share of the server and network, and expects to replace the hardware after four years. Push the rental rate to $2.50 and the same machine needs to sell about 77% of the year. Open the [GPU break-even calculator](/downloads/ai-infrastructure-reality-check/gpu-break-even.html) to change any of those inputs.
+In the model below, a GPU earns $2 an hour for 90% of the year and still finishes $1,212 short. The operator bought a share of the server and network along with the GPU and needs to recover that investment over four years. At $2.50 an hour, the same installation breaks even at about 77% billable time. The [GPU break-even calculator](/downloads/ai-infrastructure-reality-check/gpu-break-even.html) lets you price your own assumptions.
 
 ## Price the billable hour
 
-A billing record tells you what the customer owes. GPU telemetry tells you how much work the device did during the sample. The two can move independently. An eight-GPU reservation can be fully billable while a customer's code runs on six GPUs. A week spent testing the provider's software can keep all eight busy without yielding a billable hour. The denominator I use is 8,760 calendar hours per GPU. Every outage, empty slot or maintenance hour reduces the fraction that can be sold.
+Suppose a customer reserves eight GPUs and runs jobs on six. The invoice covers eight. The provider could keep all eight busy for a week testing its own software and bill nothing for that time. Start with the 8,760 calendar hours each GPU provides per year. Count the hours customers actually pay for, leaving outages, maintenance and idle periods in the denominator.
 
-Allocate the accelerator, host and initial fabric cost to each GPU. Convert that investment into an annual capital charge using the deployment's economic life and cost of capital. Add annual fixed expenses and the baseline electricity cost. Finally, add the incremental energy cost as the fleet works.
+Each GPU has to pay for part of the host and network fabric as well as the accelerator itself. The capital charge converts that bill into a yearly cost at the return the operator requires. Fixed operations and idle electricity also accrue all year. The rest of the electricity bill follows the hours the equipment spends under load.
 
 ```text
 capital charge = installed cost × r / (1 − (1 + r)^(−life))
@@ -37,7 +37,7 @@ break-even billable fraction = annual fixed cost
                                / (8,760 × (realized rate − variable cost))
 ```
 
-The annual capital charge is the cash-flow equivalent of recovering the upfront investment at the assumed return. At a zero discount rate it becomes cost divided by life. There is no resale value in this model. The fixed operating line includes staffing, maintenance, space and recurring network costs allocated per GPU. A site budget that charges for power demand or reserved utility capacity can include those charges in that line. PUE is facility electricity divided by IT electricity over a matching period. In this scenario it allocates the cooling and other facility overhead on top of IT load.
+Here `r` is the annual cost of capital. With a zero discount rate, divide the installed cost by the years of service. The example assigns zero resale value. Fixed operations cover each GPU's share of staffing, maintenance, floor space and recurring network costs. Include power demand charges and fees for reserved utility capacity in fixed operations if the site pays them. Power usage effectiveness (PUE) is total facility electricity divided by IT electricity for the same period. Multiplying IT consumption by PUE adds the facility's share of cooling and other overhead.
 
 | Base case assumption | Amount per GPU |
 | --- | ---: |
@@ -48,9 +48,9 @@ The annual capital charge is the cash-flow equivalent of recovering the upfront 
 | PUE and energy tariff | 1.25, $0.09/kWh |
 | Realized rate and billable fraction | $2.00/h, 90% |
 
-NVIDIA lists a configurable maximum TDP up to 700 W for the H100 SXM. That is a device specification. The 0.90 kW here is a synthetic loaded allocation for a GPU plus its share of IT equipment. The energy equation treats every billable hour as loaded and every other hour as idle. A fleet running internal jobs should account for their energy use separately. [NVIDIA H100 specifications](https://www.nvidia.com/en-us/data-center/h100/)
+NVIDIA specifies up to 700 W of configurable thermal design power (TDP) for the H100 SXM. The loaded draw in the model, 0.90 kW, is an assumption for the GPU and its share of the other IT equipment. The equation applies loaded power to billable hours and idle power to the rest. If the provider runs internal jobs, add their electricity separately. [NVIDIA H100 specifications](https://www.nvidia.com/en-us/data-center/h100/)
 
-The $36,000 investment requires an annual capital charge of about $11,357. Fixed operations and idle electricity bring annual fixed cost to $16,403. Each loaded hour adds about 7.3 cents in electricity. At 90% billable, 7,884 hours earn $15,768 and cost approximately $16,980, including the capital charge. This is an annual economic result before tax. Monthly cash balances will follow the actual payment schedules.
+Recovering the $36,000 investment at the required return costs about $11,357 a year. Add operations and idle electricity and the annual fixed bill comes to $16,403, even with an empty booking calendar. Each loaded hour adds about 7.3 cents. At 90% billable, the provider earns $15,768 over 7,884 hours and incurs about $16,980 in annual costs including the capital charge. That's the economic result before tax. The cash account follows the actual payment dates.
 
 | Realized rate | Share of calendar hours needed |
 | ---: | ---: |
@@ -60,15 +60,15 @@ The $36,000 investment requires an annual capital charge of about $11,357. Fixed
 | $3.00 | 64.0% |
 | $4.00 | 47.7% |
 
-That table explains why a cheaper power contract can matter less than a few lost customers. At 90% billable, lowering energy prices from 9 to 7 cents per kWh saves about $183 a year. A drop from 90% to 80% billable costs about $1,688 a year at $2/h after the associated energy savings. Change the location, tariff, model or cooling system and the comparison can change with it.
+Cut the electricity tariff from 9 to 7 cents per kWh and the provider saves about $183 a year at 90% billable. Losing ten points of billable time, from 90% to 80%, costs about $1,688 a year at $2/h even after the electricity savings. At this site and with this equipment, finding paying workloads does more for the budget than negotiating those two cents.
 
 ## Put a price on years four and five
 
-The physical life ends when the machine stops being serviceable. The accounting life is the period over which management expects to depreciate the asset, subject to its accounting policies and estimates. CoreWeave's 2025 annual report lists six years for technology equipment. Meta extended the estimated useful life of most servers and network assets to 5.5 years in January 2025. Those are policies for asset classes that include more than one GPU generation and, in Meta's case, network equipment. [CoreWeave 2025 Form 10-K](https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm) · [Meta 2025 Form 10-K](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm)
+A functioning server can have years of work left when demand for its GPU generation falls. A depreciation schedule gives another answer to how long the equipment will last. CoreWeave's 2025 annual report lists six years for technology equipment. In January 2025 Meta extended the estimated useful life of most servers and network assets to 5.5 years. These policies apply to asset classes that include several GPU generations and, at Meta, network equipment. [CoreWeave 2025 Form 10-K](https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm) · [Meta 2025 Form 10-K](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm)
 
-The four-year break-even calculation holds the hourly rate steady. If a new generation pushes the rental rate down, spread the cash flows across years and test how much the later years are worth. This second scenario uses a different equipment budget and a starting rate of $3.20.
+The first model charges for four years of equipment and assumes a steady rental rate. Suppose customers start paying less after a new GPU generation ships. The buyer needs to know how much years four and five are worth at the price customers would actually pay.
 
-Consider an illustrative GPU-equivalent slice of a deployment. It costs $35,000 up front, including its share of server and network hardware. The year-one realized rate is $3.20 per billable GPU-hour. At 72% of 8,760 calendar hours, it bills 6,307.2 hours a year. Annual operating cash cost is $4,200, covering the modeled allocation of power, hosting, maintenance and labor. All rates and costs are assumed. The model discounts year-end cash flows at 10%, with zero salvage value and no taxes, working-capital changes or financing cash flows.
+In this second scenario, one GPU's share of the installation costs $35,000. It earns $3.20 per billable GPU-hour in year one. At 72% of 8,760 calendar hours, it sells 6,307.2 hours each year. Power, hosting, maintenance and labor cost $4,200 in cash each year. All inputs are assumptions. The model discounts year-end cash flows at 10%, assumes zero salvage value, and excludes taxes, working-capital changes and financing cash flows. Subtracting the investment from the discounted cash gives net present value (NPV).
 
 ```text
 rate in year t = $3.20 × (1 − annual rate decline)^(t − 1)
@@ -84,15 +84,15 @@ NPV through year T = −$35,000 + sum of year t cash / 1.10^t
 
 ![Three cash-flow curves for the modeled GPU. At a 15% annual price decline, discounted cash turns positive in year four. At 30%, it remains negative through year five.](/downloads/ai-infrastructure-reality-check/gpu-economic-life.png)
 
-Year one is identical across all three rows. At a 15% decline, years four and five rescue the economics. At a 30% decline, the GPU is still generating a little operating cash in year five and still falls $5,729 short in present-value terms. At that steeper decline, a five-year project needs a starting rate of about $3.61 per billable hour to break even under the same assumptions.
+Every row starts with the same year-one cash flow. With an annual price drop of 15%, years four and five take net present value above zero. With a 30% annual drop, the machine still generates $646 of cash in year five. The project has a $5,729 shortfall in present-value terms. At that rate of decline, the operator needs about $3.61 per billable hour in year one to make a five-year project break even.
 
-The model holds billable hours constant while the price falls. In practice, an older fleet can lose both at once if a customer leaves. Alternatively, a lower price can fill previously idle capacity. Neither relationship is estimated here. The table is a sensitivity test. [Run the Python model](/downloads/ai-infrastructure-reality-check/gpu-economic-life.py) · [Download the default results](/downloads/ai-infrastructure-reality-check/gpu-economic-life.csv)
+Every scenario sells the same number of hours. A departing customer could cut both occupancy and the achievable price. The reverse can happen when a lower rate brings in work for otherwise idle GPUs. You can set the billable share and price decline in the model to see how much each assumption costs. [Run the Python model](/downloads/ai-infrastructure-reality-check/gpu-economic-life.py) · [Download the default results](/downloads/ai-infrastructure-reality-check/gpu-economic-life.csv)
 
 ## Convert rack-hours to useful tokens
 
-The same GB200 rack posted 523,790 output tokens per second in an offline DeepSeek-R1 benchmark and 240,274 in an interactive benchmark. At the same assumed hourly cost, a million output tokens would cost 2.18 times as much in the second run. That difference appears before a quiet hour, a retry, or any extra idle capacity for a traffic spike. [MLPerf Inference v6.1, NVIDIA DeepSeek-R1 submission](https://github.com/mlcommons/inference_results_v6.1/tree/6623c6c8bac460c46a8768ac261bc0889c9c7f13/closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1)
+In the published DeepSeek-R1 runs, one GB200 rack produced 523,790 output tokens per second in Offline and 240,274 in Interactive. If the hourly rack cost stays fixed, the cost of producing a million output tokens at the interactive throughput is 2.18 times the offline cost. Quiet periods, retries and spare capacity for traffic spikes would raise the cost further. [MLPerf Inference v6.1, NVIDIA DeepSeek-R1 submission](https://github.com/mlcommons/inference_results_v6.1/tree/6623c6c8bac460c46a8768ac261bc0889c9c7f13/closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1)
 
-The performance logs come from one submitter, system and model in MLCommons' published repository. All three runs are marked valid. Offline measures bulk processing, while Server and Interactive use online request schedules and latency requirements. Interactive has a tighter time-per-output-token limit. Settings and serving techniques can differ across scenarios, so this is a comparison of submitted runs. The measured differences reflect the full serving configurations.
+MLCommons marks all three runs as valid. They come from one submitter using the same system and model. Offline measures bulk processing. Server and Interactive send requests online and impose latency limits, with a tighter time-per-output-token limit for Interactive. The submissions can use different serving settings, so the numbers describe each run's complete configuration.
 
 | Scenario | Output tokens/s, rack-wide | p99 time to first token | p99 time per output token |
 |---|---:|---:|---:|
@@ -100,11 +100,11 @@ The performance logs come from one submitter, system and model in MLCommons' pub
 | [Server](https://github.com/mlcommons/inference_results_v6.1/blob/6623c6c8bac460c46a8768ac261bc0889c9c7f13/closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_summary.txt) | 395,940 | 869 ms | 65.8 ms |
 | [Interactive](https://github.com/mlcommons/inference_results_v6.1/blob/6623c6c8bac460c46a8768ac261bc0889c9c7f13/closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Interactive/performance/run_1/mlperf_log_summary.txt) | 240,274 | 527 ms | 14.6 ms |
 
-The hourly model prices the capacity you provision. A rack-wide throughput number adds the output from concurrent requests. An individual user experiences the delay before the first token and the pace of tokens after that. The interactive run trades aggregate throughput for a faster stream in the published measurements.
+A rack can generate hundreds of thousands of tokens per second because it serves requests in parallel. At the other end of one request, a user waits for the first token and then reads the rest as they arrive. The published interactive run gives that user a faster stream while the rack generates fewer tokens overall.
 
-Prefill processes the prompt and builds its key-value (KV) cache. Decode then generates tokens sequentially for that request and uses the cached keys and values for attention. Continuous batching puts work from multiple requests together. It gives the hardware more work per step, but a large prefill or a more crowded batch can change latency for requests already decoding. DistServe's OSDI paper measured the interference and moved prefill and decode onto separate GPU pools, at the cost of moving the KV state between them. The same design that removes a scheduling conflict now needs network bandwidth. [DistServe, OSDI 2024](https://www.usenix.org/conference/osdi24/presentation/zhong-yinmin)
+The server reads the prompt during prefill and saves the attention keys and values in a KV cache. Decode uses that cache to produce each successive output token. Continuous batching lets the GPU do work for several requests in one step. A long prefill can delay requests already decoding, and larger batches can also affect their latency. The DistServe researchers measured the interference and separated prefill and decode onto different GPU pools. That puts the KV cache on the network between the pools, so the link now has to carry it. [DistServe, OSDI 2024](https://www.usenix.org/conference/osdi24/presentation/zhong-yinmin)
 
-Suppose the all-in pool cost is $216 per provisioned hour, equivalent to $3 per GPU-hour across 72 GPUs. This is a rounded scenario input. A hosted deployment can start from its rental bill plus separately charged services. An owned rack needs an hourly share of hardware, facilities, power, networking and operations. The denominator is usable output tokens across the same provisioned hour.
+Price the 72 GPUs at an assumed $3 each and the pool costs $216 for every hour you provision it. For rented GPUs, start with the invoice and add services billed separately. For an owned rack, allocate equipment, facilities, power, networking and operations by the hour. Divide that hourly cost by the usable output from the same hour.
 
 ```text
 USD per million usable output tokens =
@@ -112,8 +112,8 @@ USD per million usable output tokens =
     / (3,600 * reference output tokens/second * realized throughput share * usable-token share)
 ```
 
-Under full benchmark throughput and a 100% usable-token share, the model returns $0.115 for Offline, $0.152 for Server, and $0.250 for Interactive. With Interactive as the reference and a production scenario that realizes 55% of that throughput over a provisioned hour, of which 90% meets the service target, the result is **$0.504 per million usable output tokens**. The 55% represents a throughput ratio across time. GPU activity readings would be a poor substitute. The 90% is a share of tokens belonging to qualifying requests, which can differ from the share of requests that qualify.
+At full benchmark throughput and 100% usable output, the cost per million is $0.115 for Offline, $0.152 for Server and $0.250 for Interactive. Now suppose the provisioned rack averages 55% of that Interactive throughput and 90% of the output tokens come from requests that met the service target. The result is **$0.504 per million usable output tokens**. The 55% measures throughput across the hour. GPU activity would measure something else. The 90% counts tokens in qualifying requests, so a long request carries more weight than a short one.
 
-The figures are serving scenarios, with prompt cost already embedded in each benchmark's workload mix and API pricing left out of the calculation. Production prompt lengths, prefix reuse, reasoning output, cancellations and retries can move both factors. When retries consume capacity, charge that time to the pool and count the accepted output once.
+The benchmark's workload already incorporates the cost of processing its prompts. These calculations exclude API prices. A live workload can have longer prompts, different prefix reuse, extra reasoning output or more cancellations. Charge retries to the pool and count accepted output once.
 
-[Download the model](/downloads/ai-infrastructure-reality-check/physical-infrastructure-models.py) and run `python3 physical-infrastructure-models.py tokens` to reproduce the table. Use `--hourly-cost`, `--fill` and `--usable` to test your inputs. For a real service, replay a trace with its prompt and output length distribution, then divide the pool's cost by the output that arrived within its service target. A million tokens only becomes a useful unit once you know when the user received them.
+Run `python3 physical-infrastructure-models.py tokens` to reproduce the calculation. The `--hourly-cost`, `--fill` and `--usable` options let you substitute your own inputs. For a deployment decision, replay real prompts and output lengths against the latency target. Divide the pool's cost by the output from requests that met the target. [Download the model](/downloads/ai-infrastructure-reality-check/physical-infrastructure-models.py)
