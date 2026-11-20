@@ -25,3 +25,4 @@ A memory supplier sells a wafer’s worth of chips. A cloud operator sells GPU h
 - [GPU economic-life model](/downloads/ai-infrastructure-reality-check/gpu-economic-life.py) and its [scenario results](/downloads/ai-infrastructure-reality-check/gpu-economic-life.csv)
 - [Capex and cash flow](/downloads/ai-infrastructure-reality-check/capex-cash-flow.csv) and [DDR5 retail observations](/downloads/ai-infrastructure-reality-check/retail-ddr5-observations.csv)
 - [Prediction scorecard](/downloads/ai-infrastructure-reality-check/prediction-scorecard.csv)
+- [Python source for the ten article figures](/downloads/ai-infrastructure-reality-check/series-figures.py)

@@ -44,6 +44,8 @@ By September 30, 2026, Anthropic counted more than 11,900 customers generating a
 
 The U.S. Census Bureau's Business Trends and Outlook Survey asked a nationally representative sample of firms whether they used AI in a business function. Researchers found that 18% did during the November 2025 to January 2026 reference period. Weight the firms by employment and the share rises to 32%, because larger businesses reported using AI more often. That 32% is the share of employees who work for firms that reported using AI. [U.S. Census Bureau working paper, The Microstructure of AI Diffusion](https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-25.html)
 
+{{< figure class="series-figure" src="/downloads/ai-infrastructure-reality-check/ai-adoption-two-denominators.webp" link="/downloads/ai-infrastructure-reality-check/ai-adoption-two-denominators.webp" alt="18% of firms reported using AI in a business function. 32% of employment was at firms that reported AI use." caption="The employment-weighted measure counts workers at firms that report AI use in a business function." width="1184" height="568" >}}
+
 A company can report using AI in a workflow without knowing what the workflow saves. The survey measures how widely firms say they've put AI to work. The prospectus puts a dollar figure on one vendor's sales.
 
 The International Energy Agency estimates that global electricity demand from data centers rose 17% in 2025. At sites the IEA classifies as AI-focused, it rose 50%. Electricity demand covers everything the facility powers, including the overhead for keeping equipment running. The meter gives a separate way to track the buildout. To measure the return, you need figures on the revenue those sites help earn and what it costs to run them. [IEA, Key Questions on Energy and AI](https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary)
@@ -53,6 +55,8 @@ The International Energy Agency estimates that global electricity demand from da
 I expect paid use to grow even as some operators wait to commission new sites or struggle to earn back what they spent. These five thresholds date to November 20, 2026. Each one calls for a figure from a public disclosure.
 
 The [scorecard CSV](/downloads/ai-infrastructure-reality-check/prediction-scorecard.csv) has a row for each threshold, with space to fill in results as the filings come out.
+
+{{< figure class="series-figure" src="/downloads/ai-infrastructure-reality-check/ai-boom-prediction-scorecard.webp" link="/downloads/ai-infrastructure-reality-check/ai-boom-prediction-scorecard.webp" alt="Five thresholds for 2027 measure Anthropic compute expense as a share of revenue, CoreWeave power and interest coverage, Digital Realty lease lag, and NVIDIA Data Center revenue." caption="The 2026 disclosures establish the baselines. The deadline for scoring the five predictions is December 31, 2027." width="1184" height="760" >}}
 
 ### 1. A model company will turn usage growth into a lower compute ratio
 

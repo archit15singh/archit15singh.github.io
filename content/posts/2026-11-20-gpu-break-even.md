@@ -60,6 +60,8 @@ Recovering the $36,000 investment at the required return costs about $11,357 a y
 | $3.00 | 64.0% |
 | $4.00 | 47.7% |
 
+{{< figure class="series-figure" src="/downloads/ai-infrastructure-reality-check/gpu-break-even-curve.webp" link="/downloads/ai-infrastructure-reality-check/gpu-break-even-curve.webp" alt="The model breaks even at 97.2% billable hours for $2 per hour and 77.2% for $2.50. At $1.50 it would need 131.2%." caption="Each point uses the same base-case GPU, electricity and operating costs. The shaded region would require more hours than a year contains." width="1184" height="696" >}}
+
 Cut the electricity tariff from 9 to 7 cents per kWh and the provider saves about $183 a year at 90% billable. Losing ten points of billable time, from 90% to 80%, costs about $1,688 a year at $2/h even after the electricity savings. At this site and with this equipment, finding paying workloads does more for the budget than negotiating those two cents.
 
 ## Put a price on years four and five
@@ -99,6 +101,8 @@ MLCommons marks all three runs as valid. They come from one submitter using the 
 | [Offline](https://github.com/mlcommons/inference_results_v6.1/blob/6623c6c8bac460c46a8768ac261bc0889c9c7f13/closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_summary.txt) | 523,790 | N/A | N/A |
 | [Server](https://github.com/mlcommons/inference_results_v6.1/blob/6623c6c8bac460c46a8768ac261bc0889c9c7f13/closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_summary.txt) | 395,940 | 869 ms | 65.8 ms |
 | [Interactive](https://github.com/mlcommons/inference_results_v6.1/blob/6623c6c8bac460c46a8768ac261bc0889c9c7f13/closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Interactive/performance/run_1/mlperf_log_summary.txt) | 240,274 | 527 ms | 14.6 ms |
+
+{{< figure class="series-figure" src="/downloads/ai-infrastructure-reality-check/mlperf-throughput-and-token-cost.webp" link="/downloads/ai-infrastructure-reality-check/mlperf-throughput-and-token-cost.webp" alt="Offline, Server and Interactive measured 524k, 396k and 240k tokens per second. Their modeled costs per million were $0.115, $0.152 and $0.250." caption="Throughput comes from the published MLPerf runs. The costs assume $216 per rack-hour, full benchmark throughput and 100% usable output." width="1184" height="696" >}}
 
 A rack can generate hundreds of thousands of tokens per second because it serves requests in parallel. At the other end of one request, a user waits for the first token and then reads the rest as they arrive. The published interactive run gives that user a faster stream while the rack generates fewer tokens overall.
 

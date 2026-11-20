@@ -72,3 +72,5 @@ body:has(.editorial-home) .post-entry:not(:has(.entry-cover)) {grid-template-col
  #menu li + li {margin-inline-start:0;}
  #menu a {min-height:40px;}
 }
+
+.post-content .series-figure img { height: auto; }
