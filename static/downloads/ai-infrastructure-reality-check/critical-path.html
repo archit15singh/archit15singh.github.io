@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data-center critical-path simulator</title>
+<style>
+  :root{color-scheme:dark;--bg:#111722;--panel:#1a2432;--line:#42546a;--ink:#f3f6fa;--muted:#bac9da;--accent:#9ccefb}
+  *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+  main{max-width:65rem;margin:auto;padding:clamp(1rem,5vw,3rem)} h1{font-size:clamp(1.8rem,6vw,3.25rem);line-height:1.08;letter-spacing:-.045em;margin:.2em 0}
+  header p,.note{color:var(--muted);max-width:48rem} .series{color:var(--accent)} h2{font-size:1.2rem;margin:.6rem 0}
+  fieldset{padding:1rem;border:1px solid var(--line);background:var(--panel);border-radius:.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));gap:1rem}
+  legend{font-weight:700} label{display:block;color:var(--muted)} input{display:block;width:100%;padding:.35rem .5rem;margin-top:.2rem}
+  input,button{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:.25rem}
+  button{padding:.4rem .6rem;cursor:pointer} .buttons{display:flex;flex-wrap:wrap;gap:.55rem;margin:1rem 0}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .result{border-left:3px solid var(--accent);padding:1rem;background:var(--panel);margin:1.4rem 0}
+  #month{font-size:1.6rem;font-weight:700} #paths{margin:.4rem 0;padding-left:1.2rem}
+  .table-wrap{overflow:auto} table{width:100%;border-collapse:collapse} td,th{border-bottom:1px solid var(--line);padding:.45rem .6rem;text-align:left}
+  td:nth-child(n+2),th:nth-child(n+2){text-align:right} .track{display:block;border-radius:.2rem;background:var(--panel);height:.5rem;min-width:3rem}
+  .bar{display:block;background:var(--accent);height:100%;border-radius:.2rem} #error{color:#ffbea9;font-weight:700}
+</style>
+<main>
+<header>
+  <p class="series">The AI Infrastructure Reality Check</p>
+  <h1>Data-center critical-path simulator</h1>
+  <p>Change the duration of a dependency to see when the first capacity can be billed. This scenario assumes one site, fixed dependencies and billing after contractual acceptance. Durations are illustrative.</p>
+</header>
+<noscript><p>Enable JavaScript to change the scenario. The article contains the full baseline table.</p></noscript>
+<form id="schedule">
+  <fieldset id="durations"><legend>Task durations in months</legend></fieldset>
+  <div class="buttons" aria-label="Preset scenarios">
+    <button type="reset">Reset baseline</button>
+    <button type="button" data-preset="gpu">GPUs four months earlier</button>
+    <button type="button" data-preset="grid">Grid four months earlier</button>
+    <button type="button" data-preset="both">Grid and cooling four months earlier</button>
+  </div>
+  <p id="error" role="status" hidden>Enter a whole number from 0 to 120 for each task.</p>
+</form>
+<div id="results">
+  <div class="result">
+    <output id="month" aria-label="First billable capacity"></output>
+    <h2>Critical paths</h2>
+    <ul id="paths"></ul>
+  </div>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Milestone table">
+    <table>
+      <thead><tr><th scope="col">Task</th><th scope="col">Start month</th><th scope="col">Finish month</th><th scope="col">Time since funding began</th></tr></thead>
+      <tbody id="milestones"></tbody>
+    </table>
+  </div>
+</div>
+<p class="note">An earlier finish date on one branch changes billing only when that branch controls the next shared milestone.</p>
+</main>
+<script>
+"use strict";
+const TASKS = [
+  ["Financing", 2, []],
+  ["Grid", 18, [0]],
+  ["Switchgear", 12, [0]],
+  ["Permits", 4, [0]],
+  ["Building and cooling", 13, [3]],
+  ["GPU delivery", 10, [0]],
+  ["Fabric delivery", 14, [0]],
+  ["Customer readiness", 16, [0]],
+  ["Energization", 0, [1, 2]],
+  ["Commissioning", 3, [8, 4, 5, 6]],
+  ["Contractual acceptance", 2, [9, 7]]
+];
+
+function schedule(durations) {
+  const finished = [];
+  for (const [index, [label, defaultDuration, parentIds]] of TASKS.entries()) {
+    const parents = parentIds.map(id => finished[id]);
+    const start = Math.max(0, ...parents.map(parent => parent.finish));
+    const paths = parents.length
+      ? parents.filter(parent => parent.finish === start).flatMap(parent => parent.paths.map(path => [...path, label]))
+      : [[label]];
+    finished.push({label, start, finish: start + (durations[index] ?? defaultDuration), paths});
+  }
+  return finished;
+}
+
+function setupSchedule() {
+  const form = document.querySelector("#schedule");
+  const fields = TASKS.map(([label, duration], index) => {
+    if (index === 8) return null;
+    const wrapper = document.createElement("label");
+    wrapper.textContent = label;
+    const input = document.createElement("input");
+    input.type = "number";
+    input.min = "0";
+    input.max = "120";
+    input.step = "1";
+    input.required = true;
+    input.defaultValue = duration;
+    wrapper.append(input);
+    document.querySelector("#durations").append(wrapper);
+    return input;
+  });
+
+  function update() {
+    const invalid = fields.some(field => field !== null && !field.validity.valid);
+    document.querySelector("#error").hidden = !invalid;
+    document.querySelector("#results").hidden = invalid;
+    if (invalid) return;
+    const milestones = schedule(fields.map(field => field?.valueAsNumber));
+    const acceptance = milestones.at(-1);
+    document.querySelector("#month").value = "First billable capacity in month " + acceptance.finish;
+    document.querySelector("#paths").replaceChildren(...acceptance.paths.map(path => {
+      const row = document.createElement("li");
+      row.textContent = path.join(" → ");
+      return row;
+    }));
+    document.querySelector("#milestones").replaceChildren(...milestones.map(milestone => {
+      const row = document.createElement("tr");
+      const label = document.createElement("th");
+      label.scope = "row";
+      label.textContent = milestone.label;
+      row.append(label);
+      row.insertCell().textContent = milestone.start;
+      row.insertCell().textContent = milestone.finish;
+      const track = document.createElement("span");
+      track.className = "track";
+      track.setAttribute("aria-hidden", "true");
+      const bar = document.createElement("span");
+      bar.className = "bar";
+      bar.style.width = (100 * milestone.finish / Math.max(1, acceptance.finish)) + "%";
+      track.append(bar);
+      row.insertCell().append(track);
+      return row;
+    }));
+  }
+
+  const presets = {gpu:{5:6}, grid:{1:14}, both:{1:14,4:9}};
+  for (const button of form.querySelectorAll("[data-preset]")) {
+    button.addEventListener("click", () => {
+      form.reset();
+      for (const [index, value] of Object.entries(presets[button.dataset.preset])) fields[index].value = value;
+      update();
+    });
+  }
+  form.addEventListener("input", update);
+  form.addEventListener("submit", event => event.preventDefault());
+  form.addEventListener("reset", () => queueMicrotask(update));
+  update();
+}
+
+if (typeof document !== "undefined") setupSchedule();
+</script>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<!--
+MIT License
+
+Copyright (c) 2026 Archit Singh
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GPU break-even calculator</title>
+<style>
+  :root{color-scheme:dark;--bg:#111722;--panel:#1a2432;--line:#42546a;--text:#f3f6fa;--muted:#b7c5d6;--accent:#9de1c4;--warning:#ffbea9}
+  *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,sans-serif}
+  main{max-width:68rem;margin:auto;padding:clamp(1rem,4vw,3rem)} header>p{max-width:47rem;color:var(--muted)} h1{font-size:clamp(1.85rem,5vw,3.5rem);line-height:1.08;letter-spacing:-.045em;margin:.2em 0}
+  h2{font-size:1.15rem;margin:0 0 .8rem} .series{color:var(--accent);font-size:.9rem;margin:0 0 .5rem}
+  form{border:1px solid var(--line);padding:1.25rem;border-radius:.65rem;background:var(--panel)}
+  fieldset{border:0;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));gap:1rem}
+  legend{margin-bottom:1rem;font-weight:700} label{display:block;color:var(--muted);font-size:.91rem}
+  input{display:block;background:var(--bg);color:var(--text);font:inherit;border:1px solid var(--line);border-radius:.3rem;padding:.45rem .6rem;width:100%;margin-top:.25rem}
+  button{border:1px solid var(--line);border-radius:.3rem;background:var(--bg);color:var(--text);font:inherit;padding:.4rem .7rem;margin-top:1.2rem;cursor:pointer}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .metrics{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));margin:1.4rem 0}
+  .metric{background:var(--panel);border-top:2px solid var(--accent);padding:.8rem 1rem;border-radius:0 0 .4rem .4rem}
+  .metric span{display:block;color:var(--muted);font-size:.9rem}.metric output{font:700 clamp(1.35rem,4vw,2.25rem)/1.5 system-ui,sans-serif;display:block}
+  #error{color:var(--warning);font-weight:700} table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+  th,td{padding:.54rem .7rem;border-bottom:1px solid var(--line);text-align:right} th:first-child{text-align:left}
+  caption{text-align:left;color:var(--muted);margin-bottom:.4rem} section{margin-block:1.5rem}
+  .table-wrap{overflow:auto} a{color:var(--accent)} details{margin-top:1.6rem;color:var(--muted)} summary{color:var(--text);cursor:pointer}
+  @media print{body{print-color-adjust:exact;-webkit-print-color-adjust:exact} main{padding:1rem}}
+</style>
+<main>
+<header>
+  <p class="series">The AI Infrastructure Reality Check</p>
+  <h1>GPU break-even calculator</h1>
+  <p>Model a single GPU’s share of an installed fleet. The starting values describe an illustrative deployment. Dollar values are USD and all outputs are before tax.</p>
+</header>
+<noscript><p>JavaScript is required to recalculate. The article includes the base case and formula.</p></noscript>
+<form id="assumptions">
+  <fieldset>
+    <legend>Assumptions per GPU</legend>
+    <label>Installed cost ($)<input name="capital" type="number" min="0" max="10000000" step="any" value="36000" required></label>
+    <label>Economic life (years)<input name="life" type="number" min="0.1" max="30" step="any" value="4" required></label>
+    <label>Cost of capital (% per year)<input name="discount" type="number" min="0" max="100" step="any" value="10" required></label>
+    <label>Fixed operations ($/year)<input name="ops" type="number" min="0" max="10000000" step="any" value="4800" required></label>
+    <label>Idle IT power (kW)<input name="idle" type="number" min="0" max="100" step="any" value="0.25" required></label>
+    <label>Loaded IT power (kW)<input name="loaded" type="number" min="0" max="100" step="any" value="0.9" required></label>
+    <label>Facility PUE<input name="pue" type="number" min="1" max="5" step="any" value="1.25" required></label>
+    <label>Electricity ($/kWh)<input name="electricity" type="number" min="0" max="10" step="any" value="0.09" required></label>
+    <label>Realized rate ($/billable hour)<input name="rate" type="number" min="0" max="1000" step="any" value="2" required></label>
+    <label>Billable calendar hours (%)<input name="share" type="number" min="0" max="100" step="any" value="90" required></label>
+  </fieldset>
+  <button type="reset">Reset assumptions</button>
+  <p id="error" role="status" hidden></p>
+</form>
+<div id="results">
+  <div class="metrics" aria-label="Model results">
+    <div class="metric"><span id="annual-label">Annual economic surplus</span><output id="annual" aria-labelledby="annual-label"></output></div>
+    <div class="metric"><span id="price-label">Break-even rate per hour</span><output id="price" aria-labelledby="price-label"></output></div>
+    <div class="metric"><span id="usage-label">Break-even billable share</span><output id="usage" aria-labelledby="usage-label"></output></div>
+  </div>
+  <section>
+    <h2>Price sensitivity</h2>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="Price sensitivity table">
+      <table>
+        <caption>Annual economic surplus by billable share and realized rate. Negative amounts are shortfalls.</caption>
+        <thead><tr id="price-columns"><th scope="col">Billable share</th></tr></thead>
+        <tbody id="sensitivity"></tbody>
+      </table>
+    </div>
+  </section>
+</div>
+<details>
+  <summary>Model and assumptions</summary>
+  <p>The cost of capital annualizes the installed cost over the economic life at zero resale value. Fixed operations and baseline power are charged over 8,760 calendar hours. Incremental electricity is charged for billable hours at the difference between loaded and idle IT power, multiplied by PUE and the energy tariff. Include recurring demand charges and capacity fees in fixed operations if applicable.</p>
+  <p>The model uses steady-state revenue and assumes billable hours draw loaded power. It leaves out taxes, contract ramp timing and resale proceeds. A realized rate accounts for discounts and credits. An annual economic surplus includes the capital charge and differs from annual cash flow.</p>
+</details>
+</main>
+<script>
+"use strict";
+const HOURS = 8760;
+
+function gpuEconomics(input) {
+  const r = input.discount / 100;
+  const share = input.share / 100;
+  const annuity = r === 0 ? 1 / input.life : r / -Math.expm1(-input.life * Math.log1p(r));
+  const annualCapital = input.capital * annuity;
+  const powerFactor = input.pue * input.electricity;
+  const fixed = annualCapital + input.ops + HOURS * input.idle * powerFactor;
+  const variable = (input.loaded - input.idle) * powerFactor;
+  const annualAt = (billableShare, rate) => HOURS * billableShare * (rate - variable) - fixed;
+  const threshold = fixed === 0 && input.rate >= variable ? 0 :
+    input.rate > variable ? fixed / (HOURS * (input.rate - variable)) : Infinity;
+
+  return {
+    annualAt,
+    annual: annualAt(share, input.rate),
+    hourly: share > 0 ? fixed / (HOURS * share) + variable : null,
+    threshold
+  };
+}
+
+function setupCalculator() {
+  const form = document.querySelector("#assumptions");
+  const fields = Array.from(form.querySelectorAll("input"));
+  const currency = new Intl.NumberFormat("en-US", {style:"currency", currency:"USD", maximumFractionDigits:0});
+  const hourly = new Intl.NumberFormat("en-US", {style:"currency", currency:"USD", minimumFractionDigits:2, maximumFractionDigits:3});
+  const percent = new Intl.NumberFormat("en-US", {style:"percent", maximumFractionDigits:1});
+  const error = document.querySelector("#error");
+  const results = document.querySelector("#results");
+  const rates = [1.5, 2, 2.5, 3, 4];
+  const shares = [.5, .6, .7, .8, .9, 1];
+
+  for (const rate of rates) {
+    const heading = document.createElement("th");
+    heading.scope = "col";
+    heading.textContent = hourly.format(rate) + "/h";
+    document.querySelector("#price-columns").append(heading);
+  }
+
+  function update() {
+    const input = Object.fromEntries(fields.map(field => [field.name, field.valueAsNumber]));
+    const invalid = fields.find(field => !field.validity.valid);
+    const invalidPower = input.loaded < input.idle;
+    error.hidden = !invalid && !invalidPower;
+    results.hidden = !error.hidden;
+    if (invalid || invalidPower) {
+      error.textContent = invalid
+        ? invalid.labels[0].textContent.trim() + " needs a value in its allowed range."
+        : "Loaded power must be at least idle power.";
+      return;
+    }
+
+    const model = gpuEconomics(input);
+    document.querySelector("#annual").value = currency.format(Math.round(model.annual) || 0);
+    document.querySelector("#price").value = model.hourly === null ? "No billable hours" : hourly.format(model.hourly) + "/h";
+    document.querySelector("#usage").value = Number.isFinite(model.threshold)
+      ? percent.format(model.threshold) + (model.threshold > 1 ? " · infeasible" : "")
+      : "Infeasible at this rate";
+    const rows = shares.map(share => {
+      const row = document.createElement("tr");
+      const label = document.createElement("th");
+      label.scope = "row";
+      label.textContent = percent.format(share);
+      row.append(label);
+      for (const rate of rates) {
+        const cell = document.createElement("td");
+        cell.textContent = currency.format(Math.round(model.annualAt(share, rate)) || 0);
+        row.append(cell);
+      }
+      return row;
+    });
+    document.querySelector("#sensitivity").replaceChildren(...rows);
+  }
+
+  form.addEventListener("input", update);
+  form.addEventListener("submit", event => event.preventDefault());
+  form.addEventListener("reset", () => queueMicrotask(update));
+  update();
+}
+
+if (typeof document !== "undefined") setupCalculator();
+</script>
+</html>
