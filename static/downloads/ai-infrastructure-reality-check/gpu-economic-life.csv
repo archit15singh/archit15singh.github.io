@@ -1,0 +1,4 @@
+annual_price_decline,initial_capital_usd,year_1_rate_usd,billable_share,annual_cash_cost_usd,discount_rate,year_1_cash_usd,year_2_cash_usd,year_3_cash_usd,year_4_cash_usd,year_5_cash_usd,npv_3_year_usd,npv_5_year_usd,break_even_year_1_price_3_year_usd,break_even_year_1_price_5_year_usd
+0.00,35000.00,3.20,0.72,4200.00,0.10,15983.04,15983.04,15983.04,15983.04,15983.04,4747.45,25588.30,2.8973,2.1298
+0.15,35000.00,3.20,0.72,4200.00,0.10,15983.04,12955.58,10382.25,8194.91,6335.67,-1962.53,7568.65,3.3444,2.7859
+0.30,35000.00,3.20,0.72,4200.00,0.10,15983.04,9928.13,5689.69,2722.78,645.95,-7990.15,-5729.37,3.8827,3.6057

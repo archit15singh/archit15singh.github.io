@@ -1,0 +1,6 @@
+id,observation,reference_period,baseline_period,baseline,operator,target,unit,review_deadline,actual,status,evidence_url,source_for_baseline
+1,Anthropic compute and infrastructure expense divided by revenue,9M ended 2027-09-30,9M ended 2026-09-30,56.6,<,50,percent,2027-12-31,,pending,,https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm
+2,CoreWeave active power divided by contracted power,Q3 2027,Q3 2026,roughly 37,>=,45,percent,2027-12-31,,pending,,https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm
+3,CoreWeave GAAP operating income minus positive net interest expense,Q3 2027,Q3 2026,-639,<,0,USD million,2027-12-31,,pending,,https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm
+4,Digital Realty weighted-average new-lease signing to contractual commencement,Q3 2027,Q3 2026,17,>=,12,months,2027-12-31,,pending,,https://www.sec.gov/Archives/edgar/data/1297996/000110465926120212/dlr-ex99d1.htm
+5,NVIDIA Data Center revenue,Q3 FY2028,Q3 FY2027,107.6,>=,120,USD billion,2027-12-31,,pending,,https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx

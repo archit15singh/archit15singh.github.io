@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+<title id="title">Six businesses in the AI stack</title>
+<desc id="desc">Memory, DRAM allocation. Chips, Accelerator shipments. Facilities, Commissioned space. Power, Energized capacity. Compute, Billable capacity. Applications, Paid workflows</desc>
+<rect width="1200" height="480" fill="#121b26"/>
+<g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+<text x="64" y="62" fill="#91e5bb" font-size="20" letter-spacing="2">THE AI INFRASTRUCTURE REALITY CHECK</text>
+<text x="64" y="124" fill="#eef4fa" font-size="45" font-weight="700">Six businesses in the AI stack</text>
+<g transform="translate(64,166)">
+        <rect width="332" height="112" rx="11" fill="#1c2a39" stroke="#40566a"/>
+        <rect x="17" y="20" width="4" height="68" rx="2" fill="#91e5bb"/>
+        <text x="34" y="49" fill="#eef4fa" font-size="30" font-weight="650">Memory</text>
+        <text x="34" y="80" fill="#bccbdb" font-size="20">DRAM allocation</text>
+        </g><g transform="translate(419,166)">
+        <rect width="332" height="112" rx="11" fill="#1c2a39" stroke="#40566a"/>
+        <rect x="17" y="20" width="4" height="68" rx="2" fill="#91e5bb"/>
+        <text x="34" y="49" fill="#eef4fa" font-size="30" font-weight="650">Chips</text>
+        <text x="34" y="80" fill="#bccbdb" font-size="20">Accelerator shipments</text>
+        </g><g transform="translate(774,166)">
+        <rect width="332" height="112" rx="11" fill="#1c2a39" stroke="#40566a"/>
+        <rect x="17" y="20" width="4" height="68" rx="2" fill="#91e5bb"/>
+        <text x="34" y="49" fill="#eef4fa" font-size="30" font-weight="650">Facilities</text>
+        <text x="34" y="80" fill="#bccbdb" font-size="20">Commissioned space</text>
+        </g><g transform="translate(64,308)">
+        <rect width="332" height="112" rx="11" fill="#1c2a39" stroke="#40566a"/>
+        <rect x="17" y="20" width="4" height="68" rx="2" fill="#91e5bb"/>
+        <text x="34" y="49" fill="#eef4fa" font-size="30" font-weight="650">Power</text>
+        <text x="34" y="80" fill="#bccbdb" font-size="20">Energized capacity</text>
+        </g><g transform="translate(419,308)">
+        <rect width="332" height="112" rx="11" fill="#1c2a39" stroke="#40566a"/>
+        <rect x="17" y="20" width="4" height="68" rx="2" fill="#91e5bb"/>
+        <text x="34" y="49" fill="#eef4fa" font-size="30" font-weight="650">Compute</text>
+        <text x="34" y="80" fill="#bccbdb" font-size="20">Billable capacity</text>
+        </g><g transform="translate(774,308)">
+        <rect width="332" height="112" rx="11" fill="#1c2a39" stroke="#40566a"/>
+        <rect x="17" y="20" width="4" height="68" rx="2" fill="#91e5bb"/>
+        <text x="34" y="49" fill="#eef4fa" font-size="30" font-weight="650">Applications</text>
+        <text x="34" y="80" fill="#bccbdb" font-size="20">Paid workflows</text>
+        </g>
+</g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+<title id="title">What to measure across the AI buildout</title>
+<desc id="desc">Demand, Paid usage. Commitments, Backlog and leases. Deployment, Active capacity. Activity, Service delivered. Economics, Cash and margins. Recheck, Comparable disclosures</desc>
+<rect width="1200" height="480" fill="#121b26"/>
+<g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
+<text x="64" y="62" fill="#a9dfb0" font-size="20" letter-spacing="2">THE AI INFRASTRUCTURE REALITY CHECK</text>
+<text x="64" y="124" fill="#eef4fa" font-size="45" font-weight="700">What to measure across the AI buildout</text>
+<g transform="translate(64,166)">
+        <rect width="332" height="112" rx="11" fill="#1c2a39" stroke="#40566a"/>
+        <rect x="17" y="20" width="4" height="68" rx="2" fill="#a9dfb0"/>
+        <text x="34" y="49" fill="#eef4fa" font-size="30" font-weight="650">Demand</text>
+        <text x="34" y="80" fill="#bccbdb" font-size="20">Paid usage</text>
+        </g><g transform="translate(419,166)">
+        <rect width="332" height="112" rx="11" fill="#1c2a39" stroke="#40566a"/>
+        <rect x="17" y="20" width="4" height="68" rx="2" fill="#a9dfb0"/>
+        <text x="34" y="49" fill="#eef4fa" font-size="30" font-weight="650">Commitments</text>
+        <text x="34" y="80" fill="#bccbdb" font-size="20">Backlog and leases</text>
+        </g><g transform="translate(774,166)">
+        <rect width="332" height="112" rx="11" fill="#1c2a39" stroke="#40566a"/>
+        <rect x="17" y="20" width="4" height="68" rx="2" fill="#a9dfb0"/>
+        <text x="34" y="49" fill="#eef4fa" font-size="30" font-weight="650">Deployment</text>
+        <text x="34" y="80" fill="#bccbdb" font-size="20">Active capacity</text>
+        </g><g transform="translate(64,308)">
+        <rect width="332" height="112" rx="11" fill="#1c2a39" stroke="#40566a"/>
+        <rect x="17" y="20" width="4" height="68" rx="2" fill="#a9dfb0"/>
+        <text x="34" y="49" fill="#eef4fa" font-size="30" font-weight="650">Activity</text>
+        <text x="34" y="80" fill="#bccbdb" font-size="20">Service delivered</text>
+        </g><g transform="translate(419,308)">
+        <rect width="332" height="112" rx="11" fill="#1c2a39" stroke="#40566a"/>
+        <rect x="17" y="20" width="4" height="68" rx="2" fill="#a9dfb0"/>
+        <text x="34" y="49" fill="#eef4fa" font-size="30" font-weight="650">Economics</text>
+        <text x="34" y="80" fill="#bccbdb" font-size="20">Cash and margins</text>
+        </g><g transform="translate(774,308)">
+        <rect width="332" height="112" rx="11" fill="#1c2a39" stroke="#40566a"/>
+        <rect x="17" y="20" width="4" height="68" rx="2" fill="#a9dfb0"/>
+        <text x="34" y="49" fill="#eef4fa" font-size="30" font-weight="650">Recheck</text>
+        <text x="34" y="80" fill="#bccbdb" font-size="20">Comparable disclosures</text>
+        </g>
+</g>
+</svg>
