@@ -37,6 +37,8 @@ format: "Technical note"
 ---
 
 > **Update, 12 November 2026:** Memori is now [Lorevell](https://github.com/archit15singh/lorevell). The current version uses Markdown notes as its source of truth and a rebuildable SQLite index. This article describes an earlier version; use the [current setup and rename guide](https://github.com/archit15singh/lorevell/blob/main/docs/rebrand.md) for installation and migration.
+>
+> **Try the 2.0 preview:** The [wheel quickstart](https://github.com/archit15singh/lorevell/releases/tag/preview-2.0.0) includes a two-note search and archive demo. The verified wheels run on Apple Silicon macOS and Ubuntu arm64 without Rust.
 
 
 # Designing CLI Tools for AI Agents
